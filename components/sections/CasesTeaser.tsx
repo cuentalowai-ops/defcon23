@@ -19,6 +19,8 @@ interface CaseStudy {
   problemDetail: string;
   solution: string;
   metrics: Metric[];
+  roi: string;
+  roiPeriod: string;
   href: string;
 }
 
@@ -37,6 +39,8 @@ const cases: CaseStudy[] = [
       { label: "Viscøsidad", value: "-67%", color: "cold" },
       { label: "Legitimidad", value: "+520%", color: "warm" },
     ],
+    roi: "RØI 1,011%",
+    roiPeriod: "24 meses",
     href: "/casos/holding-gastronomico",
   },
   {
@@ -52,6 +56,8 @@ const cases: CaseStudy[] = [
       { label: "Presión reg.", value: "-91%", color: "success" },
       { label: "Escalabilidad", value: "+280%", color: "cold" },
     ],
+    roi: "RØI 680%",
+    roiPeriod: "18 meses",
     href: "/casos/red-profesionales",
   },
   {
@@ -68,6 +74,8 @@ const cases: CaseStudy[] = [
       { label: "Cøste/tx", value: "-68%", color: "cold" },
       { label: "Crecimientø", value: "+410%/añø", color: "warm" },
     ],
+    roi: "RØI 1,340%",
+    roiPeriod: "12 meses",
     href: "/casos/plataforma-p2p",
   },
 ];
@@ -197,6 +205,14 @@ function CaseCard({ cs, index }: { cs: CaseStudy; index: number }) {
             <AnimatedStat value={m.value} color={m.color} />
           </div>
         ))}
+      </div>
+
+      {/* ROI */}
+      <div className="pt-3 border-t border-border-subtle flex items-baseline justify-between">
+        <span className="text-xl font-bold text-accent-warm terminal-text-warm">
+          {cs.roi}
+        </span>
+        <span className="text-xs text-text-subtle">{cs.roiPeriod}</span>
       </div>
 
       {/* CTA */}

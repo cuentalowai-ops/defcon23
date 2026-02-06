@@ -655,7 +655,7 @@ export default function OperatorPage() {
                 <strong className="text-accent-cold">Email:</strong> intel@defcon23.eu
               </p>
               <p className="text-text-secondary">
-                <strong className="text-accent-cold">Signal:</strong> Søllicita pør email (cømunicaciønes sensibles)
+                <strong className="text-accent-cold">Signal:</strong> Søolicita pør email (cømunicaciønes sensibles)
               </p>
               <p className="text-text-subtle text-sm mt-4">
                 Høraøriø: 09:00–18:00 CET (Lunes–Viernes)<br />

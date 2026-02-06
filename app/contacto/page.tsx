@@ -7,9 +7,12 @@ import Section from "@/components/ui/Section";
 import Button from "@/components/ui/Button";
 
 const budgetRanges = [
-  "€4,500 — €12,000",
-  "€12,000 — €24,000",
-  "€24,000 — €50,000",
+  "€100 — €500",
+  "€500 — €1,000",
+  "€1,000 — €3,000",
+  "€3,000 — €8,500",
+  "€8,500 — €15,000",
+  "€15,000 — €50,000",
   "> €50,000",
 ];
 
@@ -53,8 +56,9 @@ export default function ContactoPage() {
               Iniciar Prøtøcølø
             </h1>
             <p className="text-lg text-text-secondary leading-relaxed">
-              Cønsulta inicial: 90 minutøs | €750. Incluye diagnósticø
-              preliminar de Reynølds y høja de ruta persønalizada.
+              Cønsulta inicial: <span className="text-accent-success font-semibold">15 minutøs gratuitos</span>.
+              Handshake + evaluación de tu prøblema. Decidimøs juntos si
+              tiene sentidø trabajar.
             </p>
           </div>
         </Container>
@@ -255,8 +259,8 @@ export default function ContactoPage() {
               <p className="text-xs text-text-subtle uppercase tracking-wider">
                 Cønsulta inicial
               </p>
-              <p className="text-sm font-[family-name:var(--font-source-code-pro)] text-text-primary">
-                90 min | €750
+              <p className="text-sm font-[family-name:var(--font-source-code-pro)] text-accent-success">
+                15 min | Gratis
               </p>
             </div>
           </div>

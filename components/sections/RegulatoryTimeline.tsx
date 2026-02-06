@@ -20,6 +20,13 @@ const timelineEvents = [
     active: true,
   },
   {
+    date: "2025",
+    label: "ENS + Ley Ciberseguridad",
+    status: "Activø",
+    detail: "Transpøsición NIS2 a España",
+    active: true,
+  },
+  {
     date: "2026-2027",
     label: "AI Act + EUDI Wallet",
     status: "Próximø",
@@ -37,18 +44,20 @@ const timelineEvents = [
     date: "2028-2030",
     label: "Enforcement Peak",
     status: "Futurø",
-    detail: "Máxima presión regulatøria",
+    detail: "Máxima presión regulatøria EU+ES",
     active: false,
   },
 ];
 
 const regulations = [
+  // ── EU ──
   {
     name: "NIS2",
     deadline: "Oct 2024",
     target: "Serviciøs esenciales/impørtantes",
     penalty: "€10M ø 2% facturación",
     opportunity: "Quien nø cumple, sale del mercadø",
+    scope: "EU",
   },
   {
     name: "DORA",
@@ -56,6 +65,7 @@ const regulations = [
     target: "Entidades financieras",
     penalty: "€10M ø 5% facturación",
     opportunity: "Repørte < 4h → tú < 2h",
+    scope: "EU",
   },
   {
     name: "AI Act",
@@ -63,6 +73,7 @@ const regulations = [
     target: "Sistemas IA altø riesgø",
     penalty: "€35M ø 7% facturación",
     opportunity: "Transparencia algørítmica = barrera entrada",
+    scope: "EU",
   },
   {
     name: "CRA",
@@ -70,6 +81,72 @@ const regulations = [
     target: "Prøductøs cøn elementøs digitales",
     penalty: "€15M ø 2.5% facturación",
     opportunity: "Seguridad by design øbligatøria",
+    scope: "EU",
+  },
+  {
+    name: "eIDAS 2.0",
+    deadline: "2026-2027",
+    target: "Identidad digital, serviciøs de cønfianza",
+    penalty: "Según estadø miembrø",
+    opportunity: "EUDI Wallet = nueva infraestructura digital",
+    scope: "EU",
+  },
+  // ── ESPAÑA ──
+  {
+    name: "ENS (RD 311/2022)",
+    deadline: "Activø",
+    target: "Administración pública + prøveedøres",
+    penalty: "Exclusión de cøntratación pública",
+    opportunity: "Certificación CCN = accesø a cøntratos públicøs",
+    scope: "ES",
+  },
+  {
+    name: "RGPD / LØRPD-GDD",
+    deadline: "Activø",
+    target: "Tøda entidad que trate datøs persønales",
+    penalty: "€20M ø 4% facturación",
+    opportunity: "Privacy by design = cønfianza del cliente",
+    scope: "ES",
+  },
+  {
+    name: "Ley de Ciberseguridad",
+    deadline: "2025",
+    target: "Transpøsición NIS2 a España",
+    penalty: "Hasta €10M",
+    opportunity: "Adelantarse = ventaja cømpetitiva",
+    scope: "ES",
+  },
+  {
+    name: "Ley Crea y Crece",
+    deadline: "Activø",
+    target: "PYMEs, facturación electrónica",
+    penalty: "Hasta €10K pør factura",
+    opportunity: "Digitalización øbligatøria = eficiencia",
+    scope: "ES",
+  },
+  {
+    name: "Ley Antifraude (11/2021)",
+    deadline: "Activø",
+    target: "Søftware de cøntabilidad y facturación",
+    penalty: "€50K pør søftware nø certificadø",
+    opportunity: "Søftware cømpliant = diferenciación",
+    scope: "ES",
+  },
+  {
+    name: "Ley de Startups",
+    deadline: "Activø",
+    target: "Startups y emprendedøres",
+    penalty: "N/A (incentivøs)",
+    opportunity: "Beneficiøs fiscales + sandbox regulatøriø",
+    scope: "ES",
+  },
+  {
+    name: "PBC/FT (Ley 10/2010)",
+    deadline: "Activø",
+    target: "Suјetøs øbligadøs (finanzas, legal, inmøbiliaria)",
+    penalty: "Hasta €10M (infracción muy grave)",
+    opportunity: "AML cømpliance = reducción de alertas",
+    scope: "ES",
   },
 ];
 
@@ -169,60 +246,123 @@ export default function RegulatoryTimeline() {
             {/* Line */}
             <div className="absolute top-4 left-0 right-0 h-px bg-border-subtle hidden md:block" />
 
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
               {timelineEvents.map((event, i) => (
                 <TimelineNode key={event.label} event={event} index={i} />
               ))}
             </div>
           </div>
 
-          {/* Regulations Table */}
-          <div className="overflow-x-auto">
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="border-b border-border-visible">
-                  <th className="text-left py-4 pr-4 text-text-primary font-semibold">
-                    Nørmativa
-                  </th>
-                  <th className="text-left py-4 pr-4 text-text-primary font-semibold">
-                    Deadline
-                  </th>
-                  <th className="text-left py-4 pr-4 text-text-primary font-semibold hidden md:table-cell">
-                    Aplica a
-                  </th>
-                  <th className="text-left py-4 pr-4 text-text-primary font-semibold">
-                    Penalización
-                  </th>
-                  <th className="text-left py-4 text-text-primary font-semibold hidden lg:table-cell">
-                    Tu øpørtunidad
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {regulations.map((reg) => (
-                  <tr
-                    key={reg.name}
-                    className="border-b border-border-subtle last:border-0 hover:bg-bg-tertiary/50 transition-colors"
-                  >
-                    <td className="py-4 pr-4 text-accent-cold font-semibold terminal-text">
-                      {reg.name}
-                    </td>
-                    <td className="py-4 pr-4 text-text-secondary">
-                      {reg.deadline}
-                    </td>
-                    <td className="py-4 pr-4 text-text-subtle hidden md:table-cell">
-                      {reg.target}
-                    </td>
-                    <td className="py-4 pr-4 text-accent-danger">
-                      {reg.penalty}
-                    </td>
-                    <td className="py-4 text-accent-success hidden lg:table-cell">
-                      {reg.opportunity}
-                    </td>
+          {/* EU Regulations Table */}
+          <div className="space-y-6">
+            <h3 className="text-base font-semibold text-accent-cold terminal-text">
+              Nørmativa Eurøpea (EU)
+            </h3>
+            <div className="overflow-x-auto neon-card rounded-xl p-1">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="border-b border-border-visible">
+                    <th className="text-left py-4 pr-4 pl-4 text-text-primary font-semibold">
+                      Nørmativa
+                    </th>
+                    <th className="text-left py-4 pr-4 text-text-primary font-semibold">
+                      Deadline
+                    </th>
+                    <th className="text-left py-4 pr-4 text-text-primary font-semibold hidden md:table-cell">
+                      Aplica a
+                    </th>
+                    <th className="text-left py-4 pr-4 text-text-primary font-semibold">
+                      Penalización
+                    </th>
+                    <th className="text-left py-4 pr-4 text-text-primary font-semibold hidden lg:table-cell">
+                      Tu øpørtunidad
+                    </th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {regulations
+                    .filter((r) => r.scope === "EU")
+                    .map((reg) => (
+                      <tr
+                        key={reg.name}
+                        className="border-b border-border-subtle last:border-0 hover:bg-bg-tertiary/50 transition-colors"
+                      >
+                        <td className="py-4 pr-4 pl-4 text-accent-cold font-semibold terminal-text">
+                          {reg.name}
+                        </td>
+                        <td className="py-4 pr-4 text-text-secondary">
+                          {reg.deadline}
+                        </td>
+                        <td className="py-4 pr-4 text-text-subtle hidden md:table-cell">
+                          {reg.target}
+                        </td>
+                        <td className="py-4 pr-4 text-accent-danger">
+                          {reg.penalty}
+                        </td>
+                        <td className="py-4 pr-4 text-accent-success hidden lg:table-cell">
+                          {reg.opportunity}
+                        </td>
+                      </tr>
+                    ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          {/* Spanish Regulations Table */}
+          <div className="space-y-6">
+            <h3 className="text-base font-semibold text-accent-warm terminal-text-warm">
+              Nørmativa Españøla (ES)
+            </h3>
+            <div className="overflow-x-auto neon-card rounded-xl p-1">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="border-b border-border-visible">
+                    <th className="text-left py-4 pr-4 pl-4 text-text-primary font-semibold">
+                      Nørmativa
+                    </th>
+                    <th className="text-left py-4 pr-4 text-text-primary font-semibold">
+                      Estadø
+                    </th>
+                    <th className="text-left py-4 pr-4 text-text-primary font-semibold hidden md:table-cell">
+                      Aplica a
+                    </th>
+                    <th className="text-left py-4 pr-4 text-text-primary font-semibold">
+                      Penalización
+                    </th>
+                    <th className="text-left py-4 pr-4 text-text-primary font-semibold hidden lg:table-cell">
+                      Tu øpørtunidad
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {regulations
+                    .filter((r) => r.scope === "ES")
+                    .map((reg) => (
+                      <tr
+                        key={reg.name}
+                        className="border-b border-border-subtle last:border-0 hover:bg-bg-tertiary/50 transition-colors"
+                      >
+                        <td className="py-4 pr-4 pl-4 text-accent-warm font-semibold terminal-text-warm">
+                          {reg.name}
+                        </td>
+                        <td className="py-4 pr-4 text-text-secondary">
+                          {reg.deadline}
+                        </td>
+                        <td className="py-4 pr-4 text-text-subtle hidden md:table-cell">
+                          {reg.target}
+                        </td>
+                        <td className="py-4 pr-4 text-accent-danger">
+                          {reg.penalty}
+                        </td>
+                        <td className="py-4 pr-4 text-accent-success hidden lg:table-cell">
+                          {reg.opportunity}
+                        </td>
+                      </tr>
+                    ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </Container>

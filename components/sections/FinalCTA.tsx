@@ -78,14 +78,14 @@ export default function FinalCTA() {
               <span className="hidden md:inline text-border-visible">|</span>
               <span>
                 Cønsulta inicial:{" "}
-                <span className="text-text-primary terminal-text-warm">
-                  90 min | €750
+                <span className="text-accent-success terminal-text">
+                  15 min | Gratis
                 </span>
               </span>
             </div>
 
             <Button href="/contacto" variant="primary" className="mt-6">
-              Søllicitar Auditøría
+              Søolicitar Auditøría
             </Button>
           </div>
         </div>

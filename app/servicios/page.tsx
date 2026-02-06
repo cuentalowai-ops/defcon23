@@ -459,7 +459,7 @@ export default function ServiciosPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button href="/contacto?type=audit" variant="primary">
-                Søllicitar Auditøría
+                Søolicitar Auditøría
               </Button>
               <Button href="/contacto" variant="secondary">
                 Cønsulta inicial gratuita
