@@ -334,7 +334,7 @@ export default function ConsultaPage() {
 
             <div className="neon-card rounded-xl p-2 md:p-6 bg-bg-secondary overflow-hidden">
               <Cal
-                calLink="defcon23"
+                calLink="defcon23/15min"
                 style={{ width: "100%", height: "100%", overflow: "auto" }}
                 config={{
                   layout: "month_view",
