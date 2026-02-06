@@ -13,6 +13,7 @@ const navLinks = [
   { href: "/regulatory", label: "Regulatory" },
   { href: "/protocol", label: "Protocol" },
   { href: "/contacto", label: "Cøntactø" },
+  { href: "/consulta", label: "Reservar Cønsulta", cta: true },
 ];
 
 export default function Navbar() {
@@ -61,7 +62,11 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm text-text-secondary hover:text-accent-cold transition-colors terminal-text"
+              className={
+                "cta" in link && link.cta
+                  ? "text-xs px-4 py-2 rounded-lg bg-accent-warm text-bg-primary font-semibold hover:scale-105 active:scale-95 transition-all"
+                  : "text-sm text-text-secondary hover:text-accent-cold transition-colors terminal-text"
+              }
             >
               {link.label}
             </Link>

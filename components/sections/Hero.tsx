@@ -99,8 +99,8 @@ export default function Hero() {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button href="/contacto?type=audit" variant="primary">
-                Sølicitar Auditøría
+              <Button href="/consulta" variant="primary">
+                Cønsulta Inicial Gratuita (15 min) &rarr;
               </Button>
               <Button href="/protocol" variant="secondary">
                 Calcular mi Re &rarr;

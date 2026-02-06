@@ -399,3 +399,68 @@ h1, h2, h3, h4, h5, h6, p, span, a, li, td, th, label, input, textarea, select, 
   background: rgba(255, 140, 66, 0.3);
   color: #f5f5f5;
 }
+
+/* ===== CAL.COM EMBED ===== */
+
+[data-cal-namespace] {
+  font-family: var(--font-source-code-pro) !important;
+}
+
+[data-cal-namespace] button {
+  font-family: var(--font-source-code-pro) !important;
+}
+
+[data-cal-namespace] input,
+[data-cal-namespace] select,
+[data-cal-namespace] textarea {
+  font-family: var(--font-source-code-pro) !important;
+  background-color: #2a2a2a !important;
+  border: 1px solid #4a4a4a !important;
+  color: #f5f5f5 !important;
+  padding: 0.75rem !important;
+}
+
+[data-cal-namespace] input:focus,
+[data-cal-namespace] select:focus,
+[data-cal-namespace] textarea:focus {
+  border-color: #4a9eff !important;
+  outline: none !important;
+  box-shadow: 0 0 0 2px rgba(74, 158, 255, 0.1) !important;
+}
+
+[data-cal-namespace] label {
+  color: #b0b0b0 !important;
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+}
+
+[data-cal-namespace] button[type="submit"] {
+  background-color: #ff8c42 !important;
+  color: #1a1a1a !important;
+  border: none !important;
+  padding: 1rem 2rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  transition: all 0.3s ease !important;
+}
+
+[data-cal-namespace] button[type="submit"]:hover {
+  background-color: #ff9d5c !important;
+  transform: scale(1.02) !important;
+}
+
+[data-cal-namespace] [class*="calendar"] {
+  background-color: #242424 !important;
+  border: 1px solid #4a4a4a !important;
+}
+
+[data-cal-namespace] [class*="selected"] {
+  background-color: #4a9eff !important;
+  color: #1a1a1a !important;
+}
+
+[data-cal-namespace] [class*="disabled"] {
+  color: #808080 !important;
+  opacity: 0.5 !important;
+}

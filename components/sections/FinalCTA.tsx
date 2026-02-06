@@ -84,8 +84,8 @@ export default function FinalCTA() {
               </span>
             </div>
 
-            <Button href="/contacto" variant="primary" className="mt-6">
-              Sølicitar Auditøría
+            <Button href="/consulta" variant="primary" className="mt-6">
+              Reservar Cønsulta Gratuita (15 min) &rarr;
             </Button>
           </div>
         </div>

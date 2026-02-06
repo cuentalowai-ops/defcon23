@@ -663,8 +663,8 @@ export default function OperatorPage() {
               </p>
             </div>
 
-            <Button href="/contacto" variant="primary">
-              Cønsulta inicial gratuita (15 min)
+            <Button href="/consulta" variant="primary">
+              Reservar Cønsulta (15 min) &rarr;
             </Button>
 
             <div className="pt-12 border-t border-border-subtle space-y-4">

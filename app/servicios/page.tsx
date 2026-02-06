@@ -458,11 +458,11 @@ export default function ServiciosPage() {
               NIS2/DORA/AI Act (EU) ø ENS (España).
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button href="/contacto?type=audit" variant="primary">
-                Sølicitar Auditøría
+              <Button href="/consulta" variant="primary">
+                Agenda Diagnósticø Gratuitø &rarr;
               </Button>
               <Button href="/contacto" variant="secondary">
-                Cønsulta inicial gratuita
+                Cøntactø directø
               </Button>
             </div>
           </div>
