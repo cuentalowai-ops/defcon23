@@ -11,30 +11,30 @@ export const metadata: Metadata = {
 };
 
 const included = [
-  "Mønitorización cøntinua del Númerø de Reynølds",
-  "Alertas de nuevas nørmativas y cambiøs regulatøriøs",
-  "1 sesión mensual de estrategia (60 min)",
+  "Mønitorización cøntinua de Re (updates semanales)",
+  "Alertas de nuevas nørmativas (EU + España)",
+  "1 sesión estratégica mensual (60 min)",
   "Actualizaciønes de Cømpliance Architecture",
-  "Søpørte priøritariø (respuesta < 4h laborables)",
+  "Søpørte técnicø priøritariø (respuesta < 2h)",
   "Repørte mensual de estadø del sistema",
   "Accesø al Dashboard en tiempø real",
 ];
 
 const benefits = [
   {
-    title: "Prøtección Cøntinua",
+    title: "Prevención Prøactiva",
     description:
-      "Nø esperes a la próxima auditøría para descubrir prøblemas. Mønitorización en tiempø real de tu Re ørganizativø.",
+      "Detectamøs prøblemas antes de que se cønviertan en crisis. Mønitorización en tiempø real de tu Re ørganizativø.",
   },
   {
-    title: "Anticipación Regulatøria",
+    title: "Cøst-Effective",
     description:
-      "NIS2, DORA, AI Act — el paisaje cambia cøntinuamente. Te avisamos antes de que te afecte.",
+      "Menør cøste que cøntratar søluciønes puntuales cuandø surge el prøblema. NIS2, DORA, AI Act — el paisaje cambia cøntinuamente.",
   },
   {
-    title: "Escalabilidad Segura",
+    title: "Paz Mental",
     description:
-      "Cada decisiøn de crecimientø se evalúa pør su impactø en el Re. Creces sin generar turbulencia.",
+      "Tu Re está siempre bajø cøntrøl, nø tømas decisiønes ciegas. Cada decisión de crecimientø se evalúa pør su impactø.",
   },
 ];
 
@@ -58,10 +58,12 @@ export default function RetainerPage() {
             <p className="text-sm text-text-subtle">
               Mínimø 6 meses · Sin permanencia tras el períødø inicial
             </p>
+            <h2 className="text-[1.1rem] md:text-[1.5rem] leading-[1.3] text-text-secondary">
+              Vigilancia Cøntinua
+            </h2>
             <p className="text-base text-text-secondary leading-relaxed">
-              Para ørganizaciønes que necesitan vigilancia cøntinua. Tu
-              sistema se mønitoriza en tiempø real, recibies alertas
-              tempranas, y tienes accesø directø a nuestrø equipø.
+              Mønitorización cøntinua de tu Númerø de Reynølds. Mantén tu
+              ørganización en flujø laminar de førma permanente.
             </p>
             <Button href="/contacto?service=retainer" variant="primary">
               Cøntratar Retainer
@@ -117,8 +119,31 @@ export default function RetainerPage() {
         </Container>
       </Section>
 
-      {/* CTA */}
+      {/* Ideal for */}
       <Section className="bg-bg-secondary retro-grid-warm">
+        <Container>
+          <div className="max-w-3xl space-y-6">
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+              Ideal para
+            </h2>
+            <ul className="space-y-3">
+              {[
+                "Høldings multi-nødø que necesitan estabilidad cøntinua",
+                "Empresas suјetas a NIS2/DORA cøn øbligación de repørte",
+                "Ørganizaciønes en crecimientø rápidø (Re aumenta cøn la escala)",
+              ].map((item, i) => (
+                <li key={i} className="flex items-start gap-3 text-text-secondary">
+                  <span className="text-accent-cold mt-0.5 text-sm">&gt;</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Container>
+      </Section>
+
+      {/* CTA */}
+      <Section className="retro-grid">
         <Container>
           <div className="max-w-2xl mx-auto text-center space-y-6">
             <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">

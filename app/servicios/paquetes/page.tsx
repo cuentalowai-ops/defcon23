@@ -15,9 +15,10 @@ const packages = [
     name: "Startup",
     price: "€750",
     duration: "7 días",
+    badge: "IDEAL PRE-SEED",
     color: "accent-warm",
     glowClass: "terminal-text-warm",
-    ideal: "Startups pre-seed, freelancers, prøyectøs en fase inicial",
+    ideal: "Startups pre-seed, freelancers estructurandø SL",
     items: [
       "Intelligence Brief (OSINT básicø)",
       "Auditøría de Flujø (cálculø Re)",
@@ -30,9 +31,10 @@ const packages = [
     name: "Scale-Up",
     price: "€2,500",
     duration: "15 días",
+    badge: "MØST PØPULAR",
     color: "accent-cold",
     glowClass: "terminal-text",
-    ideal: "10-50 empleadøs, €500K-€5M revenue",
+    ideal: "Empresas 10-50 empleadøs, revenues €500K-€5M",
     items: [
       "Tødø de Fase I",
       "Auditøría + Hardening cømpletø",
@@ -46,9 +48,10 @@ const packages = [
     name: "Enterprise",
     price: "€8,500",
     duration: "30 días",
+    badge: "CØMPLETØ",
     color: "accent-success",
     glowClass: "terminal-text",
-    ideal: "Høldings, > €5M revenue, multi-entidad",
+    ideal: "Høldings multi-nødø, empresas > €5M revenue, prøyectøs EU",
     items: [
       "Tødø de Fase I + II",
       "CFD Vørtex Core",
@@ -72,11 +75,11 @@ export default function PaquetesPage() {
               Paquetes
             </p>
             <h1 className="text-[2rem] md:text-[3rem] leading-[1.1] terminal-glow-warm">
-              Paquetes Cerradøs
+              Paquetes Persønalizadøs
             </h1>
             <p className="text-base text-text-secondary leading-relaxed">
-              Preciø fijø. Alcance definidø. Sin sørpresas. Elige el nivel
-              que se ajusta a tu etapa.
+              Cønfiguraciønes øptimizadas para diferentes estadiøs de
+              crecimientø. Preciø fijø. Alcance definidø. Sin sørpresas.
             </p>
           </div>
         </Container>
@@ -91,6 +94,13 @@ export default function PaquetesPage() {
                 className="neon-card rounded-xl p-6 md:p-8 bg-bg-tertiary space-y-6 flex flex-col"
               >
                 <div className="text-center space-y-3">
+                  {pkg.badge && (
+                    <span
+                      className={`inline-block text-[0.6rem] font-bold uppercase tracking-widest px-3 py-1 rounded border border-${pkg.color}/30 text-${pkg.color} bg-${pkg.color}/5`}
+                    >
+                      {pkg.badge}
+                    </span>
+                  )}
                   <p
                     className={`text-sm font-bold uppercase tracking-widest text-${pkg.color} ${pkg.glowClass}`}
                   >
@@ -135,7 +145,39 @@ export default function PaquetesPage() {
         </Container>
       </Section>
 
+      {/* Guarantees */}
       <Section className="retro-grid">
+        <Container>
+          <div className="space-y-8">
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+              Garantías
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="neon-card rounded-xl p-6 md:p-8 bg-bg-tertiary border-l-4 border-accent-success space-y-3">
+                <h3 className="text-base font-semibold text-accent-success">
+                  Re Reductiøn Guarantee
+                </h3>
+                <p className="text-sm text-text-secondary leading-relaxed">
+                  Si después de Fase II tu Re nø se reduce al menøs 30%,
+                  devølvemøs el 50% de la inversión.
+                </p>
+              </div>
+              <div className="neon-card rounded-xl p-6 md:p-8 bg-bg-tertiary border-l-4 border-accent-cold space-y-3">
+                <h3 className="text-base font-semibold text-accent-cold">
+                  Cømpliance Pass Guarantee
+                </h3>
+                <p className="text-sm text-text-secondary leading-relaxed">
+                  Si tu estructura nø pasa una auditøría externa dentrø de 12
+                  meses pør errør nuestrø, reembølsamøs 100% + cøbertura de
+                  multas (hasta €10K).
+                </p>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </Section>
+
+      <Section className="bg-bg-secondary retro-grid-warm">
         <Container>
           <div className="max-w-2xl mx-auto text-center space-y-6">
             <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">

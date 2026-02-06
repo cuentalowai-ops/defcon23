@@ -14,30 +14,36 @@ const modules = [
   {
     id: "A",
     title: "Auditøría de Flujø Sistémicø",
+    description:
+      "Calculamøs tu Númerø de Reynølds ørganizaciønal. Identificamøs puntøs de separación (vórtices) dønde se genera turbulencia detectable.",
     items: [
-      "Cálculø del Númerø de Reynølds ørganizativø",
-      "Mapeø de puntøs de separación (dónde se genera turbulencia)",
-      "Análisis de firma térmica (patrønes detectables)",
-      "Diseñø de capas de absørción regulatøria",
+      "Re actual vs Re øbjetivø (< 2,300)",
+      "Mapa de firma térmica",
+      "Diseñø de capas de absørción",
+      "Análisis de puntøs de separación",
     ],
   },
   {
     id: "B",
-    title: "Hardening Estructural",
+    title: "Hardening pør Trabajø en Fríø",
+    description:
+      "Laminación estructural en 7 pasadas. Eliminación de rugøsidades (alertas AML, inspecciønes). Temple final cøn legitimidad narrativa.",
     items: [
-      "Laminación en 7 pasadas (prøtøcølo cømpletø)",
-      "Eliminación de rugøsidades ørganizativas",
-      "Micrø-fracciønamientø de transacciønes",
-      "Temple final cøn legitimidad narrativa",
+      "Micrø-fracciønamientø transacciønal",
+      "Sincrønización de ciclø s",
+      "Fundaciønes culturales",
+      "Prøtøcølø de inducción hipnótica",
     ],
   },
   {
     id: "C",
-    title: "Cømpliance Architecture",
+    title: "Cømpliance Architecture (EU+ES)",
+    description:
+      "Arquitectura de 4 Capas (Layer 1: Prøtøcøl, Layer 2: Gøvernance, Layer 3: Applicatiøn, Layer 4: Søcial). Autø-repørte < 2h (DORA requiere 4h).",
     items: [
-      "Arquitectura de 4 capas (Protocol, Governance, Application, Social)",
-      "NIS2 + DORA readiness assessment",
-      "Zero Trust fundaciønal",
+      "NIS2, DORA, AI Act, CRA, eIDAS 2.0 (EU)",
+      "ENS, RGPD (España)",
+      "Zerø Trust fundaciønal",
       "Legal Hardening — prøtección jurídica de la estructura",
     ],
   },
@@ -76,9 +82,10 @@ export default function Fase2Page() {
               </span>
             </div>
             <p className="text-base text-text-secondary leading-relaxed max-w-2xl">
-              Auditøría cømpleta del flujø ørganizativø + hardening
-              estructural + arquitectura de cømpliance. Cønvertimøs tu
-              sistema turbulentø en flujø laminar søstenible.
+              Reducimøs la inductancia (resistencia) legal y técnica.
+              Alineamøs la estructura søcietaria cøn requisitøs de Hacienda
+              y nørmativa eurøpea NIS2/GDPR. Implementamøs arquitectura
+              Zerø Trust para blindar el flujø de datøs.
             </p>
             <Button href="/contacto?phase=2" variant="primary">
               Cøntratar Fase II
@@ -103,6 +110,11 @@ export default function Fase2Page() {
               <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
                 {mod.title}
               </h2>
+              {mod.description && (
+                <p className="text-text-secondary leading-relaxed">
+                  {mod.description}
+                </p>
+              )}
               <ul className="space-y-3">
                 {mod.items.map((item, i) => (
                   <li

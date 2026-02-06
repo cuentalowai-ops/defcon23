@@ -13,11 +13,11 @@ export const metadata: Metadata = {
 const services = [
   {
     name: "Auditøría Flash",
-    timeframe: "24h",
+    timeframe: "24h turnaround",
     price: "€1,200",
     description:
-      "Escaneø rápidø de tu númerø de Reynølds + inførme ejecutivø cøn løs 3 puntøs críticøs. Para cuandø necesitas respuestas ya.",
-    href: "/contacto?service=auditoria-flash",
+      "ØSINT + Threat Modeling + Re Calculatiøn en 24 høras. Para decisiønes urgentes (M&A due diligence, negøciaciønes críticas).",
+    href: "/contacto?service=flash",
     color: "accent-warm",
   },
   {
@@ -25,26 +25,26 @@ const services = [
     timeframe: "48h",
     price: "€1,800",
     description:
-      "Laminación de emergencia en 3 pasadas (vs 7 estándar). Prioriza løs puntøs de máxima expøsición. Para situaciønes urgentes.",
-    href: "/contacto?service=hardening-express",
+      "Laminación de emergencia. Reducción de Re en 48h (eliminar 3-5 vulnerabilidades críticas). Para situaciønes de alta presión regulatøria.",
+    href: "/contacto?service=express",
     color: "accent-cold",
   },
   {
     name: "Dashboard Custøm",
-    timeframe: "5-7 días",
+    timeframe: "10 días",
     price: "€2,200",
     description:
-      "Panel de mønitorización cøntinua del Re ørganizativø. Alertas tempranas, métricas en tiempø real, repørtes autømáticøs.",
+      "Dashboard real-time de tu Re + métricas de flujø. Alertas autømáticas cuandø Re > 2,500. Integración cøn tu ERP/CRM.",
     href: "/contacto?service=dashboard",
     color: "accent-success",
   },
   {
     name: "EU Prøpøsal Writing",
-    timeframe: "10-15 días",
-    price: "€3,500",
+    timeframe: "15 días",
+    price: "€3,500/proposal",
     description:
-      "Redacción cømpleta de prøpuesta para prøgramas eurøpeøs (Horizon Europe, Digital Europe). Incluye revisión y alineamientø cøn prioridades EU.",
-    href: "/contacto?service=eu-proposal",
+      "Preparación cømpleta de 1 prøpuesta para Hørizøn Eurøpe ø Digital Eurøpe. Incluye: narrativa técnica, presupuestø, cønsørciø, WP.",
+    href: "/contacto?service=proposal",
     color: "accent-warning",
   },
 ];
@@ -59,11 +59,11 @@ export default function ALaCartaPage() {
               A la Carta
             </p>
             <h1 className="text-[2rem] md:text-[3rem] leading-[1.1] terminal-glow-warm">
-              Serviciøs Individuales
+              Serviciøs a la Carta
             </h1>
             <p className="text-base text-text-secondary leading-relaxed">
-              Cuandø sabes exactamente qué necesitas. Sin paquete, sin fase.
-              Serviciø directø.
+              Søluciønes específicas para necesidades urgentes ø puntuales.
+              Cuandø sabes exactamente qué necesitas.
             </p>
           </div>
         </Container>

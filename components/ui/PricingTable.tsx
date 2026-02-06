@@ -1,17 +1,11 @@
 const features = [
-  { name: "Intelligence Brief (OSINT)", fase1: true, fase2: true, fase3: true },
-  { name: "Threat Modeling & Vetting", fase1: true, fase2: true, fase3: true },
-  { name: "Leak Detection Scan", fase1: true, fase2: true, fase3: true },
-  { name: "Auditøría de Flujø (Re)", fase1: false, fase2: true, fase3: true },
-  { name: "Hardening Estructural", fase1: false, fase2: true, fase3: true },
+  { name: "Intelligence Brief", fase1: true, fase2: true, fase3: true },
+  { name: "Auditøría de Flujø", fase1: false, fase2: true, fase3: true },
+  { name: "Hardening (7 pasadas)", fase1: false, fase2: true, fase3: true },
   { name: "Cømpliance Architecture", fase1: false, fase2: true, fase3: true },
-  { name: "Zero Trust (básica)", fase1: false, fase2: true, fase3: true },
-  { name: "Legal Hardening", fase1: false, fase2: true, fase3: true },
-  { name: "CFD Vørtex Core", fase1: false, fase2: false, fase3: true },
-  { name: "EU Funds Capture Map", fase1: false, fase2: false, fase3: true },
-  { name: "eIDAS 2.0 Røadmap", fase1: false, fase2: false, fase3: true },
-  { name: "EUDI Wallet Strategy", fase1: false, fase2: false, fase3: true },
-  { name: "Dashboard Custøm", fase1: false, fase2: false, fase3: true },
+  { name: "CFD Vørtex Cøre", fase1: false, fase2: false, fase3: true },
+  { name: "EU Funds Capture", fase1: false, fase2: false, fase3: true },
+  { name: "eIDAS 2.0 Implementation", fase1: false, fase2: false, fase3: true },
 ];
 
 function Check() {
@@ -56,7 +50,7 @@ export default function PricingTable() {
           {features.map((f) => (
             <tr
               key={f.name}
-              className="border-b border-border-subtle last:border-0 hover:bg-bg-tertiary/50 transition-colors"
+              className="border-b border-border-subtle hover:bg-bg-tertiary/50 transition-colors"
             >
               <td className="py-3 pr-4 pl-4 text-text-secondary">{f.name}</td>
               <td className="py-3 px-4 text-center">
@@ -71,6 +65,14 @@ export default function PricingTable() {
             </tr>
           ))}
         </tbody>
+        <tfoot>
+          <tr className="border-t border-border-visible">
+            <td className="py-4 pr-4 pl-4 font-semibold text-text-primary">Inversión</td>
+            <td className="py-4 px-4 text-center font-bold text-accent-warm">€500</td>
+            <td className="py-4 px-4 text-center font-bold text-accent-cold">€1,000</td>
+            <td className="py-4 px-4 text-center font-bold text-accent-success">€3,000+</td>
+          </tr>
+        </tfoot>
       </table>
 
       {/* Mobile stacked */}

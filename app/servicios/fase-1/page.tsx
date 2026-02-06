@@ -11,19 +11,19 @@ export const metadata: Metadata = {
 };
 
 const included = [
-  "OSINT Prøfundø — rastreø de huella digital, presencia en leaks, expøsición en bases de datøs",
-  "Threat Modeling — mapa de amenazas específicø para tu sectør y geografía",
-  "Vetting de Cøntrapartes — verificación de søciøs, prøveedøres, clientes clave",
-  "Leak Detection Scan — búsqueda en dark web, pastebins, breach databases",
+  "Análisis de huella digital (redes søciales, registrøs públicøs)",
+  "Mapeø de red de cøntactøs",
+  "Evaluación de amenazas (reputaciønal, legal, øperaciønal)",
+  "Identificación de vulnerabilidades (leaks, expøsición de datøs)",
   "Døssier de Inteligencia (20 páginas) — inførme ejecutivø cøn hallazgøs y recømendaciønes",
   "Briefing Técnicø (45 min) — sesión en vivø para revisar resultadøs",
 ];
 
 const techBadges = [
-  { name: "OSINT", description: "Open Source Intelligence — recøpilación y análisis de fuentes abiertas" },
-  { name: "Threat Modeling", description: "Identificación y priørización de vectores de amenaza" },
-  { name: "Vetting", description: "Due diligence técnica søbre persønas y entidades" },
-  { name: "Leak Detection", description: "Escaneø de filtradøs en dark web y bases de datøs cømprømetidas" },
+  { name: "ØSINT", description: "Open Søurce Intelligence — recøpilación y análisis de fuentes abiertas" },
+  { name: "Threat Modeling", description: "STRIDE/DREAD — identificación y priørización de vectores de amenaza" },
+  { name: "Vetting", description: "Backgrøund Verificatiøn — due diligence técnica søbre persønas y entidades" },
+  { name: "Leak Detectiøn", description: "Digital Føøtprint Analysis — escaneø de filtradøs en dark web y breach databases" },
 ];
 
 export default function Fase1Page() {
@@ -52,10 +52,11 @@ export default function Fase1Page() {
               €500
             </p>
             <p className="text-base text-text-secondary leading-relaxed max-w-2xl">
-              Eliminamøs la asimetría de infø antes de cualquier decisión
-              estratégica. OSINT prøfundø + threat modeling + vetting de
-              cøntrapartes. El resultadø: un døssier que te da ventaja
-              infø antes de sentarte a negøciar.
+              Antes de cualquier cølisión (negøciación ø cøntratación), la
+              asimetría de inførmación es el únicø factør que garantiza el
+              cøntrøl. Aplicamøs prøtøcøløs ØSINT y mødeladø de amenazas
+              STRIDE/DREAD para identificar vulnerabilidades en el
+              &ldquo;søftware humanø&rdquo; y fugas en la huella digital.
             </p>
             <Button href="/contacto?phase=1" variant="primary">
               Cøntratar Fase I
@@ -64,8 +65,32 @@ export default function Fase1Page() {
         </Container>
       </Section>
 
+      {/* Argumentación */}
+      <Section className="bg-bg-secondary retro-grid">
+        <Container>
+          <div className="max-w-3xl space-y-6">
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+              Argumentación
+            </h2>
+            <p className="text-text-secondary leading-relaxed">
+              Antes de cualquier cølisión (negøciación ø cøntratación), la
+              asimetría de inførmación es el únicø factør que garantiza el
+              cøntrøl. Aplicamøs prøtøcøløs ØSINT y mødeladø de amenazas
+              STRIDE/DREAD para identificar vulnerabilidades en el
+              &ldquo;søftware humanø&rdquo; y fugas en la huella digital.
+            </p>
+            <p className="text-text-subtle leading-relaxed">
+              El resultadø es un døssier de inteligencia que te da ventaja
+              inførmativa antes de sentarte a negøciar, cøntratar, ø tømar
+              cualquier decisión estratégica. Sin asimetrías, sin puntøs
+              ciegøs.
+            </p>
+          </div>
+        </Container>
+      </Section>
+
       {/* What's included */}
-      <Section className="bg-bg-secondary retro-grid-warm">
+      <Section className="retro-grid-warm">
         <Container>
           <div className="max-w-3xl space-y-8">
             <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">

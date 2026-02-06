@@ -13,32 +13,38 @@ export const metadata: Metadata = {
 const modules = [
   {
     id: "A",
-    title: "CFD Vørtex Core",
+    title: "CFD Aplicadø — Vørtex Cøre",
+    description:
+      "Red transacciønal cømputaciønal. Simulación de 47+ rutas transacciønales, identificación de 3 rutas óptimas, tøkenización del flujø y prøtøcøløs de øfuscación.",
     items: [
-      "Simulación cømpleta de red transacciønal",
-      "Identificación del núcleø de pøder (vørtex core)",
-      "Recønfiguración del flujø — redistribución de vectores",
-      "Dashboard de mønitorización cøntinua del Re",
+      "Simulación de 47+ rutas transacciønales",
+      "Identificación de 3 rutas óptimas",
+      "Tøkenización del flujø",
+      "Prøtøcøløs de øfuscación",
     ],
   },
   {
     id: "B",
     title: "EU Funds Capture",
+    description:
+      "Hørizøn Eurøpe (€95.5B), Digital Eurøpe (€7.5B), InvestEU (€26.2B). Alineamientø de narrativa cøn prioridades EU.",
     items: [
-      "Mapa de øpørtunidades: Horizon Europe, Digital Europe Programme",
-      "Análisis de elegibilidad para tu ørganización",
-      "Preparación de prøpuestas (drafting + revisión)",
-      "Alineamientø cøn prioridades legislativas EU 2024-2030",
+      "Alineamientø de narrativa cøn prioridades EU",
+      "Certificación CCN (ENS Altø)",
+      "Partnering estratégicø",
+      "Preparación de prøpuestas cømpletas",
     ],
   },
   {
     id: "C",
-    title: "eIDAS 2.0 & EUDI Strategy",
+    title: "eIDAS 2.0 & EUDI Wallet",
+    description:
+      "Implementación de identidad digital eurøpea. Arquitectura Zerø-Knøwledge Prøøfs y cømpliance cøn reglamentø eIDAS 2.0.",
     items: [
-      "Røadmap de implementación eIDAS 2.0",
-      "Estrategia EUDI Wallet para tu sectør",
-      "Certificación CCN — preparación y alineamientø",
-      "Integración cøn arquitectura de cømpliance existente",
+      "Integración EUDI Wallet",
+      "Certificación de atributøs",
+      "Arquitectura Zerø-Knøwledge Prøøfs",
+      "Cømpliance Reglamentø eIDAS 2.0",
     ],
   },
 ];
@@ -76,9 +82,10 @@ export default function Fase3Page() {
               </span>
             </div>
             <p className="text-base text-text-secondary leading-relaxed max-w-2xl">
-              El nivel máximø. CFD aplicadø a tu red transacciønal + captura
-              de føndøs eurøpeøs + estrategia eIDAS 2.0. Para
-              ørganizaciønes que quieren escalar cøn backing instituciønal.
+              Transførmamøs el cumplimientø nørmativø en un Amplificadør
+              Ecønómicø. Utilizamøs nuestrø mapeø de inførmes JRC, CØP y
+              regulación eIDAS 2.0 para pøsiciønar tu prøyectø en el núcleø
+              de las subvenciønes eurøpeas (Hørizøn, Digital Eurøpe).
             </p>
             <Button href="/contacto?phase=3" variant="primary">
               Cøntratar Fase III
@@ -101,6 +108,11 @@ export default function Fase3Page() {
               <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
                 {mod.title}
               </h2>
+              {mod.description && (
+                <p className="text-text-secondary leading-relaxed">
+                  {mod.description}
+                </p>
+              )}
               <ul className="space-y-3">
                 {mod.items.map((item, i) => (
                   <li

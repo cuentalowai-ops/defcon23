@@ -15,7 +15,7 @@ const phases = [
     price: "€500",
     duration: "5-7 días",
     description:
-      "OSINT + Threat Modeling + Vetting. Døssier de inteligencia antes de cualquier decisión.",
+      "ØSINT + Threat Modeling. Asimetría de inførmación antes de cualquier decisión.",
     badges: ["OSINT", "Threat Modeling", "Vetting"],
     href: "/servicios/fase-1",
     color: "accent-warm",
@@ -30,6 +30,7 @@ const phases = [
     duration: "10-15 días",
     description:
       "Auditøría + Hardening + Cømpliance Architecture. De turbulentø a laminar.",
+
     badges: ["Zero Trust", "NIS2", "Legal Hardening"],
     href: "/servicios/fase-2",
     color: "accent-cold",
@@ -43,7 +44,7 @@ const phases = [
     price: "Desde €3,000",
     duration: "20-30 días",
     description:
-      "CFD Vørtex + EU Funds Capture + eIDAS 2.0. Escala cøn backing instituciønal.",
+      "CFD Engineering + EU Funds Capture + eIDAS 2.0. Escala cøn backing instituciønal.",
     badges: ["eIDAS 2.0", "EU Subsidies", "EUDI Wallet"],
     href: "/servicios/fase-3",
     color: "accent-success",
@@ -147,11 +148,14 @@ export default function ServicesGrid() {
       <Container>
         <div className="space-y-12">
           <div className="text-center space-y-3">
+            <p className="text-xs font-bold uppercase tracking-widest text-accent-cold terminal-text mb-2">
+              ARSENAL
+            </p>
             <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
-              3 Fases. Un Prøtøcølo.
+              Prøtøcølø de 3 Fases
             </h2>
             <p className="text-text-secondary text-sm max-w-lg mx-auto">
-              Cada fase incluye la anteriør. Elige tu nivel de prøfundidad.
+              De la inteligencia táctica al escaladø estratégicø
             </p>
           </div>
 
