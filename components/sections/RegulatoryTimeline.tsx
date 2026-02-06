@@ -205,7 +205,7 @@ function TimelineNode({
       {/* Content */}
       <div>
         <p className="text-xs text-text-subtle">{event.date}</p>
-        <p className="text-base font-semibold text-text-primary terminal-text">
+        <p className="text-sm md:text-base font-semibold text-text-primary terminal-text break-words">
           {event.label}
         </p>
         <span
@@ -227,7 +227,7 @@ export default function RegulatoryTimeline() {
   return (
     <Section id="regulatory" className="retro-grid">
       <Container>
-        <div className="space-y-16">
+        <div className="space-y-10 md:space-y-16">
           {/* Headline */}
           <div className="max-w-3xl space-y-4">
             <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
@@ -246,7 +246,7 @@ export default function RegulatoryTimeline() {
             {/* Line */}
             <div className="absolute top-4 left-0 right-0 h-px bg-border-subtle hidden md:block" />
 
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
               {timelineEvents.map((event, i) => (
                 <TimelineNode key={event.label} event={event} index={i} />
               ))}

@@ -39,7 +39,7 @@ export default function UmbralCritico() {
   return (
     <Section id="umbral" className="bg-bg-secondary retro-grid">
       <Container>
-        <div className="max-w-4xl mx-auto space-y-10">
+          <div className="max-w-4xl mx-auto space-y-8 md:space-y-10">
           {/* Headline */}
           <div className="space-y-4">
             <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
@@ -123,7 +123,7 @@ export default function UmbralCritico() {
             {tableData.map((row, i) => (
               <div
                 key={i}
-                className="neon-card rounded-xl p-5 bg-bg-tertiary space-y-3"
+                className="neon-card rounded-xl p-4 bg-bg-tertiary space-y-3"
               >
                 <div>
                   <p className="text-accent-cold font-semibold terminal-text text-sm">
@@ -134,7 +134,7 @@ export default function UmbralCritico() {
                   )}
                 </div>
                 <div>
-                  <p className="text-[0.65rem] uppercase tracking-wider text-text-subtle mb-1">
+                  <p className="text-[0.7rem] uppercase tracking-wider text-text-subtle mb-1">
                     Aplicación
                   </p>
                   <p className="text-sm text-text-secondary leading-relaxed">
@@ -142,7 +142,7 @@ export default function UmbralCritico() {
                   </p>
                 </div>
                 <div>
-                  <p className="text-[0.65rem] uppercase tracking-wider text-text-subtle mb-1">
+                  <p className="text-[0.7rem] uppercase tracking-wider text-text-subtle mb-1">
                     Indicadør
                   </p>
                   <p className="text-sm text-text-subtle">{row.indicador}</p>

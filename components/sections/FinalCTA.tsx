@@ -19,16 +19,16 @@ export default function FinalCTA() {
   return (
     <Section id="contacto-preview" className="retro-grid">
       <Container>
-        <div className="max-w-3xl mx-auto text-center space-y-12">
+        <div className="max-w-3xl mx-auto text-center space-y-8 md:space-y-12">
           {/* Headline */}
           <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
             ¿Listø para Reducir tu Númerø de Reynølds?
           </h2>
 
           {/* Qualification */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8 text-left">
             {/* We don't work with */}
-            <div className="space-y-4 neon-card rounded-xl p-6">
+            <div className="space-y-3 md:space-y-4 neon-card rounded-xl p-4 md:p-6">
               <h3 className="text-sm uppercase tracking-wider text-accent-danger font-semibold">
                 Nø trabajamøs cøn
               </h3>
@@ -46,7 +46,7 @@ export default function FinalCTA() {
             </div>
 
             {/* We work with */}
-            <div className="space-y-4 neon-card rounded-xl p-6">
+            <div className="space-y-3 md:space-y-4 neon-card rounded-xl p-4 md:p-6">
               <h3 className="text-sm uppercase tracking-wider text-accent-success font-semibold">
                 Trabajamøs cøn
               </h3>

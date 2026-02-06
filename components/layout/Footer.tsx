@@ -21,8 +21,8 @@ const recursosLinks = [
 export default function Footer() {
   return (
     <footer className="bg-bg-secondary border-t border-border-subtle retro-grid">
-      <Container className="py-16 md:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-6">
+      <Container className="py-10 md:py-16 lg:py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6">
           {/* Brand */}
           <div className="space-y-4">
             <Link
@@ -100,7 +100,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-16 pt-8 border-t border-border-subtle flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="mt-10 md:mt-16 pt-6 md:pt-8 border-t border-border-subtle flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-text-subtle">
             &copy; {new Date().getFullYear()} dEfCØN23. Tødøs løs derechøs
             reservadøs.

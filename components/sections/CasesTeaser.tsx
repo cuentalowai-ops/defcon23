@@ -166,7 +166,7 @@ function CaseCard({ cs, index }: { cs: CaseStudy; index: number }) {
   return (
     <div
       ref={cardRef}
-      className="neon-card rounded-xl p-8 bg-bg-primary space-y-6 flex flex-col opacity-0 translate-y-8 transition-all duration-700"
+      className="neon-card rounded-xl p-5 md:p-8 bg-bg-primary space-y-5 md:space-y-6 flex flex-col opacity-0 translate-y-8 transition-all duration-700"
       style={{ transitionDelay: `${index * 200}ms` }}
     >
       {/* Header */}

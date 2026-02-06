@@ -35,7 +35,7 @@ export default function Hero() {
   return (
     <section className="min-h-screen flex items-center pt-20 md:pt-0 retro-grid">
       <Container>
-        <div className="max-w-4xl space-y-8">
+        <div className="max-w-4xl space-y-5 md:space-y-8">
           {/* Boot sequence */}
           <div className="space-y-1 mb-8">
             {bootLines.slice(0, visibleLines).map((line, i) => (
@@ -56,21 +56,21 @@ export default function Hero() {
 
           {/* Main content - appears after boot */}
           <div
-            className={`space-y-8 transition-all duration-700 ${
+            className={`space-y-5 md:space-y-8 transition-all duration-700 ${
               showContent
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-4"
             }`}
           >
             {/* Tagline */}
-            <p className="text-sm md:text-base text-accent-cold tracking-wider uppercase terminal-text">
+            <p className="text-xs md:text-base text-accent-cold tracking-wide md:tracking-wider uppercase terminal-text break-words">
               Ingeniería de Sistemas Cømplejos | Flujø Ecønómicø | Cømpliance
               Nativa
             </p>
 
             {/* H1 with glitch effect */}
             <h1
-              className="text-[2.5rem] md:text-[4rem] leading-[1.1] tracking-tight glitch-text terminal-glow-warm animate-[pulse-warm_2s_ease-in-out_infinite]"
+              className="text-[2rem] sm:text-[2.5rem] md:text-[4rem] leading-[1.1] tracking-tight glitch-text terminal-glow-warm animate-[pulse-warm_2s_ease-in-out_infinite]"
               data-text="dEfCØN23"
             >
               dEfCØN23
@@ -90,8 +90,8 @@ export default function Hero() {
             </p>
 
             {/* Mantra */}
-            <blockquote className="border-l-4 border-accent-warm pl-6 py-2">
-              <p className="italic text-text-subtle text-base md:text-lg leading-relaxed terminal-text-warm">
+            <blockquote className="border-l-4 border-accent-warm pl-4 md:pl-6 py-2">
+              <p className="italic text-text-subtle text-sm md:text-lg leading-relaxed terminal-text-warm">
                 &ldquo;La carne se pudre. El HUESO permanece. Diseñamøs
                 sistemas cuya arquitectura está en la capa de prøtøcølo.&rdquo;
               </p>

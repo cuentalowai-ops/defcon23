@@ -48,7 +48,7 @@ export default function Fase1Page() {
                 █
               </span>
             </p>
-            <p className="text-3xl font-bold text-accent-warm terminal-text-warm">
+            <p className="text-2xl md:text-3xl font-bold text-accent-warm terminal-text-warm">
               €500
             </p>
             <p className="text-base text-text-secondary leading-relaxed max-w-2xl">

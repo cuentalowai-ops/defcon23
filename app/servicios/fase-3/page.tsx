@@ -74,7 +74,7 @@ export default function Fase3Page() {
               </span>
             </p>
             <div className="flex items-baseline gap-3">
-              <span className="text-3xl font-bold text-accent-success terminal-text">
+              <span className="text-2xl md:text-3xl font-bold text-accent-success terminal-text">
                 Desde €3,000
               </span>
               <span className="text-sm text-text-subtle">

@@ -393,6 +393,64 @@ h1, h2, h3, h4, h5, h6, p, span, a, li, td, th, label, input, textarea, select, 
   background: #4a4a4a;
 }
 
+/* ===== MOBILE PERFORMANCE ===== */
+
+/* Disable heavy animations on mobile & reduced-motion */
+@media (max-width: 767px) {
+  .scanline-overlay::before {
+    animation: none !important;
+  }
+  .scanline-overlay::after {
+    display: none !important;
+  }
+  .crt-flicker {
+    animation: none !important;
+  }
+  .neon-card:hover {
+    animation: none !important;
+  }
+  .glow-button::before {
+    display: none !important;
+  }
+  .terminal-glow {
+    text-shadow: 0 0 5px rgba(74, 158, 255, 0.3) !important;
+  }
+  .terminal-glow-warm {
+    text-shadow: 0 0 5px rgba(255, 140, 66, 0.3) !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .scanline-overlay::before,
+  .scanline-overlay::after {
+    display: none !important;
+  }
+}
+
+/* GPU hints for animated elements */
+.scanline-overlay,
+.scanline-overlay::before {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+.glow-button::before {
+  will-change: opacity;
+}
+
+.neon-card {
+  will-change: border-color;
+}
+
+.boot-line {
+  will-change: opacity, transform;
+}
+
 /* ===== SELECTION ===== */
 
 ::selection {

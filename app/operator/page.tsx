@@ -160,7 +160,7 @@ export default function OperatorPage() {
             <p className="text-sm text-accent-cold uppercase tracking-widest terminal-text">
               Øperatør
             </p>
-            <h1 className="text-[2.5rem] md:text-[4.5rem] leading-[1.05] terminal-glow">
+            <h1 className="text-[2rem] sm:text-[2.5rem] md:text-[4.5rem] leading-[1.05] terminal-glow">
               Raúl Balaguer
             </h1>
             <h2 className="text-[1.1rem] md:text-[1.5rem] leading-[1.3] text-text-secondary">
@@ -209,11 +209,11 @@ export default function OperatorPage() {
                 <p className="text-text-secondary text-sm">
                   <strong>Zurderø / Døminancia Hemisferió Derechø</strong> para recønøcimientø de patrønes nø lineales.
                 </p>
-                <div className="bg-bg-primary rounded-lg p-4 text-xs text-text-subtle space-y-1 overflow-x-auto">
-                  <p>MØDELØ CØGNITIVØ:       Pensadør Divergente (Døminancia Hemisferió Derechø)</p>
-                  <p>ESTILØ DE PRØCESAMIENTØ: Hølísticø &gt; Analíticø</p>
-                  <p>DETECCIÓN DE PATRØNES:  Cønexiønes nø øbvias (Señal en el Ruidø)</p>
-                  <p>PENSAMIENTØ LATERAL:    Capacidad nativa para søluciønes &ldquo;Saltø Largø&rdquo;</p>
+                <div className="bg-bg-primary rounded-lg p-3 md:p-4 text-xs text-text-subtle space-y-1 break-words overflow-hidden">
+                  <p><span className="text-accent-cold">MØDELØ CØGNITIVØ:</span> Pensadør Divergente (Døminancia Hemisferió Derechø)</p>
+                  <p><span className="text-accent-cold">ESTILØ DE PRØCESAMIENTØ:</span> Hølísticø &gt; Analíticø</p>
+                  <p><span className="text-accent-cold">DETECCIÓN DE PATRØNES:</span> Cønexiønes nø øbvias (Señal en el Ruidø)</p>
+                  <p><span className="text-accent-cold">PENSAMIENTØ LATERAL:</span> Capacidad nativa para søluciønes &ldquo;Saltø Largø&rdquo;</p>
                 </div>
               </div>
 
@@ -225,11 +225,11 @@ export default function OperatorPage() {
                 <p className="text-text-secondary text-sm">
                   Un biømarcadør cørrelaciønadø cøn <strong>alta empatía cøgnitiva</strong> e inteligencia verbal.
                 </p>
-                <div className="bg-bg-primary rounded-lg p-4 text-xs text-text-subtle space-y-1 overflow-x-auto">
-                  <p>BIØMARCADØR:            Dedø Índice &gt; Dedø Anular (2D:4D &gt; 1.0)</p>
-                  <p>CØRRELACIÓN:            Alta expøsición prenatal a estrógenøs</p>
-                  <p>RASGØS CØGNITIVØS:      IQ verbal meјøradø, empatía, inteligencia emøciønal</p>
-                  <p>VENTAJA TÁCTICA:        Detección de Ingeniería Søcial (Humanø cømø Sensør)</p>
+                <div className="bg-bg-primary rounded-lg p-3 md:p-4 text-xs text-text-subtle space-y-1 break-words overflow-hidden">
+                  <p><span className="text-accent-cold">BIØMARCADØR:</span> Dedø Índice &gt; Dedø Anular (2D:4D &gt; 1.0)</p>
+                  <p><span className="text-accent-cold">CØRRELACIÓN:</span> Alta expøsición prenatal a estrógenøs</p>
+                  <p><span className="text-accent-cold">RASGØS CØGNITIVØS:</span> IQ verbal meјøradø, empatía, inteligencia emøciønal</p>
+                  <p><span className="text-accent-cold">VENTAJA TÁCTICA:</span> Detección de Ingeniería Søcial (Humanø cømø Sensør)</p>
                 </div>
               </div>
 
@@ -242,19 +242,18 @@ export default function OperatorPage() {
                   Validada pør neurøimagen para pøseer <strong>grøsør cørtical meјøradø</strong> en áreas
                   de regulación emøciønal.
                 </p>
-                <div className="bg-bg-primary rounded-lg p-4 text-xs text-text-subtle space-y-1 overflow-x-auto">
-                  <p>PUBLICACIÓN: &ldquo;State and Training Effects øf Mindfulness Meditatiøn øn Brain Netwørks...&rdquo;</p>
-                  <p>             (Neural Plasticity, 2016)</p>
+                <div className="bg-bg-primary rounded-lg p-3 md:p-4 text-xs text-text-subtle space-y-1 break-words overflow-hidden">
+                  <p><span className="text-accent-cold">PUBLICACIÓN:</span> &ldquo;State and Training Effects øf Mindfulness Meditatiøn øn Brain Netwørks...&rdquo; (Neural Plasticity, 2016)</p>
                   <p>
-                    LINK:&nbsp;
-                    <a href="https://pubmed.ncbi.nlm.nih.gov/26998365" target="_blank" rel="noopener noreferrer" className="text-accent-cold hover:underline">
+                    <span className="text-accent-cold">LINK:</span>&nbsp;
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/26998365" target="_blank" rel="noopener noreferrer" className="text-accent-cold hover:underline break-all">
                       pubmed.ncbi.nlm.nih.gøv/26998365
                     </a>
                   </p>
-                  <p className="pt-2">EVIDENCIA FÍSICA: Aumentø de densidad de materia gris en:</p>
-                  <p>  - Córtex Cinguladø Anteriør (resølución de cønflictøs)</p>
-                  <p>  - Ínsula (interøcepción, cønciencia emøciønal)</p>
-                  <p>  - Córtex Prefrøntal (función eјecutiva, regulación)</p>
+                  <p className="pt-2"><span className="text-accent-cold">EVIDENCIA FÍSICA:</span> Aumentø de densidad de materia gris en:</p>
+                  <p className="pl-2">- Córtex Cinguladø Anteriør (resølución de cønflictøs)</p>
+                  <p className="pl-2">- Ínsula (interøcepción, cønciencia emøciønal)</p>
+                  <p className="pl-2">- Córtex Prefrøntal (función eјecutiva, regulación)</p>
                 </div>
               </div>
             </div>
@@ -376,7 +375,7 @@ export default function OperatorPage() {
               <h3 className="text-lg font-semibold text-accent-cold terminal-text">
                 Hardware Técnicø (Ciber y Cømpliance)
               </h3>
-              <div className="bg-bg-primary rounded-xl p-6 text-sm space-y-4 overflow-x-auto">
+              <div className="bg-bg-primary rounded-xl p-4 md:p-6 text-sm space-y-4 break-words overflow-hidden">
                 <p className="text-accent-warm font-semibold">CERTIFICACIØNES:</p>
                 {[
                   { cert: "Lead Auditør ISØ/IEC 27001:2022", desc: "Gøbiernø e integridad de sistemas." },
@@ -441,10 +440,10 @@ export default function OperatorPage() {
               <h3 className="text-lg font-semibold text-accent-cold terminal-text">
                 Lenguajes (Prøtøcøløs)
               </h3>
-              <div className="bg-bg-primary rounded-xl p-6 text-sm text-text-subtle space-y-1 overflow-x-auto">
-                <p>ESPAÑØL:   Nativø (L1)</p>
-                <p>ALEMÁN:    C1 (Prøfesiønal / Øperaciønal) — 8 añøs de inmersión</p>
-                <p>INGLÉS:    C2 (Técnicø / Académicø)</p>
+              <div className="bg-bg-primary rounded-xl p-4 md:p-6 text-sm text-text-subtle space-y-2 break-words overflow-hidden">
+                <p><span className="text-accent-cold">ESPAÑØL:</span> Nativø (L1)</p>
+                <p><span className="text-accent-cold">ALEMÁN:</span> C1 (Prøfesiønal / Øperaciønal) — 8 añøs de inmersión</p>
+                <p><span className="text-accent-cold">INGLÉS:</span> C2 (Técnicø / Académicø)</p>
               </div>
             </div>
           </div>
@@ -589,17 +588,17 @@ export default function OperatorPage() {
             <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
               Biømarcadøres Øperaciønales (Prøtøcølø Persønal)
             </h2>
-            <div className="bg-bg-primary rounded-xl p-6 text-sm text-text-subtle space-y-1 overflow-x-auto">
-              <p>SØUEÑØ:       7–8h (23:00–07:00 CET) | Nø negøciable</p>
-              <p>NUTRICIÓN:    Ketøgénica cíclica (5 días øn, 2 días øff)</p>
-              <p>EJERCICIØ:    4x/semana (BJJ, calistenia, CFD mental)</p>
-              <p>ESTIMULANTES: Cafeína (200mg, 08:00–12:00) + L-Theanine (200mg)</p>
-              <p>NØØTRÓPICØS: Bacøpa Mønnieri, Liøn&apos;s Mane (memøria largø plazø)</p>
-              <p className="pt-4 text-accent-cold">MØDØ DE TRABAJØ PREFERIDØ:</p>
-              <p>Deep Wørk:             4–6h cøntinuas, 2–3 días/semana</p>
-              <p>Latencia respuesta:    Baja (&lt;2h) emergencias | Alta (24–72h) estrategia</p>
-              <p>Bandwidth:             3–5 prøyectøs simultáneøs (capacidad máxima)</p>
-              <p>Thrøughput:            1 auditøría/semana | 3–4 briefs/mes</p>
+            <div className="bg-bg-primary rounded-xl p-4 md:p-6 text-sm text-text-subtle space-y-2 break-words overflow-hidden">
+              <p><span className="text-accent-cold">SØUEÑØ:</span> 7–8h (23:00–07:00 CET) | Nø negøciable</p>
+              <p><span className="text-accent-cold">NUTRICIÓN:</span> Ketøgénica cíclica (5 días øn, 2 días øff)</p>
+              <p><span className="text-accent-cold">EJERCICIØ:</span> 4x/semana (BJJ, calistenia, CFD mental)</p>
+              <p><span className="text-accent-cold">ESTIMULANTES:</span> Cafeína (200mg, 08:00–12:00) + L-Theanine (200mg)</p>
+              <p><span className="text-accent-cold">NØØTRÓPICØS:</span> Bacøpa Mønnieri, Liøn&apos;s Mane (memøria largø plazø)</p>
+              <p className="pt-3 text-accent-warm font-semibold">MØDØ DE TRABAJØ PREFERIDØ:</p>
+              <p><span className="text-accent-cold">Deep Wørk:</span> 4–6h cøntinuas, 2–3 días/semana</p>
+              <p><span className="text-accent-cold">Latencia respuesta:</span> Baja (&lt;2h) emergencias | Alta (24–72h) estrategia</p>
+              <p><span className="text-accent-cold">Bandwidth:</span> 3–5 prøyectøs simultáneøs (capacidad máxima)</p>
+              <p><span className="text-accent-cold">Thrøughput:</span> 1 auditøría/semana | 3–4 briefs/mes</p>
             </div>
           </div>
         </Container>

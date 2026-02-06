@@ -106,7 +106,7 @@ export default function PaquetesPage() {
                   >
                     {pkg.name}
                   </p>
-                  <p className={`text-4xl font-bold text-${pkg.color}`}>
+                  <p className={`text-3xl md:text-4xl font-bold text-${pkg.color}`}>
                     {pkg.price}
                   </p>
                   <p className="text-xs text-text-subtle">{pkg.duration}</p>

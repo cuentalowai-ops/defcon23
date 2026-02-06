@@ -121,7 +121,7 @@ function PhaseCard({
         {phase.badges.map((b) => (
           <span
             key={b}
-            className="text-[0.65rem] px-2 py-1 rounded bg-bg-primary border border-border-subtle text-text-subtle"
+            className="text-[0.7rem] px-2 py-1 rounded bg-bg-primary border border-border-subtle text-text-subtle"
           >
             {b}
           </span>

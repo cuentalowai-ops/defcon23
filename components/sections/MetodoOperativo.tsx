@@ -85,12 +85,12 @@ function StepBlock({
   return (
     <div
       ref={ref}
-      className="flex gap-6 md:gap-10 opacity-0 -translate-x-6 transition-all duration-700"
+      className="flex gap-4 md:gap-10 opacity-0 -translate-x-6 transition-all duration-700"
       style={{ transitionDelay: `${index * 200}ms` }}
     >
       {/* Step number */}
       <div className="shrink-0">
-        <span className="text-4xl md:text-5xl text-accent-warm/30 font-bold terminal-text-warm">
+        <span className="text-3xl md:text-5xl text-accent-warm/30 font-bold terminal-text-warm">
           {step.number}
         </span>
       </div>
@@ -130,12 +130,12 @@ export default function MetodoOperativo() {
   return (
     <Section id="metodo" className="retro-grid-warm">
       <Container>
-        <div className="max-w-4xl mx-auto space-y-16">
+        <div className="max-w-4xl mx-auto space-y-10 md:space-y-16">
           <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
             Nuestrø Métødø Øperativø
           </h2>
 
-          <div className="space-y-16">
+          <div className="space-y-10 md:space-y-16">
             {steps.map((step, i) => (
               <StepBlock key={step.number} step={step} index={i} />
             ))}

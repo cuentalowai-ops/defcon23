@@ -123,9 +123,9 @@ export default function ConsultaPage() {
 
             <div className="space-y-5">
               {/* 00-03 */}
-              <div className="neon-card rounded-xl p-6 bg-bg-tertiary border-l-4 border-accent-cold">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-14 h-14 rounded-full bg-accent-cold/10 border border-accent-cold/30 flex items-center justify-center text-sm font-bold text-accent-cold">
+              <div className="neon-card rounded-xl p-4 md:p-6 bg-bg-tertiary border-l-4 border-accent-cold">
+                <div className="flex items-start gap-3 md:gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-full bg-accent-cold/10 border border-accent-cold/30 flex items-center justify-center text-xs md:text-sm font-bold text-accent-cold">
                     00–03
                   </div>
                   <div>
@@ -141,9 +141,9 @@ export default function ConsultaPage() {
               </div>
 
               {/* 04-10 */}
-              <div className="neon-card rounded-xl p-6 bg-bg-tertiary border-l-4 border-accent-warm">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-14 h-14 rounded-full bg-accent-warm/10 border border-accent-warm/30 flex items-center justify-center text-sm font-bold text-accent-warm">
+              <div className="neon-card rounded-xl p-4 md:p-6 bg-bg-tertiary border-l-4 border-accent-warm">
+                <div className="flex items-start gap-3 md:gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-full bg-accent-warm/10 border border-accent-warm/30 flex items-center justify-center text-xs md:text-sm font-bold text-accent-warm">
                     04–10
                   </div>
                   <div>
@@ -173,9 +173,9 @@ export default function ConsultaPage() {
               </div>
 
               {/* 11-15 */}
-              <div className="neon-card rounded-xl p-6 bg-bg-tertiary border-l-4 border-accent-success">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-14 h-14 rounded-full bg-accent-success/10 border border-accent-success/30 flex items-center justify-center text-sm font-bold text-accent-success">
+              <div className="neon-card rounded-xl p-4 md:p-6 bg-bg-tertiary border-l-4 border-accent-success">
+                <div className="flex items-start gap-3 md:gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-full bg-accent-success/10 border border-accent-success/30 flex items-center justify-center text-xs md:text-sm font-bold text-accent-success">
                     11–15
                   </div>
                   <div>
@@ -209,7 +209,7 @@ export default function ConsultaPage() {
         <Container>
           <div className="max-w-4xl">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="neon-card rounded-xl p-6 bg-bg-tertiary border-l-4 border-accent-success space-y-4">
+              <div className="neon-card rounded-xl p-4 md:p-6 bg-bg-tertiary border-l-4 border-accent-success space-y-3 md:space-y-4">
                 <h3 className="text-base font-semibold text-accent-success">
                   &#10003; ACEPTØ SI
                 </h3>
@@ -237,7 +237,7 @@ export default function ConsultaPage() {
                 </ul>
               </div>
 
-              <div className="neon-card rounded-xl p-6 bg-bg-tertiary border-l-4 border-accent-danger space-y-4">
+              <div className="neon-card rounded-xl p-4 md:p-6 bg-bg-tertiary border-l-4 border-accent-danger space-y-3 md:space-y-4">
                 <h3 className="text-base font-semibold text-accent-danger">
                   &#10005; RECHAZØ SI
                 </h3>
@@ -332,10 +332,10 @@ export default function ConsultaPage() {
               </p>
             </div>
 
-            <div className="neon-card rounded-xl p-4 md:p-6 bg-bg-secondary overflow-hidden">
+            <div className="neon-card rounded-xl p-2 md:p-6 bg-bg-secondary overflow-hidden">
               <Cal
                 calLink="defcon23"
-                style={{ width: "100%", height: "100%", overflow: "scroll" }}
+                style={{ width: "100%", height: "100%", overflow: "auto" }}
                 config={{
                   layout: "month_view",
                   theme: "dark",
@@ -355,7 +355,7 @@ export default function ConsultaPage() {
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="neon-card rounded-xl p-6 bg-bg-tertiary border-2 border-accent-success/30 space-y-4">
+              <div className="neon-card rounded-xl p-4 md:p-6 bg-bg-tertiary border-2 border-accent-success/30 space-y-3 md:space-y-4">
                 <h3 className="text-base font-semibold text-accent-success">
                   Øpción A (Aceptø)
                 </h3>
@@ -378,7 +378,7 @@ export default function ConsultaPage() {
                 </ul>
               </div>
 
-              <div className="neon-card rounded-xl p-6 bg-bg-tertiary border-2 border-accent-danger/30 space-y-4">
+              <div className="neon-card rounded-xl p-4 md:p-6 bg-bg-tertiary border-2 border-accent-danger/30 space-y-3 md:space-y-4">
                 <h3 className="text-base font-semibold text-accent-danger">
                   Øpción B (Rechazø)
                 </h3>

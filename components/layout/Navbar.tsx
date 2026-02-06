@@ -64,7 +64,7 @@ export default function Navbar() {
               href={link.href}
               className={
                 "cta" in link && link.cta
-                  ? "text-xs px-4 py-2 rounded-lg bg-accent-warm text-bg-primary font-semibold hover:scale-105 active:scale-95 transition-all"
+                  ? "text-sm px-4 py-2.5 rounded-lg bg-accent-warm text-bg-primary font-semibold hover:scale-105 active:scale-95 transition-all"
                   : "text-sm text-text-secondary hover:text-accent-cold transition-colors terminal-text"
               }
             >
@@ -76,7 +76,7 @@ export default function Navbar() {
         {/* Mobile Hamburger */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="lg:hidden text-text-primary p-2"
+          className="lg:hidden text-text-primary p-3 -mr-3 min-w-[44px] min-h-[44px] flex items-center justify-center"
           aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
           aria-expanded={isOpen}
         >
@@ -93,7 +93,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="text-base text-text-secondary hover:text-accent-cold transition-colors py-2"
+                className="text-base text-text-secondary hover:text-accent-cold transition-colors py-3 min-h-[44px] flex items-center"
               >
                 {link.label}
               </Link>
