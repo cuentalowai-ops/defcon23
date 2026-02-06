@@ -43,7 +43,7 @@ export default function ConfirmacionPage() {
                     variant="secondary"
                     className="w-full"
                   >
-                    Explø rar arsenal de serviciøs &rarr;
+                    Explørar arsenal de serviciøs &rarr;
                   </Button>
                   <Button
                     href="/operator"

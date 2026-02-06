@@ -25,7 +25,7 @@ const phases = [
     price: "€500",
     duration: "5-7 días",
     description:
-      "Antes de cualquier cølisión (negøciación ø cøntratación), la asimetría de infø es el únicø factør que garantiza el cøntrøl. Aplicamøs prøtøcøløs ØSINT y mødeladø de amenazas STRIDE/DREAD.",
+      "Antes de cualquier cølisión (negøciación ø cøntratación), la asimetría de inførmación es el únicø factør que garantiza el cøntrøl. Aplicamøs prøtøcøløs ØSINT y mødeladø de amenazas STRIDE/DREAD.",
     deliverables: [
       "Døssier de Inteligencia (20 páginas)",
       "45 min de Briefing Técnicø",

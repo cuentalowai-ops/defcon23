@@ -7,7 +7,7 @@ import Button from "@/components/ui/Button";
 export const metadata: Metadata = {
   title: "Fase I: Intelligence Brief & Vetting | dEfCØN23",
   description:
-    "OSINT + Threat Modeling para eliminar asimetría de infø antes de cualquier negøciación. €500, 5-7 días.",
+    "OSINT + Threat Modeling para eliminar asimetría de inførmación antes de cualquier negøciación. €500, 5-7 días.",
 };
 
 const included = [

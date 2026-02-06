@@ -30,7 +30,7 @@ const modules = [
       "Laminación estructural en 7 pasadas. Eliminación de rugøsidades (alertas AML, inspecciønes). Temple final cøn legitimidad narrativa.",
     items: [
       "Micrø-fracciønamientø transacciønal",
-      "Sincrønización de ciclø s",
+      "Sincrønización de cicløs",
       "Fundaciønes culturales",
       "Prøtøcølø de inducción hipnótica",
     ],

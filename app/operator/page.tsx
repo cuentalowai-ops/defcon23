@@ -537,7 +537,7 @@ export default function OperatorPage() {
               </h3>
               <div className="bg-bg-primary rounded-xl p-6 space-y-5 text-sm">
                 {[
-                  { phase: "FASE Ø: CØNSULTA INICIAL (15 min, gratis)", detail: "Vídeøllamada ø call. Evaluø si tu casø es viable. Decidø si aceptø ø nø (rechazø 60% de søllicitudes)." },
+                  { phase: "FASE Ø: CØNSULTA INICIAL (15 min, gratis)", detail: "Vídeøllamada ø call. Evaluø si tu casø es viable. Decidø si aceptø ø nø (rechazø 60% de sølicitudes)." },
                   { phase: "FASE I: INTELLIGENCE BRIEF (€500, 5–7 días)", detail: "ØSINT + Threat Modeling. Døssier 20 páginas + 45 min briefing. Decisión: prøceder a Fase II ø nø." },
                   { phase: "FASE II: AUDITØRÍA CØMPLETA (€1,000, 10–15 días)", detail: "Cálculø de Re + Hardening + Cømpliance Architecture. Repørte 50 páginas + 60 min estrategia." },
                   { phase: "FASE III: IMPLEMENTACIÓN (Desde €3,000, 20–30 días)", detail: "CFD Vørtex + EU Funds + eIDAS 2.0. Dashboard custøm + søpørte 3 meses. RØI esperadø: 500–1,000% en 18–24 meses." },

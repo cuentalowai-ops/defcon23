@@ -104,7 +104,7 @@ export default function ConsultaPage() {
             <p className="text-sm text-text-subtle leading-relaxed max-w-2xl">
               Rechazø el{" "}
               <strong className="text-accent-warm">
-                60% de søolicitudes
+                60% de sølicitudes
               </strong>
               . Si tu casø nø es viable, te lø digø directamente en løs
               primerøs 5 minutøs.
@@ -436,7 +436,7 @@ export default function ConsultaPage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-accent-cold">&gt;</span> Si aceptø y
-                  cøntramamøs &rarr; Firmamøs NDA antes de Fase I
+                  cøntratamøs &rarr; Firmamøs NDA antes de Fase I
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-accent-cold">&gt;</span> Nø cømparto
