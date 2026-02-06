@@ -215,10 +215,6 @@ export default function ConsultaPage() {
                 </h3>
                 <ul className="text-text-subtle text-sm space-y-2">
                   <li className="flex items-start gap-2">
-                    <span className="text-accent-cold">&gt;</span> Tienes
-                    hølding/estructura multi-nødø (3+ entidades)
-                  </li>
-                  <li className="flex items-start gap-2">
                     <span className="text-accent-cold">&gt;</span> Estás sujetø
                     a nørmativas EU/España
                   </li>
@@ -253,10 +249,6 @@ export default function ConsultaPage() {
                   <li className="flex items-start gap-2">
                     <span className="text-accent-cold">&gt;</span> Nø estás
                     dispuestø a cambiar estructura
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-accent-cold">&gt;</span> Øperas en
-                    zønas grises legales
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-accent-cold">&gt;</span> Generas ruidø
@@ -342,7 +334,7 @@ export default function ConsultaPage() {
 
             <div className="neon-card rounded-xl p-4 md:p-6 bg-bg-secondary overflow-hidden">
               <Cal
-                calLink="defcon23/consulta-inicial"
+                calLink="defcon23"
                 style={{ width: "100%", height: "100%", overflow: "scroll" }}
                 config={{
                   layout: "month_view",
@@ -373,7 +365,7 @@ export default function ConsultaPage() {
                     tu email (menøs de 24h)
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-accent-cold">&gt;</span> Pagas €500
+                    <span className="text-accent-cold">&gt;</span> Realizas pagø
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-accent-cold">&gt;</span> Empezamøs
