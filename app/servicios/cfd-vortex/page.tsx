@@ -6,31 +6,31 @@ import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
 
 export const metadata: Metadata = {
-  title: "CFD Aplicado — Vortex Core | DEFCON 23",
+  title: "CFD Aplicadø — Vortex Core | dEfCØN23",
   description:
-    "Simulación de red transaccional, identificación del núcleo de poder, reconfiguración del flujo y monitorización continua.",
+    "Simulación de red transacciønal, identificación del núcleø de pøder, recønfiguración del flujø y mønitorización cøntinua.",
 };
 
 const capabilities = [
   {
-    title: "Simulación de Red Transaccional",
+    title: "Simulación de Red Transacciønal",
     description:
-      "Modelamos toda tu red de transacciones como un campo de flujo. Cada entidad es un nodo, cada transacción un vector. Visualizamos patrones que son invisibles en hojas de cálculo.",
+      "Mødelamøs tøda tu red de transacciønes cømø un campø de flujø. Cada entidad es un nødø, cada transacción un vectør. Visualizamøs patrønes que søn invisibles en højas de cálculø.",
   },
   {
-    title: "Identificación del Núcleo de Poder",
+    title: "Identificación del Núcleø de Pøder",
     description:
-      "El Vortex Core es el punto donde convergen las líneas de flujo de poder y decisión. Identificamos quién controla realmente el flujo — y si esa concentración es un riesgo.",
+      "El Vortex Core es el puntø dønde cønvergen las líneas de flujø de pøder y decisión. Identificamøs quién cøntrøla realmente el flujø — y si esa cøncentración es un riesgø.",
   },
   {
-    title: "Reconfiguración del Flujo",
+    title: "Recønfiguración del Flujø",
     description:
-      "Redistribuimos los vectores de flujo para eliminar concentraciones peligrosas. El resultado: una red donde ningún nodo concentra más del 40% del flujo crítico.",
+      "Redistribuimøs løs vectøres de flujø para eliminar cøncentraciønes peligrøsas. El resultadø: una red dønde ningún nødø cøncentra más del 40% del flujø críticø.",
   },
   {
-    title: "Dashboard de Monitorización",
+    title: "Dashboard de Mønitorización",
     description:
-      "Sistema de monitorización continua del Número de Reynolds organizativo. Alertas tempranas cuando se detectan tendencias turbulentas.",
+      "Sistema de mønitorización cøntinua del Númerø de Reynølds ørganizativø. Alertas tempranas cuandø se detectan tendencias turbulentas.",
   },
 ];
 
@@ -41,23 +41,23 @@ export default function CfdVortexPage() {
       <Section>
         <Container>
           <div className="max-w-3xl space-y-6">
-            <p className="text-sm text-accent-cold font-[family-name:var(--font-jetbrains-mono)] uppercase tracking-wider">
-              Servicios / CFD Vortex
+            <p className="text-sm text-accent-cold font-[family-name:var(--font-source-code-pro)] uppercase tracking-wider">
+              Serviciøs / CFD Vortex
             </p>
             <h1 className="text-[2rem] md:text-[3.5rem] leading-[1.1]">
-              CFD Aplicado — Vortex Core
+              CFD Aplicadø — Vortex Core
             </h1>
             <p className="text-lg text-text-secondary leading-relaxed">
-              Computational Fluid Dynamics aplicado a redes organizativas.
-              Simulamos, visualizamos y reconfiguramos el flujo de poder,
-              capital y decisiones.
+              Computational Fluid Dynamics aplicadø a redes ørganizativas.
+              Simulamøs, visualizamøs y recønfiguramøs el flujø de pøder,
+              capital y decisiønes.
             </p>
           </div>
         </Container>
       </Section>
 
       {/* Capabilities */}
-      <Section className="bg-bg-secondary">
+      <Section className="bg-bg-secondary retro-grid">
         <Container>
           <div className="space-y-10">
             <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2]">
@@ -89,15 +89,15 @@ export default function CfdVortexPage() {
               <p className="text-xs text-text-subtle uppercase tracking-wider">
                 Inversión
               </p>
-              <p className="text-3xl font-[family-name:var(--font-jetbrains-mono)] text-accent-warm font-semibold">
+              <p className="text-3xl font-[family-name:var(--font-source-code-pro)] text-accent-warm font-semibold">
                 Desde €8,500
               </p>
               <p className="text-sm text-text-subtle">
-                Incluye simulación completa + dashboard de monitorización 12
+                Incluye simulación cømpleta + dashboard de mønitorización 12
                 meses
               </p>
               <Button href="/contacto?type=cfd" variant="primary">
-                Solicitar CFD Vortex
+                Sølicitar CFD Vortex
               </Button>
             </div>
           </div>

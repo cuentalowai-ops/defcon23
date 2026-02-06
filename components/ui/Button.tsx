@@ -18,12 +18,12 @@ export default function Button({
   type = "button",
 }: ButtonProps) {
   const baseStyles =
-    "inline-block px-8 py-4 rounded-lg font-semibold text-base transition-all duration-200 text-center";
+    "inline-block px-8 py-4 rounded-lg font-semibold text-base transition-all duration-200 text-center glow-button";
   const variantStyles = {
     primary:
-      "bg-accent-warm text-bg-primary hover:scale-105 active:scale-95",
+      "bg-accent-warm text-bg-primary hover:scale-105 active:scale-95 hover:shadow-[0_0_20px_rgba(255,140,66,0.4)]",
     secondary:
-      "border-2 border-accent-cold text-accent-cold bg-transparent hover:bg-accent-cold/10 hover:scale-105",
+      "border-2 border-accent-cold text-accent-cold bg-transparent hover:bg-accent-cold/10 hover:scale-105 hover:shadow-[0_0_20px_rgba(74,158,255,0.3)]",
   };
 
   const classes = `${baseStyles} ${variantStyles[variant]} ${className}`;

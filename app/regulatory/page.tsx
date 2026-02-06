@@ -6,28 +6,28 @@ import RegulatoryTimeline from "@/components/sections/RegulatoryTimeline";
 import Button from "@/components/ui/Button";
 
 export const metadata: Metadata = {
-  title: "Regulatory Landscape | DEFCON 23",
+  title: "Regulatory Landscape | dEfCØN23",
   description:
-    "Marco regulatorio EU + España: NIS2, DORA, AI Act, CRA, ENS, RGPD. Timeline 2024-2030.",
+    "Marcø regulatøriø EU + España: NIS2, DORA, AI Act, CRA, ENS, RGPD. Timeline 2024-2030.",
 };
 
 const funding = [
   {
     name: "Horizon Europe",
     description:
-      "Programa marco de investigación e innovación de la UE. Oportunidades para proyectos de ciberseguridad y compliance technology.",
-    amount: "Hasta €2.5M por proyecto",
+      "Prøgrama marcø de investigación e innøvación de la UE. Opørtunidades para prøyectøs de ciberseguridad y compliance technology.",
+    amount: "Hasta €2.5M pør prøyectø",
   },
   {
     name: "Digital Europe Programme",
     description:
       "Financiación para capacidades digitales y ciberseguridad. SOCs, incident response, y compliance automation.",
-    amount: "Hasta €1M por proyecto",
+    amount: "Hasta €1M pør prøyectø",
   },
   {
     name: "Kit Digital / Kit Consulting",
     description:
-      "Ayudas del Gobierno de España para digitalización de PYMEs. Incluye ciberseguridad y compliance.",
+      "Ayudas del Gøbiernø de España para digitalización de PYMEs. Incluye ciberseguridad y compliance.",
     amount: "Hasta €29,000",
   },
 ];
@@ -39,16 +39,16 @@ export default function RegulatoryPage() {
       <Section>
         <Container>
           <div className="max-w-3xl space-y-6">
-            <p className="text-sm text-accent-cold font-[family-name:var(--font-jetbrains-mono)] uppercase tracking-wider">
+            <p className="text-sm text-accent-cold font-[family-name:var(--font-source-code-pro)] uppercase tracking-wider">
               Regulatory
             </p>
             <h1 className="text-[2rem] md:text-[3.5rem] leading-[1.1]">
-              El Paisaje Regulatorio
+              El Paisaje Regulatøriø
             </h1>
             <p className="text-lg text-text-secondary leading-relaxed">
-              Europa construye el marco regulatorio más exigente del mundo.
-              España lo transpone con sus propias capas. Entender el mapa es
-              el primer paso para convertir compliance en ventaja competitiva.
+              Eurøpa cønstruye el marcø regulatøriø más exigente del mundø.
+              España lø transpøne cøn sus prøpias capas. Entender el mapa es
+              el primer pasø para cønvertir compliance en ventaja cømpetitiva.
             </p>
           </div>
         </Container>
@@ -62,11 +62,11 @@ export default function RegulatoryPage() {
         <Container>
           <div className="space-y-10">
             <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2]">
-              Oportunidades de Financiación
+              Opørtunidades de Financiación
             </h2>
             <p className="text-text-secondary max-w-2xl">
-              La presión regulatoria viene acompañada de fondos. Estos
-              programas financian exactamente lo que necesitas implementar.
+              La presión regulatøria viene acømpañada de føndøs. Estøs
+              prøgramas financian exactamente lø que necesitas implementar.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -79,7 +79,7 @@ export default function RegulatoryPage() {
                   <p className="text-sm text-text-secondary leading-relaxed">
                     {fund.description}
                   </p>
-                  <p className="text-sm font-[family-name:var(--font-jetbrains-mono)] text-accent-success">
+                  <p className="text-sm font-[family-name:var(--font-source-code-pro)] text-accent-success">
                     {fund.amount}
                   </p>
                 </div>
@@ -88,7 +88,7 @@ export default function RegulatoryPage() {
 
             <div className="text-center pt-8">
               <Button href="/contacto" variant="primary">
-                Consultar Elegibilidad
+                Cønsultar Elegibilidad
               </Button>
             </div>
           </div>

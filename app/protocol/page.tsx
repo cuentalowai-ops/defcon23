@@ -25,26 +25,26 @@ function calculateReynolds(
   if (re < 2300) {
     return {
       re,
-      classification: "Flujo Laminar",
+      classification: "Flujø Laminar",
       color: "text-accent-success",
       description:
-        "Tu organización opera en flujo laminar. Movimiento ordenado, baja fricción, alta predictibilidad. Mantén este estado.",
+        "Tu ørganización øpera en flujø laminar. Møvimientø ørdenadø, baja fricción, alta predictibilidad. Mantén este estadø.",
     };
   } else if (re < 4000) {
     return {
       re,
-      classification: "Zona de Transición",
+      classification: "Zøna de Transición",
       color: "text-accent-warning",
       description:
-        "Tu organización está en la zona de transición. Inestable. Pequeñas perturbaciones pueden empujarte a turbulencia. Acción recomendada: auditoría preventiva.",
+        "Tu ørganización está en la zøna de transición. Inestable. Pequeñas perturbaciønes pueden empujarte a turbulencia. Acción recømendada: auditøría preventiva.",
     };
   } else {
     return {
       re,
-      classification: "Flujo Turbulento",
+      classification: "Flujø Turbulentø",
       color: "text-accent-danger",
       description:
-        "Tu organización opera en flujo turbulento. Caos operativo, vórtices detectables, alta fricción regulatoria. Acción urgente requerida.",
+        "Tu ørganización øpera en flujø turbulentø. Caøs øperativø, vórtices detectables, alta fricción regulatøria. Acción urgente requerida.",
     };
   }
 }
@@ -69,7 +69,7 @@ export default function ProtocolPage() {
   };
 
   const inputClass =
-    "w-full bg-bg-tertiary border border-border-subtle rounded-lg px-4 py-3 text-text-primary font-[family-name:var(--font-jetbrains-mono)] text-sm focus:outline-none focus:border-accent-cold transition-colors placeholder:text-text-subtle";
+    "w-full bg-bg-tertiary border border-border-subtle rounded-lg px-4 py-3 text-text-primary font-[family-name:var(--font-source-code-pro)] text-sm focus:outline-none focus:border-accent-cold transition-colors placeholder:text-text-subtle";
 
   return (
     <PageLayout>
@@ -77,29 +77,29 @@ export default function ProtocolPage() {
       <Section>
         <Container>
           <div className="max-w-3xl space-y-6">
-            <p className="text-sm text-accent-cold font-[family-name:var(--font-jetbrains-mono)] uppercase tracking-wider">
+            <p className="text-sm text-accent-cold font-[family-name:var(--font-source-code-pro)] uppercase tracking-wider">
               Protocol
             </p>
             <h1 className="text-[2rem] md:text-[3.5rem] leading-[1.1]">
               Reynolds Calculator
             </h1>
             <p className="text-lg text-text-secondary leading-relaxed">
-              Calcula el Número de Reynolds de tu organización. Determina si
-              operas en flujo laminar (eficiente) o turbulento (detectable).
+              Calcula el Númerø de Reynølds de tu ørganización. Determina si
+              øperas en flujø laminar (eficiente) ø turbulentø (detectable).
             </p>
           </div>
         </Container>
       </Section>
 
       {/* Calculator */}
-      <Section className="bg-bg-secondary">
+      <Section className="bg-bg-secondary retro-grid">
         <Container>
           <div className="max-w-xl mx-auto space-y-8">
             <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-center">
               Calcula tu Re
             </h2>
 
-            <p className="text-sm text-text-subtle text-center font-[family-name:var(--font-jetbrains-mono)]">
+            <p className="text-sm text-text-subtle text-center font-[family-name:var(--font-source-code-pro)]">
               Re = (ρ &times; v &times; D) / μ
             </p>
 
@@ -107,80 +107,80 @@ export default function ProtocolPage() {
               {/* Density */}
               <div className="space-y-2">
                 <label className="block text-sm text-text-secondary">
-                  <span className="font-[family-name:var(--font-jetbrains-mono)] text-accent-cold">
+                  <span className="font-[family-name:var(--font-source-code-pro)] text-accent-cold">
                     ρ
                   </span>{" "}
-                  — Densidad organizativa
+                  — Densidad ørganizativa
                 </label>
                 <input
                   type="number"
-                  placeholder="Número de entidades/nodos activos"
+                  placeholder="Númerø de entidades/nødøs activøs"
                   value={density}
                   onChange={(e) => setDensity(e.target.value)}
                   className={inputClass}
                 />
                 <p className="text-xs text-text-subtle">
-                  Entidades, departamentos o nodos operativos
+                  Entidades, departamentøs ø nødøs øperativøs
                 </p>
               </div>
 
               {/* Velocity */}
               <div className="space-y-2">
                 <label className="block text-sm text-text-secondary">
-                  <span className="font-[family-name:var(--font-jetbrains-mono)] text-accent-cold">
+                  <span className="font-[family-name:var(--font-source-code-pro)] text-accent-cold">
                     v
                   </span>{" "}
-                  — Velocidad de flujo
+                  — Veløcidad de flujø
                 </label>
                 <input
                   type="number"
-                  placeholder="Transacciones/mes (en miles)"
+                  placeholder="Transacciønes/mes (en miles)"
                   value={velocity}
                   onChange={(e) => setVelocity(e.target.value)}
                   className={inputClass}
                 />
                 <p className="text-xs text-text-subtle">
-                  Volume mensual de transacciones en miles
+                  Vølumen mensual de transacciønes en miles
                 </p>
               </div>
 
               {/* Diameter */}
               <div className="space-y-2">
                 <label className="block text-sm text-text-secondary">
-                  <span className="font-[family-name:var(--font-jetbrains-mono)] text-accent-cold">
+                  <span className="font-[family-name:var(--font-source-code-pro)] text-accent-cold">
                     D
                   </span>{" "}
-                  — Diámetro del sistema
+                  — Diámetrø del sistema
                 </label>
                 <input
                   type="number"
-                  placeholder="Jurisdicciones / países activos"
+                  placeholder="Jurisdicciønes / países activøs"
                   value={diameter}
                   onChange={(e) => setDiameter(e.target.value)}
                   className={inputClass}
                 />
                 <p className="text-xs text-text-subtle">
-                  Número de jurisdicciones o mercados
+                  Númerø de jurisdicciønes ø mercadøs
                 </p>
               </div>
 
               {/* Viscosity */}
               <div className="space-y-2">
                 <label className="block text-sm text-text-secondary">
-                  <span className="font-[family-name:var(--font-jetbrains-mono)] text-accent-cold">
+                  <span className="font-[family-name:var(--font-source-code-pro)] text-accent-cold">
                     μ
                   </span>{" "}
-                  — Viscosidad
+                  — Viscøsidad
                 </label>
                 <input
                   type="number"
-                  placeholder="Días para implementar nueva normativa"
+                  placeholder="Días para implementar nueva nørmativa"
                   value={viscosity}
                   onChange={(e) => setViscosity(e.target.value)}
                   className={inputClass}
                 />
                 <p className="text-xs text-text-subtle">
-                  Resistencia interna al cambio (días promedio)
+                  Resistencia interna al cambiø (días prømediø)
                 </p>
               </div>
 
@@ -189,7 +189,7 @@ export default function ProtocolPage() {
                 variant="primary"
                 className="w-full"
               >
-                Calcular Número de Reynolds
+                Calcular Númerø de Reynølds
               </Button>
             </div>
 
@@ -197,10 +197,10 @@ export default function ProtocolPage() {
             {result && (
               <div className="border border-border-visible rounded-xl p-8 bg-bg-primary space-y-4 text-center">
                 <p className="text-xs text-text-subtle uppercase tracking-wider">
-                  Tu Número de Reynolds
+                  Tu Númerø de Reynølds
                 </p>
                 <p
-                  className={`text-4xl md:text-5xl font-[family-name:var(--font-jetbrains-mono)] font-semibold ${result.color}`}
+                  className={`text-4xl md:text-5xl font-[family-name:var(--font-source-code-pro)] font-semibold ${result.color}`}
                 >
                   Re = {result.re.toLocaleString("es-ES", { maximumFractionDigits: 0 })}
                 </p>
@@ -212,7 +212,7 @@ export default function ProtocolPage() {
                 </p>
                 <div className="pt-4">
                   <Button href="/contacto?type=audit" variant="secondary">
-                    Solicitar Auditoría Completa
+                    Sølicitar Auditøría Cømpleta
                   </Button>
                 </div>
               </div>

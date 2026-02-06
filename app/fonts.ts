@@ -1,22 +1,8 @@
-import { Space_Grotesk, Inter, JetBrains_Mono } from 'next/font/google'
+import { Source_Code_Pro } from 'next/font/google'
 
-export const spaceGrotesk = Space_Grotesk({
+export const sourceCodePro = Source_Code_Pro({
   subsets: ['latin'],
-  weight: ['600'],
-  variable: '--font-space-grotesk',
-  display: 'swap',
-})
-
-export const inter = Inter({
-  subsets: ['latin'],
-  weight: ['400', '600'],
-  variable: '--font-inter',
-  display: 'swap',
-})
-
-export const jetbrainsMono = JetBrains_Mono({
-  subsets: ['latin'],
-  weight: ['400'],
-  variable: '--font-jetbrains-mono',
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-source-code-pro',
   display: 'swap',
 })

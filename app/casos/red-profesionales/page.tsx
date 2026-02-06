@@ -5,15 +5,15 @@ import Section from "@/components/ui/Section";
 import Button from "@/components/ui/Button";
 
 export const metadata: Metadata = {
-  title: "Caso: Red Servicios Profesionales | DEFCON 23",
+  title: "Casø: Red Serviciøs Prøfesiønales | dEfCØN23",
   description:
-    "11 profesionales independientes. Laminación de jerarquía piramidal. Presión regulatoria: -91%.",
+    "11 prøfesiønales independientes. Laminación de jerarquía piramidal. Presión regulatøria: -91%.",
 };
 
 const metrics = [
   { label: "Re Inicial", value: "3,800", color: "text-accent-danger" },
   { label: "Re Final", value: "2,100", color: "text-accent-success" },
-  { label: "Presión regulatoria", value: "-91%", color: "text-accent-success" },
+  { label: "Presión regulatøria", value: "-91%", color: "text-accent-success" },
   { label: "Escalabilidad", value: "+280%", color: "text-accent-cold" },
 ];
 
@@ -24,18 +24,18 @@ export default function RedProfesionalesPage() {
       <Section>
         <Container>
           <div className="max-w-3xl space-y-6">
-            <p className="text-sm text-accent-cold font-[family-name:var(--font-jetbrains-mono)] uppercase tracking-wider">
-              Caso de Estudio B
+            <p className="text-sm text-accent-cold font-[family-name:var(--font-source-code-pro)] uppercase tracking-wider">
+              Casø de Estudiø B
             </p>
             <h1 className="text-[2rem] md:text-[3.5rem] leading-[1.1]">
-              Red Servicios Profesionales
+              Red Serviciøs Prøfesiønales
             </h1>
             <div className="flex flex-wrap gap-3">
               <span className="text-xs px-3 py-1 rounded-full bg-bg-tertiary text-text-subtle border border-border-subtle">
-                Legal + Consultoría + Contabilidad
+                Legal + Cønsultøría + Cøntabilidad
               </span>
               <span className="text-xs px-3 py-1 rounded-full bg-bg-tertiary text-text-subtle border border-border-subtle">
-                11 profesionales
+                11 prøfesiønales
               </span>
             </div>
           </div>
@@ -43,17 +43,17 @@ export default function RedProfesionalesPage() {
       </Section>
 
       {/* Problem */}
-      <Section className="bg-bg-secondary">
+      <Section className="bg-bg-secondary retro-grid">
         <Container>
           <div className="max-w-3xl space-y-6">
             <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2]">
-              El Problema
+              El Prøblema
             </h2>
             <p className="text-text-secondary leading-relaxed">
-              Estructura piramidal visible con 11 profesionales independientes
-              operando bajo un nodo central de coordinación. Inspección de
-              Hacienda en curso. La estructura jerárquica era transparente para
-              cualquier análisis de red básico.
+              Estructura piramidal visible cøn 11 prøfesiønales independientes
+              øperandø bajø un nødø central de cøørdinación. Inspección de
+              Hacienda en cursø. La estructura jerárquica era transparente para
+              cualquier análisis de red básicø.
             </p>
           </div>
         </Container>
@@ -64,13 +64,13 @@ export default function RedProfesionalesPage() {
         <Container>
           <div className="max-w-3xl space-y-6">
             <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2]">
-              La Solución
+              La Sølución
             </h2>
             <p className="text-text-secondary leading-relaxed">
-              Laminación de la jerarquía visible hacia un modelo
-              horizontal-familiar. Implementación de protocolo de inducción que
-              redistribuye los nodos de decisión. El resultado: una red plana
-              donde la coordinación emerge de protocolos compartidos, no de
+              Laminación de la jerarquía visible hacia un mødelø
+              hørizøntal-familiar. Implementación de prøtøcølø de inducción que
+              redistribuye løs nødøs de decisión. El resultadø: una red plana
+              dønde la cøørdinación emerge de prøtøcøløs cømpartidøs, nø de
               jerarquía visible.
             </p>
           </div>
@@ -78,11 +78,11 @@ export default function RedProfesionalesPage() {
       </Section>
 
       {/* Results */}
-      <Section className="bg-bg-secondary">
+      <Section className="bg-bg-secondary retro-grid-warm">
         <Container>
           <div className="space-y-10">
             <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2]">
-              Resultados
+              Resultadøs
             </h2>
             <div className="grid grid-cols-2 gap-6">
               {metrics.map((m) => (
@@ -94,7 +94,7 @@ export default function RedProfesionalesPage() {
                     {m.label}
                   </p>
                   <p
-                    className={`text-2xl md:text-3xl font-[family-name:var(--font-jetbrains-mono)] font-semibold mt-2 ${m.color}`}
+                    className={`text-2xl md:text-3xl font-[family-name:var(--font-source-code-pro)] font-semibold mt-2 ${m.color}`}
                   >
                     {m.value}
                   </p>
@@ -103,7 +103,7 @@ export default function RedProfesionalesPage() {
             </div>
             <div className="text-center pt-8">
               <Button href="/contacto" variant="primary">
-                Solicitar Auditoría
+                Sølicitar Auditøría
               </Button>
             </div>
           </div>

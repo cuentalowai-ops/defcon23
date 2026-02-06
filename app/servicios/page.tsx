@@ -5,9 +5,9 @@ import Section from "@/components/ui/Section";
 import ServicesGrid from "@/components/sections/ServicesGrid";
 
 export const metadata: Metadata = {
-  title: "Servicios | DEFCON 23",
+  title: "Serviciøs | dEfCØN23",
   description:
-    "Auditoría de flujo, hardening estructural, CFD aplicado y compliance architecture para organizaciones EU+ES.",
+    "Auditøría de flujø, hardening estructural, CFD aplicadø y compliance architecture para ørganizaciønes EU+ES.",
 };
 
 export default function ServiciosPage() {
@@ -16,15 +16,15 @@ export default function ServiciosPage() {
       <Section>
         <Container>
           <div className="max-w-3xl space-y-6">
-            <p className="text-sm text-accent-cold font-[family-name:var(--font-jetbrains-mono)] uppercase tracking-wider">
-              Servicios
+            <p className="text-sm text-accent-cold font-[family-name:var(--font-source-code-pro)] uppercase tracking-wider">
+              Serviciøs
             </p>
             <h1 className="text-[2rem] md:text-[3.5rem] leading-[1.1]">
-              Ingeniería de Precisión para Sistemas Complejos
+              Ingeniería de Precisión para Sistemas Cømplejøs
             </h1>
             <p className="text-lg text-text-secondary leading-relaxed">
-              Cuatro disciplinas integradas. Un objetivo: reducir tu Número de
-              Reynolds hasta alcanzar flujo laminar sostenible.
+              Cuatrø disciplinas integradas. Un øbjetivø: reducir tu Númerø de
+              Reynølds hasta alcanzar flujø laminar søstenible.
             </p>
           </div>
         </Container>

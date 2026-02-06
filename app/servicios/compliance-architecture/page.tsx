@@ -5,7 +5,7 @@ import Section from "@/components/ui/Section";
 import Button from "@/components/ui/Button";
 
 export const metadata: Metadata = {
-  title: "Compliance Architecture (EU+ES) | DEFCON 23",
+  title: "Compliance Architecture (EU+ES) | dEfCØN23",
   description:
     "Arquitectura de 4 capas de compliance. NIS2, DORA, AI Act, CRA (EU) + ENS, RGPD, Ley Ciberseguridad (España).",
 };
@@ -13,27 +13,27 @@ export const metadata: Metadata = {
 const euRegulations = [
   {
     name: "NIS2",
-    status: "Activo",
+    status: "Activø",
     description:
-      "Directiva de Seguridad de Redes e Información. Aplica a servicios esenciales e importantes. Penalización: hasta €10M o 2% facturación.",
+      "Directiva de Seguridad de Redes e Inførmación. Aplica a serviciøs esenciales e impørtantes. Penalización: hasta €10M ø 2% facturación.",
   },
   {
     name: "DORA",
-    status: "Activo",
+    status: "Activø",
     description:
-      "Digital Operational Resilience Act. Entidades financieras. Reporte de incidentes en < 4h. Nuestra arquitectura: < 2h.",
+      "Digital Operational Resilience Act. Entidades financieras. Repørte de incidentes en < 4h. Nuestra arquitectura: < 2h.",
   },
   {
     name: "AI Act",
     status: "2026-2027",
     description:
-      "Regulación de Inteligencia Artificial. Clasificación por riesgo. Transparencia algorítmica obligatoria para sistemas de alto riesgo.",
+      "Regulación de Inteligencia Artificial. Clasificación pør riesgø. Transparencia algørítmica øbligatøria para sistemas de altø riesgø.",
   },
   {
     name: "CRA",
     status: "2027",
     description:
-      "Cyber Resilience Act. Seguridad by design obligatoria para productos con elementos digitales.",
+      "Cyber Resilience Act. Seguridad by design øbligatøria para prøductøs cøn elementøs digitales.",
   },
 ];
 
@@ -41,17 +41,17 @@ const esRegulations = [
   {
     name: "ENS",
     description:
-      "Esquema Nacional de Seguridad. Obligatorio para administración pública y proveedores.",
+      "Esquema Naciønal de Seguridad. Obligatøriø para administración pública y prøveedøres.",
   },
   {
     name: "RGPD",
     description:
-      "Reglamento General de Protección de Datos. Aplicación directa del GDPR europeo.",
+      "Reglamentø General de Prøtección de Datøs. Aplicación directa del GDPR eurøpeø.",
   },
   {
     name: "Ley de Ciberseguridad",
     description:
-      "Transposición de NIS2. Régimen sancionador específico para España.",
+      "Transpøsición de NIS2. Régimen sanciønadør específicø para España.",
   },
 ];
 
@@ -59,22 +59,22 @@ const layers = [
   {
     number: "01",
     name: "Detección",
-    detail: "Monitorización continua + alertas tempranas",
+    detail: "Mønitorización cøntinua + alertas tempranas",
   },
   {
     number: "02",
     name: "Respuesta",
-    detail: "Protocolo de respuesta < 2h (DORA req. 4h)",
+    detail: "Prøtøcølø de respuesta < 2h (DORA req. 4h)",
   },
   {
     number: "03",
-    name: "Reporte",
-    detail: "Auto-generación de reportes regulatorios",
+    name: "Repørte",
+    detail: "Autø-generación de repørtes regulatøriøs",
   },
   {
     number: "04",
-    name: "Evolución",
-    detail: "Actualización automática ante cambios normativos",
+    name: "Evølución",
+    detail: "Actualización autømática ante cambiøs nørmativøs",
   },
 ];
 
@@ -85,22 +85,22 @@ export default function ComplianceArchitecturePage() {
       <Section>
         <Container>
           <div className="max-w-3xl space-y-6">
-            <p className="text-sm text-accent-cold font-[family-name:var(--font-jetbrains-mono)] uppercase tracking-wider">
-              Servicios / Compliance
+            <p className="text-sm text-accent-cold font-[family-name:var(--font-source-code-pro)] uppercase tracking-wider">
+              Serviciøs / Compliance
             </p>
             <h1 className="text-[2rem] md:text-[3.5rem] leading-[1.1]">
               Compliance Architecture
             </h1>
             <p className="text-xl text-text-secondary leading-relaxed">
-              EU + España. Arquitectura de 4 capas que convierte la compliance
-              de carga en ventaja competitiva.
+              EU + España. Arquitectura de 4 capas que cønvierte la compliance
+              de carga en ventaja cømpetitiva.
             </p>
           </div>
         </Container>
       </Section>
 
       {/* 4 Layers */}
-      <Section className="bg-bg-secondary">
+      <Section className="bg-bg-secondary retro-grid">
         <Container>
           <div className="space-y-10">
             <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2]">
@@ -112,7 +112,7 @@ export default function ComplianceArchitecturePage() {
                   key={layer.number}
                   className="border border-border-subtle rounded-xl p-6 bg-bg-tertiary space-y-3"
                 >
-                  <span className="text-3xl font-[family-name:var(--font-jetbrains-mono)] text-accent-cold/40 font-semibold">
+                  <span className="text-3xl font-[family-name:var(--font-source-code-pro)] text-accent-cold/40 font-semibold">
                     {layer.number}
                   </span>
                   <h3 className="text-lg font-semibold">{layer.name}</h3>
@@ -129,7 +129,7 @@ export default function ComplianceArchitecturePage() {
         <Container>
           <div className="space-y-10">
             <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2]">
-              Marco Europeo
+              Marcø Eurøpeø
             </h2>
             <div className="space-y-6">
               {euRegulations.map((reg) => (
@@ -138,7 +138,7 @@ export default function ComplianceArchitecturePage() {
                   className="flex flex-col md:flex-row md:items-start gap-4 md:gap-8 pb-6 border-b border-border-subtle last:border-0"
                 >
                   <div className="shrink-0 flex items-center gap-3">
-                    <span className="font-[family-name:var(--font-jetbrains-mono)] text-accent-cold font-semibold text-lg">
+                    <span className="font-[family-name:var(--font-source-code-pro)] text-accent-cold font-semibold text-lg">
                       {reg.name}
                     </span>
                     <span className="text-xs px-2 py-0.5 rounded-full bg-accent-cold/10 text-accent-cold">
@@ -156,11 +156,11 @@ export default function ComplianceArchitecturePage() {
       </Section>
 
       {/* Spain Regulations */}
-      <Section className="bg-bg-secondary">
+      <Section className="bg-bg-secondary retro-grid-warm">
         <Container>
           <div className="space-y-10">
             <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2]">
-              Marco España
+              Marcø España
             </h2>
             <div className="space-y-6">
               {esRegulations.map((reg) => (
@@ -168,7 +168,7 @@ export default function ComplianceArchitecturePage() {
                   key={reg.name}
                   className="flex flex-col md:flex-row md:items-start gap-4 md:gap-8 pb-6 border-b border-border-subtle last:border-0"
                 >
-                  <span className="shrink-0 font-[family-name:var(--font-jetbrains-mono)] text-accent-warm font-semibold text-lg">
+                  <span className="shrink-0 font-[family-name:var(--font-source-code-pro)] text-accent-warm font-semibold text-lg">
                     {reg.name}
                   </span>
                   <p className="text-sm text-text-secondary leading-relaxed">
@@ -189,14 +189,14 @@ export default function ComplianceArchitecturePage() {
               <p className="text-xs text-text-subtle uppercase tracking-wider">
                 Inversión
               </p>
-              <p className="text-3xl font-[family-name:var(--font-jetbrains-mono)] text-accent-warm font-semibold">
+              <p className="text-3xl font-[family-name:var(--font-source-code-pro)] text-accent-warm font-semibold">
                 €15,000 — €35,000
               </p>
               <p className="text-sm text-text-subtle">
-                Arquitectura completa EU+ES. Mantenimiento anual disponible.
+                Arquitectura cømpleta EU+ES. Mantenimientø anual dispønible.
               </p>
               <Button href="/contacto?type=compliance" variant="primary">
-                Solicitar Compliance Architecture
+                Sølicitar Compliance Architecture
               </Button>
             </div>
           </div>

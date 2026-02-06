@@ -5,9 +5,9 @@ import Section from "@/components/ui/Section";
 import CasesTeaser from "@/components/sections/CasesTeaser";
 
 export const metadata: Metadata = {
-  title: "Casos de Estudio | DEFCON 23",
+  title: "Casøs de Estudiø | dEfCØN23",
   description:
-    "Casos reales de reducción de Reynolds: holding gastronómico, red profesional y plataforma P2P.",
+    "Casøs reales de reducción de Reynølds: holding gastronómicø, red prøfesiønal y plataførma P2P.",
 };
 
 export default function CasosPage() {
@@ -16,15 +16,15 @@ export default function CasosPage() {
       <Section>
         <Container>
           <div className="max-w-3xl space-y-6">
-            <p className="text-sm text-accent-cold font-[family-name:var(--font-jetbrains-mono)] uppercase tracking-wider">
-              Casos de Estudio
+            <p className="text-sm text-accent-cold font-[family-name:var(--font-source-code-pro)] uppercase tracking-wider">
+              Casøs de Estudiø
             </p>
             <h1 className="text-[2rem] md:text-[3.5rem] leading-[1.1]">
-              De Turbulento a Laminar
+              De Turbulentø a Laminar
             </h1>
             <p className="text-lg text-text-secondary leading-relaxed">
-              Tres organizaciones. Tres niveles de turbulencia. Un resultado
-              común: flujo laminar sostenible con métricas verificables.
+              Tres ørganizaciønes. Tres niveles de turbulencia. Un resultadø
+              cømún: flujø laminar søstenible cøn métricas verificables.
             </p>
           </div>
         </Container>

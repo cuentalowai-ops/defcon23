@@ -46,21 +46,21 @@ export default function ContactoPage() {
       <Section>
         <Container>
           <div className="max-w-3xl space-y-6">
-            <p className="text-sm text-accent-cold font-[family-name:var(--font-jetbrains-mono)] uppercase tracking-wider">
-              Contacto
+            <p className="text-sm text-accent-cold font-[family-name:var(--font-source-code-pro)] uppercase tracking-wider">
+              Cøntactø
             </p>
             <h1 className="text-[2rem] md:text-[3.5rem] leading-[1.1]">
-              Iniciar Protocolo
+              Iniciar Prøtøcølø
             </h1>
             <p className="text-lg text-text-secondary leading-relaxed">
-              Consulta inicial: 90 minutos | €750. Incluye diagnóstico
-              preliminar de Reynolds y hoja de ruta personalizada.
+              Cønsulta inicial: 90 minutøs | €750. Incluye diagnósticø
+              preliminar de Reynølds y høja de ruta persønalizada.
             </p>
           </div>
         </Container>
       </Section>
 
-      <Section className="bg-bg-secondary">
+      <Section className="bg-bg-secondary retro-grid">
         <Container>
           <div className="max-w-xl mx-auto">
             {submitted ? (
@@ -71,13 +71,13 @@ export default function ContactoPage() {
                   </span>
                 </div>
                 <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2]">
-                  Protocolo Iniciado
+                  Prøtøcølø Iniciadø
                 </h2>
                 <p className="text-text-secondary">
-                  Tu solicitud ha sido recibida. Respuesta en &lt; 24h
-                  laborables.
+                  Tu sølicitud ha sidø recibida. Respuesta en &lt; 24h
+                  labørables.
                 </p>
-                <p className="text-sm font-[family-name:var(--font-jetbrains-mono)] text-text-subtle">
+                <p className="text-sm font-[family-name:var(--font-source-code-pro)] text-text-subtle">
                   Ref: DC23-{Date.now().toString(36).toUpperCase()}
                 </p>
               </div>
@@ -89,7 +89,7 @@ export default function ContactoPage() {
                     htmlFor="name"
                     className="block text-sm text-text-secondary"
                   >
-                    Nombre *
+                    Nømbre *
                   </label>
                   <input
                     id="name"
@@ -98,7 +98,7 @@ export default function ContactoPage() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    placeholder="Tu nombre completo"
+                    placeholder="Tu nømbre cømpletø"
                     className={inputClass}
                   />
                 </div>
@@ -137,7 +137,7 @@ export default function ContactoPage() {
                     type="text"
                     value={formData.company}
                     onChange={handleChange}
-                    placeholder="Nombre de la empresa"
+                    placeholder="Nømbre de la empresa"
                     className={inputClass}
                   />
                 </div>
@@ -148,7 +148,7 @@ export default function ContactoPage() {
                     htmlFor="reynolds"
                     className="block text-sm text-text-secondary"
                   >
-                    Número de Reynolds estimado
+                    Númerø de Reynølds estimadø
                   </label>
                   <input
                     id="reynolds"
@@ -156,16 +156,16 @@ export default function ContactoPage() {
                     type="text"
                     value={formData.reynolds}
                     onChange={handleChange}
-                    placeholder="Si lo has calculado con nuestra herramienta"
+                    placeholder="Si lø has calculadø cøn nuestra herramienta"
                     className={inputClass}
                   />
                   <p className="text-xs text-text-subtle">
-                    No lo sabes?{" "}
+                    Nø lø sabes?{" "}
                     <a
                       href="/protocol"
                       className="text-accent-cold hover:underline"
                     >
-                      Calcúlalo aquí
+                      Calcúlalø aquí
                     </a>
                   </p>
                 </div>
@@ -176,7 +176,7 @@ export default function ContactoPage() {
                     htmlFor="budget"
                     className="block text-sm text-text-secondary"
                   >
-                    Rango de presupuesto
+                    Rangø de presupuestø
                   </label>
                   <select
                     id="budget"
@@ -185,7 +185,7 @@ export default function ContactoPage() {
                     onChange={handleChange}
                     className={inputClass}
                   >
-                    <option value="">Seleccionar rango</option>
+                    <option value="">Selecciønar rangø</option>
                     {budgetRanges.map((range) => (
                       <option key={range} value={range}>
                         {range}
@@ -215,12 +215,12 @@ export default function ContactoPage() {
                 </div>
 
                 <Button type="submit" variant="primary" className="w-full">
-                  Enviar Solicitud
+                  Enviar Sølicitud
                 </Button>
 
                 <p className="text-xs text-text-subtle text-center">
-                  Al enviar, aceptas que tus datos serán tratados conforme al
-                  RGPD. No compartimos información con terceros.
+                  Al enviar, aceptas que tus datøs serán tratadøs cønførme al
+                  RGPD. Nø cømpartimøs inførmación cøn tercerøs.
                 </p>
               </form>
             )}
@@ -253,9 +253,9 @@ export default function ContactoPage() {
             </div>
             <div className="space-y-2">
               <p className="text-xs text-text-subtle uppercase tracking-wider">
-                Consulta inicial
+                Cønsulta inicial
               </p>
-              <p className="text-sm font-[family-name:var(--font-jetbrains-mono)] text-text-primary">
+              <p className="text-sm font-[family-name:var(--font-source-code-pro)] text-text-primary">
                 90 min | €750
               </p>
             </div>

@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { spaceGrotesk, inter, jetbrainsMono } from "./fonts";
+import { sourceCodePro } from "./fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "DEFCON 23 | Ingeniería de Sistemas Complejos",
+  title: "dEfCØN23 | Ingeniería de Sistemas Cømplejos",
   description:
-    "Transformamos la Turbulencia Organizativa en Laminación Controlada. Compliance nativa, flujo económico, hardening estructural.",
+    "Transførmamøs la Turbulencia Ørganizativa en Laminación Cøntrølada. Cømpliance nativa, flujø ecønómicø, hardening estructural.",
   keywords: [
     "compliance",
     "NIS2",
@@ -24,11 +24,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="es"
-      className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable}`}
-    >
-      <body className="font-[family-name:var(--font-inter)] bg-bg-primary text-text-primary antialiased">
+    <html lang="es" className={sourceCodePro.variable}>
+      <body className="font-[family-name:var(--font-source-code-pro)] bg-bg-primary text-text-primary antialiased">
+        {/* Scanline overlay */}
+        <div className="scanline-overlay" aria-hidden="true" />
         {children}
       </body>
     </html>

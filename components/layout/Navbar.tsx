@@ -1,26 +1,47 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import Container from "@/components/ui/Container";
 
 const navLinks = [
-  { href: "/metodologia", label: "Metodología" },
-  { href: "/servicios", label: "Servicios" },
-  { href: "/casos", label: "Casos" },
+  { href: "/metodologia", label: "Metødøløgía" },
+  { href: "/servicios", label: "Serviciøs" },
+  { href: "/casos", label: "Casøs" },
   { href: "/operator", label: "Operator" },
   { href: "/regulatory", label: "Regulatory" },
   { href: "/protocol", label: "Protocol" },
-  { href: "/contacto", label: "Contacto" },
+  { href: "/contacto", label: "Cøntactø" },
 ];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-50 bg-bg-primary/90 backdrop-blur-md border-b border-border-subtle"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        scrolled
+          ? "bg-bg-primary/95 backdrop-blur-md border-b border-accent-cold/20"
+          : "bg-bg-primary/80 backdrop-blur-sm border-b border-border-subtle"
+      }`}
+      style={
+        scrolled
+          ? {
+              boxShadow:
+                "0 1px 10px rgba(74, 158, 255, 0.15), 0 1px 20px rgba(74, 158, 255, 0.05)",
+            }
+          : {}
+      }
       role="navigation"
       aria-label="Navegación principal"
     >
@@ -28,9 +49,10 @@ export default function Navbar() {
         {/* Logo */}
         <Link
           href="/"
-          className="font-[family-name:var(--font-space-grotesk)] text-xl md:text-2xl font-semibold text-text-primary tracking-tight hover:text-accent-warm transition-colors"
+          className="text-xl md:text-2xl font-bold text-text-primary tracking-tight hover:text-accent-warm transition-colors glitch-text terminal-glow-warm"
+          data-text="dEfCØN23"
         >
-          DEFCON 23
+          dEfCØN23
         </Link>
 
         {/* Desktop Navigation */}
@@ -39,7 +61,7 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm text-text-secondary hover:text-text-primary transition-colors"
+              className="text-sm text-text-secondary hover:text-accent-cold transition-colors terminal-text"
             >
               {link.label}
             </Link>
@@ -66,7 +88,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="text-base text-text-secondary hover:text-text-primary transition-colors py-2"
+                className="text-base text-text-secondary hover:text-accent-cold transition-colors py-2"
               >
                 {link.label}
               </Link>
