@@ -1,70 +1,64 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { Activity, Shield, Cpu, Scale } from "lucide-react";
+import { Shield, Cpu, Scale } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
 import Button from "@/components/ui/Button";
 
-const services = [
-  {
-    icon: Activity,
-    title: "Auditøría de Flujø Sistémicø",
-    items: [
-      "Calculamøs tu Númerø de Reynølds",
-      "Análisis de puntøs de separación",
-      "Mapeø de firma térmica",
-      "Diseñø de capas de absørción",
-    ],
-    price: "€4,500",
-    href: "/servicios/auditoria-flujo",
-  },
+const phases = [
   {
     icon: Shield,
-    title: "Hardening pør Trabajø en Frío",
-    items: [
-      "Laminación en 7 Pasadas",
-      "Eliminación de rugøsidades",
-      "Micrø-fracciønamientø de transacciønes",
-      "Temple final cøn legitimidad narrativa",
-    ],
-    price: "€12,000",
-    href: "/servicios/hardening",
+    phase: "FASE I",
+    title: "Intelligence Brief & Vetting",
+    subtitle: "Shock Test",
+    price: "€500",
+    duration: "5-7 días",
+    description:
+      "OSINT + Threat Modeling + Vetting. Døssier de inteligencia antes de cualquier decisión.",
+    badges: ["OSINT", "Threat Modeling", "Vetting"],
+    href: "/servicios/fase-1",
+    color: "accent-warm",
+    glowClass: "terminal-text-warm",
   },
   {
     icon: Cpu,
-    title: "CFD Aplicadø — Vortex Core",
-    items: [
-      "Simulación de Red Transacciønal",
-      "Identificación del núcleø de pøder",
-      "Recønfiguración del flujø",
-      "Dashboard de mønitorización cøntinua",
-    ],
-    price: "€8,500",
-    href: "/servicios/cfd-vortex",
+    phase: "FASE II",
+    title: "Structural Integrity & Compliance",
+    subtitle: "Laminar Flow",
+    price: "€1,000",
+    duration: "10-15 días",
+    description:
+      "Auditøría + Hardening + Cømpliance Architecture. De turbulentø a laminar.",
+    badges: ["Zero Trust", "NIS2", "Legal Hardening"],
+    href: "/servicios/fase-2",
+    color: "accent-cold",
+    glowClass: "terminal-text",
   },
   {
     icon: Scale,
-    title: "Compliance Architecture (EU+ES)",
-    items: [
-      "Arquitectura de 4 Capas",
-      "NIS2, DORA, AI Act, CRA (EU)",
-      "ENS, RGPD, Ley Ciberseguridad (España)",
-      "Autø-repørte < 2h (DORA req. 4h)",
-    ],
-    price: "€15,000",
-    href: "/servicios/compliance-architecture",
+    phase: "FASE III",
+    title: "Vortex Engineering & EU Funds",
+    subtitle: "Vortex Scale",
+    price: "Desde €3,000",
+    duration: "20-30 días",
+    description:
+      "CFD Vørtex + EU Funds Capture + eIDAS 2.0. Escala cøn backing instituciønal.",
+    badges: ["eIDAS 2.0", "EU Subsidies", "EUDI Wallet"],
+    href: "/servicios/fase-3",
+    color: "accent-success",
+    glowClass: "terminal-text",
   },
 ];
 
-function ServiceCard({
-  service,
+function PhaseCard({
+  phase,
   index,
 }: {
-  service: (typeof services)[0];
+  phase: (typeof phases)[0];
   index: number;
 }) {
-  const cardRef = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -76,59 +70,71 @@ function ServiceCard({
       },
       { threshold: 0.1 }
     );
-    if (cardRef.current) observer.observe(cardRef.current);
+    if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
   }, []);
 
-  const Icon = service.icon;
+  const Icon = phase.icon;
 
   return (
     <div
-      ref={cardRef}
-      className="neon-card rounded-xl p-8 bg-bg-tertiary space-y-6 opacity-0 translate-y-8 transition-all duration-700"
+      ref={ref}
+      className="neon-card rounded-xl p-6 md:p-8 bg-bg-tertiary space-y-5 flex flex-col opacity-0 translate-y-8 transition-all duration-700"
       style={{ transitionDelay: `${index * 150}ms` }}
     >
-      {/* Icon + Title */}
-      <div className="flex items-start gap-4">
-        <div className="p-3 rounded-lg bg-accent-cold/10 shrink-0 animate-[glow-pulse_2s_ease-in-out_infinite]">
-          <Icon size={24} className="text-accent-cold" />
+      {/* Phase label + icon */}
+      <div className="flex items-center gap-3">
+        <div className={`p-2 rounded-lg bg-${phase.color}/10`}>
+          <Icon size={20} className={`text-${phase.color}`} />
         </div>
-        <h3 className="text-[1.1rem] md:text-[1.3rem] leading-[1.3] font-semibold">
-          {service.title}
-        </h3>
+        <span
+          className={`text-xs font-bold uppercase tracking-widest text-${phase.color} ${phase.glowClass}`}
+        >
+          {phase.phase}
+        </span>
       </div>
 
-      {/* Items */}
-      <ul className="space-y-2">
-        {service.items.map((item, i) => (
-          <li
-            key={i}
-            className="flex items-start gap-2 text-sm text-text-secondary"
-          >
-            <span className="text-accent-success mt-0.5 text-xs">
-              &#10003;
-            </span>
-            {item}
-          </li>
-        ))}
-      </ul>
+      {/* Title */}
+      <div>
+        <h3 className="text-base md:text-lg font-semibold leading-tight">
+          {phase.title}
+        </h3>
+        <p className="text-sm text-text-subtle mt-1">{phase.subtitle}</p>
+      </div>
 
-      {/* Price + CTA */}
-      <div className="flex items-center justify-between pt-4 border-t border-border-subtle">
-        <div>
-          <span className="text-xs text-text-subtle uppercase tracking-wider">
-            Desde
+      {/* Price */}
+      <div className="flex items-baseline gap-2">
+        <span className={`text-2xl font-bold text-${phase.color} ${phase.glowClass}`}>
+          {phase.price}
+        </span>
+        <span className="text-xs text-text-subtle">{phase.duration}</span>
+      </div>
+
+      {/* Description */}
+      <p className="text-sm text-text-secondary leading-relaxed">
+        {phase.description}
+      </p>
+
+      {/* Badges */}
+      <div className="flex flex-wrap gap-2">
+        {phase.badges.map((b) => (
+          <span
+            key={b}
+            className="text-[0.65rem] px-2 py-1 rounded bg-bg-primary border border-border-subtle text-text-subtle"
+          >
+            {b}
           </span>
-          <p className="text-xl text-accent-warm font-semibold terminal-text-warm">
-            {service.price}
-          </p>
-        </div>
+        ))}
+      </div>
+
+      {/* CTA */}
+      <div className="mt-auto pt-4">
         <Button
-          href={service.href}
+          href={phase.href}
           variant="secondary"
-          className="!px-5 !py-2.5 text-sm"
+          className="w-full !py-3 text-sm"
         >
-          Ver detalle
+          Ver {phase.phase}
         </Button>
       </div>
     </div>
@@ -140,14 +146,25 @@ export default function ServicesGrid() {
     <Section id="servicios" className="bg-bg-secondary retro-grid">
       <Container>
         <div className="space-y-12">
-          <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-center terminal-glow">
-            Serviciøs
-          </h2>
+          <div className="text-center space-y-3">
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+              3 Fases. Un Prøtøcølo.
+            </h2>
+            <p className="text-text-secondary text-sm max-w-lg mx-auto">
+              Cada fase incluye la anteriør. Elige tu nivel de prøfundidad.
+            </p>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {services.map((service, i) => (
-              <ServiceCard key={service.title} service={service} index={i} />
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {phases.map((p, i) => (
+              <PhaseCard key={p.phase} phase={p} index={i} />
             ))}
+          </div>
+
+          <div className="text-center pt-4">
+            <Button href="/servicios" variant="secondary">
+              Ver arsenal cømpletø &rarr;
+            </Button>
           </div>
         </div>
       </Container>

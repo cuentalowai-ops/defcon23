@@ -3,24 +3,28 @@ import Section from "@/components/ui/Section";
 
 const tableData = [
   {
-    concepto: "Flujø Laminar (Re < 2,300)",
+    concepto: "Flujø Laminar",
+    re: "Re < 2,300",
     aplicacion: "Møvimientø ørdenadø, baja fricción, alta predictibilidad",
-    indicador: "Tiempø de respuesta ante auditøría: 14+ días",
+    indicador: "Respuesta auditøría: 14+ días",
   },
   {
-    concepto: "Flujø Turbulentø (Re > 4,000)",
+    concepto: "Flujø Turbulentø",
+    re: "Re > 4,000",
     aplicacion: "Caøs øperativø, vórtices detectables, pérdida de energía",
-    indicador: "Alertas regulatørias: 7+/añø, fricción fiscal alta",
+    indicador: "Alertas regulatørias: 7+/añø",
   },
   {
     concepto: "Viscøsidad (μ)",
+    re: "",
     aplicacion: "Resistencia interna al cambiø (burøcracia, legacy systems)",
-    indicador: "Días para implementar nueva nørmativa: 45+ días",
+    indicador: "Implementar nørmativa: 45+ días",
   },
   {
     concepto: "Vortex Core",
+    re: "",
     aplicacion: "Puntø de máxima influencia/decisión en la red",
-    indicador: "Nødø cøn > 60% de flujø de decisiønes críticas",
+    indicador: "Nødø cøn >60% flujø críticø",
   },
 ];
 
@@ -72,15 +76,15 @@ export default function UmbralCritico() {
             </ul>
           </div>
 
-          {/* Table */}
-          <div className="overflow-x-auto neon-card rounded-xl p-1">
+          {/* Table — Desktop */}
+          <div className="hidden md:block overflow-x-auto neon-card rounded-xl p-1">
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-border-visible">
-                  <th className="text-left py-4 pr-6 pl-4 text-text-primary font-semibold">
+                  <th className="text-left py-4 pr-4 pl-4 text-text-primary font-semibold">
                     Cønceptø Físicø
                   </th>
-                  <th className="text-left py-4 pr-6 text-text-primary font-semibold">
+                  <th className="text-left py-4 pr-4 text-text-primary font-semibold">
                     Aplicación Ørganizativa
                   </th>
                   <th className="text-left py-4 pr-4 text-text-primary font-semibold">
@@ -94,19 +98,57 @@ export default function UmbralCritico() {
                     key={i}
                     className="border-b border-border-subtle last:border-0 hover:bg-bg-tertiary/50 transition-colors"
                   >
-                    <td className="py-4 pr-6 pl-4 text-accent-cold text-xs md:text-sm whitespace-nowrap terminal-text">
-                      {row.concepto}
+                    <td className="py-4 pr-4 pl-4 text-accent-cold text-sm terminal-text">
+                      <span className="block font-semibold">{row.concepto}</span>
+                      {row.re && (
+                        <span className="block text-xs text-accent-cold/70 mt-0.5">
+                          {row.re}
+                        </span>
+                      )}
                     </td>
-                    <td className="py-4 pr-6 text-text-secondary">
+                    <td className="py-4 pr-4 text-text-secondary text-sm">
                       {row.aplicacion}
                     </td>
-                    <td className="py-4 pr-4 text-text-subtle">
+                    <td className="py-4 pr-4 text-text-subtle text-sm">
                       {row.indicador}
                     </td>
                   </tr>
                 ))}
               </tbody>
             </table>
+          </div>
+
+          {/* Table — Mobile (stacked cards) */}
+          <div className="md:hidden space-y-4">
+            {tableData.map((row, i) => (
+              <div
+                key={i}
+                className="neon-card rounded-xl p-5 bg-bg-tertiary space-y-3"
+              >
+                <div>
+                  <p className="text-accent-cold font-semibold terminal-text text-sm">
+                    {row.concepto}
+                  </p>
+                  {row.re && (
+                    <p className="text-xs text-accent-cold/70 mt-0.5">{row.re}</p>
+                  )}
+                </div>
+                <div>
+                  <p className="text-[0.65rem] uppercase tracking-wider text-text-subtle mb-1">
+                    Aplicación
+                  </p>
+                  <p className="text-sm text-text-secondary leading-relaxed">
+                    {row.aplicacion}
+                  </p>
+                </div>
+                <div>
+                  <p className="text-[0.65rem] uppercase tracking-wider text-text-subtle mb-1">
+                    Indicadør
+                  </p>
+                  <p className="text-sm text-text-subtle">{row.indicador}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </Container>

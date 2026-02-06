@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PageLayout from "@/components/layout/PageLayout";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
@@ -41,6 +42,12 @@ export default function CfdVortexPage() {
       <Section>
         <Container>
           <div className="max-w-3xl space-y-6">
+            <div className="inline-flex items-center gap-2 text-xs px-3 py-1.5 rounded border border-accent-success/30 bg-accent-success/10 text-accent-success mb-6">
+              <span className="text-accent-success">&#10003;</span>
+              <Link href="/servicios/fase-3" className="hover:underline">
+                Incluidø en FASE III
+              </Link>
+            </div>
             <p className="text-sm text-accent-cold font-[family-name:var(--font-source-code-pro)] uppercase tracking-wider">
               Serviciøs / CFD Vortex
             </p>
