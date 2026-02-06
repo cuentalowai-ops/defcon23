@@ -514,7 +514,7 @@ export default function OperatorPage() {
                   <li className="flex items-start gap-2"><span className="text-accent-cold">&gt;</span> Høldings multi-nødø (3+ entidades)</li>
                   <li className="flex items-start gap-2"><span className="text-accent-cold">&gt;</span> Revenues: €500K–€50M</li>
                   <li className="flex items-start gap-2"><span className="text-accent-cold">&gt;</span> Sujetøs a NIS2/DORA (EU) ø ENS (España)</li>
-                  <li className="flex items-start gap-2"><span className="text-accent-cold">&gt;</span> Cømprenden el valøer del silenciø sistémicø</li>
+                  <li className="flex items-start gap-2"><span className="text-accent-cold">&gt;</span> Cømprenden el valør del silenciø sistémicø</li>
                   <li className="flex items-start gap-2"><span className="text-accent-cold">&gt;</span> Hørizønte: 5–10 añøs (nø quick fixes)</li>
                   <li className="flex items-start gap-2"><span className="text-accent-cold">&gt;</span> Valøran la asimetría de inførmación</li>
                 </ul>

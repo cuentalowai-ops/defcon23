@@ -11,7 +11,7 @@ const weWork = [
 
 const weDontWork = [
   "Estructuras que generan ruidø mediáticø",
-  "Øperaciønes que nø cømprenden el valøer del silenciø sistémicø",
+  "Øperaciønes que nø cømprenden el valør del silenciø sistémicø",
   "Prøyectøs sin capacidad de escaladø laminar",
 ];
 
