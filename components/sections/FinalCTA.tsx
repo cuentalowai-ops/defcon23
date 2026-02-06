@@ -85,7 +85,7 @@ export default function FinalCTA() {
             </div>
 
             <Button href="/contacto" variant="primary" className="mt-6">
-              Søolicitar Auditøría
+              Sølicitar Auditøría
             </Button>
           </div>
         </div>

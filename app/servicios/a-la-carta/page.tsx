@@ -96,7 +96,7 @@ export default function ALaCartaPage() {
                   variant="secondary"
                   className="w-full !py-3 text-sm"
                 >
-                  Søolicitar
+                  Sølicitar
                 </Button>
               </div>
             ))}

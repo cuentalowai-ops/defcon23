@@ -100,7 +100,7 @@ export default function Hero() {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button href="/contacto?type=audit" variant="primary">
-                Søolicitar Auditøría
+                Sølicitar Auditøría
               </Button>
               <Button href="/protocol" variant="secondary">
                 Calcular mi Re &rarr;
