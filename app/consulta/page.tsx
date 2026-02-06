@@ -327,7 +327,7 @@ export default function ConsultaPage() {
                 Agenda tu Cønsulta
               </h2>
               <p className="text-sm text-text-secondary">
-                Elige un høraøriø. Respøndemøs en menøs de 24h cøn
+                Elige un horario. Respøndemøs en menøs de 24h cøn
                 cønfirmación.
               </p>
             </div>
