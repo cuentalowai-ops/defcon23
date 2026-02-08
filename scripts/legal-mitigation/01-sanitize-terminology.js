@@ -15,7 +15,7 @@ const REPLACEMENTS = [
   { pattern: /Lavapís/gi, replacement: 'zona urbana de alta densidad' },
 ];
 
-const FILES_PATTERN = ['app/**/*.{tsx,mdx}', 'components/**/*.tsx'];
+const FILES_PATTERN = ['app/**/*.{tsx,mdx}', 'components/**/*.tsx', 'content/**/*.{md,json}'];
 
 let totalReplacements = 0;
 const log = [];
