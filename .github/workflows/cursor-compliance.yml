@@ -20,6 +20,9 @@ on:
       - '**.json'
       - '.cursorrules'
 
+permissions:
+  contents: read
+
 jobs:
   compliance:
     runs-on: ubuntu-latest
