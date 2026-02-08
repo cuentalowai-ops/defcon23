@@ -40,3 +40,12 @@ Reports are saved to `reports/` (gitignored).
 ## Support
 
 compliance@defcon23.eu
+
+---
+
+## Último Deploy con Compliance 100/100
+
+- **Fecha:** 2026-02-08 (UTC)
+- **Commit:** f23fe1f
+- **Compliance Score:** 100/100
+- **Status:** Código sanitizado; redeploy en Vercel pendiente para reflejar en producción (sin caché).
