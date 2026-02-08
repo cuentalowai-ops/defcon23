@@ -1,0 +1,118 @@
+name: Cursor Compliance Check
+
+on:
+  push:
+    branches: [ main, legal-*, cursor-* ]
+    paths:
+      - '**.md'
+      - '**.mdx'
+      - '**.tsx'
+      - '**.ts'
+      - '**.json'
+      - '.cursorrules'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - '**.md'
+      - '**.mdx'
+      - '**.tsx'
+      - '**.ts'
+      - '**.json'
+      - '.cursorrules'
+
+jobs:
+  compliance:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Verify .cursorrules exists
+        run: |
+          if [ ! -f .cursorrules ]; then
+            echo "::error::.cursorrules file not found"
+            exit 1
+          fi
+          echo "✅ .cursorrules file found"
+
+      - name: Run sanitize terminology
+        id: sanitize
+        run: npm run sanitize
+        continue-on-error: true
+
+      - name: Run case rewrite
+        id: rewrite
+        run: npm run rewrite
+        continue-on-error: true
+
+      - name: Inject disclaimers
+        id: disclaimers
+        run: npm run disclaimers
+        continue-on-error: true
+
+      - name: Run compliance audit
+        id: audit
+        run: npm run audit
+        continue-on-error: true
+
+      - name: Upload compliance reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cursor-compliance-reports
+          path: reports/
+          retention-days: 30
+
+      - name: Check compliance score
+        run: |
+          if [ -d reports ] && ls reports/legal-audit-*.md 1> /dev/null 2>&1; then
+            SCORE=$(grep -h "Compliance score" reports/legal-audit-*.md | grep -oE '[0-9]+(?=/100)' | tail -1)
+            if [ -n "$SCORE" ]; then
+              echo "📊 Compliance Score: $SCORE/100"
+              if [ "$SCORE" -lt 90 ]; then
+                echo "::warning::Compliance score below 90: $SCORE/100"
+                echo "::warning::Review the compliance report for details"
+              else
+                echo "✅ Compliance score meets standards: $SCORE/100"
+              fi
+            else
+              echo "::warning::Unable to determine compliance score"
+            fi
+          else
+            echo "::warning::No compliance report generated"
+          fi
+
+      - name: Check for forbidden terms
+        run: |
+          echo "🔍 Scanning for forbidden terms..."
+          FORBIDDEN_FOUND=false
+          
+          # Check for forbidden terms from .cursorrules
+          if grep -rn --include="*.md" --include="*.mdx" --include="*.tsx" --include="*.ts" \
+            -e "alertas AML" -e "AML alerts" \
+            -e "micro-fraccionamiento" -e "structuring" -e "smurfing" \
+            -e "blanqueo" -e "money laundering" -e "lavado de dinero" \
+            -e "evasión fiscal" -e "tax evasion" \
+            -e "Ndrangheta" -e "mafia" -e "Società Maggiore" \
+            -e "detectabilidad" -e "evitar detección" \
+            -e "Porto Carro" -e "La Playa" -e "Lavapís" \
+            . 2>/dev/null; then
+            FORBIDDEN_FOUND=true
+          fi
+          
+          if [ "$FORBIDDEN_FOUND" = true ]; then
+            echo "::error::Forbidden terms detected in code. Please review and use approved terminology."
+            exit 1
+          else
+            echo "✅ No forbidden terms detected"
+          fi
