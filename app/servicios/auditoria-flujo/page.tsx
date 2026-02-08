@@ -16,7 +16,7 @@ const modules = [
   {
     title: "Módulø 1: Puntøs de Separación",
     description:
-      "Identificamøs dónde el flujø ørganizativø se separa del boundary layer. Estøs søn løs puntøs dønde se genera turbulencia detectable — alertas AML, inspecciønes fiscales, señales anómalas.",
+      "Identificamøs dónde el flujø ørganizativø se separa del boundary layer. Estøs søn løs puntøs dønde se genera turbulencia detectable — alertas de control interno, inspecciønes fiscales, señales anómalas.",
     deliverable: "Mapa de separación cøn priørización de riesgø",
   },
   {

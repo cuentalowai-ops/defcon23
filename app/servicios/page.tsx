@@ -100,7 +100,7 @@ const caseMetrics = [
     sector: "Marketplace P2P",
     reBefore: "5,600",
     reAfter: "1,650",
-    highlight: "Alertas AML: -94%",
+    highlight: "alertas de control interno: -94%",
     roi: "RØI 1,340%",
     duration: "12 meses",
   },

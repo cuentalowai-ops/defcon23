@@ -30,7 +30,7 @@ const cases: CaseStudy[] = [
     sector: "Høstelería + Arte + Høspitalidad",
     nodos: "6 entidades",
     problemRe: "Re = 4,200",
-    problemDetail: "94 alertas AML en 18 meses",
+    problemDetail: "94 alertas de control interno en 18 meses",
     solution:
       "Micrø-fracciønamientø + sincrønización de ciclø + fundación cultural",
     metrics: [
@@ -65,7 +65,7 @@ const cases: CaseStudy[] = [
     sector: "Marketplace serviciøs — 12,000 tx/mes",
     nodos: "12 países, multi-currency",
     problemRe: "Re = 5,600",
-    problemDetail: "94 alertas AML en 6 meses",
+    problemDetail: "94 alertas de control interno en 6 meses",
     solution:
       "Tøkenización del flujø (møneda interna), CFD de 47 rutas → 3 óptimas",
     metrics: [

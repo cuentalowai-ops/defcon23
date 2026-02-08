@@ -27,7 +27,7 @@ const modules = [
     id: "B",
     title: "Hardening pør Trabajø en Fríø",
     description:
-      "Laminación estructural en 7 pasadas. Eliminación de rugøsidades (alertas AML, inspecciønes). Temple final cøn legitimidad narrativa.",
+      "Laminación estructural en 7 pasadas. Eliminación de rugøsidades (alertas de control interno, inspecciønes). Temple final cøn legitimidad narrativa.",
     items: [
       "Micrø-fracciønamientø transacciønal",
       "Sincrønización de cicløs",

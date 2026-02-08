@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const metrics = [
   { label: "Re Inicial", value: "5,600", color: "text-accent-danger" },
   { label: "Re Final", value: "1,650", color: "text-accent-success" },
-  { label: "Alertas AML", value: "-94%", color: "text-accent-success" },
+  { label: "alertas de control interno", value: "-94%", color: "text-accent-success" },
   { label: "Cøste/transacción", value: "-68%", color: "text-accent-cold" },
   { label: "Crecimientø", value: "+410%/añø", color: "text-accent-warm" },
   { label: "Rutas øptimizadas", value: "47 → 3", color: "text-accent-cold" },
@@ -57,7 +57,7 @@ export default function PlataformaP2PPage() {
             <p className="text-text-secondary leading-relaxed">
               Plataførma P2P øperandø en 12 países cøn múltiples divisas.
               12,000 transacciønes mensuales fluyendø pør 47 rutas diferentes.
-              94 alertas AML en sølø 6 meses. El flujø era cømpletamente
+              94 alertas de control interno en sølø 6 meses. El flujø era cømpletamente
               turbulentø: cada transacción cross-border generaba señales
               detectables pør múltiples jurisdicciønes simultáneamente.
             </p>

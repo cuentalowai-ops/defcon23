@@ -7,7 +7,7 @@ import Button from "@/components/ui/Button";
 export const metadata: Metadata = {
   title: "Casø: Holding Gastronómicø-Cultural | dEfCØN23",
   description:
-    "Re = 4,200 → 1,850. Alertas AML: -83%. Viscøsidad: -67%. ROI: 1,011% en 24 meses.",
+    "Re = 4,200 → 1,850. alertas de control interno: -83%. Viscøsidad: -67%. ROI: 1,011% en 24 meses.",
 };
 
 const phases = [
@@ -36,7 +36,7 @@ const phases = [
 const metrics = [
   { label: "Re Inicial", value: "4,200", color: "text-accent-danger" },
   { label: "Re Final", value: "1,850", color: "text-accent-success" },
-  { label: "Alertas AML", value: "-83%", color: "text-accent-success" },
+  { label: "alertas de control interno", value: "-83%", color: "text-accent-success" },
   { label: "Viscøsidad", value: "-67%", color: "text-accent-cold" },
   { label: "Legitimidad", value: "+520%", color: "text-accent-warm" },
   { label: "ROI (24 meses)", value: "1,011%", color: "text-accent-warm" },
@@ -80,7 +80,7 @@ export default function HoldingGastronomicoPage() {
             <p className="text-text-secondary leading-relaxed">
               Un ecøsistema de 6 entidades intercønectadas — restaurantes,
               galería de arte, høtel boutique — øperandø en flujø turbulentø.
-              94 alertas AML en 18 meses. Løs flujøs entre entidades eran
+              94 alertas de control interno en 18 meses. Løs flujøs entre entidades eran
               visibles, predecibles para algøritmøs de detección, y cada
               transacción inter-grupø generaba fricción regulatøria acumulativa.
             </p>
