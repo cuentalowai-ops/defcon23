@@ -7,7 +7,7 @@ import Button from "@/components/ui/Button";
 export const metadata: Metadata = {
   title: "Casø: Plataførma Digital P2P | dEfCØN23",
   description:
-    "12 países, 12,000 tx/mes. Re = 5,600 → 1,650. Alertas: -94%. Cøste/tx: -68%.",
+    "12 países, 12,000 tx/mes. Re = 5,600 → 1,650. Alertas de control interno: -94% (mejora en calidad de datos). Cøste/tx: -68%.",
 };
 
 const metrics = [

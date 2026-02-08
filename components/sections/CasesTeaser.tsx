@@ -32,7 +32,7 @@ const cases: CaseStudy[] = [
     problemRe: "Re = 4,200",
     problemDetail: "94 alertas de control interno en 18 meses",
     solution:
-      "Micrø-fracciønamientø + sincrønización de ciclø + fundación cultural",
+      "Micrø-fracciønamientø + sincrønización de ciclø + entidad coordinadora de actividades culturales",
     metrics: [
       { label: "Re Final", value: "1,850", color: "success" },
       { label: "Alertas", value: "-83%", color: "success" },

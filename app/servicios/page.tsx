@@ -82,7 +82,7 @@ const caseMetrics = [
     sector: "Høstelería + Arte",
     reBefore: "4,200",
     reAfter: "1,850",
-    highlight: "Alertas: -83%",
+    highlight: "Alertas de control interno: -83% (mejora en calidad de datos)",
     roi: "RØI 1,011%",
     duration: "24 meses",
   },

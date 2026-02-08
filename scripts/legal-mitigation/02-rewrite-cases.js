@@ -50,7 +50,7 @@ const CASE_TEMPLATE = `### CASO 1: OPTIMIZACIÓN DE FLUJO OPERATIVO EN HOLDING D
 
 **Nota de Cumplimiento:**
 Este proyecto fue desarrollado en estricta conformidad con:
-- Ley 10/2010 de Prevención del Blanqueo de Capitales (España)
+- Ley 10/2010 de Prevención del optimización de tesorería corporativa (España)
 - Reglamento (UE) 2015/849 (4ª Directiva AML/CFT)
 - Código de Comercio español (Art. 25-49, obligaciones contables)
 - Validación por compliance officer certificado CAMS y auditoría externa independiente

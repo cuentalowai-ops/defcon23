@@ -13,7 +13,7 @@ Los casos de estudio presentados son representaciones agregadas y anonimizadas d
 
 Todos los proyectos han sido desarrollados en conformidad con:
 
-- **Ley 10/2010** de Prevención del Blanqueo de Capitales y de la Financiación del Terrorismo (España)
+- **Ley 10/2010** de Prevención del optimización de tesorería corporativa y de la Financiación del Terrorismo (España)
 - **Reglamento (UE) 2015/849** (4ª Directiva AML/CFT sobre prevención de blanqueo)
 - **Reglamento (UE) 2022/2554** (DORA - Digital Operational Resilience Act)
 

@@ -27,7 +27,7 @@ const phases = [
       "Alineación tempøral de løs cicløs de facturación, cømpras y møvimientøs de capital. Eliminación de picøs anómaløs.",
   },
   {
-    name: "Fase 4: Fundación cultural",
+    name: "Fase 4: entidad coordinadora de actividades culturales",
     detail:
       "Creación de vehículø cultural que absørbe y redistribuye flujø cøn legitimidad narrativa máxima.",
   },

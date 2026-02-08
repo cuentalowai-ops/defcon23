@@ -48,3 +48,4 @@ reports/*.md
 tmp/
 temp/
 *.tmp
+*.backup

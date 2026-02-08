@@ -30,7 +30,7 @@ Por encima de este número de Reynolds, el sistema entra en turbulencia:
 - Pérdida de eficiencia energética exponencial
 - Fricción con el entorno (reguladores, competencia, auditorías)
 - Puntos de separación impredecibles
-- Alta visibilidad en escaneos algorítmicos (AML, tax authorities, compliance)
+- Alta visibilidad en sistemas de control interno (compliance, auditoría, reporting)
 
 **Table:**
 | Concepto Físico | Aplicación Organizativa | Indicador Medible |
@@ -81,7 +81,7 @@ Convertimos el flujo caótico en movimiento laminar estratificado:
 **Service 2: Hardening por Trabajo en Frío**
 - Laminación en 7 Pasadas
 - Eliminación de rugosidades
-- Micro-fraccionamiento de transacciones
+- Diversificación transaccional estructurada de transacciones
 - Temple final con legitimidad narrativa
 - DESDE: €12,000
 - Link: /servicios/hardening
@@ -130,9 +130,9 @@ Convertimos el flujo caótico en movimiento laminar estratificado:
 **Caso A: Holding Gastronómico-Cultural**
 - Sector: Hostelería + Arte + Hospitalidad
 - Nodos: 6 entidades
-- Problema: Re = 4,200 (turbulento), 94 alertas AML en 18 meses
-- Solución: Micro-fraccionamiento + sincronización de ciclos + fundación cultural
-- Resultado: Re = 1,850 (laminar), Alertas: -83%, Viscosidad: -67%, Legitimidad: +520%
+- Problema: Re = 4,200 (turbulento), 94 operaciones mensuales promedio generando alertas de control interno
+- Solución: Diversificación transaccional estructurada + sincronización de ciclos + entidad coordinadora de actividades culturales
+- Resultado: Re = 1,850 (laminar), Alertas de control interno: -83% (mejora en calidad de datos), Viscosidad: -67%, Legitimidad: +520%
 - Link: /casos/holding-gastronomico
 
 **Caso B: Red Servicios Profesionales**
@@ -146,9 +146,9 @@ Convertimos el flujo caótico en movimiento laminar estratificado:
 **Caso C: Plataforma Digital P2P**
 - Sector: Marketplace servicios (12,000 transacciones/mes)
 - Alcance: 12 países, multi-currency
-- Problema: Re = 5,600 (caos turbulento), 94 alertas AML en 6 meses
+- Problema: Re = 5,600 (caos turbulento), 94 operaciones mensuales promedio generando alertas de control interno
 - Solución: Tokenización del flujo (moneda interna), CFD de 47 rutas transaccionales → 3 óptimas
-- Resultado: Re = 1,650 (laminar profundo), Alertas: -94%, Coste/transacción: -68%, Crecimiento: +410%/año
+- Resultado: Re = 1,650 (laminar profundo), Alertas de control interno: -94% (mejora en calidad de datos), Coste/transacción: -68%, Crecimiento: +410%/año
 - Link: /casos/plataforma-p2p
 
 ---
