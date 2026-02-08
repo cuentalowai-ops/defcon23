@@ -6,7 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "mitigation": "bash scripts/run-mitigation.sh",
+    "sanitize": "node scripts/legal-mitigation/01-sanitize-terminology.js",
+    "rewrite": "node scripts/legal-mitigation/02-rewrite-cases.js",
+    "disclaimers": "node scripts/legal-mitigation/03-inject-disclaimers.js",
+    "audit": "node scripts/legal-mitigation/04-audit-compliance.js"
   },
   "dependencies": {
     "@calcom/embed-react": "^1.5.3",
@@ -24,6 +29,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "glob": "^10.3.10"
   }
 }

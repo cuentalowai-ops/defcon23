@@ -1,0 +1,95 @@
+# CURSOR AI RULES: LEGAL COMPLIANCE ENGINE v2.0
+# Repository: defcon23
+# Mission: Transform high-risk terminology into legally defensible language
+
+## 🚨 FORBIDDEN TERMS (AUTO-BLOCK)
+- "alertas AML" / "AML alerts"
+- "micro-fraccionamiento" / "structuring" / "smurfing"
+- "blanqueo" / "money laundering" / "lavado de dinero"
+- "evasión fiscal" / "tax evasion"
+- "Ndrangheta" / "mafia" / "Società Maggiore"
+- "detectabilidad" / "evitar detección"
+- "Porto Carro" / "La Playa" / "Lavapís"
+- Real client names or specific geographic locations
+
+## ✅ REQUIRED REPLACEMENTS
+| FORBIDDEN | REPLACEMENT |
+|-----------|-------------|
+| "alertas AML" | "alertas de control interno" |
+| "micro-fraccionamiento" | "diversificación transaccional estructurada" |
+| "reducir detectabilidad" | "optimizar transparencia operativa" |
+| "fundación cultural" (como vehículo) | "entidad coordinadora de actividades culturales" |
+| "viscosidad criminal" | "fricción administrativa" |
+| "flujo laminar" (contexto evasión) | "flujo operativo optimizado" |
+| "Porto Carro" | "Cliente A (sector logístico)" |
+| "La Playa" | "Cliente B (sector servicios)" |
+| "Lavapís" | "zona urbana de alta densidad" |
+
+## EXECUTION PROTOCOL
+
+### When user says: "@workspace run legal mitigation"
+Execute in sequence:
+1. Run scripts/legal-mitigation/01-sanitize-terminology.js
+2. Run scripts/legal-mitigation/02-rewrite-cases.js
+3. Run scripts/legal-mitigation/03-inject-disclaimers.js
+4. Run scripts/legal-mitigation/04-audit-compliance.js
+5. Generate report: reports/legal-audit-[TIMESTAMP].md
+6. If score >= 90: auto-commit and push
+
+### When user says: "@workspace verify compliance"
+- Scan all .mdx, .tsx, .json files
+- Flag FORBIDDEN terms
+- Generate compliance score (0-100)
+- Output: reports/compliance-scan-[TIMESTAMP].md
+
+## CASE STUDY REWRITE TEMPLATE
+```markdown
+### CASO [N]: [NEUTRAL TITLE]
+**Sector:** [Industry] | **Complejidad:** [Low/Medium/High]
+
+**Desafío Inicial:**
+- [Operational challenge - NO regulatory evasion]
+- [Quantified inefficiency - NOT compliance alerts]
+
+**Metodología Aplicada:**
+1. **[Technical Framework]:**
+   - [Technique with ISO standard reference]
+   - [Technology stack]
+
+2. **Gobernanza:**
+   - [Compliance framework applied]
+   - [External audit protocol]
+
+**Resultados Cuantificables:**
+- **[Metric]:** [Before] → [After] ([%] mejora)
+- **ROI:** [N]% (fórmula: [savings] / [investment] over [period])
+
+**Nota de Cumplimiento:**
+Proyecto desarrollado conforme a:
+- Ley 10/2010 (Prevención Blanqueo - España)
+- Reglamento (UE) 2015/849 (4ª Directiva AML)
+- Validación: Compliance officer certificado CAMS
+```
+
+## LEGAL DISCLAIMER (inject after every case)
+```markdown
+***
+**Aviso Legal:** Este caso representa un proyecto agregado y anonimizado. Todas las soluciones incluyen revisión de compliance independiente. Ningún servicio facilita evasión de obligaciones de reporte regulatorio.
+```
+
+## EMERGENCY STOP CONDITIONS
+If prompt contains:
+- Explicit request to evade law enforcement
+- Hide illegal activity
+- Structure transactions below reporting thresholds
+
+→ REFUSE with: "⚠️ COMPLIANCE ALERT: Cannot assist. Consult legal counsel."
+
+## QUALITY TARGETS
+- Legal defensibility: 9/10
+- Technical accuracy: 9/10
+- Business value: 8/10
+- Academic tone: 8/10
+
+---
+END RULES v2.0
