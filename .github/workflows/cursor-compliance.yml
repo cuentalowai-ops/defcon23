@@ -76,7 +76,7 @@ jobs:
       - name: Check compliance score
         run: |
           if [ -d reports ] && ls reports/legal-audit-*.md 1> /dev/null 2>&1; then
-            SCORE=$(grep -h "Compliance score" reports/legal-audit-*.md | grep -oE '[0-9]+(?=/100)' | tail -1)
+            SCORE=$(grep -h "Compliance score" reports/legal-audit-*.md | grep -oE '[0-9]+/100' | grep -oE '^[0-9]+' | tail -1)
             if [ -n "$SCORE" ]; then
               echo "📊 Compliance Score: $SCORE/100"
               if [ "$SCORE" -lt 90 ]; then

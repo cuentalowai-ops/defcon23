@@ -48,6 +48,8 @@ Thumbs.db
 # Documentation (not needed for deployment)
 *.md
 !README.md
+!INTEGRATION_SETUP.md
+!SETUP_QUICK_START.md
 
 # Reports
 reports
