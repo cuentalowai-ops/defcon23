@@ -37,7 +37,7 @@ export default function OperatorTeaser() {
               OPERATOR
             </p>
             <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
-              Raúl Balaguer Monferrer
+              Raúl Balaguer
             </h2>
             <p className="text-base md:text-lg text-text-secondary leading-relaxed max-w-2xl">
               Arquitecto de Sistemas Cognitivos. Operador de Inteligencia Híbrida.

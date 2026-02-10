@@ -161,7 +161,7 @@ export default function OperatorPage() {
               Operator
             </p>
             <h1 className="text-[2rem] sm:text-[2.5rem] md:text-[4.5rem] leading-[1.05] terminal-glow">
-              Raúl Balaguer Monferrer
+              Raúl Balaguer
             </h1>
             <h2 className="text-[1.1rem] md:text-[1.5rem] leading-[1.3] text-text-secondary">
               Arquitecto de Sistemas Cognitivos | Operador de Inteligencia Híbrida
