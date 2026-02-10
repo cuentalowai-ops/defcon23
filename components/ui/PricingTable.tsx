@@ -1,9 +1,9 @@
 const features = [
   { name: "Intelligence Brief", fase1: true, fase2: true, fase3: true },
-  { name: "Auditøría de Flujø", fase1: false, fase2: true, fase3: true },
+  { name: "Auditoría de Flujo", fase1: false, fase2: true, fase3: true },
   { name: "Hardening (7 pasadas)", fase1: false, fase2: true, fase3: true },
-  { name: "Cømpliance Architecture", fase1: false, fase2: true, fase3: true },
-  { name: "CFD Vørtex Cøre", fase1: false, fase2: false, fase3: true },
+  { name: "Compliance Architecture", fase1: false, fase2: true, fase3: true },
+  { name: "CFD Vortex Core", fase1: false, fase2: false, fase3: true },
   { name: "EU Funds Capture", fase1: false, fase2: false, fase3: true },
   { name: "eIDAS 2.0 Implementation", fase1: false, fase2: false, fase3: true },
 ];
@@ -24,7 +24,7 @@ export default function PricingTable() {
         <thead>
           <tr className="border-b border-border-visible">
             <th className="text-left py-4 pr-4 pl-4 text-text-primary font-semibold">
-              Serviciø
+              Servicio
             </th>
             <th className="text-center py-4 px-4 text-accent-warm font-semibold">
               FASE I

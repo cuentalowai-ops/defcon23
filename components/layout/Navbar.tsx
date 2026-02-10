@@ -6,14 +6,14 @@ import { Menu, X } from "lucide-react";
 import Container from "@/components/ui/Container";
 
 const navLinks = [
-  { href: "/metodologia", label: "Metødøløgía" },
-  { href: "/servicios", label: "Serviciøs" },
-  { href: "/casos", label: "Casøs" },
+  { href: "/metodologia", label: "Metodología" },
+  { href: "/servicios", label: "Servicios" },
+  { href: "/casos", label: "Casos" },
   { href: "/operator", label: "Operator" },
   { href: "/regulatory", label: "Regulatory" },
-  { href: "/protocol", label: "Protocol" },
-  { href: "/contacto", label: "Cøntactø" },
-  { href: "/consulta", label: "Reservar Cønsulta", cta: true },
+  { href: "/calculadora-reynolds", label: "Calculadora Re" },
+  { href: "/contacto", label: "Contacto" },
+  { href: "/consulta", label: "Reservar Consulta", cta: true },
 ];
 
 export default function Navbar() {

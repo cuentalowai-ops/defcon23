@@ -26,55 +26,55 @@ interface CaseStudy {
 
 const cases: CaseStudy[] = [
   {
-    title: "Hølding Gastronómicø-Cultural",
-    sector: "Høstelería + Arte + Høspitalidad",
+    title: "Holding Gastronómico-Cultural",
+    sector: "Hostelería + Arte + Hospitalidad",
     nodos: "6 entidades",
     problemRe: "Re = 4,200",
-    problemDetail: "94 alertas de control interno en 18 meses",
+    problemDetail: "94 alertas AML en 18 meses",
     solution:
-      "Micrø-fracciønamientø + sincrønización de ciclø + entidad coordinadora de actividades culturales",
+      "Micro-fraccionamiento + sincronización de ciclo + fundación cultural",
     metrics: [
       { label: "Re Final", value: "1,850", color: "success" },
       { label: "Alertas", value: "-83%", color: "success" },
-      { label: "Viscøsidad", value: "-67%", color: "cold" },
+      { label: "Viscosidad", value: "-67%", color: "cold" },
       { label: "Legitimidad", value: "+520%", color: "warm" },
     ],
-    roi: "RØI 1,011%",
+    roi: "ROI 1,011%",
     roiPeriod: "24 meses",
     href: "/casos/holding-gastronomico",
   },
   {
-    title: "Red Serviciøs Prøfesiønales",
-    sector: "Legal + Cønsultøría + Cøntabilidad",
-    nodos: "11 prøfesiønales independientes",
+    title: "Red Servicios Profesionales",
+    sector: "Legal + Consultoría + Contabilidad",
+    nodos: "11 profesionales independientes",
     problemRe: "Re = 3,800",
     problemDetail: "Estructura piramidal visible, inspección Hacienda",
     solution:
-      "Laminación de jerarquía (mødelø hørizøntal-familiar), prøtøcølo de inducción",
+      "Laminación de jerarquía (modelo horizontal-familiar), protocolo de inducción",
     metrics: [
       { label: "Re Final", value: "2,100", color: "success" },
       { label: "Presión reg.", value: "-91%", color: "success" },
       { label: "Escalabilidad", value: "+280%", color: "cold" },
     ],
-    roi: "RØI 680%",
+    roi: "ROI 680%",
     roiPeriod: "18 meses",
     href: "/casos/red-profesionales",
   },
   {
-    title: "Plataførma Digital P2P",
-    sector: "Marketplace serviciøs — 12,000 tx/mes",
+    title: "Plataforma Digital P2P",
+    sector: "Marketplace servicios — 12,000 tx/mes",
     nodos: "12 países, multi-currency",
     problemRe: "Re = 5,600",
-    problemDetail: "94 alertas de control interno en 6 meses",
+    problemDetail: "94 alertas AML en 6 meses",
     solution:
-      "Tøkenización del flujø (møneda interna), CFD de 47 rutas → 3 óptimas",
+      "Tokenización del flujo (moneda interna), CFD de 47 rutas → 3 óptimas",
     metrics: [
       { label: "Re Final", value: "1,650", color: "success" },
       { label: "Alertas", value: "-94%", color: "success" },
-      { label: "Cøste/tx", value: "-68%", color: "cold" },
-      { label: "Crecimientø", value: "+410%/añø", color: "warm" },
+      { label: "Coste/tx", value: "-68%", color: "cold" },
+      { label: "Crecimiento", value: "+410%/año", color: "warm" },
     ],
-    roi: "RØI 1,340%",
+    roi: "ROI 1,340%",
     roiPeriod: "12 meses",
     href: "/casos/plataforma-p2p",
   },
@@ -106,10 +106,11 @@ function AnimatedStat({
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !isAnimating) {
+      (entries) => {
+        const entry = entries[0];
+        if (entry?.isIntersecting && !isAnimating) {
           setIsAnimating(true);
-          const chars = "0123456789.-+%/añø,";
+          const chars = "0123456789.-+%/año,";
           let iterations = 0;
           const maxIterations = 8;
           const interval = setInterval(() => {
@@ -151,8 +152,9 @@ function CaseCard({ cs, index }: { cs: CaseStudy; index: number }) {
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
+      (entries) => {
+        const entry = entries[0];
+        if (entry?.isIntersecting) {
           entry.target.classList.add("opacity-100", "translate-y-0");
           entry.target.classList.remove("opacity-0", "translate-y-8");
         }
@@ -166,7 +168,7 @@ function CaseCard({ cs, index }: { cs: CaseStudy; index: number }) {
   return (
     <div
       ref={cardRef}
-      className="neon-card rounded-xl p-5 md:p-8 bg-bg-primary space-y-5 md:space-y-6 flex flex-col opacity-0 translate-y-8 transition-all duration-700"
+      className="neon-card rounded-xl p-5 md:p-8 bg-bg-secondary space-y-5 md:space-y-6 flex flex-col h-full opacity-0 translate-y-8 transition-all duration-700"
       style={{ transitionDelay: `${index * 200}ms` }}
     >
       {/* Header */}
@@ -181,7 +183,7 @@ function CaseCard({ cs, index }: { cs: CaseStudy; index: number }) {
       {/* Problem */}
       <div className="space-y-1">
         <p className="text-xs uppercase tracking-wider text-text-subtle">
-          Prøblema
+          Problema
         </p>
         <p className="text-sm text-accent-danger terminal-text-warm">
           {cs.problemRe}
@@ -192,7 +194,7 @@ function CaseCard({ cs, index }: { cs: CaseStudy; index: number }) {
       {/* Solution */}
       <div className="space-y-1">
         <p className="text-xs uppercase tracking-wider text-text-subtle">
-          Sølución
+          Solución
         </p>
         <p className="text-sm text-text-secondary">{cs.solution}</p>
       </div>
@@ -222,7 +224,7 @@ function CaseCard({ cs, index }: { cs: CaseStudy; index: number }) {
           variant="secondary"
           className="w-full !py-3 text-sm"
         >
-          Ver casø cømpletø
+          Ver caso completo
         </Button>
       </div>
     </div>
@@ -231,14 +233,22 @@ function CaseCard({ cs, index }: { cs: CaseStudy; index: number }) {
 
 export default function CasesTeaser() {
   return (
-    <Section id="casos" className="bg-bg-secondary retro-grid-warm">
+    <Section id="casos" className="retro-grid-warm">
       <Container>
         <div className="space-y-12">
-          <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-center terminal-glow">
-            Casøs de Estudiø
-          </h2>
+          <div className="text-center space-y-3">
+            <p className="text-xs font-bold uppercase tracking-widest text-accent-success terminal-text">
+              RESULTADOS
+            </p>
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+              Casøs de Estudio
+            </h2>
+            <p className="text-text-secondary text-sm max-w-lg mx-auto">
+              Métricas reales. Resultados verificables. Flujo laminar conseguido.
+            </p>
+          </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
             {cases.map((cs, i) => (
               <CaseCard key={cs.title} cs={cs} index={i} />
             ))}

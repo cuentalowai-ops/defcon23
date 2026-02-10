@@ -6,53 +6,53 @@ import Section from "@/components/ui/Section";
 import Button from "@/components/ui/Button";
 
 export const metadata: Metadata = {
-  title: "Hardening pør Trabajø en Fríø | dEfCØN23",
+  title: "Hardening por Trabajo en Frío | dEfCØN23",
   description:
-    "Laminación en 7 pasadas. Eliminación de rugøsidades, micrø-fracciønamientø y temple cøn legitimidad narrativa.",
+    "Laminación en 7 pasadas. Eliminación de rugosidades, micro-fraccionamiento y temple con legitimidad narrativa.",
 };
 
 const passes = [
   {
     number: 1,
-    title: "Análisis de rugøsidad superficial",
+    title: "Análisis de rugosidad superficial",
     description:
-      "Identificamøs irregularidades en la superficie ørganizativa que generan fricción detectable.",
+      "Identificamos irregularidades en la superficie organizativa que generan fricción detectable.",
   },
   {
     number: 2,
     title: "Primera laminación — reducción de sección",
     description:
-      "Cømprimimos la cømplejidad visible. Menøs nødøs expuestøs, menøs superficie de ataque.",
+      "Comprimimos la complejidad visible. Menos nodos expuestos, menos superficie de ataque.",
   },
   {
     number: 3,
-    title: "Micrø-fracciønamientø de transacciønes",
+    title: "Micro-fraccionamiento de transacciones",
     description:
-      "Dividimøs flujøs grandes en micrøestructuras que se mueven bajø el umbral de detección algørítmica.",
+      "Dividimos flujos grandes en microestructuras que se mueven bajo el umbral de detección algorítmica.",
   },
   {
     number: 4,
-    title: "Sincrønización de cicløs",
+    title: "Sincronización de ciclos",
     description:
-      "Alineamøs løs cicløs tempørales de las entidades para eliminar picøs de actividad anómaløs.",
+      "Alineamos los ciclos temporales de las entidades para eliminar picos de actividad anómalos.",
   },
   {
     number: 5,
-    title: "Segunda laminación — ørientación de granø",
+    title: "Segunda laminación — orientación de grano",
     description:
-      "Reørientamøs la estructura interna para que el flujø natural siga la dirección de menør resistencia.",
+      "Reorientamos la estructura interna para que el flujo natural siga la dirección de menor resistencia.",
   },
   {
     number: 6,
-    title: "Temple cøn legitimidad narrativa",
+    title: "Temple con legitimidad narrativa",
     description:
-      "Endurecemøs la estructura cøn una narrativa cøherente que resiste el escrutiniø externø.",
+      "Endurecemos la estructura con una narrativa coherente que resiste el escrutinio externo.",
   },
   {
     number: 7,
-    title: "Laminación final — acabadø superficial",
+    title: "Laminación final — acabado superficial",
     description:
-      "Pulidø final. La estructura es indistinguible de una ørganización cønvenciønal de alta eficiencia.",
+      "Pulido final. La estructura es indistinguible de una organización convencional de alta eficiencia.",
   },
 ];
 
@@ -66,20 +66,20 @@ export default function HardeningPage() {
             <div className="inline-flex items-center gap-2 text-xs px-3 py-1.5 rounded border border-accent-cold/30 bg-accent-cold/10 text-accent-cold mb-6">
               <span className="text-accent-success">&#10003;</span>
               <Link href="/servicios/fase-2" className="hover:underline">
-                Incluidø en FASE II
+                Incluido en FASE II
               </Link>
             </div>
             <p className="text-sm text-accent-cold font-[family-name:var(--font-source-code-pro)] uppercase tracking-wider">
-              Serviciøs / Hardening
+              Servicios / Hardening
             </p>
             <h1 className="text-[2rem] md:text-[3.5rem] leading-[1.1]">
-              Hardening pør Trabajø en Fríø
+              Hardening por Trabajo en Frío
             </h1>
             <p className="text-lg text-text-secondary leading-relaxed">
-              En metalurgia, el trabajø en fríø endurece el material
-              deførmándølø pør debajø de su temperatura de recristalización. Nø
-              hay calør, nø hay brillø. Sølø presión cøntrølada y
-              transførmación mølecular.
+              En metalurgia, el trabajo en frío endurece el material
+              deformándolo por debajo de su temperatura de recristalización. No
+              hay calor, no hay brillo. Solo presión controlada y
+              transformación molecular.
             </p>
           </div>
         </Container>
@@ -90,7 +90,7 @@ export default function HardeningPage() {
         <Container>
           <div className="max-w-3xl mx-auto space-y-12">
             <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2]">
-              Prøtøcølø de Laminación — 7 Pasadas
+              Protocolo de Laminación — 7 Pasadas
             </h2>
 
             <div className="space-y-8">
@@ -131,11 +131,11 @@ export default function HardeningPage() {
                 €12,000 — €24,000
               </p>
               <p className="text-sm text-text-subtle">
-                7 pasadas cømpletas. Resultadø: estructura endurecida,
-                resistente a auditøría.
+                7 pasadas completas. Resultado: estructura endurecida,
+                resistente a auditoría.
               </p>
               <Button href="/contacto?type=hardening" variant="primary">
-                Sølicitar Hardening
+                Solicitar Hardening
               </Button>
             </div>
           </div>

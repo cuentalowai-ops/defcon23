@@ -7,7 +7,7 @@ import Button from "@/components/ui/Button";
 export const metadata: Metadata = {
   title: "Paquetes | dEfCØN23",
   description:
-    "Startup €750, Scale-Up €2,500, Enterprise €8,500. Paquetes cerradøs para cada etapa de crecimientø.",
+    "Startup €750, Scale-Up €2,500, Enterprise €8,500. Paquetes cerrados para cada etapa de crecimiento.",
 };
 
 const packages = [
@@ -18,11 +18,11 @@ const packages = [
     badge: "IDEAL PRE-SEED",
     color: "accent-warm",
     glowClass: "terminal-text-warm",
-    ideal: "Startups pre-seed, freelancers estructurandø SL",
+    ideal: "Startups pre-seed, freelancers estructurando SL",
     items: [
-      "Intelligence Brief (OSINT básicø)",
-      "Auditøría de Flujø (cálculø Re)",
-      "Cømpliance Gap Analysis",
+      "Intelligence Brief (OSINT básico)",
+      "Auditoría de Flujo (cálculo Re)",
+      "Compliance Gap Analysis",
       "1 sesión estratégica (60 min)",
     ],
     href: "/contacto?package=startup",
@@ -31,16 +31,16 @@ const packages = [
     name: "Scale-Up",
     price: "€2,500",
     duration: "15 días",
-    badge: "MØST PØPULAR",
+    badge: "MOST POPULAR",
     color: "accent-cold",
     glowClass: "terminal-text",
-    ideal: "Empresas 10-50 empleadøs, revenues €500K-€5M",
+    ideal: "Empresas 10-50 empleados, revenues €500K-€5M",
     items: [
-      "Tødø de Fase I",
-      "Auditøría + Hardening cømpletø",
-      "Cømpliance Architecture (4 capas)",
+      "Todo de Fase I",
+      "Auditoría + Hardening completo",
+      "Compliance Architecture (4 capas)",
       "Zero Trust (básica)",
-      "2 sesiønes (90 min c/u)",
+      "2 sesiones (90 min c/u)",
     ],
     href: "/contacto?package=scaleup",
   },
@@ -48,18 +48,18 @@ const packages = [
     name: "Enterprise",
     price: "€8,500",
     duration: "30 días",
-    badge: "CØMPLETØ",
+    badge: "COMPLETO",
     color: "accent-success",
     glowClass: "terminal-text",
-    ideal: "Høldings multi-nødø, empresas > €5M revenue, prøyectøs EU",
+    ideal: "Holdings multi-nodo, empresas > €5M revenue, proyectos EU",
     items: [
-      "Tødø de Fase I + II",
-      "CFD Vørtex Core",
+      "Todo de Fase I + II",
+      "CFD Vortex Core",
       "EU Funds Capture",
-      "eIDAS 2.0 Røadmap",
-      "Dashboard custøm",
-      "4 sesiønes (120 min c/u)",
-      "Søpørte 3 meses",
+      "eIDAS 2.0 Roadmap",
+      "Dashboard custom",
+      "4 sesiones (120 min c/u)",
+      "Soporte 3 meses",
     ],
     href: "/contacto?package=enterprise",
   },
@@ -75,11 +75,11 @@ export default function PaquetesPage() {
               Paquetes
             </p>
             <h1 className="text-[2rem] md:text-[3rem] leading-[1.1] terminal-glow-warm">
-              Paquetes Persønalizadøs
+              Paquetes Personalizados
             </h1>
             <p className="text-base text-text-secondary leading-relaxed">
-              Cønfiguraciønes øptimizadas para diferentes estadiøs de
-              crecimientø. Preciø fijø. Alcance definidø. Sin sørpresas.
+              Configuraciones optimizadas para diferentes estadios de
+              crecimiento. Precio fijo. Alcance definido. Sin sorpresas.
             </p>
           </div>
         </Container>
@@ -136,7 +136,7 @@ export default function PaquetesPage() {
                     variant="primary"
                     className="w-full !py-3 text-sm"
                   >
-                    Cøntratar {pkg.name}
+                    Contratar {pkg.name}
                   </Button>
                 </div>
               </div>
@@ -155,20 +155,20 @@ export default function PaquetesPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="neon-card rounded-xl p-6 md:p-8 bg-bg-tertiary border-l-4 border-accent-success space-y-3">
                 <h3 className="text-base font-semibold text-accent-success">
-                  Re Reductiøn Guarantee
+                  Re Reduction Guarantee
                 </h3>
                 <p className="text-sm text-text-secondary leading-relaxed">
-                  Si después de Fase II tu Re nø se reduce al menøs 30%,
-                  devølvemøs el 50% de la inversión.
+                  Si después de Fase II tu Re no se reduce al menos 30%,
+                  devolvemos el 50% de la inversión.
                 </p>
               </div>
               <div className="neon-card rounded-xl p-6 md:p-8 bg-bg-tertiary border-l-4 border-accent-cold space-y-3">
                 <h3 className="text-base font-semibold text-accent-cold">
-                  Cømpliance Pass Guarantee
+                  Compliance Pass Guarantee
                 </h3>
                 <p className="text-sm text-text-secondary leading-relaxed">
-                  Si tu estructura nø pasa una auditøría externa dentrø de 12
-                  meses pør errør nuestrø, reembølsamøs 100% + cøbertura de
+                  Si tu estructura no pasa una auditoría externa dentro de 12
+                  meses por error nuestro, reembolsamos 100% + cobertura de
                   multas (hasta €10K).
                 </p>
               </div>
@@ -181,10 +181,10 @@ export default function PaquetesPage() {
         <Container>
           <div className="max-w-2xl mx-auto text-center space-y-6">
             <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
-              ¿Nø encaja ningún paquete?
+              ¿No encaja ningún paquete?
             </h2>
             <p className="text-text-secondary">
-              Tenemos serviciøs a la carta y mødelo retainer.
+              Tenemos servicios a la carta y modelo retainer.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button href="/servicios/a-la-carta" variant="secondary">

@@ -8,26 +8,26 @@ import Button from "@/components/ui/Button";
 export const metadata: Metadata = {
   title: "Regulatory Landscape | dEfCØN23",
   description:
-    "Marcø regulatøriø EU + España: NIS2, DORA, AI Act, CRA, ENS, RGPD. Timeline 2024-2030.",
+    "Marco regulatorio EU + España: NIS2, DORA, AI Act, CRA, ENS, RGPD. Timeline 2024-2030.",
 };
 
 const funding = [
   {
     name: "Horizon Europe",
     description:
-      "Prøgrama marcø de investigación e innøvación de la UE. Opørtunidades para prøyectøs de ciberseguridad y compliance technology.",
-    amount: "Hasta €2.5M pør prøyectø",
+      "Programa marco de investigación e innovación de la UE. Oportunidades para proyectos de ciberseguridad y compliance technology.",
+    amount: "Hasta €2.5M por proyecto",
   },
   {
     name: "Digital Europe Programme",
     description:
       "Financiación para capacidades digitales y ciberseguridad. SOCs, incident response, y compliance automation.",
-    amount: "Hasta €1M pør prøyectø",
+    amount: "Hasta €1M por proyecto",
   },
   {
     name: "Kit Digital / Kit Consulting",
     description:
-      "Ayudas del Gøbiernø de España para digitalización de PYMEs. Incluye ciberseguridad y compliance.",
+      "Ayudas del Gobierno de España para digitalización de PYMEs. Incluye ciberseguridad y compliance.",
     amount: "Hasta €29,000",
   },
 ];
@@ -43,12 +43,12 @@ export default function RegulatoryPage() {
               Regulatory
             </p>
             <h1 className="text-[2rem] md:text-[3.5rem] leading-[1.1]">
-              El Paisaje Regulatøriø
+              El Paisaje Regulatorio
             </h1>
             <p className="text-lg text-text-secondary leading-relaxed">
-              Eurøpa cønstruye el marcø regulatøriø más exigente del mundø.
-              España lø transpøne cøn sus prøpias capas. Entender el mapa es
-              el primer pasø para cønvertir compliance en ventaja cømpetitiva.
+              Europa construye el marco regulatorio más exigente del mundo.
+              España lo transpone con sus propias capas. Entender el mapa es
+              el primer paso para convertir compliance en ventaja competitiva.
             </p>
           </div>
         </Container>
@@ -62,11 +62,11 @@ export default function RegulatoryPage() {
         <Container>
           <div className="space-y-10">
             <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2]">
-              Opørtunidades de Financiación
+              Oportunidades de Financiación
             </h2>
             <p className="text-text-secondary max-w-2xl">
-              La presión regulatøria viene acømpañada de føndøs. Estøs
-              prøgramas financian exactamente lø que necesitas implementar.
+              La presión regulatoria viene acompañada de fondos. Estos
+              programas financian exactamente lo que necesitas implementar.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -88,7 +88,7 @@ export default function RegulatoryPage() {
 
             <div className="text-center pt-8">
               <Button href="/contacto" variant="primary">
-                Cønsultar Elegibilidad
+                Consultar Elegibilidad
               </Button>
             </div>
           </div>

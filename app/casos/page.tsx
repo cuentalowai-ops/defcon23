@@ -5,9 +5,9 @@ import Section from "@/components/ui/Section";
 import CasesTeaser from "@/components/sections/CasesTeaser";
 
 export const metadata: Metadata = {
-  title: "Casøs de Estudiø | dEfCØN23",
+  title: "Casos de Estudio | dEfCØN23",
   description:
-    "Casøs reales de reducción de Reynølds: holding gastronómicø, red prøfesiønal y plataførma P2P.",
+    "Casos reales de reducción de Reynolds: holding gastronómico, red profesional y plataforma P2P.",
 };
 
 export default function CasosPage() {
@@ -17,14 +17,14 @@ export default function CasosPage() {
         <Container>
           <div className="max-w-3xl space-y-6">
             <p className="text-sm text-accent-cold font-[family-name:var(--font-source-code-pro)] uppercase tracking-wider">
-              Casøs de Estudiø
+              Casos de Estudio
             </p>
             <h1 className="text-[2rem] md:text-[3.5rem] leading-[1.1]">
-              De Turbulentø a Laminar
+              De Turbulento a Laminar
             </h1>
             <p className="text-lg text-text-secondary leading-relaxed">
-              Tres ørganizaciønes. Tres niveles de turbulencia. Un resultadø
-              cømún: flujø laminar søstenible cøn métricas verificables.
+              Tres organizaciones. Tres niveles de turbulencia. Un resultado
+              común: flujo laminar sostenible con métricas verificables.
             </p>
           </div>
         </Container>

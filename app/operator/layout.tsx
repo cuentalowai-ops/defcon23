@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Raúl Balaguer — Øperatør | dEfCØN23",
+  title: "Raúl Balaguer — Operator | dEfCØN23",
   description:
-    "Arquitectø de Sistemas Cøgnitivøs. Especializadø en Ciberseguridad, Cømpørtamientø Humanø y Sistemas Cømplejos.",
+    "Arquitecto de Sistemas Cognitivos. Especializado en Ciberseguridad, Comportamiento Humano y Sistemas Complejos.",
 };
 
 export default function OperatorLayout({

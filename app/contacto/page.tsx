@@ -50,15 +50,15 @@ export default function ContactoPage() {
         <Container>
           <div className="max-w-3xl space-y-6">
             <p className="text-sm text-accent-cold font-[family-name:var(--font-source-code-pro)] uppercase tracking-wider">
-              Cøntactø
+              Contacto
             </p>
             <h1 className="text-[2rem] md:text-[3.5rem] leading-[1.1]">
-              Iniciar Prøtøcølø
+              Iniciar Protocolo
             </h1>
             <p className="text-lg text-text-secondary leading-relaxed">
-              Cønsulta inicial: <span className="text-accent-success font-semibold">15 minutøs gratuitos</span>.
-              Handshake + evaluación de tu prøblema. Decidimøs juntos si
-              tiene sentidø trabajar.
+              Consulta inicial: <span className="text-accent-success font-semibold">15 minutos gratuitos</span>.
+              Handshake + evaluación de tu problema. Decidimos juntos si
+              tiene sentido trabajar.
             </p>
           </div>
         </Container>
@@ -75,11 +75,11 @@ export default function ContactoPage() {
                   </span>
                 </div>
                 <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2]">
-                  Prøtøcølø Iniciadø
+                  Protocolo Iniciado
                 </h2>
                 <p className="text-text-secondary">
-                  Tu sølicitud ha sidø recibida. Respuesta en &lt; 24h
-                  labørables.
+                  Tu solicitud ha sido recibida. Respuesta en &lt; 24h
+                  laborables.
                 </p>
                 <p className="text-sm font-[family-name:var(--font-source-code-pro)] text-text-subtle">
                   Ref: DC23-{Date.now().toString(36).toUpperCase()}
@@ -93,7 +93,7 @@ export default function ContactoPage() {
                     htmlFor="name"
                     className="block text-sm text-text-secondary"
                   >
-                    Nømbre *
+                    Nombre *
                   </label>
                   <input
                     id="name"
@@ -102,7 +102,7 @@ export default function ContactoPage() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    placeholder="Tu nømbre cømpletø"
+                    placeholder="Tu nombre completo"
                     className={inputClass}
                   />
                 </div>
@@ -141,7 +141,7 @@ export default function ContactoPage() {
                     type="text"
                     value={formData.company}
                     onChange={handleChange}
-                    placeholder="Nømbre de la empresa"
+                    placeholder="Nombre de la empresa"
                     className={inputClass}
                   />
                 </div>
@@ -152,7 +152,7 @@ export default function ContactoPage() {
                     htmlFor="reynolds"
                     className="block text-sm text-text-secondary"
                   >
-                    Númerø de Reynølds estimadø
+                    Número de Reynolds estimado
                   </label>
                   <input
                     id="reynolds"
@@ -160,16 +160,16 @@ export default function ContactoPage() {
                     type="text"
                     value={formData.reynolds}
                     onChange={handleChange}
-                    placeholder="Si lø has calculadø cøn nuestra herramienta"
+                    placeholder="Si lo has calculado con nuestra herramienta"
                     className={inputClass}
                   />
                   <p className="text-xs text-text-subtle">
-                    Nø lø sabes?{" "}
+                    No lo sabes?{" "}
                     <a
                       href="/protocol"
                       className="text-accent-cold hover:underline"
                     >
-                      Calcúlalø aquí
+                      Calcúlalo aquí
                     </a>
                   </p>
                 </div>
@@ -180,7 +180,7 @@ export default function ContactoPage() {
                     htmlFor="budget"
                     className="block text-sm text-text-secondary"
                   >
-                    Rangø de presupuestø
+                    Rango de presupuesto
                   </label>
                   <select
                     id="budget"
@@ -189,7 +189,7 @@ export default function ContactoPage() {
                     onChange={handleChange}
                     className={inputClass}
                   >
-                    <option value="">Selecciønar rangø</option>
+                    <option value="">Seleccionar rango</option>
                     {budgetRanges.map((range) => (
                       <option key={range} value={range}>
                         {range}
@@ -219,12 +219,12 @@ export default function ContactoPage() {
                 </div>
 
                 <Button type="submit" variant="primary" className="w-full">
-                  Enviar Sølicitud
+                  Enviar Solicitud
                 </Button>
 
                 <p className="text-xs text-text-subtle text-center">
-                  Al enviar, aceptas que tus datøs serán tratadøs cønførme al
-                  RGPD. Nø cømpartimøs inførmación cøn tercerøs.
+                  Al enviar, aceptas que tus datos serán tratados conforme al
+                  RGPD. No compartimos información con terceros.
                 </p>
               </form>
             )}
@@ -257,7 +257,7 @@ export default function ContactoPage() {
             </div>
             <div className="space-y-2">
               <p className="text-xs text-text-subtle uppercase tracking-wider">
-                Cønsulta inicial
+                Consulta inicial
               </p>
               <p className="text-sm font-[family-name:var(--font-source-code-pro)] text-accent-success">
                 15 min | Gratis

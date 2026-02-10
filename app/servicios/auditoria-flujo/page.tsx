@@ -7,29 +7,29 @@ import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
 
 export const metadata: Metadata = {
-  title: "Auditøría de Flujø Sistémicø | dEfCØN23",
+  title: "Auditoría de Flujo Sistémico | dEfCØN23",
   description:
-    "Calculamøs tu Númerø de Reynølds. Análisis de puntøs de separación, mapeø de firma térmica y diseñø de capas de absørción.",
+    "Calculamos tu Número de Reynolds. Análisis de puntos de separación, mapeo de firma térmica y diseño de capas de absorción.",
 };
 
 const modules = [
   {
-    title: "Módulø 1: Puntøs de Separación",
+    title: "Módulo 1: Puntos de Separación",
     description:
-      "Identificamøs dónde el flujø ørganizativø se separa del boundary layer. Estøs søn løs puntøs dønde se genera turbulencia detectable — alertas de control interno, inspecciønes fiscales, señales anómalas.",
-    deliverable: "Mapa de separación cøn priørización de riesgø",
+      "Identificamos dónde el flujo organizativo se separa del boundary layer. Estos son los puntos donde se genera turbulencia detectable — alertas AML, inspecciones fiscales, señales anómalas.",
+    deliverable: "Mapa de separación con priorización de riesgo",
   },
   {
-    title: "Módulø 2: Firma Térmica",
+    title: "Módulo 2: Firma Térmica",
     description:
-      "Cada ørganización emite una firma térmica — patrønes de transacción, flujøs de capital, relaciønes entre nødøs. Mapeamøs tu firma actual y diseñamøs el perfil térmicø øbjetivø.",
-    deliverable: "Thermal Map + análisis de expøsición",
+      "Cada organización emite una firma térmica — patrones de transacción, flujos de capital, relaciones entre nodos. Mapeamos tu firma actual y diseñamos el perfil térmico objetivo.",
+    deliverable: "Thermal Map + análisis de exposición",
   },
   {
-    title: "Módulø 3: Capas de Absørción",
+    title: "Módulo 3: Capas de Absorción",
     description:
-      "Diseñamøs las capas que absørben la fricción regulatøria antes de que alcance el núcleø øperativø. Compliance cømø escudø, nø cømø carga.",
-    deliverable: "Yield Stress Analysis + prøtøcølø de absørción",
+      "Diseñamos las capas que absorben la fricción regulatoria antes de que alcance el núcleo operativo. Compliance como escudo, no como carga.",
+    deliverable: "Yield Stress Analysis + protocolo de absorción",
   },
 ];
 
@@ -43,22 +43,22 @@ export default function AuditoriaFlujoPage() {
             <div className="inline-flex items-center gap-2 text-xs px-3 py-1.5 rounded border border-accent-cold/30 bg-accent-cold/10 text-accent-cold mb-6">
               <span className="text-accent-success">&#10003;</span>
               <Link href="/servicios/fase-2" className="hover:underline">
-                Incluidø en FASE II
+                Incluido en FASE II
               </Link>
             </div>
             <p className="text-sm text-accent-cold font-[family-name:var(--font-source-code-pro)] uppercase tracking-wider">
-              Serviciøs / Auditøría
+              Servicios / Auditoría
             </p>
             <h1 className="text-[2rem] md:text-[3.5rem] leading-[1.1]">
-              Auditøría de Flujø Sistémicø
+              Auditoría de Flujo Sistémico
             </h1>
             <p className="text-lg text-text-secondary leading-relaxed">
-              Cønceptø base:{" "}
+              Concepto base:{" "}
               <span className="text-accent-cold font-semibold">
-                Esfuerzø de Fluencia (yield stress)
+                Esfuerzo de Fluencia (yield stress)
               </span>{" "}
-              — el puntø exactø dønde tu estructura deja de absørber presión y
-              cømienza a deførmarse.
+              — el punto exacto donde tu estructura deja de absorber presión y
+              comienza a deformarse.
             </p>
           </div>
         </Container>
@@ -69,7 +69,7 @@ export default function AuditoriaFlujoPage() {
         <Container>
           <div className="space-y-10">
             <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2]">
-              3 Móduløs de Análisis
+              3 Módulos de Análisis
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {modules.map((mod) => (
@@ -106,9 +106,9 @@ export default function AuditoriaFlujoPage() {
             </h2>
             <ul className="space-y-4">
               {[
-                "Reynolds Report — Tu númerø actual + diagnósticø cømpletø",
-                "Thermal Map — Mapa de firma térmica y expøsición",
-                "Yield Stress Analysis — Puntø de fluencia y recømendaciønes",
+                "Reynolds Report — Tu número actual + diagnóstico completo",
+                "Thermal Map — Mapa de firma térmica y exposición",
+                "Yield Stress Analysis — Punto de fluencia y recomendaciones",
               ].map((item, i) => (
                 <li
                   key={i}
@@ -130,10 +130,10 @@ export default function AuditoriaFlujoPage() {
                 €4,500 — €12,000
               </p>
               <p className="text-sm text-text-subtle">
-                Según alcance y cømplejidad del ecøsistema
+                Según alcance y complejidad del ecosistema
               </p>
               <Button href="/contacto?type=audit" variant="primary">
-                Sølicitar Auditøría
+                Solicitar Auditoría
               </Button>
             </div>
           </div>

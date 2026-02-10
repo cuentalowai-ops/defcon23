@@ -5,15 +5,15 @@ import Section from "@/components/ui/Section";
 import Button from "@/components/ui/Button";
 
 export const metadata: Metadata = {
-  title: "Casø: Red Serviciøs Prøfesiønales | dEfCØN23",
+  title: "Caso: Red Servicios Profesionales | dEfCØN23",
   description:
-    "11 prøfesiønales independientes. Laminación de jerarquía piramidal. Presión regulatøria: -91%.",
+    "11 profesionales independientes. Laminación de jerarquía piramidal. Presión regulatoria: -91%.",
 };
 
 const metrics = [
   { label: "Re Inicial", value: "3,800", color: "text-accent-danger" },
   { label: "Re Final", value: "2,100", color: "text-accent-success" },
-  { label: "Presión regulatøria", value: "-91%", color: "text-accent-success" },
+  { label: "Presión regulatoria", value: "-91%", color: "text-accent-success" },
   { label: "Escalabilidad", value: "+280%", color: "text-accent-cold" },
 ];
 
@@ -25,17 +25,17 @@ export default function RedProfesionalesPage() {
         <Container>
           <div className="max-w-3xl space-y-6">
             <p className="text-sm text-accent-cold font-[family-name:var(--font-source-code-pro)] uppercase tracking-wider">
-              Casø de Estudiø B
+              Caso de Estudio B
             </p>
             <h1 className="text-[2rem] md:text-[3.5rem] leading-[1.1]">
-              Red Serviciøs Prøfesiønales
+              Red Servicios Profesionales
             </h1>
             <div className="flex flex-wrap gap-3">
               <span className="text-xs px-3 py-1 rounded-full bg-bg-tertiary text-text-subtle border border-border-subtle">
-                Legal + Cønsultøría + Cøntabilidad
+                Legal + Consultoría + Contabilidad
               </span>
               <span className="text-xs px-3 py-1 rounded-full bg-bg-tertiary text-text-subtle border border-border-subtle">
-                11 prøfesiønales
+                11 profesionales
               </span>
             </div>
           </div>
@@ -47,13 +47,13 @@ export default function RedProfesionalesPage() {
         <Container>
           <div className="max-w-3xl space-y-6">
             <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2]">
-              El Prøblema
+              El Problema
             </h2>
             <p className="text-text-secondary leading-relaxed">
-              Estructura piramidal visible cøn 11 prøfesiønales independientes
-              øperandø bajø un nødø central de cøørdinación. Inspección de
-              Hacienda en cursø. La estructura jerárquica era transparente para
-              cualquier análisis de red básicø.
+              Estructura piramidal visible con 11 profesionales independientes
+              operando bajo un nodo central de coordinación. Inspección de
+              Hacienda en curso. La estructura jerárquica era transparente para
+              cualquier análisis de red básico.
             </p>
           </div>
         </Container>
@@ -64,13 +64,13 @@ export default function RedProfesionalesPage() {
         <Container>
           <div className="max-w-3xl space-y-6">
             <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2]">
-              La Sølución
+              La Solución
             </h2>
             <p className="text-text-secondary leading-relaxed">
-              Laminación de la jerarquía visible hacia un mødelø
-              hørizøntal-familiar. Implementación de prøtøcølø de inducción que
-              redistribuye løs nødøs de decisión. El resultadø: una red plana
-              dønde la cøørdinación emerge de prøtøcøløs cømpartidøs, nø de
+              Laminación de la jerarquía visible hacia un modelo
+              horizontal-familiar. Implementación de protocolo de inducción que
+              redistribuye los nodos de decisión. El resultado: una red plana
+              donde la coordinación emerge de protocolos compartidos, no de
               jerarquía visible.
             </p>
           </div>
@@ -82,7 +82,7 @@ export default function RedProfesionalesPage() {
         <Container>
           <div className="space-y-10">
             <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2]">
-              Resultadøs
+              Resultados
             </h2>
             <div className="grid grid-cols-2 gap-6">
               {metrics.map((m) => (
@@ -103,7 +103,7 @@ export default function RedProfesionalesPage() {
             </div>
             <div className="text-center pt-8">
               <Button href="/contacto" variant="primary">
-                Sølicitar Auditøría
+                Solicitar Auditoría
               </Button>
             </div>
           </div>

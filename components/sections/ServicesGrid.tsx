@@ -15,7 +15,7 @@ const phases = [
     price: "€500",
     duration: "5-7 días",
     description:
-      "ØSINT + Threat Modeling. Asimetría de inførmación antes de cualquier decisión.",
+      "OSINT + Threat Modeling. Asimetría de información antes de cualquier decisión.",
     badges: ["OSINT", "Threat Modeling", "Vetting"],
     href: "/servicios/fase-1",
     color: "accent-warm",
@@ -29,7 +29,7 @@ const phases = [
     price: "€1,000",
     duration: "10-15 días",
     description:
-      "Auditøría + Hardening + Cømpliance Architecture. De turbulentø a laminar.",
+      "Auditoría + Hardening + Compliance Architecture. De turbulento a laminar.",
 
     badges: ["Zero Trust", "NIS2", "Legal Hardening"],
     href: "/servicios/fase-2",
@@ -44,7 +44,7 @@ const phases = [
     price: "Desde €3,000",
     duration: "20-30 días",
     description:
-      "CFD Engineering + EU Funds Capture + eIDAS 2.0. Escala cøn backing instituciønal.",
+      "CFD Engineering + EU Funds Capture + eIDAS 2.0. Escala con backing institucional.",
     badges: ["eIDAS 2.0", "EU Subsidies", "EUDI Wallet"],
     href: "/servicios/fase-3",
     color: "accent-success",
@@ -63,8 +63,9 @@ function PhaseCard({
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
+      (entries) => {
+        const entry = entries[0];
+        if (entry?.isIntersecting) {
           entry.target.classList.add("opacity-100", "translate-y-0");
           entry.target.classList.remove("opacity-0", "translate-y-8");
         }
@@ -80,7 +81,7 @@ function PhaseCard({
   return (
     <div
       ref={ref}
-      className="neon-card rounded-xl p-6 md:p-8 bg-bg-tertiary space-y-5 flex flex-col opacity-0 translate-y-8 transition-all duration-700"
+      className="neon-card rounded-xl p-6 md:p-8 bg-bg-tertiary space-y-5 flex flex-col h-full opacity-0 translate-y-8 transition-all duration-700"
       style={{ transitionDelay: `${index * 150}ms` }}
     >
       {/* Phase label + icon */}
@@ -152,10 +153,10 @@ export default function ServicesGrid() {
               ARSENAL
             </p>
             <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
-              Prøtøcølø de 3 Fases
+              Prøtøcølo de 3 Fases
             </h2>
             <p className="text-text-secondary text-sm max-w-lg mx-auto">
-              De la inteligencia táctica al escaladø estratégicø
+              De la inteligencia táctica al escalado estratégico
             </p>
           </div>
 
@@ -167,7 +168,7 @@ export default function ServicesGrid() {
 
           <div className="text-center pt-4">
             <Button href="/servicios" variant="secondary">
-              Ver arsenal cømpletø &rarr;
+              Ver arsenal completo &rarr;
             </Button>
           </div>
         </div>

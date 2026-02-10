@@ -178,6 +178,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: var(--font-source-code-pro), 'Source Code Pro', monospace;
+  line-height: 1.7;
 }
 
 h1, h2, h3, h4, h5, h6, p, span, a, li, td, th, label, input, textarea, select, button {

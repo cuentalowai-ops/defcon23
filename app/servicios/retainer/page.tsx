@@ -7,34 +7,34 @@ import Button from "@/components/ui/Button";
 export const metadata: Metadata = {
   title: "Retainer | dEfCØN23",
   description:
-    "€1,500/mes. Mønitorización cøntinua, alertas nørmativas, sesión mensual, søpørte priøritariø. Mínimø 6 meses.",
+    "€1,500/mes. Monitorización continua, alertas normativas, sesión mensual, soporte prioritario. Mínimo 6 meses.",
 };
 
 const included = [
-  "Mønitorización cøntinua de Re (updates semanales)",
-  "Alertas de nuevas nørmativas (EU + España)",
+  "Monitorización continua de Re (updates semanales)",
+  "Alertas de nuevas normativas (EU + España)",
   "1 sesión estratégica mensual (60 min)",
-  "Actualizaciønes de Cømpliance Architecture",
-  "Søpørte técnicø priøritariø (respuesta < 2h)",
-  "Repørte mensual de estadø del sistema",
-  "Accesø al Dashboard en tiempø real",
+  "Actualizaciones de Compliance Architecture",
+  "Soporte técnico prioritario (respuesta < 2h)",
+  "Reporte mensual de estado del sistema",
+  "Acceso al Dashboard en tiempo real",
 ];
 
 const benefits = [
   {
-    title: "Prevención Prøactiva",
+    title: "Prevención Proactiva",
     description:
-      "Detectamøs prøblemas antes de que se cønviertan en crisis. Mønitorización en tiempø real de tu Re ørganizativø.",
+      "Detectamos problemas antes de que se conviertan en crisis. Monitorización en tiempo real de tu Re organizativo.",
   },
   {
-    title: "Cøst-Effective",
+    title: "Cost-Effective",
     description:
-      "Menør cøste que cøntratar søluciønes puntuales cuandø surge el prøblema. NIS2, DORA, AI Act — el paisaje cambia cøntinuamente.",
+      "Menor coste que contratar soluciones puntuales cuando surge el problema. NIS2, DORA, AI Act — el paisaje cambia continuamente.",
   },
   {
     title: "Paz Mental",
     description:
-      "Tu Re está siempre bajø cøntrøl, nø tømas decisiønes ciegas. Cada decisión de crecimientø se evalúa pør su impactø.",
+      "Tu Re está siempre bajo control, no tomas decisiones ciegas. Cada decisión de crecimiento se evalúa por su impacto.",
   },
 ];
 
@@ -48,7 +48,7 @@ export default function RetainerPage() {
               Retainer
             </p>
             <h1 className="text-[2rem] md:text-[3rem] leading-[1.1] terminal-glow-warm">
-              Mødelo Retainer
+              Modelo Retainer
             </h1>
             <div className="flex items-baseline gap-3">
               <span className="text-4xl font-bold text-accent-warm terminal-text-warm">
@@ -56,17 +56,17 @@ export default function RetainerPage() {
               </span>
             </div>
             <p className="text-sm text-text-subtle">
-              Mínimø 6 meses · Sin permanencia tras el períødø inicial
+              Mínimo 6 meses · Sin permanencia tras el período inicial
             </p>
             <h2 className="text-[1.1rem] md:text-[1.5rem] leading-[1.3] text-text-secondary">
-              Vigilancia Cøntinua
+              Vigilancia Continua
             </h2>
             <p className="text-base text-text-secondary leading-relaxed">
-              Mønitorización cøntinua de tu Númerø de Reynølds. Mantén tu
-              ørganización en flujø laminar de førma permanente.
+              Monitorización continua de tu Número de Reynolds. Mantén tu
+              organización en flujo laminar de forma permanente.
             </p>
             <Button href="/contacto?service=retainer" variant="primary">
-              Cøntratar Retainer
+              Contratar Retainer
             </Button>
           </div>
         </Container>
@@ -98,7 +98,7 @@ export default function RetainerPage() {
         <Container>
           <div className="space-y-8">
             <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
-              Beneficiøs
+              Beneficios
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {benefits.map((b) => (
@@ -128,9 +128,9 @@ export default function RetainerPage() {
             </h2>
             <ul className="space-y-3">
               {[
-                "Høldings multi-nødø que necesitan estabilidad cøntinua",
-                "Empresas suјetas a NIS2/DORA cøn øbligación de repørte",
-                "Ørganizaciønes en crecimientø rápidø (Re aumenta cøn la escala)",
+                "Holdings multi-nodo que necesitan estabilidad continua",
+                "Empresas suјetas a NIS2/DORA con obligación de reporte",
+                "Organizaciones en crecimiento rápido (Re aumenta con la escala)",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3 text-text-secondary">
                   <span className="text-accent-cold mt-0.5 text-sm">&gt;</span>
@@ -147,13 +147,13 @@ export default function RetainerPage() {
         <Container>
           <div className="max-w-2xl mx-auto text-center space-y-6">
             <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
-              Prøtección 24/7
+              Protección 24/7
             </h2>
             <p className="text-text-secondary">
-              Tu Reynølds nø duerme. Nøsøtrøs tampøcø.
+              Tu Reynolds no duerme. Nosotros tampoco.
             </p>
             <Button href="/contacto?service=retainer" variant="primary">
-              Cøntratar Retainer
+              Contratar Retainer
             </Button>
           </div>
         </Container>

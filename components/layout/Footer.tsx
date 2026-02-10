@@ -2,7 +2,7 @@ import Link from "next/link";
 import Container from "@/components/ui/Container";
 
 const serviciosLinks = [
-  { href: "/servicios/auditoria-flujo", label: "Auditøría de Flujø" },
+  { href: "/servicios/auditoria-flujo", label: "Auditoría de Flujo" },
   { href: "/servicios/hardening", label: "Hardening" },
   { href: "/servicios/cfd-vortex", label: "CFD Vortex" },
   {
@@ -12,8 +12,8 @@ const serviciosLinks = [
 ];
 
 const recursosLinks = [
-  { href: "/metodologia", label: "Metødøløgía" },
-  { href: "/casos", label: "Casøs de Estudiø" },
+  { href: "/metodologia", label: "Metodología" },
+  { href: "/casos", label: "Casos de Estudio" },
   { href: "/regulatory", label: "Regulatory" },
   { href: "/protocol", label: "Protocol" },
 ];
@@ -32,15 +32,15 @@ export default function Footer() {
               dEfCØN23
             </Link>
             <p className="text-sm text-text-subtle leading-relaxed max-w-xs">
-              Ingeniería de Sistemas Cømplejos. Transførmamøs la turbulencia
-              ørganizativa en laminación cøntrølada.
+              Ingeniería de Sistemas Complejos. Transformamos la turbulencia
+              organizativa en laminación controlada.
             </p>
           </div>
 
           {/* Servicios */}
           <div className="space-y-4">
             <h4 className="text-sm font-semibold text-text-primary uppercase tracking-wider">
-              Serviciøs
+              Servicios
             </h4>
             <ul className="space-y-3">
               {serviciosLinks.map((link) => (
@@ -59,7 +59,7 @@ export default function Footer() {
           {/* Recursos */}
           <div className="space-y-4">
             <h4 className="text-sm font-semibold text-text-primary uppercase tracking-wider">
-              Recursøs
+              Recursos
             </h4>
             <ul className="space-y-3">
               {recursosLinks.map((link) => (
@@ -78,7 +78,7 @@ export default function Footer() {
           {/* Contacto */}
           <div className="space-y-4">
             <h4 className="text-sm font-semibold text-text-primary uppercase tracking-wider">
-              Cøntactø
+              Contacto
             </h4>
             <ul className="space-y-3">
               <li>
@@ -90,10 +90,10 @@ export default function Footer() {
                 </a>
               </li>
               <li className="text-sm text-text-subtle">
-                Base: Madrid | Øperación: Gløbal
+                Base: Madrid | Operación: Global
               </li>
               <li className="text-sm text-text-subtle">
-                Cønsulta inicial: 90 min | €750
+                Consulta inicial: 90 min | €750
               </li>
             </ul>
           </div>
@@ -102,11 +102,40 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-10 md:mt-16 pt-6 md:pt-8 border-t border-border-subtle flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-text-subtle">
-            &copy; {new Date().getFullYear()} dEfCØN23. Tødøs løs derechøs
-            reservadøs.
+            &copy; {new Date().getFullYear()} dEfCØN23. Todos los derechos
+            reservados.
           </p>
+          <div className="flex items-center gap-6">
+            <a
+              href="https://linkedin.com/company/defcon23"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-text-subtle hover:text-accent-cold transition-colors"
+              aria-label="LinkedIn"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="https://github.com/defcon23"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-text-subtle hover:text-accent-cold transition-colors"
+              aria-label="GitHub"
+            >
+              GitHub
+            </a>
+            <a
+              href="https://x.com/defcon23eu"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-text-subtle hover:text-accent-cold transition-colors"
+              aria-label="X (Twitter)"
+            >
+              X
+            </a>
+          </div>
           <p className="text-xs text-text-subtle terminal-text">
-            Re &lt; 2,300 | Flujø Laminar
+            Re &lt; 2,300 | Flujo Laminar
           </p>
         </div>
       </Container>

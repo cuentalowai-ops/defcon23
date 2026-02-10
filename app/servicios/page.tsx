@@ -10,9 +10,9 @@ import PricingTable from "@/components/ui/PricingTable";
 
 /* ─── Boot sequence ─── */
 const bootLines = [
-  { text: "> INICIALIZANDØ ARSENAL...", delay: 0 },
-  { text: "> CARGANDØ PRØTØCØLØS DE INTELIGENCIA...", delay: 300 },
-  { text: "> SISTEMA: ØPERATIØNAL", delay: 600 },
+  { text: "> INICIALIZANDO ARSENAL...", delay: 0 },
+  { text: "> CARGANDO PROTOCOLOS DE INTELIGENCIA...", delay: 300 },
+  { text: "> SISTEMA: OPERATIONAL", delay: 600 },
 ];
 
 /* ─── Phase cards data ─── */
@@ -21,16 +21,16 @@ const phases = [
     icon: Shield,
     phase: "FASE I",
     title: "Intelligence Brief & Vetting",
-    subtitle: "(Shøck Test)",
+    subtitle: "(Shock Test)",
     price: "€500",
     duration: "5-7 días",
     description:
-      "Antes de cualquier cølisión (negøciación ø cøntratación), la asimetría de inførmación es el únicø factør que garantiza el cøntrøl. Aplicamøs prøtøcøløs ØSINT y mødeladø de amenazas STRIDE/DREAD.",
+      "Antes de cualquier colisión (negociación o contratación), la asimetría de información es el único factor que garantiza el control. Aplicamos protocolos OSINT y modelado de amenazas STRIDE/DREAD.",
     deliverables: [
-      "Døssier de Inteligencia (20 páginas)",
-      "45 min de Briefing Técnicø",
+      "Dossier de Inteligencia (20 páginas)",
+      "45 min de Briefing Técnico",
     ],
-    badges: ["ØSINT", "Threat Modeling", "Vetting", "Leak Detectiøn"],
+    badges: ["OSINT", "Threat Modeling", "Vetting", "Leak Detection"],
     href: "/servicios/fase-1",
     color: "accent-warm",
     glowClass: "terminal-text-warm",
@@ -39,17 +39,17 @@ const phases = [
     icon: Cpu,
     phase: "FASE II",
     title: "Structural Integrity & Compliance",
-    subtitle: "(Laminar Fløw)",
+    subtitle: "(Laminar Flow)",
     price: "€1,000",
     priceNote: "incluye Fase I",
     duration: "10-15 días",
     description:
-      "Reducimøs la inductancia (resistencia) legal y técnica. Alineamøs la estructura søcietaria cøn requisitøs de Hacienda y nørmativa eurøpea NIS2/GDPR. Implementamøs arquitectura Zerø Trust.",
+      "Reducimos la inductancia (resistencia) legal y técnica. Alineamos la estructura societaria con requisitos de Hacienda y normativa europea NIS2/GDPR. Implementamos arquitectura Zero Trust.",
     deliverables: [
-      "Auditøría de Sistemas (50 páginas)",
-      "60 min de Estrategia Øperativa",
+      "Auditoría de Sistemas (50 páginas)",
+      "60 min de Estrategia Operativa",
     ],
-    badges: ["Zerø Trust", "Tax Cømpliance", "NIS2", "Legal Hardening"],
+    badges: ["Zero Trust", "Tax Compliance", "NIS2", "Legal Hardening"],
     href: "/servicios/fase-2",
     color: "accent-cold",
     glowClass: "terminal-text",
@@ -58,17 +58,17 @@ const phases = [
     icon: Scale,
     phase: "FASE III",
     title: "Vortex Engineering & EU Funds",
-    subtitle: "(Vørtex Scale)",
+    subtitle: "(Vortex Scale)",
     price: "Desde €3,000",
     priceNote: "incluye I y II",
     duration: "20-30 días",
     description:
-      "Transførmamøs el cumplimientø nørmativø en un Amplificadør Ecønómicø. Mapeø de inførmes JRC, CØP y regulación eIDAS 2.0 para pøsiciønar tu prøyectø en el núcleø de subvenciønes eurøpeas.",
+      "Transformamos el cumplimiento normativo en un Amplificador Económico. Mapeo de informes JRC, COP y regulación eIDAS 2.0 para posicionar tu proyecto en el núcleo de subvenciones europeas.",
     deliverables: [
       "Mapa de Captura de Capital",
-      "Alineamientø Legislativø Cømpletø",
+      "Alineamiento Legislativo Completo",
     ],
-    badges: ["eIDAS 2.0", "EU Subsidies", "CCN Certificatiøn", "EUDI Wallet"],
+    badges: ["eIDAS 2.0", "EU Subsidies", "CCN Certification", "EUDI Wallet"],
     href: "/servicios/fase-3",
     color: "accent-success",
     glowClass: "terminal-text",
@@ -78,30 +78,30 @@ const phases = [
 /* ─── Case metrics ─── */
 const caseMetrics = [
   {
-    label: "Casø A",
-    sector: "Høstelería + Arte",
+    label: "Caso A",
+    sector: "Hostelería + Arte",
     reBefore: "4,200",
     reAfter: "1,850",
-    highlight: "Alertas de control interno: -83% (mejora en calidad de datos)",
-    roi: "RØI 1,011%",
+    highlight: "Alertas: -83%",
+    roi: "ROI 1,011%",
     duration: "24 meses",
   },
   {
-    label: "Casø B",
-    sector: "Legal + Cønsultøría",
+    label: "Caso B",
+    sector: "Legal + Consultoría",
     reBefore: "3,800",
     reAfter: "2,100",
     highlight: "Presión: -91%",
-    roi: "RØI 680%",
+    roi: "ROI 680%",
     duration: "18 meses",
   },
   {
-    label: "Casø C",
+    label: "Caso C",
     sector: "Marketplace P2P",
     reBefore: "5,600",
     reAfter: "1,650",
-    highlight: "alertas de control interno: -94%",
-    roi: "RØI 1,340%",
+    highlight: "Alertas AML: -94%",
+    roi: "ROI 1,340%",
     duration: "12 meses",
   },
 ];
@@ -111,21 +111,21 @@ const packages = [
   {
     name: "Startup",
     price: "€750",
-    description: "Intelligence + Auditøría + Gap Analysis + 1 sesión",
+    description: "Intelligence + Auditoría + Gap Analysis + 1 sesión",
     color: "accent-warm",
     href: "/servicios/paquetes",
   },
   {
     name: "Scale-Up",
     price: "€2,500",
-    description: "Fase I + II cømpletø + 2 sesiønes estratégicas",
+    description: "Fase I + II completo + 2 sesiones estratégicas",
     color: "accent-cold",
     href: "/servicios/paquetes",
   },
   {
     name: "Enterprise",
     price: "€8,500",
-    description: "Tødø incluido + Dashboard + Søpørte 3 meses",
+    description: "Todo incluido + Dashboard + Soporte 3 meses",
     color: "accent-success",
     href: "/servicios/paquetes",
   },
@@ -143,8 +143,9 @@ function PhaseCard({
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
+      (entries) => {
+        const entry = entries[0];
+        if (entry?.isIntersecting) {
           entry.target.classList.add("opacity-100", "translate-y-0");
           entry.target.classList.remove("opacity-0", "translate-y-8");
         }
@@ -250,8 +251,8 @@ export default function ServiciosPage() {
   const [showContent, setShowContent] = useState(false);
 
   useEffect(() => {
-    bootLines.forEach((_, i) => {
-      setTimeout(() => setVisibleLines(i + 1), bootLines[i].delay);
+    bootLines.forEach((line, i) => {
+      setTimeout(() => setVisibleLines(i + 1), line.delay);
     });
     setTimeout(() => setShowContent(true), 900);
   }, []);
@@ -283,17 +284,17 @@ export default function ServiciosPage() {
               }`}
             >
               <p className="text-sm text-accent-cold uppercase tracking-wider terminal-text">
-                Serviciøs
+                Servicios
               </p>
               <h1 className="text-[2rem] md:text-[3.5rem] leading-[1.1] terminal-glow-warm">
-                Arsenal de Serviciøs
+                Arsenal de Servicios
               </h1>
               <h2 className="text-[1.25rem] md:text-[1.75rem] leading-[1.2] text-text-secondary">
-                Inteligencia Øperativa para Escalar
+                Inteligencia Operativa para Escalar
               </h2>
               <p className="text-base text-text-secondary leading-relaxed max-w-2xl">
-                Prøtøcøløs de inteligencia y cømpliance diseñadøs para eliminar
-                fricción y capturar øpørtunidades.
+                Protocolos de inteligencia y compliance diseñados para eliminar
+                fricción y capturar oportunidades.
               </p>
             </div>
           </div>
@@ -305,7 +306,7 @@ export default function ServiciosPage() {
         <Container>
           <div className="space-y-10">
             <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-center terminal-glow">
-              3 Fases. Un Prøtøcølo.
+              3 Fases. Un Protocolo.
             </h2>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
               {phases.map((p, i) => (
@@ -321,7 +322,7 @@ export default function ServiciosPage() {
         <Container>
           <div className="space-y-10">
             <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-center terminal-glow">
-              Matriz de Serviciøs
+              Matriz de Servicios
             </h2>
             <div className="neon-card rounded-xl p-4 md:p-6 bg-bg-secondary">
               <PricingTable />
@@ -335,7 +336,7 @@ export default function ServiciosPage() {
         <Container>
           <div className="space-y-10">
             <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-center terminal-glow">
-              Métricas de Éxitø (Casøs Reales)
+              Métricas de Éxito (Casos Reales)
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {caseMetrics.map((c) => (
@@ -375,7 +376,7 @@ export default function ServiciosPage() {
         <Container>
           <div className="space-y-10">
             <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-center terminal-glow">
-              Paquetes Persønalizadøs
+              Paquetes Personalizados
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {packages.map((pkg) => (
@@ -410,28 +411,28 @@ export default function ServiciosPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="neon-card rounded-xl p-6 md:p-8 bg-bg-tertiary space-y-4">
               <h3 className="text-lg font-semibold text-accent-cold terminal-text">
-                Serviciøs a la Carta
+                Servicios a la Carta
               </h3>
               <p className="text-sm text-text-subtle leading-relaxed">
-                Søluciønes específicas para necesidades urgentes ø puntuales.
-                Auditøría Flash (24h), Hardening Express (48h), Dashboard
-                Custøm, EU Prøpøsal Writing.
+                Soluciones específicas para necesidades urgentes o puntuales.
+                Auditoría Flash (24h), Hardening Express (48h), Dashboard
+                Custom, EU Proposal Writing.
               </p>
               <Button
                 href="/servicios/a-la-carta"
                 variant="secondary"
                 className="!py-3 text-sm"
               >
-                Ver tødøs &rarr;
+                Ver todos &rarr;
               </Button>
             </div>
             <div className="neon-card rounded-xl p-6 md:p-8 bg-bg-tertiary space-y-4">
               <h3 className="text-lg font-semibold text-accent-cold terminal-text">
-                Mødelø Retainer
+                Modelo Retainer
               </h3>
               <p className="text-sm text-text-subtle leading-relaxed">
-                €1,500/mes (6 meses mínimø). Mønitorización cøntinua de Re,
-                alertas nørmativas, sesión mensual, søpørte priøritariø.
+                €1,500/mes (6 meses mínimo). Monitorización continua de Re,
+                alertas normativas, sesión mensual, soporte prioritario.
               </p>
               <Button
                 href="/servicios/retainer"
@@ -450,19 +451,19 @@ export default function ServiciosPage() {
         <Container>
           <div className="max-w-2xl mx-auto text-center space-y-8">
             <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
-              ¿Listø para reducir tu Númerø de Reynølds?
+              ¿Listo para reducir tu Número de Reynolds?
             </h2>
             <p className="text-text-secondary leading-relaxed">
-              Trabajamøs cøn ecøsistemas multi-nødø, høldings que requieren
-              reducción de viscøsidad regulatøria, y ørganizaciønes suјetas a
-              NIS2/DORA/AI Act (EU) ø ENS (España).
+              Trabajamos con ecosistemas multi-nodo, holdings que requieren
+              reducción de viscosidad regulatoria, y organizaciones suјetas a
+              NIS2/DORA/AI Act (EU) o ENS (España).
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button href="/consulta" variant="primary">
-                Agenda Diagnósticø Gratuitø &rarr;
+                Agenda Diagnóstico Gratuito &rarr;
               </Button>
               <Button href="/contacto" variant="secondary">
-                Cøntactø directø
+                Contacto directo
               </Button>
             </div>
           </div>

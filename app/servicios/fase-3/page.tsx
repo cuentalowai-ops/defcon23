@@ -7,44 +7,44 @@ import Button from "@/components/ui/Button";
 export const metadata: Metadata = {
   title: "Fase III: Vortex Engineering & EU Funds | dEfCØN23",
   description:
-    "CFD Vørtex Core + EU Funds Capture + eIDAS 2.0 Røadmap. Escala cøn financiación eurøpea. Desde €3,000.",
+    "CFD Vortex Core + EU Funds Capture + eIDAS 2.0 Roadmap. Escala con financiación europea. Desde €3,000.",
 };
 
 const modules = [
   {
     id: "A",
-    title: "CFD Aplicadø — Vørtex Cøre",
+    title: "CFD Aplicado — Vortex Core",
     description:
-      "Red transacciønal cømputaciønal. Simulación de 47+ rutas transacciønales, identificación de 3 rutas óptimas, tøkenización del flujø y prøtøcøløs de øfuscación.",
+      "Red transaccional computacional. Simulación de 47+ rutas transaccionales, identificación de 3 rutas óptimas, tokenización del flujo y protocolos de ofuscación.",
     items: [
-      "Simulación de 47+ rutas transacciønales",
+      "Simulación de 47+ rutas transaccionales",
       "Identificación de 3 rutas óptimas",
-      "Tøkenización del flujø",
-      "Prøtøcøløs de øfuscación",
+      "Tokenización del flujo",
+      "Protocolos de ofuscación",
     ],
   },
   {
     id: "B",
     title: "EU Funds Capture",
     description:
-      "Hørizøn Eurøpe (€95.5B), Digital Eurøpe (€7.5B), InvestEU (€26.2B). Alineamientø de narrativa cøn prioridades EU.",
+      "Horizon Europe (€95.5B), Digital Europe (€7.5B), InvestEU (€26.2B). Alineamiento de narrativa con prioridades EU.",
     items: [
-      "Alineamientø de narrativa cøn prioridades EU",
-      "Certificación CCN (ENS Altø)",
-      "Partnering estratégicø",
-      "Preparación de prøpuestas cømpletas",
+      "Alineamiento de narrativa con prioridades EU",
+      "Certificación CCN (ENS Alto)",
+      "Partnering estratégico",
+      "Preparación de propuestas completas",
     ],
   },
   {
     id: "C",
     title: "eIDAS 2.0 & EUDI Wallet",
     description:
-      "Implementación de identidad digital eurøpea. Arquitectura Zerø-Knøwledge Prøøfs y cømpliance cøn reglamentø eIDAS 2.0.",
+      "Implementación de identidad digital europea. Arquitectura Zero-Knowledge Proofs y compliance con reglamento eIDAS 2.0.",
     items: [
       "Integración EUDI Wallet",
-      "Certificación de atributøs",
-      "Arquitectura Zerø-Knøwledge Prøøfs",
-      "Cømpliance Reglamentø eIDAS 2.0",
+      "Certificación de atributos",
+      "Arquitectura Zero-Knowledge Proofs",
+      "Compliance Reglamento eIDAS 2.0",
     ],
   },
 ];
@@ -82,13 +82,13 @@ export default function Fase3Page() {
               </span>
             </div>
             <p className="text-base text-text-secondary leading-relaxed max-w-2xl">
-              Transførmamøs el cumplimientø nørmativø en un Amplificadør
-              Ecønómicø. Utilizamøs nuestrø mapeø de inførmes JRC, CØP y
-              regulación eIDAS 2.0 para pøsiciønar tu prøyectø en el núcleø
-              de las subvenciønes eurøpeas (Hørizøn, Digital Eurøpe).
+              Transformamos el cumplimiento normativo en un Amplificador
+              Económico. Utilizamos nuestro mapeo de informes JRC, COP y
+              regulación eIDAS 2.0 para posicionar tu proyecto en el núcleo
+              de las subvenciones europeas (Horizon, Digital Europe).
             </p>
             <Button href="/contacto?phase=3" variant="primary">
-              Cøntratar Fase III
+              Contratar Fase III
             </Button>
           </div>
         </Container>
@@ -103,7 +103,7 @@ export default function Fase3Page() {
           <Container>
             <div className="max-w-3xl space-y-6">
               <span className="text-sm font-bold text-accent-success terminal-text">
-                Módulø {mod.id}
+                Módulo {mod.id}
               </span>
               <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
                 {mod.title}
@@ -136,7 +136,7 @@ export default function Fase3Page() {
         <Container>
           <div className="space-y-6">
             <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
-              Tecnøløgías
+              Tecnologías
             </h2>
             <div className="flex flex-wrap gap-3">
               {techBadges.map((b) => (
@@ -157,15 +157,15 @@ export default function Fase3Page() {
         <Container>
           <div className="max-w-2xl mx-auto text-center space-y-6">
             <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
-              El prøtøcølo cømpletø
+              El protocolo completo
             </h2>
             <p className="text-text-secondary">
               Fase III es el paquete integral. Intelligence + Integrity + Scale.
-              Para ørganizaciønes que nø quieren medias tintas.
+              Para organizaciones que no quieren medias tintas.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button href="/contacto?phase=3" variant="primary">
-                Cøntratar Fase III
+                Contratar Fase III
               </Button>
               <Button href="/servicios/paquetes" variant="secondary">
                 Ver paquetes &rarr;

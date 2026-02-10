@@ -3,62 +3,65 @@ import Section from "@/components/ui/Section";
 
 const tableData = [
   {
-    concepto: "Flujø Laminar",
+    concepto: "Flujo Laminar",
     re: "Re < 2,300",
-    aplicacion: "Møvimientø ørdenadø, baja fricción, alta predictibilidad",
-    indicador: "Respuesta auditøría: 14+ días",
+    aplicacion: "Movimiento ordenado, baja fricción, alta predictibilidad",
+    indicador: "Respuesta auditoría: 14+ días",
   },
   {
-    concepto: "Flujø Turbulentø",
+    concepto: "Flujo Turbulento",
     re: "Re > 4,000",
-    aplicacion: "Caøs øperativø, vórtices detectables, pérdida de energía",
-    indicador: "Alertas regulatørias: 7+/añø",
+    aplicacion: "Caos operativo, vórtices detectables, pérdida de energía",
+    indicador: "Alertas regulatorias: 7+/año",
   },
   {
-    concepto: "Viscøsidad (μ)",
+    concepto: "Viscosidad (μ)",
     re: "",
-    aplicacion: "Resistencia interna al cambiø (burøcracia, legacy systems)",
-    indicador: "Implementar nørmativa: 45+ días",
+    aplicacion: "Resistencia interna al cambio (burocracia, legacy systems)",
+    indicador: "Implementar normativa: 45+ días",
   },
   {
     concepto: "Vortex Core",
     re: "",
-    aplicacion: "Puntø de máxima influencia/decisión en la red",
-    indicador: "Nødø cøn >60% flujø críticø",
+    aplicacion: "Punto de máxima influencia/decisión en la red",
+    indicador: "Nodo con >60% flujo crítico",
   },
 ];
 
 const turbulenceEffects = [
-  "Pérdida de eficiencia energética expønencial",
-  "Fricción cøn el entørnø (reguladøres, cømpetencia, auditørías)",
-  "Puntøs de separación impredecibles",
-  "Alta visibilidad en escaneøs algørítmicøs (AML, tax authorities, compliance)",
+  "Pérdida de eficiencia energética exponencial",
+  "Fricción con el entorno (reguladores, competencia, auditorías)",
+  "Puntos de separación impredecibles",
+  "Alta visibilidad en escaneos algorítmicos (AML, tax authorities, compliance)",
 ];
 
 export default function UmbralCritico() {
   return (
     <Section id="umbral" className="bg-bg-secondary retro-grid">
       <Container>
-          <div className="max-w-4xl mx-auto space-y-8 md:space-y-10">
+        <div className="max-w-4xl mx-auto space-y-8 md:space-y-12">
           {/* Headline */}
           <div className="space-y-4">
+            <p className="text-xs font-bold uppercase tracking-widest text-accent-cold terminal-text">
+              FUNDAMENTOS
+            </p>
             <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
               ¿Qué es la Ingeniería de Flujøs Aplicada?
             </h2>
-            <p className="text-text-secondary text-base md:text-lg leading-relaxed">
-              En mecánica de fluidøs cømputaciønal, existe un umbral que define
-              la supervivencia de løs sistemas:{" "}
+            <p className="text-text-secondary text-sm md:text-base leading-relaxed">
+              En mecánica de fluidos computacional, existe un umbral que define
+              la supervivencia de los sistemas:{" "}
               <span className="text-accent-cold terminal-text">
                 Re &lt; 2,300
               </span>{" "}
-              es flujø laminar.
+              es flujo laminar.
             </p>
           </div>
 
           {/* Turbulence effects */}
           <div className="space-y-4">
             <p className="text-text-secondary leading-relaxed">
-              Pør encima de este númerø de Reynølds, el sistema entra en
+              Por encima de este número de Reynolds, el sistema entra en
               turbulencia:
             </p>
             <ul className="space-y-3">
@@ -82,13 +85,13 @@ export default function UmbralCritico() {
               <thead>
                 <tr className="border-b border-border-visible">
                   <th className="text-left py-4 pr-4 pl-4 text-text-primary font-semibold">
-                    Cønceptø Físicø
+                    Concepto Físico
                   </th>
                   <th className="text-left py-4 pr-4 text-text-primary font-semibold">
-                    Aplicación Ørganizativa
+                    Aplicación Organizativa
                   </th>
                   <th className="text-left py-4 pr-4 text-text-primary font-semibold">
-                    Indicadør Medible
+                    Indicador Medible
                   </th>
                 </tr>
               </thead>
@@ -143,7 +146,7 @@ export default function UmbralCritico() {
                 </div>
                 <div>
                   <p className="text-[0.7rem] uppercase tracking-wider text-text-subtle mb-1">
-                    Indicadør
+                    Indicador
                   </p>
                   <p className="text-sm text-text-subtle">{row.indicador}</p>
                 </div>

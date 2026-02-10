@@ -7,31 +7,31 @@ import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
 
 export const metadata: Metadata = {
-  title: "CFD Aplicadø — Vortex Core | dEfCØN23",
+  title: "CFD Aplicado — Vortex Core | dEfCØN23",
   description:
-    "Simulación de red transacciønal, identificación del núcleø de pøder, recønfiguración del flujø y mønitorización cøntinua.",
+    "Simulación de red transaccional, identificación del núcleo de poder, reconfiguración del flujo y monitorización continua.",
 };
 
 const capabilities = [
   {
-    title: "Simulación de Red Transacciønal",
+    title: "Simulación de Red Transaccional",
     description:
-      "Mødelamøs tøda tu red de transacciønes cømø un campø de flujø. Cada entidad es un nødø, cada transacción un vectør. Visualizamøs patrønes que søn invisibles en højas de cálculø.",
+      "Modelamos toda tu red de transacciones como un campo de flujo. Cada entidad es un nodo, cada transacción un vector. Visualizamos patrones que son invisibles en hojas de cálculo.",
   },
   {
-    title: "Identificación del Núcleø de Pøder",
+    title: "Identificación del Núcleo de Poder",
     description:
-      "El Vortex Core es el puntø dønde cønvergen las líneas de flujø de pøder y decisión. Identificamøs quién cøntrøla realmente el flujø — y si esa cøncentración es un riesgø.",
+      "El Vortex Core es el punto donde convergen las líneas de flujo de poder y decisión. Identificamos quién controla realmente el flujo — y si esa concentración es un riesgo.",
   },
   {
-    title: "Recønfiguración del Flujø",
+    title: "Reconfiguración del Flujo",
     description:
-      "Redistribuimøs løs vectøres de flujø para eliminar cøncentraciønes peligrøsas. El resultadø: una red dønde ningún nødø cøncentra más del 40% del flujø críticø.",
+      "Redistribuimos los vectores de flujo para eliminar concentraciones peligrosas. El resultado: una red donde ningún nodo concentra más del 40% del flujo crítico.",
   },
   {
-    title: "Dashboard de Mønitorización",
+    title: "Dashboard de Monitorización",
     description:
-      "Sistema de mønitorización cøntinua del Númerø de Reynølds ørganizativø. Alertas tempranas cuandø se detectan tendencias turbulentas.",
+      "Sistema de monitorización continua del Número de Reynolds organizativo. Alertas tempranas cuando se detectan tendencias turbulentas.",
   },
 ];
 
@@ -45,19 +45,19 @@ export default function CfdVortexPage() {
             <div className="inline-flex items-center gap-2 text-xs px-3 py-1.5 rounded border border-accent-success/30 bg-accent-success/10 text-accent-success mb-6">
               <span className="text-accent-success">&#10003;</span>
               <Link href="/servicios/fase-3" className="hover:underline">
-                Incluidø en FASE III
+                Incluido en FASE III
               </Link>
             </div>
             <p className="text-sm text-accent-cold font-[family-name:var(--font-source-code-pro)] uppercase tracking-wider">
-              Serviciøs / CFD Vortex
+              Servicios / CFD Vortex
             </p>
             <h1 className="text-[2rem] md:text-[3.5rem] leading-[1.1]">
-              CFD Aplicadø — Vortex Core
+              CFD Aplicado — Vortex Core
             </h1>
             <p className="text-lg text-text-secondary leading-relaxed">
-              Computational Fluid Dynamics aplicadø a redes ørganizativas.
-              Simulamøs, visualizamøs y recønfiguramøs el flujø de pøder,
-              capital y decisiønes.
+              Computational Fluid Dynamics aplicado a redes organizativas.
+              Simulamos, visualizamos y reconfiguramos el flujo de poder,
+              capital y decisiones.
             </p>
           </div>
         </Container>
@@ -100,11 +100,11 @@ export default function CfdVortexPage() {
                 Desde €8,500
               </p>
               <p className="text-sm text-text-subtle">
-                Incluye simulación cømpleta + dashboard de mønitorización 12
+                Incluye simulación completa + dashboard de monitorización 12
                 meses
               </p>
               <Button href="/contacto?type=cfd" variant="primary">
-                Sølicitar CFD Vortex
+                Solicitar CFD Vortex
               </Button>
             </div>
           </div>

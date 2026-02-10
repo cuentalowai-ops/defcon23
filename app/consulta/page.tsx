@@ -8,9 +8,9 @@ import Section from "@/components/ui/Section";
 import Button from "@/components/ui/Button";
 
 const bootLines = [
-  { text: "> INICIALIZANDØ PRØTØCØLØ DE CØNSULTA...", delay: 0 },
-  { text: "> VALIDANDØ DISPØNIBILIDAD...", delay: 400 },
-  { text: "> SISTEMA: LISTØ", delay: 800 },
+  { text: "> INICIALIZANDO PROTOCOLO DE CONSULTA...", delay: 0 },
+  { text: "> VALIDANDO DISPONIBILIDAD...", delay: 400 },
+  { text: "> SISTEMA: LISTO", delay: 800 },
 ];
 
 export default function ConsultaPage() {
@@ -18,8 +18,8 @@ export default function ConsultaPage() {
   const [showContent, setShowContent] = useState(false);
 
   useEffect(() => {
-    bootLines.forEach((_, i) => {
-      setTimeout(() => setVisibleLines(i + 1), bootLines[i].delay);
+    bootLines.forEach((line, i) => {
+      setTimeout(() => setVisibleLines(i + 1), line.delay);
     });
     setTimeout(() => setShowContent(true), 1200);
   }, []);
@@ -82,32 +82,32 @@ export default function ConsultaPage() {
               FASE 0
             </span>
             <h1 className="text-[2rem] md:text-[3.5rem] leading-[1.1] terminal-glow">
-              Cønsulta Inicial
+              Consulta Inicial
             </h1>
 
             <div className="flex flex-wrap gap-3">
               <span className="text-xs px-3 py-1.5 bg-accent-cold/10 border border-accent-cold/30 text-accent-cold rounded">
-                15 MINUTØS
+                15 MINUTOS
               </span>
               <span className="text-xs px-3 py-1.5 bg-accent-success/10 border border-accent-success/30 text-accent-success rounded">
                 GRATUITA
               </span>
               <span className="text-xs px-3 py-1.5 bg-accent-warm/10 border border-accent-warm/30 text-accent-warm rounded">
-                ZERØ CØMPROMISØ
+                ZERO COMPROMISO
               </span>
             </div>
 
             <p className="text-base md:text-lg text-text-secondary leading-relaxed max-w-2xl">
-              Diagnósticø rápidø de viabilidad. Nø es ventas. Es evaluación
-              prøfesiønal.
+              Diagnóstico rápido de viabilidad. No es ventas. Es evaluación
+              profesional.
             </p>
             <p className="text-sm text-text-subtle leading-relaxed max-w-2xl">
-              Rechazø el{" "}
+              Rechazo el{" "}
               <strong className="text-accent-warm">
-                60% de sølicitudes
+                60% de solicitudes
               </strong>
-              . Si tu casø nø es viable, te lø digø directamente en løs
-              primerøs 5 minutøs.
+              . Si tu caso no es viable, te lo digo directamente en los
+              primeros 5 minutos.
             </p>
           </div>
         </Container>
@@ -118,7 +118,7 @@ export default function ConsultaPage() {
         <Container>
           <div className="max-w-4xl space-y-8">
             <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
-              Qué Evaluaremøs
+              Qué Evaluaremos
             </h2>
 
             <div className="space-y-5">
@@ -133,7 +133,7 @@ export default function ConsultaPage() {
                       Handshake
                     </h3>
                     <p className="text-sm text-text-subtle">
-                      ¿Quién eres? ¿Qué haces? ¿Pør qué ahøra? Validamøs
+                      ¿Quién eres? ¿Qué haces? ¿Por qué ahora? Validamos
                       &ldquo;fit cultural&rdquo;.
                     </p>
                   </div>
@@ -148,24 +148,24 @@ export default function ConsultaPage() {
                   </div>
                   <div>
                     <h3 className="text-base font-semibold text-text-primary mb-2">
-                      Diagnósticø del Sistema
+                      Diagnóstico del Sistema
                     </h3>
                     <ul className="text-sm text-text-subtle space-y-1">
                       <li className="flex items-start gap-2">
-                        <span className="text-accent-cold">&gt;</span> Tu Númerø
-                        de Reynølds (nivel de turbulencia)
+                        <span className="text-accent-cold">&gt;</span> Tu Número
+                        de Reynolds (nivel de turbulencia)
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-accent-cold">&gt;</span>{" "}
-                        Nørmativas que te afectan (ENS, NIS2, DORA, GDPR, AML)
+                        Normativas que te afectan (ENS, NIS2, DORA, GDPR, AML)
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-accent-cold">&gt;</span> Dónde
-                        está tu &ldquo;vørtex cøre&rdquo; (nødø críticø)
+                        está tu &ldquo;vortex core&rdquo; (nodo crítico)
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-accent-cold">&gt;</span> Qué
-                        fricción genera mayør cøste
+                        fricción genera mayor coste
                       </li>
                     </ul>
                   </div>
@@ -185,15 +185,15 @@ export default function ConsultaPage() {
                     <div className="space-y-2 text-sm">
                       <p className="text-text-subtle">
                         <strong className="text-accent-success">
-                          &rarr; SI ACEPTØ:
+                          &rarr; SI ACEPTO:
                         </strong>{" "}
-                        Prøpuesta Fase I (€500) en menøs de 24h
+                        Propuesta Fase I (€500) en menos de 24h
                       </p>
                       <p className="text-text-subtle">
                         <strong className="text-accent-danger">
-                          &rarr; SI RECHAZØ:
+                          &rarr; SI RECHAZO:
                         </strong>{" "}
-                        Explicación + recømendaciønes
+                        Explicación + recomendaciones
                       </p>
                     </div>
                   </div>
@@ -211,52 +211,52 @@ export default function ConsultaPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="neon-card rounded-xl p-4 md:p-6 bg-bg-tertiary border-l-4 border-accent-success space-y-3 md:space-y-4">
                 <h3 className="text-base font-semibold text-accent-success">
-                  &#10003; ACEPTØ SI
+                  &#10003; ACEPTO SI
                 </h3>
                 <ul className="text-text-subtle text-sm space-y-2">
                   <li className="flex items-start gap-2">
-                    <span className="text-accent-cold">&gt;</span> Estás sujetø
-                    a nørmativas EU/España
+                    <span className="text-accent-cold">&gt;</span> Estás sujeto
+                    a normativas EU/España
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-accent-cold">&gt;</span> Has tenidø
-                    inspecciønes Hacienda/AEPD
+                    <span className="text-accent-cold">&gt;</span> Has tenido
+                    inspecciones Hacienda/AEPD
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-accent-cold">&gt;</span> Necesitas
-                    reducir fricción sin expønerte
+                    reducir fricción sin exponerte
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-accent-cold">&gt;</span> Piensas en
-                    5–10 añøs (nø quick fixes)
+                    5–10 años (no quick fixes)
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-accent-cold">&gt;</span> Presupuestø
-                    mínimø €500
+                    <span className="text-accent-cold">&gt;</span> Presupuesto
+                    mínimo €500
                   </li>
                 </ul>
               </div>
 
               <div className="neon-card rounded-xl p-4 md:p-6 bg-bg-tertiary border-l-4 border-accent-danger space-y-3 md:space-y-4">
                 <h3 className="text-base font-semibold text-accent-danger">
-                  &#10005; RECHAZØ SI
+                  &#10005; RECHAZO SI
                 </h3>
                 <ul className="text-text-subtle text-sm space-y-2">
                   <li className="flex items-start gap-2">
                     <span className="text-accent-cold">&gt;</span> Buscas
-                    &ldquo;hack rápidø&rdquo; ø sølución mágica
+                    &ldquo;hack rápido&rdquo; o solución mágica
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-accent-cold">&gt;</span> Nø estás
-                    dispuestø a cambiar estructura
+                    <span className="text-accent-cold">&gt;</span> No estás
+                    dispuesto a cambiar estructura
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-accent-cold">&gt;</span> Generas ruidø
-                    mediáticø (alta expøsición)
+                    <span className="text-accent-cold">&gt;</span> Generas ruido
+                    mediático (alta exposición)
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-accent-cold">&gt;</span> Presupuestø
-                    menør a €100
+                    <span className="text-accent-cold">&gt;</span> Presupuesto
+                    menor a €100
                   </li>
                 </ul>
               </div>
@@ -270,29 +270,29 @@ export default function ConsultaPage() {
         <Container>
           <div className="max-w-4xl space-y-8">
             <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
-              Preparación (Ten a Manø)
+              Preparación (Ten a Mano)
             </h2>
 
             <div className="neon-card rounded-xl p-6 md:p-8 bg-bg-tertiary space-y-5">
               {[
                 {
-                  title: "Estructura de tu ørganización",
+                  title: "Estructura de tu organización",
                   detail:
                     "Cuántas entidades, actividad de cada una",
                 },
                 {
-                  title: "Prøblemas recientes",
+                  title: "Problemas recientes",
                   detail:
-                    "Inspecciønes, multas, alertas, incidentes",
+                    "Inspecciones, multas, alertas, incidentes",
                 },
                 {
-                  title: "Nørmativas que te afectan",
+                  title: "Normativas que te afectan",
                   detail:
-                    "ENS, NIS2, GDPR, AML, ø las que crees que te afectan",
+                    "ENS, NIS2, GDPR, AML, o las que crees que te afectan",
                 },
                 {
-                  title: "Presupuestø dispønible",
-                  detail: "Rangø aprøximadø (desde €100)",
+                  title: "Presupuesto disponible",
+                  detail: "Rango aproximado (desde €100)",
                 },
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
@@ -308,9 +308,9 @@ export default function ConsultaPage() {
 
               <div className="mt-4 p-4 border-l-2 border-accent-cold bg-accent-cold/5 rounded-r-lg">
                 <p className="text-sm text-text-secondary">
-                  <strong>Nø necesitas:</strong> Presentación, pitch deck,
-                  døcumentación legal detallada, ni decisión tømada. La
-                  cønsulta te ayuda a decidir.
+                  <strong>No necesitas:</strong> Presentación, pitch deck,
+                  documentación legal detallada, ni decisión tomada. La
+                  consulta te ayuda a decidir.
                 </p>
               </div>
             </div>
@@ -324,11 +324,11 @@ export default function ConsultaPage() {
           <div className="max-w-4xl mx-auto space-y-6">
             <div className="text-center space-y-3">
               <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
-                Agenda tu Cønsulta
+                Agenda tu Consulta
               </h2>
               <p className="text-sm text-text-secondary">
-                Elige un horario. Respøndemøs en menøs de 24h cøn
-                cønfirmación.
+                Elige un horario. Respondemos en menos de 24h con
+                confirmación.
               </p>
             </div>
 
@@ -358,47 +358,47 @@ export default function ConsultaPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="neon-card rounded-xl p-4 md:p-6 bg-bg-tertiary border-2 border-accent-success/30 space-y-3 md:space-y-4">
                 <h3 className="text-base font-semibold text-accent-success">
-                  Øpción A (Aceptø)
+                  Opción A (Acepto)
                 </h3>
                 <ul className="text-sm text-text-subtle space-y-2">
                   <li className="flex items-start gap-2">
-                    <span className="text-accent-cold">&gt;</span> Prøpuesta en
-                    tu email (menøs de 24h)
+                    <span className="text-accent-cold">&gt;</span> Propuesta en
+                    tu email (menos de 24h)
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-accent-cold">&gt;</span> Realizas pagø
+                    <span className="text-accent-cold">&gt;</span> Realizas pago
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-accent-cold">&gt;</span> Empezamøs
+                    <span className="text-accent-cold">&gt;</span> Empezamos
                     OSINT inmediatamente
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-accent-cold">&gt;</span> Entrega
-                    døssier 20 págs + briefing 45 min (5–7 días)
+                    dossier 20 págs + briefing 45 min (5–7 días)
                   </li>
                 </ul>
               </div>
 
               <div className="neon-card rounded-xl p-4 md:p-6 bg-bg-tertiary border-2 border-accent-danger/30 space-y-3 md:space-y-4">
                 <h3 className="text-base font-semibold text-accent-danger">
-                  Øpción B (Rechazø)
+                  Opción B (Rechazo)
                 </h3>
                 <ul className="text-sm text-text-subtle space-y-2">
                   <li className="flex items-start gap-2">
                     <span className="text-accent-cold">&gt;</span> Email
-                    explicandø pør qué nø es viable
+                    explicando por qué no es viable
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-accent-cold">&gt;</span>{" "}
-                    Recømendaciønes alternativas (si las hay)
+                    Recomendaciones alternativas (si las hay)
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-accent-cold">&gt;</span> Sin cøste,
-                    sin cømpromisø
+                    <span className="text-accent-cold">&gt;</span> Sin coste,
+                    sin compromiso
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-accent-cold">&gt;</span> Børramøs tus
-                    datøs inmediatamente
+                    <span className="text-accent-cold">&gt;</span> Borramos tus
+                    datos inmediatamente
                   </li>
                 </ul>
               </div>
@@ -413,31 +413,31 @@ export default function ConsultaPage() {
           <div className="max-w-4xl">
             <div className="neon-card rounded-xl p-6 md:p-8 bg-bg-tertiary border-2 border-accent-cold/30 space-y-4">
               <h3 className="text-base font-semibold text-accent-cold terminal-text">
-                Cønfidencialidad Garantizada
+                Confidencialidad Garantizada
               </h3>
               <p className="text-sm text-text-subtle leading-relaxed">
-                Tødø lø que cømpartes en la cønsulta es{" "}
+                Todo lo que compartes en la consulta es{" "}
                 <strong className="text-text-secondary">
-                  estrictamente cønfidencial
+                  estrictamente confidencial
                 </strong>
-                . Nø guardø registrøs sin tu cønsentimientø.
+                . No guardo registros sin tu consentimiento.
               </p>
               <ul className="text-sm text-text-subtle space-y-2">
                 <li className="flex items-start gap-2">
-                  <span className="text-accent-cold">&gt;</span> Si rechazø el
-                  casø &rarr; Børrø tus datøs inmediatamente
+                  <span className="text-accent-cold">&gt;</span> Si rechazo el
+                  caso &rarr; Borro tus datos inmediatamente
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-accent-cold">&gt;</span> Si aceptø y
-                  cøntratamøs &rarr; Firmamøs NDA antes de Fase I
+                  <span className="text-accent-cold">&gt;</span> Si acepto y
+                  contratamos &rarr; Firmamos NDA antes de Fase I
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-accent-cold">&gt;</span> Nø cømparto
-                  inførmación entre clientes (Chinese Wall)
+                  <span className="text-accent-cold">&gt;</span> No comparto
+                  información entre clientes (Chinese Wall)
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-accent-cold">&gt;</span> Encriptación
-                  E2E dispønible (PGP keys)
+                  E2E disponible (PGP keys)
                 </li>
               </ul>
             </div>
@@ -450,8 +450,8 @@ export default function ConsultaPage() {
         <Container>
           <div className="max-w-2xl mx-auto text-center space-y-8">
             <p className="text-text-subtle italic text-sm">
-              &ldquo;Antes de cualquier cølisión, la asimetría de inførmación
-              es el únicø factør que garantiza cøntrøl.&rdquo;
+              &ldquo;Antes de cualquier colisión, la asimetría de información
+              es el único factor que garantiza control.&rdquo;
             </p>
             <div className="space-y-3">
               <p className="text-sm text-text-secondary">

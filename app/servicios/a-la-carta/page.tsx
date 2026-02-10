@@ -5,18 +5,18 @@ import Section from "@/components/ui/Section";
 import Button from "@/components/ui/Button";
 
 export const metadata: Metadata = {
-  title: "Serviciøs a la Carta | dEfCØN23",
+  title: "Servicios a la Carta | dEfCØN23",
   description:
-    "Auditøría Flash 24h, Hardening Express 48h, Dashboard Custøm, EU Prøpøsal Writing. Serviciøs individuales.",
+    "Auditoría Flash 24h, Hardening Express 48h, Dashboard Custom, EU Proposal Writing. Servicios individuales.",
 };
 
 const services = [
   {
-    name: "Auditøría Flash",
+    name: "Auditoría Flash",
     timeframe: "24h turnaround",
     price: "€1,200",
     description:
-      "ØSINT + Threat Modeling + Re Calculatiøn en 24 høras. Para decisiønes urgentes (M&A due diligence, negøciaciønes críticas).",
+      "OSINT + Threat Modeling + Re Calculation en 24 horas. Para decisiones urgentes (M&A due diligence, negociaciones críticas).",
     href: "/contacto?service=flash",
     color: "accent-warm",
   },
@@ -25,25 +25,25 @@ const services = [
     timeframe: "48h",
     price: "€1,800",
     description:
-      "Laminación de emergencia. Reducción de Re en 48h (eliminar 3-5 vulnerabilidades críticas). Para situaciønes de alta presión regulatøria.",
+      "Laminación de emergencia. Reducción de Re en 48h (eliminar 3-5 vulnerabilidades críticas). Para situaciones de alta presión regulatoria.",
     href: "/contacto?service=express",
     color: "accent-cold",
   },
   {
-    name: "Dashboard Custøm",
+    name: "Dashboard Custom",
     timeframe: "10 días",
     price: "€2,200",
     description:
-      "Dashboard real-time de tu Re + métricas de flujø. Alertas autømáticas cuandø Re > 2,500. Integración cøn tu ERP/CRM.",
+      "Dashboard real-time de tu Re + métricas de flujo. Alertas automáticas cuando Re > 2,500. Integración con tu ERP/CRM.",
     href: "/contacto?service=dashboard",
     color: "accent-success",
   },
   {
-    name: "EU Prøpøsal Writing",
+    name: "EU Proposal Writing",
     timeframe: "15 días",
     price: "€3,500/proposal",
     description:
-      "Preparación cømpleta de 1 prøpuesta para Hørizøn Eurøpe ø Digital Eurøpe. Incluye: narrativa técnica, presupuestø, cønsørciø, WP.",
+      "Preparación completa de 1 propuesta para Horizon Europe o Digital Europe. Incluye: narrativa técnica, presupuesto, consorcio, WP.",
     href: "/contacto?service=proposal",
     color: "accent-warning",
   },
@@ -59,11 +59,11 @@ export default function ALaCartaPage() {
               A la Carta
             </p>
             <h1 className="text-[2rem] md:text-[3rem] leading-[1.1] terminal-glow-warm">
-              Serviciøs a la Carta
+              Servicios a la Carta
             </h1>
             <p className="text-base text-text-secondary leading-relaxed">
-              Søluciønes específicas para necesidades urgentes ø puntuales.
-              Cuandø sabes exactamente qué necesitas.
+              Soluciones específicas para necesidades urgentes o puntuales.
+              Cuando sabes exactamente qué necesitas.
             </p>
           </div>
         </Container>
@@ -96,7 +96,7 @@ export default function ALaCartaPage() {
                   variant="secondary"
                   className="w-full !py-3 text-sm"
                 >
-                  Sølicitar
+                  Solicitar
                 </Button>
               </div>
             ))}
@@ -108,7 +108,7 @@ export default function ALaCartaPage() {
         <Container>
           <div className="max-w-2xl mx-auto text-center space-y-6">
             <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
-              ¿Prefieres un cømpromisø cøntinuø?
+              ¿Prefieres un compromiso continuo?
             </h2>
             <Button href="/servicios/retainer" variant="secondary">
               Ver Retainer &rarr;

@@ -25,26 +25,26 @@ function calculateReynolds(
   if (re < 2300) {
     return {
       re,
-      classification: "Flujø Laminar",
+      classification: "Flujo Laminar",
       color: "text-accent-success",
       description:
-        "Tu ørganización øpera en flujø laminar. Møvimientø ørdenadø, baja fricción, alta predictibilidad. Mantén este estadø.",
+        "Tu organización opera en flujo laminar. Movimiento ordenado, baja fricción, alta predictibilidad. Mantén este estado.",
     };
   } else if (re < 4000) {
     return {
       re,
-      classification: "Zøna de Transición",
+      classification: "Zona de Transición",
       color: "text-accent-warning",
       description:
-        "Tu ørganización está en la zøna de transición. Inestable. Pequeñas perturbaciønes pueden empujarte a turbulencia. Acción recømendada: auditøría preventiva.",
+        "Tu organización está en la zona de transición. Inestable. Pequeñas perturbaciones pueden empujarte a turbulencia. Acción recomendada: auditoría preventiva.",
     };
   } else {
     return {
       re,
-      classification: "Flujø Turbulentø",
+      classification: "Flujo Turbulento",
       color: "text-accent-danger",
       description:
-        "Tu ørganización øpera en flujø turbulentø. Caøs øperativø, vórtices detectables, alta fricción regulatøria. Acción urgente requerida.",
+        "Tu organización opera en flujo turbulento. Caos operativo, vórtices detectables, alta fricción regulatoria. Acción urgente requerida.",
     };
   }
 }
@@ -84,8 +84,8 @@ export default function ProtocolPage() {
               Reynolds Calculator
             </h1>
             <p className="text-lg text-text-secondary leading-relaxed">
-              Calcula el Númerø de Reynølds de tu ørganización. Determina si
-              øperas en flujø laminar (eficiente) ø turbulentø (detectable).
+              Calcula el Número de Reynolds de tu organización. Determina si
+              operas en flujo laminar (eficiente) o turbulento (detectable).
             </p>
           </div>
         </Container>
@@ -110,17 +110,17 @@ export default function ProtocolPage() {
                   <span className="font-[family-name:var(--font-source-code-pro)] text-accent-cold">
                     ρ
                   </span>{" "}
-                  — Densidad ørganizativa
+                  — Densidad organizativa
                 </label>
                 <input
                   type="number"
-                  placeholder="Númerø de entidades/nødøs activøs"
+                  placeholder="Número de entidades/nodos activos"
                   value={density}
                   onChange={(e) => setDensity(e.target.value)}
                   className={inputClass}
                 />
                 <p className="text-xs text-text-subtle">
-                  Entidades, departamentøs ø nødøs øperativøs
+                  Entidades, departamentos o nodos operativos
                 </p>
               </div>
 
@@ -130,17 +130,17 @@ export default function ProtocolPage() {
                   <span className="font-[family-name:var(--font-source-code-pro)] text-accent-cold">
                     v
                   </span>{" "}
-                  — Veløcidad de flujø
+                  — Velocidad de flujo
                 </label>
                 <input
                   type="number"
-                  placeholder="Transacciønes/mes (en miles)"
+                  placeholder="Transacciones/mes (en miles)"
                   value={velocity}
                   onChange={(e) => setVelocity(e.target.value)}
                   className={inputClass}
                 />
                 <p className="text-xs text-text-subtle">
-                  Vølumen mensual de transacciønes en miles
+                  Volumen mensual de transacciones en miles
                 </p>
               </div>
 
@@ -150,17 +150,17 @@ export default function ProtocolPage() {
                   <span className="font-[family-name:var(--font-source-code-pro)] text-accent-cold">
                     D
                   </span>{" "}
-                  — Diámetrø del sistema
+                  — Diámetro del sistema
                 </label>
                 <input
                   type="number"
-                  placeholder="Jurisdicciønes / países activøs"
+                  placeholder="Jurisdicciones / países activos"
                   value={diameter}
                   onChange={(e) => setDiameter(e.target.value)}
                   className={inputClass}
                 />
                 <p className="text-xs text-text-subtle">
-                  Númerø de jurisdicciønes ø mercadøs
+                  Número de jurisdicciones o mercados
                 </p>
               </div>
 
@@ -170,17 +170,17 @@ export default function ProtocolPage() {
                   <span className="font-[family-name:var(--font-source-code-pro)] text-accent-cold">
                     μ
                   </span>{" "}
-                  — Viscøsidad
+                  — Viscosidad
                 </label>
                 <input
                   type="number"
-                  placeholder="Días para implementar nueva nørmativa"
+                  placeholder="Días para implementar nueva normativa"
                   value={viscosity}
                   onChange={(e) => setViscosity(e.target.value)}
                   className={inputClass}
                 />
                 <p className="text-xs text-text-subtle">
-                  Resistencia interna al cambiø (días prømediø)
+                  Resistencia interna al cambio (días promedio)
                 </p>
               </div>
 
@@ -189,7 +189,7 @@ export default function ProtocolPage() {
                 variant="primary"
                 className="w-full"
               >
-                Calcular Númerø de Reynølds
+                Calcular Número de Reynolds
               </Button>
             </div>
 
@@ -197,7 +197,7 @@ export default function ProtocolPage() {
             {result && (
               <div className="border border-border-visible rounded-xl p-8 bg-bg-primary space-y-4 text-center">
                 <p className="text-xs text-text-subtle uppercase tracking-wider">
-                  Tu Númerø de Reynølds
+                  Tu Número de Reynolds
                 </p>
                 <p
                   className={`text-4xl md:text-5xl font-[family-name:var(--font-source-code-pro)] font-semibold ${result.color}`}
@@ -212,7 +212,7 @@ export default function ProtocolPage() {
                 </p>
                 <div className="pt-4">
                   <Button href="/contacto?type=audit" variant="secondary">
-                    Sølicitar Auditøría Cømpleta
+                    Solicitar Auditoría Completa
                   </Button>
                 </div>
               </div>

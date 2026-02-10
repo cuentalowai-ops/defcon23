@@ -6,6 +6,9 @@ import MetodoOperativo from "@/components/sections/MetodoOperativo";
 import ServicesGrid from "@/components/sections/ServicesGrid";
 import RegulatoryTimeline from "@/components/sections/RegulatoryTimeline";
 import CasesTeaser from "@/components/sections/CasesTeaser";
+import OperatorTeaser from "@/components/sections/OperatorTeaser";
+import ProtocolTeaser from "@/components/sections/ProtocolTeaser";
+import ContactoTeaser from "@/components/sections/ContactoTeaser";
 import FinalCTA from "@/components/sections/FinalCTA";
 
 export default function Home() {
@@ -17,8 +20,11 @@ export default function Home() {
         <UmbralCritico />
         <MetodoOperativo />
         <ServicesGrid />
-        <RegulatoryTimeline />
         <CasesTeaser />
+        <OperatorTeaser />
+        <RegulatoryTimeline />
+        <ProtocolTeaser />
+        <ContactoTeaser />
         <FinalCTA />
       </main>
       <Footer />

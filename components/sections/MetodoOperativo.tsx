@@ -7,54 +7,54 @@ import Section from "@/components/ui/Section";
 const steps = [
   {
     number: "01",
-    title: "Escaneø del Circuitø Ecønómicø",
+    title: "Escaneo del Circuito Económico",
     description:
-      "Identificamøs løs tres cømpønentes del circuitø ørganizativø:",
+      "Identificamos los tres componentes del circuito organizativo:",
     items: [
       {
         label: "Capacitancia (C)",
-        detail: "Capital acumuladø, reservas, assets líquidøs",
+        detail: "Capital acumulado, reservas, assets líquidos",
       },
       {
         label: "Inductancia (L)",
-        detail: "Resistencia ørganizativa, inercia søcial, deuda estructural",
+        detail: "Resistencia organizativa, inercia social, deuda estructural",
       },
       {
-        label: "Cønductancia (G)",
-        detail: "Veløcidad de transacción, throughput øperativø",
+        label: "Conductancia (G)",
+        detail: "Velocidad de transacción, throughput operativo",
       },
     ],
   },
   {
     number: "02",
-    title: "Mapeø de Viscøsidad Øperativa",
-    description: "Calculamøs dónde se genera fricción:",
+    title: "Mapeo de Viscosidad Operativa",
+    description: "Calculamos dónde se genera fricción:",
     items: [
       {
         label: "",
         detail:
-          "¿Qué nødøs prøducen vórtices que atraen atención nø deseada?",
+          "¿Qué nodos producen vórtices que atraen atención no deseada?",
       },
       {
         label: "",
-        detail: "¿Dónde se separa el flujø del boundary layer?",
+        detail: "¿Dónde se separa el flujo del boundary layer?",
       },
       {
         label: "",
-        detail: "¿Qué prøcesøs generan calamina detectable?",
+        detail: "¿Qué procesos generan calamina detectable?",
       },
     ],
   },
   {
     number: "03",
-    title: "Reducción del Númerø de Reynølds",
+    title: "Reducción del Número de Reynolds",
     description:
-      "Cønvertimøs el flujø caóticø en møvimientø laminar estratificadø:",
+      "Convertimos el flujo caótico en movimiento laminar estratificado:",
     items: [
       { label: "", detail: "Capas que se deslizan sin mezclarse" },
       { label: "", detail: "Invisibles a la detección externa" },
       { label: "", detail: "Máxima eficiencia energética" },
-      { label: "", detail: "Cømpliance nativa, nø reactiva" },
+      { label: "", detail: "Compliance nativa, no reactiva" },
     ],
   },
 ];
@@ -70,8 +70,9 @@ function StepBlock({
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
+      (entries) => {
+        const entry = entries[0];
+        if (entry?.isIntersecting) {
           entry.target.classList.add("opacity-100", "translate-x-0");
           entry.target.classList.remove("opacity-0", "-translate-x-6");
         }
@@ -130,12 +131,20 @@ export default function MetodoOperativo() {
   return (
     <Section id="metodo" className="retro-grid-warm">
       <Container>
-        <div className="max-w-4xl mx-auto space-y-10 md:space-y-16">
-          <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
-            Nuestrø Métødø Øperativø
-          </h2>
+        <div className="max-w-4xl mx-auto space-y-10 md:space-y-14">
+          <div className="space-y-3">
+            <p className="text-xs font-bold uppercase tracking-widest text-accent-warm terminal-text-warm">
+              PROCESO
+            </p>
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+              Nuestro Métødo Operativo
+            </h2>
+            <p className="text-text-secondary text-sm max-w-lg">
+              Tres pasos. De la radiografía a la transformación.
+            </p>
+          </div>
 
-          <div className="space-y-10 md:space-y-16">
+          <div className="space-y-8 md:space-y-12">
             {steps.map((step, i) => (
               <StepBlock key={step.number} step={step} index={i} />
             ))}

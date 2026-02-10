@@ -7,23 +7,23 @@ import Button from "@/components/ui/Button";
 export const metadata: Metadata = {
   title: "Fase I: Intelligence Brief & Vetting | dEfCØN23",
   description:
-    "OSINT + Threat Modeling para eliminar asimetría de inførmación antes de cualquier negøciación. €500, 5-7 días.",
+    "OSINT + Threat Modeling para eliminar asimetría de información antes de cualquier negociación. €500, 5-7 días.",
 };
 
 const included = [
-  "Análisis de huella digital (redes søciales, registrøs públicøs)",
-  "Mapeø de red de cøntactøs",
-  "Evaluación de amenazas (reputaciønal, legal, øperaciønal)",
-  "Identificación de vulnerabilidades (leaks, expøsición de datøs)",
-  "Døssier de Inteligencia (20 páginas) — inførme ejecutivø cøn hallazgøs y recømendaciønes",
-  "Briefing Técnicø (45 min) — sesión en vivø para revisar resultadøs",
+  "Análisis de huella digital (redes sociales, registros públicos)",
+  "Mapeo de red de contactos",
+  "Evaluación de amenazas (reputacional, legal, operacional)",
+  "Identificación de vulnerabilidades (leaks, exposición de datos)",
+  "Dossier de Inteligencia (20 páginas) — informe ejecutivo con hallazgos y recomendaciones",
+  "Briefing Técnico (45 min) — sesión en vivo para revisar resultados",
 ];
 
 const techBadges = [
-  { name: "ØSINT", description: "Open Søurce Intelligence — recøpilación y análisis de fuentes abiertas" },
-  { name: "Threat Modeling", description: "STRIDE/DREAD — identificación y priørización de vectores de amenaza" },
-  { name: "Vetting", description: "Backgrøund Verificatiøn — due diligence técnica søbre persønas y entidades" },
-  { name: "Leak Detectiøn", description: "Digital Føøtprint Analysis — escaneø de filtradøs en dark web y breach databases" },
+  { name: "OSINT", description: "Open Source Intelligence — recopilación y análisis de fuentes abiertas" },
+  { name: "Threat Modeling", description: "STRIDE/DREAD — identificación y priorización de vectores de amenaza" },
+  { name: "Vetting", description: "Background Verification — due diligence técnica sobre personas y entidades" },
+  { name: "Leak Detection", description: "Digital Footprint Analysis — escaneo de filtrados en dark web y breach databases" },
 ];
 
 export default function Fase1Page() {
@@ -52,14 +52,14 @@ export default function Fase1Page() {
               €500
             </p>
             <p className="text-base text-text-secondary leading-relaxed max-w-2xl">
-              Antes de cualquier cølisión (negøciación ø cøntratación), la
-              asimetría de inførmación es el únicø factør que garantiza el
-              cøntrøl. Aplicamøs prøtøcøløs ØSINT y mødeladø de amenazas
+              Antes de cualquier colisión (negociación o contratación), la
+              asimetría de información es el único factor que garantiza el
+              control. Aplicamos protocolos OSINT y modelado de amenazas
               STRIDE/DREAD para identificar vulnerabilidades en el
-              &ldquo;søftware humanø&rdquo; y fugas en la huella digital.
+              &ldquo;software humano&rdquo; y fugas en la huella digital.
             </p>
             <Button href="/contacto?phase=1" variant="primary">
-              Cøntratar Fase I
+              Contratar Fase I
             </Button>
           </div>
         </Container>
@@ -73,17 +73,17 @@ export default function Fase1Page() {
               Argumentación
             </h2>
             <p className="text-text-secondary leading-relaxed">
-              Antes de cualquier cølisión (negøciación ø cøntratación), la
-              asimetría de inførmación es el únicø factør que garantiza el
-              cøntrøl. Aplicamøs prøtøcøløs ØSINT y mødeladø de amenazas
+              Antes de cualquier colisión (negociación o contratación), la
+              asimetría de información es el único factor que garantiza el
+              control. Aplicamos protocolos OSINT y modelado de amenazas
               STRIDE/DREAD para identificar vulnerabilidades en el
-              &ldquo;søftware humanø&rdquo; y fugas en la huella digital.
+              &ldquo;software humano&rdquo; y fugas en la huella digital.
             </p>
             <p className="text-text-subtle leading-relaxed">
-              El resultadø es un døssier de inteligencia que te da ventaja
-              inførmativa antes de sentarte a negøciar, cøntratar, ø tømar
-              cualquier decisión estratégica. Sin asimetrías, sin puntøs
-              ciegøs.
+              El resultado es un dossier de inteligencia que te da ventaja
+              informativa antes de sentarte a negociar, contratar, o tomar
+              cualquier decisión estratégica. Sin asimetrías, sin puntos
+              ciegos.
             </p>
           </div>
         </Container>
@@ -113,7 +113,7 @@ export default function Fase1Page() {
         <Container>
           <div className="space-y-8">
             <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
-              Tecnøløgías
+              Tecnologías
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {techBadges.map((t) => (
@@ -138,17 +138,17 @@ export default function Fase1Page() {
       <Section className="bg-bg-secondary retro-grid-warm">
         <Container>
           <div className="max-w-2xl mx-auto text-center space-y-6">
-            <p className="text-sm text-text-subtle">Siguiente pasø</p>
+            <p className="text-sm text-text-subtle">Siguiente paso</p>
             <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
-              ¿Necesitas más prøfundidad?
+              ¿Necesitas más profundidad?
             </h2>
             <p className="text-text-secondary">
-              Fase II incluye tødø lo de Fase I + auditøría cømpleta +
-              hardening estructural pør €1,000.
+              Fase II incluye todo lo de Fase I + auditoría completa +
+              hardening estructural por €1,000.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button href="/contacto?phase=1" variant="primary">
-                Cøntratar Fase I
+                Contratar Fase I
               </Button>
               <Button href="/servicios/fase-2" variant="secondary">
                 Ver Fase II &rarr;

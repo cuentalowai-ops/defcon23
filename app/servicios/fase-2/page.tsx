@@ -7,44 +7,44 @@ import Button from "@/components/ui/Button";
 export const metadata: Metadata = {
   title: "Fase II: Structural Integrity & Compliance | dEfCØN23",
   description:
-    "Auditøría cømpleta + Hardening + Cømpliance Architecture. Zero Trust, NIS2, Legal Hardening. €1,000 incluye Fase I.",
+    "Auditoría completa + Hardening + Compliance Architecture. Zero Trust, NIS2, Legal Hardening. €1,000 incluye Fase I.",
 };
 
 const modules = [
   {
     id: "A",
-    title: "Auditøría de Flujø Sistémicø",
+    title: "Auditoría de Flujo Sistémico",
     description:
-      "Calculamøs tu Númerø de Reynølds ørganizaciønal. Identificamøs puntøs de separación (vórtices) dønde se genera turbulencia detectable.",
+      "Calculamos tu Número de Reynolds organizacional. Identificamos puntos de separación (vórtices) donde se genera turbulencia detectable.",
     items: [
-      "Re actual vs Re øbjetivø (< 2,300)",
+      "Re actual vs Re objetivo (< 2,300)",
       "Mapa de firma térmica",
-      "Diseñø de capas de absørción",
-      "Análisis de puntøs de separación",
+      "Diseño de capas de absorción",
+      "Análisis de puntos de separación",
     ],
   },
   {
     id: "B",
-    title: "Hardening pør Trabajø en Fríø",
+    title: "Hardening por Trabajo en Frío",
     description:
-      "Laminación estructural en 7 pasadas. Eliminación de rugøsidades (alertas de control interno, inspecciønes). Temple final cøn legitimidad narrativa.",
+      "Laminación estructural en 7 pasadas. Eliminación de rugosidades (alertas AML, inspecciones). Temple final con legitimidad narrativa.",
     items: [
-      "Micrø-fracciønamientø transacciønal",
-      "Sincrønización de cicløs",
-      "Fundaciønes culturales",
-      "Prøtøcølø de inducción hipnótica",
+      "Micro-fraccionamiento transaccional",
+      "Sincronización de ciclos",
+      "Fundaciones culturales",
+      "Protocolo de inducción hipnótica",
     ],
   },
   {
     id: "C",
-    title: "Cømpliance Architecture (EU+ES)",
+    title: "Compliance Architecture (EU+ES)",
     description:
-      "Arquitectura de 4 Capas (Layer 1: Prøtøcøl, Layer 2: Gøvernance, Layer 3: Applicatiøn, Layer 4: Søcial). Autø-repørte < 2h (DORA requiere 4h).",
+      "Arquitectura de 4 Capas (Layer 1: Protocol, Layer 2: Governance, Layer 3: Application, Layer 4: Social). Auto-reporte < 2h (DORA requiere 4h).",
     items: [
       "NIS2, DORA, AI Act, CRA, eIDAS 2.0 (EU)",
       "ENS, RGPD (España)",
-      "Zerø Trust fundaciønal",
-      "Legal Hardening — prøtección jurídica de la estructura",
+      "Zero Trust fundacional",
+      "Legal Hardening — protección jurídica de la estructura",
     ],
   },
 ];
@@ -82,13 +82,13 @@ export default function Fase2Page() {
               </span>
             </div>
             <p className="text-base text-text-secondary leading-relaxed max-w-2xl">
-              Reducimøs la inductancia (resistencia) legal y técnica.
-              Alineamøs la estructura søcietaria cøn requisitøs de Hacienda
-              y nørmativa eurøpea NIS2/GDPR. Implementamøs arquitectura
-              Zerø Trust para blindar el flujø de datøs.
+              Reducimos la inductancia (resistencia) legal y técnica.
+              Alineamos la estructura societaria con requisitos de Hacienda
+              y normativa europea NIS2/GDPR. Implementamos arquitectura
+              Zero Trust para blindar el flujo de datos.
             </p>
             <Button href="/contacto?phase=2" variant="primary">
-              Cøntratar Fase II
+              Contratar Fase II
             </Button>
           </div>
         </Container>
@@ -104,7 +104,7 @@ export default function Fase2Page() {
             <div className="max-w-3xl space-y-6">
               <div className="flex items-center gap-3">
                 <span className="text-sm font-bold text-accent-cold terminal-text">
-                  Módulø {mod.id}
+                  Módulo {mod.id}
                 </span>
               </div>
               <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
@@ -138,7 +138,7 @@ export default function Fase2Page() {
         <Container>
           <div className="space-y-6">
             <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
-              Tecnøløgías
+              Tecnologías
             </h2>
             <div className="flex flex-wrap gap-3">
               {techBadges.map((b) => (
@@ -162,12 +162,12 @@ export default function Fase2Page() {
               ¿Necesitas escalar?
             </h2>
             <p className="text-text-secondary">
-              Fase III incluye tødø lo de Fase I + II + CFD Vørtex + EU Funds
+              Fase III incluye todo lo de Fase I + II + CFD Vortex + EU Funds
               capture. Desde €3,000.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button href="/contacto?phase=2" variant="primary">
-                Cøntratar Fase II
+                Contratar Fase II
               </Button>
               <Button href="/servicios/fase-3" variant="secondary">
                 Ver Fase III &rarr;

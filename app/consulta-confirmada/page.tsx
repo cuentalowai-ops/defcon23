@@ -6,9 +6,9 @@ import Section from "@/components/ui/Section";
 import Button from "@/components/ui/Button";
 
 export const metadata: Metadata = {
-  title: "Reserva Cønfirmada | dEfCØN23",
+  title: "Reserva Confirmada | dEfCØN23",
   description:
-    "Tu cønsulta inicial ha sidø cønfirmada. Revisa tu email para løs detalles.",
+    "Tu consulta inicial ha sido confirmada. Revisa tu email para los detalles.",
 };
 
 export default function ConfirmacionPage() {
@@ -23,34 +23,34 @@ export default function ConfirmacionPage() {
               </div>
 
               <h1 className="text-[1.5rem] md:text-[2.5rem] leading-[1.1] text-accent-success terminal-text">
-                Reserva Cønfirmada
+                Reserva Confirmada
               </h1>
 
               <p className="text-text-secondary">
-                Revisa tu email para løs detalles de la videøllamada.
+                Revisa tu email para los detalles de la videollamada.
               </p>
 
               <div className="border-t border-border-subtle pt-8 space-y-3">
                 <p className="text-sm text-text-subtle mb-4">
-                  Mientras tantø, puedes:
+                  Mientras tanto, puedes:
                 </p>
                 <div className="flex flex-col gap-3">
                   <Button href="/casos" variant="secondary" className="w-full">
-                    Ver casøs de estudiø &rarr;
+                    Ver casos de estudio &rarr;
                   </Button>
                   <Button
                     href="/servicios"
                     variant="secondary"
                     className="w-full"
                   >
-                    Explørar arsenal de serviciøs &rarr;
+                    Explorar arsenal de servicios &rarr;
                   </Button>
                   <Button
                     href="/operator"
                     variant="secondary"
                     className="w-full"
                   >
-                    Cønocer al øperadør &rarr;
+                    Conocer al operador &rarr;
                   </Button>
                 </div>
               </div>

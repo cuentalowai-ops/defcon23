@@ -5,18 +5,18 @@ import Section from "@/components/ui/Section";
 import Button from "@/components/ui/Button";
 
 export const metadata: Metadata = {
-  title: "Casø: Plataførma Digital P2P | dEfCØN23",
+  title: "Caso: Plataforma Digital P2P | dEfCØN23",
   description:
-    "12 países, 12,000 tx/mes. Re = 5,600 → 1,650. Alertas de control interno: -94% (mejora en calidad de datos). Cøste/tx: -68%.",
+    "12 países, 12,000 tx/mes. Re = 5,600 → 1,650. Alertas: -94%. Coste/tx: -68%.",
 };
 
 const metrics = [
   { label: "Re Inicial", value: "5,600", color: "text-accent-danger" },
   { label: "Re Final", value: "1,650", color: "text-accent-success" },
-  { label: "alertas de control interno", value: "-94%", color: "text-accent-success" },
-  { label: "Cøste/transacción", value: "-68%", color: "text-accent-cold" },
-  { label: "Crecimientø", value: "+410%/añø", color: "text-accent-warm" },
-  { label: "Rutas øptimizadas", value: "47 → 3", color: "text-accent-cold" },
+  { label: "Alertas AML", value: "-94%", color: "text-accent-success" },
+  { label: "Coste/transacción", value: "-68%", color: "text-accent-cold" },
+  { label: "Crecimiento", value: "+410%/año", color: "text-accent-warm" },
+  { label: "Rutas optimizadas", value: "47 → 3", color: "text-accent-cold" },
 ];
 
 export default function PlataformaP2PPage() {
@@ -27,10 +27,10 @@ export default function PlataformaP2PPage() {
         <Container>
           <div className="max-w-3xl space-y-6">
             <p className="text-sm text-accent-cold font-[family-name:var(--font-source-code-pro)] uppercase tracking-wider">
-              Casø de Estudiø C
+              Caso de Estudio C
             </p>
             <h1 className="text-[2rem] md:text-[3.5rem] leading-[1.1]">
-              Plataførma Digital P2P
+              Plataforma Digital P2P
             </h1>
             <div className="flex flex-wrap gap-3">
               <span className="text-xs px-3 py-1 rounded-full bg-bg-tertiary text-text-subtle border border-border-subtle">
@@ -40,7 +40,7 @@ export default function PlataformaP2PPage() {
                 12 países, multi-currency
               </span>
               <span className="text-xs px-3 py-1 rounded-full bg-accent-danger/10 text-accent-danger border border-accent-danger/20">
-                Re = 5,600 (caøs turbulentø)
+                Re = 5,600 (caos turbulento)
               </span>
             </div>
           </div>
@@ -52,14 +52,14 @@ export default function PlataformaP2PPage() {
         <Container>
           <div className="max-w-3xl space-y-6">
             <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2]">
-              El Prøblema
+              El Problema
             </h2>
             <p className="text-text-secondary leading-relaxed">
-              Plataførma P2P øperandø en 12 países cøn múltiples divisas.
-              12,000 transacciønes mensuales fluyendø pør 47 rutas diferentes.
-              94 alertas de control interno en sølø 6 meses. El flujø era cømpletamente
-              turbulentø: cada transacción cross-border generaba señales
-              detectables pør múltiples jurisdicciønes simultáneamente.
+              Plataforma P2P operando en 12 países con múltiples divisas.
+              12,000 transacciones mensuales fluyendo por 47 rutas diferentes.
+              94 alertas AML en solo 6 meses. El flujo era completamente
+              turbulento: cada transacción cross-border generaba señales
+              detectables por múltiples jurisdicciones simultáneamente.
             </p>
           </div>
         </Container>
@@ -70,15 +70,15 @@ export default function PlataformaP2PPage() {
         <Container>
           <div className="max-w-3xl space-y-6">
             <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2]">
-              La Sølución
+              La Solución
             </h2>
             <p className="text-text-secondary leading-relaxed">
-              Tøkenización del flujø mediante møneda interna de la plataførma.
-              Aplicamøs CFD a las 47 rutas transacciønales y las cønsølidamøs
-              en 3 rutas óptimas cøn mínima fricción regulatøria. El token
-              internø actúa cømø capa de abstracción: las transacciønes
-              cross-border se cønvierten en møvimientøs internøs de la
-              plataførma.
+              Tokenización del flujo mediante moneda interna de la plataforma.
+              Aplicamos CFD a las 47 rutas transaccionales y las consolidamos
+              en 3 rutas óptimas con mínima fricción regulatoria. El token
+              interno actúa como capa de abstracción: las transacciones
+              cross-border se convierten en movimientos internos de la
+              plataforma.
             </p>
           </div>
         </Container>
@@ -89,7 +89,7 @@ export default function PlataformaP2PPage() {
         <Container>
           <div className="space-y-10">
             <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2]">
-              Resultadøs
+              Resultados
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
               {metrics.map((m) => (
@@ -110,7 +110,7 @@ export default function PlataformaP2PPage() {
             </div>
             <div className="text-center pt-8">
               <Button href="/contacto" variant="primary">
-                Sølicitar Auditøría
+                Solicitar Auditoría
               </Button>
             </div>
           </div>
