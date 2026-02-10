@@ -28,7 +28,7 @@ const stats = [
 
 export default function OperatorTeaser() {
   return (
-    <Section className="bg-bg-secondary retro-grid">
+    <Section id="operator" className="bg-bg-secondary retro-grid">
       <Container>
         <div className="space-y-10 md:space-y-14">
           {/* Header */}

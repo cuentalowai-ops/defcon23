@@ -33,7 +33,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="min-h-screen flex items-center pt-20 md:pt-0 retro-grid relative overflow-hidden">
+    <section id="hero" className="min-h-screen flex items-center pt-20 md:pt-0 retro-grid relative overflow-hidden scroll-mt-20">
       <Container>
         <div className="max-w-4xl space-y-6 md:space-y-10">
           {/* Boot sequence — collapses after load */}

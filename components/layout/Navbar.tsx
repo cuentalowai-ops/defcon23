@@ -1,24 +1,27 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import Container from "@/components/ui/Container";
 
 const navLinks = [
-  { href: "/metodologia", label: "Metodología" },
-  { href: "/servicios", label: "Servicios" },
-  { href: "/casos", label: "Casos" },
-  { href: "/operator", label: "Operator" },
-  { href: "/regulatory", label: "Regulatory" },
-  { href: "/calculadora-reynolds", label: "Calculadora Re" },
-  { href: "/contacto", label: "Contacto" },
+  { href: "/metodologia", sectionId: "metodo", label: "Metodología" },
+  { href: "/servicios", sectionId: "servicios", label: "Servicios" },
+  { href: "/casos", sectionId: "casos", label: "Casos" },
+  { href: "/operator", sectionId: "operator", label: "Operator" },
+  { href: "/regulatory", sectionId: "regulatory", label: "Regulatory" },
+  { href: "/calculadora-reynolds", sectionId: "calculadora", label: "Calculadora Re" },
+  { href: "/contacto", sectionId: "contacto", label: "Contacto" },
   { href: "/consulta", label: "Reservar Consulta", cta: true },
 ];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,6 +30,17 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  function handleNavClick(e: React.MouseEvent, link: typeof navLinks[number]) {
+    if (isHome && "sectionId" in link && link.sectionId) {
+      e.preventDefault();
+      const el = document.getElementById(link.sectionId);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+      setIsOpen(false);
+    }
+  }
 
   return (
     <nav
@@ -61,7 +75,8 @@ export default function Navbar() {
           {navLinks.map((link) => (
             <Link
               key={link.href}
-              href={link.href}
+              href={isHome && "sectionId" in link && link.sectionId ? `#${link.sectionId}` : link.href}
+              onClick={(e) => handleNavClick(e, link)}
               className={
                 "cta" in link && link.cta
                   ? "text-sm px-4 py-2.5 rounded-lg bg-accent-warm text-bg-primary font-semibold hover:scale-105 active:scale-95 transition-all"
@@ -91,8 +106,8 @@ export default function Navbar() {
             {navLinks.map((link) => (
               <Link
                 key={link.href}
-                href={link.href}
-                onClick={() => setIsOpen(false)}
+                href={isHome && "sectionId" in link && link.sectionId ? `#${link.sectionId}` : link.href}
+                onClick={(e) => handleNavClick(e, link)}
                 className="text-base text-text-secondary hover:text-accent-cold transition-colors py-3 min-h-[44px] flex items-center"
               >
                 {link.label}

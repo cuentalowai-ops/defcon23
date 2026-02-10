@@ -25,7 +25,7 @@ const channels = [
 
 export default function ContactoTeaser() {
   return (
-    <Section className="bg-bg-secondary retro-grid">
+    <Section id="contacto" className="bg-bg-secondary retro-grid">
       <Container>
         <div className="max-w-4xl mx-auto space-y-10 md:space-y-12">
           {/* Header */}

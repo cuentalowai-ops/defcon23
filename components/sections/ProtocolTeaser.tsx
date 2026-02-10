@@ -31,7 +31,7 @@ const variables = [
 
 export default function ProtocolTeaser() {
   return (
-    <Section className="bg-bg-secondary retro-grid">
+    <Section id="calculadora" className="bg-bg-secondary retro-grid">
       <Container>
         <div className="max-w-4xl mx-auto space-y-10 md:space-y-14">
           {/* Header */}
