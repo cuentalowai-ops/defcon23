@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { X, Shield, Cpu, Scale, Brain, Home, BookOpen, Briefcase, Mail, Calculator } from "lucide-react";
+import { X, Shield, Cpu, Scale, Brain, Home, BookOpen, Briefcase, Mail, Calculator, User } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import EnsBadge from "@/components/ui/EnsBadge";
 
@@ -14,6 +14,7 @@ const navItems = [
   { href: "/", label: "Home", icon: Home },
   { href: "/metodologia", label: "Metodología", icon: BookOpen },
   { href: "/casos", label: "Casos", icon: Briefcase },
+  { href: "/operator", label: "Operator", icon: User },
   { href: "/contacto", label: "Contacto", icon: Mail },
   { href: "/calculadora-reynolds", label: "Calculadora Re", icon: Calculator },
 ];
