@@ -18,7 +18,7 @@ interface CalBookingProps {
 
 export default function CalBooking({ 
   calLink,
-  calOrigin = "https://cal.eu",
+  calOrigin = "https://www.cal.eu",
   config = { theme: "dark", layout: "month_view" },
   cssVarsPerTheme,
 }: CalBookingProps) {
