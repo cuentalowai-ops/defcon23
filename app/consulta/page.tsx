@@ -304,41 +304,7 @@ export default function ConsultaPage() {
             </div>
 
             <div className="neon-card rounded-2xl p-2 md:p-4 bg-bg-secondary overflow-hidden">
-              <CalBooking
-                calLink="defcon23/15min"
-                calOrigin="https://www.cal.eu"
-                config={{
-                  theme: "dark",
-                  layout: "month_view",
-                  hideEventTypeDetails: false,
-                }}
-                cssVarsPerTheme={{
-                  dark: {
-                    "cal-brand": "#FF9966",
-                    "cal-text": "#F9FAFB",
-                    "cal-text-emphasis": "#FFFFFF",
-                    "cal-text-subtle": "#A0A0A0",
-                    "cal-border": "rgba(255, 153, 102, 0.2)",
-                    "cal-border-emphasis": "rgba(58, 155, 155, 0.4)",
-                    "cal-border-subtle": "#333333",
-                    "cal-bg": "#0A0A0A",
-                    "cal-bg-emphasis": "#1A1A1A",
-                    "cal-bg-subtle": "#151515",
-                  },
-                  light: {
-                    "cal-brand": "#FF9966",
-                    "cal-text": "#0A0A0A",
-                    "cal-text-emphasis": "#000000",
-                    "cal-text-subtle": "#6B7280",
-                    "cal-border": "rgba(255, 153, 102, 0.3)",
-                    "cal-border-emphasis": "rgba(58, 155, 155, 0.5)",
-                    "cal-border-subtle": "#E5E7EB",
-                    "cal-bg": "#FFFFFF",
-                    "cal-bg-emphasis": "#F9FAFB",
-                    "cal-bg-subtle": "#F3F4F6",
-                  },
-                }}
-              />
+              <CalBooking calLink="defcon23/15min" />
             </div>
           </div>
         </Container>
