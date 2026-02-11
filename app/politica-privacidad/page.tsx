@@ -21,7 +21,7 @@ export default function PoliticaPrivacidadPage() {
                   Política de Privacidad
                 </h1>
                 <p className="text-sm text-text-subtle">
-                  <strong>defcon23.eu</strong> | Última actualización: 11 de febrero de 2026 | Versión 1.0
+                  <strong>defcon23.eu</strong> | Última actualización: 13 de febrero de 2026 | Versión 1.1
                 </p>
               </header>
 
@@ -57,7 +57,7 @@ export default function PoliticaPrivacidadPage() {
                 <p><strong>Datos recopilados:</strong> Nombre completo, email, teléfono, empresa, NIF/CIF, dirección postal, cargo (opcional)</p>
                 <p><strong>Finalidad:</strong> Prestación de servicios de auditoría y consultoría, facturación, cumplimiento de obligaciones legales</p>
                 <p><strong>Base legal:</strong> Ejecución de contrato (Art. 6.1.b GDPR) + Obligación legal (Art. 6.1.c GDPR)</p>
-                <p><strong>Plazo de conservación:</strong> Duración del contrato + 6 años (obligación fiscal)</p>
+                <p><strong>Plazo de conservación:</strong> Duración del contrato + 10 años (obligación fiscal + PBC/FT Ley 10/2010)</p>
 
                 <h3 className="text-xl font-semibold text-accent-warm mt-6">2.3 Formulario de Contacto</h3>
                 <p><strong>Datos recopilados:</strong> Nombre, email, teléfono (opcional), mensaje</p>
@@ -67,7 +67,7 @@ export default function PoliticaPrivacidadPage() {
 
                 <h3 className="text-xl font-semibold text-accent-warm mt-6">2.4 Cookies y Analítica</h3>
                 <p>
-                  Utilizamos <strong>Plausible Analytics</strong>, una solución que <strong>NO utiliza cookies, NO recopila datos personales</strong> y es 100% conforme con GDPR.
+                  Utilizamos <strong>Plausible Analytics</strong>, una solución que <strong>NO utiliza cookies, NO recopila datos personales</strong> y es 100% conforme con GDPR y LSSI-CE (Ley 34/2002 Art. 22.2).
                   Ver nuestra <Link href="/politica-cookies" className="text-accent-cold hover:underline">Política de Cookies</Link>.
                 </p>
               </section>
@@ -240,9 +240,35 @@ export default function PoliticaPrivacidadPage() {
                 </p>
               </section>
 
-              {/* 11. Contacto */}
+              {/* 11. Registro de Actividades de Tratamiento */}
+              <section>
+                <h2 className="text-2xl font-semibold text-accent-cold">11. Registro de Actividades de Tratamiento (RAT)</h2>
+                <p>
+                  Conforme al Art. 30 GDPR, mantenemos un <strong>Registro de Actividades de Tratamiento (RAT)</strong> que documenta 
+                  todos los tratamientos de datos personales realizados.
+                </p>
+                <p>
+                  El RAT incluye: finalidades, categorías de datos, destinatarios, plazos de conservación, medidas de seguridad y 
+                  transferencias internacionales. Puede solicitarlo en <strong>dpo@defcon23.eu</strong>.
+                </p>
+              </section>
+
+              {/* 12. Evaluación de Impacto (DPIA) */}
+              <section>
+                <h2 className="text-2xl font-semibold text-accent-cold">12. Evaluación de Impacto en Protección de Datos (DPIA)</h2>
+                <p>
+                  Para tratamientos de alto riesgo (Art. 35 GDPR), hemos realizado <strong>Evaluaciones de Impacto en Protección de Datos (DPIA)</strong>:
+                </p>
+                <ul className="space-y-1">
+                  <li><strong>Calculadora de Reynolds:</strong> DPIA realizada en enero 2026 (riesgo: BAJO - solo email + respuestas organizativas)</li>
+                  <li><strong>Sistema CRM:</strong> DPIA realizada en diciembre 2025 (riesgo: MEDIO - datos contractuales)</li>
+                </ul>
+                <p>Puede solicitar copia del resumen ejecutivo DPIA en <strong>dpo@defcon23.eu</strong></p>
+              </section>
+
+              {/* 13. Contacto */}
               <section className="border-t border-border-subtle pt-6">
-                <h2 className="text-2xl font-semibold text-accent-cold">11. Contacto</h2>
+                <h2 className="text-2xl font-semibold text-accent-cold">13. Contacto</h2>
                 <p>Para cualquier consulta sobre protección de datos:</p>
                 <div className="bg-bg-tertiary rounded-lg p-6 mt-4 not-prose">
                   <p><strong className="text-accent-warm">Email:</strong> dpo@defcon23.eu</p>

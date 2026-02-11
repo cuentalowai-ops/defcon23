@@ -36,7 +36,8 @@ export default function PoliticaCookiesPage() {
               <section>
                 <h2 className="text-2xl font-semibold text-accent-cold mb-4">2. Nuestra Política: NO Utilizamos Cookies</h2>
                 <p className="font-semibold text-text-primary">
-                  <strong>defcon23.eu</strong> ha optado por <strong>NO utilizar cookies</strong> en su sitio web.
+                  <strong>defcon23.eu</strong> ha optado por <strong>NO utilizar cookies</strong> en su sitio web, 
+                  cumpliendo así con <strong>GDPR, CCPA, PECR y LSSI-CE (Ley 34/2002 Art. 22.2)</strong>.
                 </p>
                 
                 <h3 className="text-xl font-semibold text-accent-warm mt-6 mb-3">¿Por qué no usamos cookies?</h3>
@@ -155,6 +156,21 @@ export default function PoliticaCookiesPage() {
               </section>
 
               <section>
+                <h2 className="text-2xl font-semibold text-accent-cold mb-4">6. Marco Legal</h2>
+                <p>Esta Política de Cookies cumple con:</p>
+                <ul className="space-y-1">
+                  <li><strong>GDPR (UE 2016/679):</strong> Reglamento General de Protección de Datos</li>
+                  <li><strong>LSSI-CE (Ley 34/2002 Art. 22.2):</strong> Ley de Servicios de la Sociedad de la Información</li>
+                  <li><strong>LOPDGDD (Ley Orgánica 3/2018):</strong> Protección de Datos en España</li>
+                  <li><strong>Directiva ePrivacy (2002/58/CE):</strong> Privacidad en comunicaciones electrónicas</li>
+                </ul>
+                <p className="mt-4">
+                  <strong>Ventaja competitiva:</strong> Al NO usar cookies, NO necesitamos banner de consentimiento, 
+                  simplificando la experiencia del usuario y cumpliendo automáticamente con toda la legislación.
+                </p>
+              </section>
+
+              <section>
                 <h2 className="text-2xl font-semibold text-accent-cold mb-4">7. Sus Derechos</h2>
                 <p>Aunque no utilizamos cookies, usted tiene derecho a:</p>
                 <ul className="space-y-2">
@@ -184,6 +200,16 @@ export default function PoliticaCookiesPage() {
                   <p><strong className="text-accent-warm">Dirección:</strong> C/ En comienda, 1 0, Madrid, España</p>
                 </div>
               </section>
+
+              {/* Footer */}
+              <footer className="border-t border-border-subtle pt-6 text-xs text-text-subtle italic mt-8">
+                <p><strong>Última actualización:</strong> 13 de febrero de 2026 | <strong>Versión:</strong> 1.1</p>
+                <p><strong>Firmado digitalmente por:</strong> Raúl Balaguer, CEO</p>
+                <p className="mt-4">
+                  Esta Política cumple con GDPR (UE 2016/679), LSSI-CE (Ley 34/2002 Art. 22.2), 
+                  LOPDGDD (Ley Orgánica 3/2018) y Directiva ePrivacy (2002/58/CE).
+                </p>
+              </footer>
             </div>
           </div>
         </Container>

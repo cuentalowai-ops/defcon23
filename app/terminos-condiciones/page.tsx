@@ -237,20 +237,87 @@ export default function TerminosCondicionesPage() {
                 </p>
               </section>
 
-              {/* 10. Legislación */}
+              {/* 10. Facturación Electrónica y Compliance Fiscal */}
               <section>
-                <h2 className="text-2xl font-semibold text-accent-cold">10. Legislación Aplicable y Jurisdicción</h2>
+                <h2 className="text-2xl font-semibold text-accent-cold">10. Facturación Electrónica (Ley 18/2022 — Crea y Crece)</h2>
                 
-                <h3 className="text-xl font-semibold text-accent-warm mt-4">10.1 Ley Aplicable</h3>
+                <h3 className="text-xl font-semibold text-accent-warm mt-4">10.1 Facturación Obligatoria</h3>
+                <p>
+                  Conforme a la <strong>Ley 18/2022 (Crea y Crece)</strong>, a partir del <strong>1 de julio de 2025</strong>, 
+                  TODAS las facturas B2B son electrónicas en formato <strong>Facturae 3.2.2</strong> o <strong>EN 16931</strong>.
+                </p>
+                <ul className="space-y-1">
+                  <li><strong>Software certificado:</strong> Utilizamos software conforme Ley 11/2021 (Antifraude)</li>
+                  <li><strong>Formato:</strong> Facturae 3.2.2 (XML firmado digitalmente)</li>
+                  <li><strong>Conservación:</strong> 10 años en formato electrónico original (PBC/FT Ley 10/2010)</li>
+                  <li><strong>Entrega:</strong> Envío automático por email + acceso portal cliente</li>
+                </ul>
+
+                <h3 className="text-xl font-semibold text-accent-warm mt-6">10.2 Obligaciones del Cliente</h3>
+                <p>El Cliente se compromete a:</p>
+                <ul className="space-y-1">
+                  <li>Proporcionar datos fiscales correctos (CIF/NIF, razón social, dirección fiscal)</li>
+                  <li>Aceptar facturas electrónicas en formato Facturae 3.2.2</li>
+                  <li>Notificar cambios fiscales en plazo {'<'} 10 días hábiles</li>
+                </ul>
+              </section>
+
+              {/* 11. Prevención de Blanqueo de Capitales (PBC/FT) */}
+              <section>
+                <h2 className="text-2xl font-semibold text-accent-cold">11. Prevención de Blanqueo de Capitales (Ley 10/2010)</h2>
+                
+                <h3 className="text-xl font-semibold text-accent-warm mt-4">11.1 Diligencia Debida Cliente (KYC)</h3>
+                <p>
+                  Como <strong>sujeto obligado</strong> conforme Art. 2.1.o) Ley 10/2010, aplicamos procedimientos <strong>KYC (Know Your Customer)</strong>:
+                </p>
+                <ul className="space-y-2 list-none pl-0">
+                  <li className="flex items-start gap-2"><span className="text-accent-cold">▸</span><span><strong>Contratos {'>'} €1.000:</strong> Verificación identidad con DNI/NIE/Pasaporte</span></li>
+                  <li className="flex items-start gap-2"><span className="text-accent-cold">▸</span><span><strong>Contratos {'>'} €3.000:</strong> Identificación Persona Políticamente Expuesta (PEP)</span></li>
+                  <li className="flex items-start gap-2"><span className="text-accent-cold">▸</span><span><strong>Empresas:</strong> Identificación titular real (beneficiario último)</span></li>
+                  <li className="flex items-start gap-2"><span className="text-accent-cold">▸</span><span><strong>Conservación:</strong> 10 años desde fin relación comercial</span></li>
+                </ul>
+
+                <h3 className="text-xl font-semibold text-accent-warm mt-6">11.2 Operaciones Sospechosas</h3>
+                <p>
+                  Nos reservamos el derecho de <strong>suspender o rechazar</strong> cualquier contratación si:
+                </p>
+                <ul className="space-y-1">
+                  <li>El Cliente se niega a proporcionar documentación KYC</li>
+                  <li>Detectamos indicios de operación sospechosa (fraude, blanqueo)</li>
+                  <li>El Cliente figura en listas OFAC, ONU, UE de sanciones</li>
+                </ul>
+                <p className="mt-3">
+                  <strong>Notificación SEPBLAC:</strong> Estamos obligados a notificar operaciones sospechosas sin informar al Cliente (Art. 18 Ley 10/2010).
+                </p>
+
+                <h3 className="text-xl font-semibold text-accent-warm mt-6">11.3 Oficial de Cumplimiento</h3>
+                <div className="bg-bg-tertiary rounded-lg p-6 mt-4 not-prose">
+                  <p><strong className="text-accent-warm">Oficial de Cumplimiento PBC/FT:</strong> Raúl Balaguer</p>
+                  <p><strong className="text-accent-warm">Email:</strong> compliance@defcon23.eu</p>
+                  <p className="mt-3 text-xs text-text-subtle">
+                    Si tiene dudas sobre nuestros procedimientos KYC/PBC, puede contactar al Oficial de Cumplimiento.
+                  </p>
+                </div>
+              </section>
+
+              {/* 12. Legislación */}
+              <section>
+                <h2 className="text-2xl font-semibold text-accent-cold">12. Legislación Aplicable y Jurisdicción</h2>
+                
+                <h3 className="text-xl font-semibold text-accent-warm mt-4">12.1 Ley Aplicable</h3>
                 <p>Los presentes Términos se rigen por la legislación española:</p>
                 <ul className="space-y-1">
                   <li>Ley 34/2002 (LSSI-CE)</li>
                   <li>Reglamento (UE) 2016/679 (GDPR)</li>
                   <li>Ley Orgánica 3/2018 (LOPDGDD)</li>
+                  <li>Ley 18/2022 (Crea y Crece — Facturación electrónica)</li>
+                  <li>Ley 11/2021 (Antifraude — Software certificado)</li>
+                  <li>Ley 10/2010 (PBC/FT — Blanqueo de capitales)</li>
+                  <li>RD 311/2022 (ENS — Seguridad)</li>
                   <li>Código Civil español</li>
                 </ul>
 
-                <h3 className="text-xl font-semibold text-accent-warm mt-6">10.2 Resolución de Conflictos</h3>
+                <h3 className="text-xl font-semibold text-accent-warm mt-6">12.2 Resolución de Conflictos</h3>
                 <p>
                   Para cualquier controversia, las partes se someten a los <strong>Juzgados y Tribunales de Madrid</strong>.
                 </p>
@@ -262,25 +329,27 @@ export default function TerminosCondicionesPage() {
                 </p>
               </section>
 
-              {/* 11. Contacto */}
+              {/* 13. Contacto */}
               <section className="border-t border-border-subtle pt-6">
-                <h2 className="text-2xl font-semibold text-accent-cold">11. Contacto</h2>
+                <h2 className="text-2xl font-semibold text-accent-cold">13. Contacto</h2>
                 <p>Para cualquier consulta sobre estos Términos y Condiciones:</p>
                 <div className="bg-bg-tertiary rounded-lg p-6 mt-4 not-prose space-y-2">
                   <p><strong className="text-accent-warm">Email:</strong> hola@defcon23.eu</p>
                   <p><strong className="text-accent-warm">Teléfono:</strong> +34 672 324 213</p>
                   <p><strong className="text-accent-warm">Dirección:</strong> C/ En comienda, 1 0, Madrid, España</p>
                   <p className="mt-3"><strong className="text-accent-warm">Departamento Legal:</strong> legal@defcon23.eu</p>
-                  <p><strong className="text-accent-warm">DPO:</strong> dpo@defcon23.eu</p>
+                  <p><strong className="text-accent-warm">DPO (Protección Datos):</strong> dpo@defcon23.eu</p>
+                  <p><strong className="text-accent-warm">Oficial Cumplimiento PBC/FT:</strong> compliance@defcon23.eu</p>
                 </div>
               </section>
 
               {/* Footer */}
               <footer className="border-t border-border-subtle pt-6 text-xs text-text-subtle italic">
-                <p><strong>Última actualización:</strong> 11 de febrero de 2026 | <strong>Versión:</strong> 1.0</p>
+                <p><strong>Última actualización:</strong> 13 de febrero de 2026 | <strong>Versión:</strong> 1.1</p>
                 <p><strong>Firma digital:</strong> Raúl Balaguer, CEO, Representante Legal de defcon23.eu</p>
                 <p className="mt-4">
-                  Términos redactados en cumplimiento con la LSSI-CE (Art. 10), GDPR y legislación española vigente.
+                  Términos redactados en cumplimiento con LSSI-CE (Art. 10), GDPR, Ley Crea y Crece (18/2022), Ley Antifraude (11/2021), 
+                  PBC/FT (10/2010), ENS (RD 311/2022) y legislación española vigente.
                 </p>
               </footer>
             </article>

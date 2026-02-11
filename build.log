@@ -1,0 +1,68 @@
+
+> defcon23@0.1.0 build
+> next build
+
+⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /Users/rbm/pnpm-lock.yaml as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * /Users/rbm/Desktop/defcon23/package-lock.json
+
+▲ Next.js 16.1.6 (Turbopack)
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 3.1s
+  Running TypeScript ...
+  Collecting page data using 7 workers ...
+  Generating static pages using 7 workers (0/41) ...
+  Generating static pages using 7 workers (10/41) 
+  Generating static pages using 7 workers (20/41) 
+  Generating static pages using 7 workers (30/41) 
+✓ Generating static pages using 7 workers (41/41) in 326.9ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /admin/ens-dashboard
+├ ○ /calculadora-reynolds
+├ ○ /calculadora-reynolds/resultados
+├ ○ /casos
+├ ○ /casos/holding-gastronomico
+├ ○ /casos/plataforma-p2p
+├ ○ /casos/red-profesionales
+├ ○ /compliance
+├ ○ /consulta
+├ ○ /consulta-confirmada
+├ ○ /contacto
+├ ○ /ens-certificacion
+├ ○ /metodologia
+├ ○ /operator
+├ ○ /politica-cookies
+├ ○ /politica-privacidad
+├ ○ /privacidad
+├ ○ /protocol
+├ ○ /proyectos
+├ ○ /regulatory
+├ ○ /servicios
+├ ○ /servicios/a-la-carta
+├ ○ /servicios/auditoria-flujo
+├ ○ /servicios/cfd-vortex
+├ ○ /servicios/cognitive-defense
+├ ○ /servicios/compliance-architecture
+├ ○ /servicios/fase-1
+├ ○ /servicios/fase-2
+├ ○ /servicios/fase-3
+├ ○ /servicios/hardening
+├ ○ /servicios/hardening-estructural
+├ ○ /servicios/intelligence-brief
+├ ○ /servicios/paquetes
+├ ○ /servicios/retainer
+├ ○ /servicios/structural-integrity
+├ ○ /sitemap.xml
+└ ○ /terminos-condiciones
+
+
+○  (Static)  prerendered as static content
+
