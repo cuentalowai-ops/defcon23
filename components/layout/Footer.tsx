@@ -20,6 +20,8 @@ const recursosLinks = [
 
 const legalLinks = [
   { href: "/privacidad", label: "Política de Privacidad" },
+  { href: "/ens-certificacion", label: "ENS Nivel MEDIO" },
+  { href: "/ens/politica-seguridad-ens.pdf", label: "Política ENS (PDF)" },
   { href: "/contacto", label: "Contacto" },
 ];
 

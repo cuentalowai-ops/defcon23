@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import Container from "@/components/ui/Container";
+import EnsBadge from "@/app/ens-certificacion/componentes/EnsBadge";
 
 const navLinks = [
   { href: "/metodologia", sectionId: "metodo", label: "Metodología" },
@@ -12,6 +13,7 @@ const navLinks = [
   { href: "/casos", sectionId: "casos", label: "Casos" },
   { href: "/operator", sectionId: "operator", label: "Operator" },
   { href: "/regulatory", sectionId: "regulatory", label: "Regulatory" },
+  { href: "/ens-certificacion", label: "ENS" },
   { href: "/calculadora-reynolds", sectionId: "calculadora", label: "Calculadora Re" },
   { href: "/contacto", sectionId: "contacto", label: "Contacto" },
   { href: "/consulta", label: "Reservar Consulta", cta: true },
@@ -62,13 +64,18 @@ export default function Navbar() {
     >
       <Container className="flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
-        <Link
-          href="/"
-          className="text-xl md:text-2xl font-bold text-text-primary tracking-tight hover:text-accent-warm transition-colors glitch-text terminal-glow-warm"
-          data-text="dEfCØN23"
-        >
-          dEfCØN23
-        </Link>
+        <div className="flex items-center gap-3">
+          <Link
+            href="/"
+            className="text-xl md:text-2xl font-bold text-text-primary tracking-tight hover:text-accent-warm transition-colors glitch-text terminal-glow-warm"
+            data-text="dEfCØN23"
+          >
+            dEfCØN23
+          </Link>
+          <div className="hidden md:flex">
+            <EnsBadge size="sm" />
+          </div>
+        </div>
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center gap-8">
