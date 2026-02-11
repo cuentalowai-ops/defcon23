@@ -18,6 +18,11 @@ const recursosLinks = [
   { href: "/protocol", label: "Protocol" },
 ];
 
+const legalLinks = [
+  { href: "/privacidad", label: "Política de Privacidad" },
+  { href: "/contacto", label: "Contacto" },
+];
+
 export default function Footer() {
   return (
     <footer className="bg-bg-secondary border-t border-border-subtle retro-grid">
@@ -101,10 +106,23 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-10 md:mt-16 pt-6 md:pt-8 border-t border-border-subtle flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-text-subtle">
-            &copy; {new Date().getFullYear()} dEfCØN23. Todos los derechos
-            reservados.
-          </p>
+          <div className="flex flex-col md:flex-row items-center gap-4">
+            <p className="text-xs text-text-subtle">
+              &copy; {new Date().getFullYear()} dEfCØN23. Todos los derechos
+              reservados.
+            </p>
+            <div className="flex items-center gap-4">
+              {legalLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-xs text-text-subtle hover:text-accent-cold transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
           <div className="flex items-center gap-6">
             <a
               href="https://linkedin.com/company/defcon23"

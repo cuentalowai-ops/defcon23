@@ -18,6 +18,7 @@ export default function CalculadoraReynoldsPage() {
   const [currentStep, setCurrentStep] = useState(0);
   const [answers, setAnswers] = useState<Partial<ReynoldsAnswers>>({});
   const [contactInfo, setContactInfo] = useState({ email: "", company: "" });
+  const [privacyConsent, setPrivacyConsent] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const totalSteps = REYNOLDS_QUESTIONS.length + 1; // +1 for contact info
@@ -44,7 +45,10 @@ export default function CalculadoraReynoldsPage() {
   }
 
   async function handleSubmit() {
-    if (!contactInfo.email || !contactInfo.company) return;
+    if (!contactInfo.email || !contactInfo.company || !privacyConsent) {
+      alert("Por favor completa todos los campos y acepta la Política de Privacidad");
+      return;
+    }
     setIsSubmitting(true);
 
     // Encode answers + contact into query params for results page
@@ -214,6 +218,35 @@ export default function CalculadoraReynoldsPage() {
                         placeholder="Nombre de tu empresa"
                       />
                     </div>
+
+                    {/* Privacy Consent Checkbox */}
+                    <div className="flex items-start gap-3 p-4 border border-border-subtle rounded-lg">
+                      <input
+                        type="checkbox"
+                        id="privacy-consent"
+                        checked={privacyConsent}
+                        onChange={(e) => setPrivacyConsent(e.target.checked)}
+                        className="mt-1 w-4 h-4 rounded border-border-visible focus:ring-accent-cold focus:ring-2 accent-accent-cold cursor-pointer"
+                        required
+                      />
+                      <label
+                        htmlFor="privacy-consent"
+                        className="text-xs text-text-secondary leading-relaxed cursor-pointer"
+                      >
+                        Acepto la{" "}
+                        <a
+                          href="/privacidad"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-accent-cold hover:underline font-semibold"
+                        >
+                          Política de Privacidad
+                        </a>{" "}
+                        y consiento el tratamiento de mis datos personales (email, empresa, respuestas) para
+                        calcular mi Re Score y recibir el informe. Puedo retirar mi consentimiento en
+                        cualquier momento contactando a dpo@defcon23.eu
+                      </label>
+                    </div>
                   </div>
 
                   <div className="flex flex-col sm:flex-row gap-3">
@@ -226,7 +259,7 @@ export default function CalculadoraReynoldsPage() {
                     <Button
                       onClick={handleSubmit}
                       variant="primary"
-                      className="flex-1"
+                      className={`flex-1 ${!privacyConsent || !contactInfo.email || !contactInfo.company ? 'opacity-50 cursor-not-allowed' : ''}`}
                       type="submit"
                     >
                       {isSubmitting
@@ -236,7 +269,7 @@ export default function CalculadoraReynoldsPage() {
                   </div>
 
                   <p className="text-xs text-text-subtle text-center">
-                    Tus datos están protegidos. No spam. Solo tu informe Reynolds.
+                    🔒 Tus datos están protegidos según RGPD. No spam. Solo tu informe Reynolds.
                   </p>
                 </div>
               )}
