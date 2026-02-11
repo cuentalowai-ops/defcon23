@@ -75,7 +75,7 @@ export default function ALaCartaPage() {
             {services.map((svc) => (
               <div
                 key={svc.name}
-                className="neon-card rounded-xl p-6 md:p-8 bg-bg-tertiary space-y-5"
+                className="neon-card rounded-2xl p-6 md:p-8 bg-bg-tertiary space-y-5"
               >
                 <div className="flex items-baseline justify-between">
                   <h3 className={`text-lg font-semibold text-${svc.color}`}>
@@ -107,7 +107,7 @@ export default function ALaCartaPage() {
       <Section className="retro-grid">
         <Container>
           <div className="max-w-2xl mx-auto text-center space-y-6">
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
               ¿Prefieres un compromiso continuo?
             </h2>
             <Button href="/servicios/retainer" variant="secondary">

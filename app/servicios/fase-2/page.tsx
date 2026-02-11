@@ -64,7 +64,7 @@ export default function Fase2Page() {
               </span>
               <span className="text-xs text-text-subtle">10-15 días</span>
             </div>
-            <h1 className="text-[2rem] md:text-[3rem] leading-[1.1] terminal-glow">
+            <h1 className="text-[2rem] md:text-[3rem] leading-[1.1] text-gradient-warm">
               Structural Integrity & Compliance
             </h1>
             <p className="text-lg text-text-subtle">
@@ -107,7 +107,7 @@ export default function Fase2Page() {
                   Módulo {mod.id}
                 </span>
               </div>
-              <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+              <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
                 {mod.title}
               </h2>
               {mod.description && (
@@ -137,7 +137,7 @@ export default function Fase2Page() {
       <Section className="bg-bg-secondary retro-grid">
         <Container>
           <div className="space-y-6">
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
               Tecnologías
             </h2>
             <div className="flex flex-wrap gap-3">
@@ -158,7 +158,7 @@ export default function Fase2Page() {
       <Section className="retro-grid-warm">
         <Container>
           <div className="max-w-2xl mx-auto text-center space-y-6">
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
               ¿Necesitas escalar?
             </h2>
             <p className="text-text-secondary">

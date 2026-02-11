@@ -130,7 +130,7 @@ export default function Footer() {
 
           {/* Sección 3: Compliance — glassmorphism card */}
           <div className="lg:col-span-3">
-            <div className="rounded-xl border border-border-subtle bg-bg-primary/60 backdrop-blur-md p-5 space-y-4">
+            <div className="rounded-xl border border-border-subtle bg-bg-primary/60 backdrop-blur-sm md:backdrop-blur-md p-5 space-y-4">
               <h4 className="text-xs font-semibold text-text-primary uppercase tracking-widest">
                 Compliance &amp; Legal
               </h4>

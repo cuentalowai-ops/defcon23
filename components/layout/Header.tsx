@@ -124,10 +124,10 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-cold rounded ${
+                className={`text-sm py-2 px-1 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-cold rounded ${
                   pathname === link.href
                     ? "text-accent-cold terminal-text"
-                    : "text-text-secondary hover:text-accent-cold"
+                    : "text-text-secondary hover:text-accent-cold active:text-teal-dark"
                 }`}
               >
                 {link.label}
@@ -210,7 +210,7 @@ export default function Header() {
             {/* Gradient CTA */}
             <Link
               href="/calculadora-reynolds"
-              className="text-sm px-5 py-2.5 rounded-lg bg-gradient-to-r from-accent-warm to-accent-warning text-bg-primary font-semibold hover:scale-105 active:scale-95 transition-transform will-change-transform focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-warm"
+              className="text-sm px-5 py-2.5 rounded-lg bg-gradient-warm text-bg-primary font-semibold hover:scale-105 active:scale-95 transition-transform will-change-transform focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-warm glow-coral"
             >
               Calcular Reynolds
             </Link>

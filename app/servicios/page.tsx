@@ -161,7 +161,7 @@ function PhaseCard({
   return (
     <div
       ref={ref}
-      className="neon-card rounded-xl p-6 md:p-8 bg-bg-tertiary space-y-5 flex flex-col opacity-0 translate-y-8 transition-all duration-700"
+      className="neon-card rounded-2xl p-6 md:p-8 bg-bg-tertiary space-y-5 flex flex-col opacity-0 translate-y-8 transition-all duration-700"
       style={{ transitionDelay: `${index * 150}ms` }}
     >
       {/* Phase label */}
@@ -305,7 +305,7 @@ export default function ServiciosPage() {
       <Section className="bg-bg-secondary retro-grid-warm">
         <Container>
           <div className="space-y-10">
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-center terminal-glow">
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-center text-gradient-warm">
               3 Fases. Un Protocolo.
             </h2>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -321,10 +321,10 @@ export default function ServiciosPage() {
       <Section className="retro-grid">
         <Container>
           <div className="space-y-10">
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-center terminal-glow">
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-center text-gradient-warm">
               Matriz de Servicios
             </h2>
-            <div className="neon-card rounded-xl p-4 md:p-6 bg-bg-secondary">
+            <div className="neon-card rounded-2xl p-4 md:p-6 bg-bg-secondary">
               <PricingTable />
             </div>
           </div>
@@ -335,14 +335,14 @@ export default function ServiciosPage() {
       <Section className="bg-bg-secondary retro-grid-warm">
         <Container>
           <div className="space-y-10">
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-center terminal-glow">
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-center text-gradient-warm">
               Métricas de Éxito (Casos Reales)
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {caseMetrics.map((c) => (
                 <div
                   key={c.label}
-                  className="neon-card rounded-xl p-6 bg-bg-tertiary space-y-4"
+                  className="neon-card rounded-2xl p-6 bg-bg-tertiary space-y-4"
                 >
                   <div className="flex items-center justify-between">
                     <p className="text-xs uppercase tracking-wider text-text-subtle">
@@ -375,14 +375,14 @@ export default function ServiciosPage() {
       <Section className="retro-grid">
         <Container>
           <div className="space-y-10">
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-center terminal-glow">
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-center text-gradient-warm">
               Paquetes Personalizados
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {packages.map((pkg) => (
                 <div
                   key={pkg.name}
-                  className="neon-card rounded-xl p-6 bg-bg-tertiary space-y-4 text-center"
+                  className="neon-card rounded-2xl p-6 bg-bg-tertiary space-y-4 text-center"
                 >
                   <p className={`text-sm font-bold uppercase tracking-wider text-${pkg.color}`}>
                     {pkg.name}
@@ -409,7 +409,7 @@ export default function ServiciosPage() {
       <Section className="bg-bg-secondary retro-grid-warm">
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="neon-card rounded-xl p-6 md:p-8 bg-bg-tertiary space-y-4">
+            <div className="neon-card rounded-2xl p-6 md:p-8 bg-bg-tertiary space-y-4">
               <h3 className="text-lg font-semibold text-accent-cold terminal-text">
                 Servicios a la Carta
               </h3>
@@ -426,7 +426,7 @@ export default function ServiciosPage() {
                 Ver todos &rarr;
               </Button>
             </div>
-            <div className="neon-card rounded-xl p-6 md:p-8 bg-bg-tertiary space-y-4">
+            <div className="neon-card rounded-2xl p-6 md:p-8 bg-bg-tertiary space-y-4">
               <h3 className="text-lg font-semibold text-accent-cold terminal-text">
                 Modelo Retainer
               </h3>
@@ -450,7 +450,7 @@ export default function ServiciosPage() {
       <Section className="retro-grid">
         <Container>
           <div className="max-w-2xl mx-auto text-center space-y-8">
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
               ¿Listo para reducir tu Número de Reynolds?
             </h2>
             <p className="text-text-secondary leading-relaxed">

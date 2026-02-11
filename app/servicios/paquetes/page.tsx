@@ -91,7 +91,7 @@ export default function PaquetesPage() {
             {packages.map((pkg) => (
               <div
                 key={pkg.name}
-                className="neon-card rounded-xl p-6 md:p-8 bg-bg-tertiary space-y-6 flex flex-col"
+                className="neon-card rounded-2xl p-6 md:p-8 bg-bg-tertiary space-y-6 flex flex-col"
               >
                 <div className="text-center space-y-3">
                   {pkg.badge && (
@@ -149,11 +149,11 @@ export default function PaquetesPage() {
       <Section className="retro-grid">
         <Container>
           <div className="space-y-8">
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
               Garantías
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="neon-card rounded-xl p-6 md:p-8 bg-bg-tertiary border-l-4 border-accent-success space-y-3">
+              <div className="neon-card rounded-2xl p-6 md:p-8 bg-bg-tertiary border-l-4 border-accent-success space-y-3">
                 <h3 className="text-base font-semibold text-accent-success">
                   Re Reduction Guarantee
                 </h3>
@@ -162,7 +162,7 @@ export default function PaquetesPage() {
                   devolvemos el 50% de la inversión.
                 </p>
               </div>
-              <div className="neon-card rounded-xl p-6 md:p-8 bg-bg-tertiary border-l-4 border-accent-cold space-y-3">
+              <div className="neon-card rounded-2xl p-6 md:p-8 bg-bg-tertiary border-l-4 border-accent-cold space-y-3">
                 <h3 className="text-base font-semibold text-accent-cold">
                   Compliance Pass Guarantee
                 </h3>
@@ -180,7 +180,7 @@ export default function PaquetesPage() {
       <Section className="bg-bg-secondary retro-grid-warm">
         <Container>
           <div className="max-w-2xl mx-auto text-center space-y-6">
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
               ¿No encaja ningún paquete?
             </h2>
             <p className="text-text-secondary">

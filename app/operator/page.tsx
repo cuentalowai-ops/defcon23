@@ -160,7 +160,7 @@ export default function OperatorPage() {
             <p className="text-sm text-accent-cold uppercase tracking-widest terminal-text">
               Operator
             </p>
-            <h1 className="text-[2rem] sm:text-[2.5rem] md:text-[4.5rem] leading-[1.05] terminal-glow">
+            <h1 className="text-[2rem] sm:text-[2.5rem] md:text-[4.5rem] leading-[1.05] text-gradient-warm">
               Raúl Balaguer
             </h1>
             <h2 className="text-[1.1rem] md:text-[1.5rem] leading-[1.3] text-text-secondary">
@@ -186,7 +186,7 @@ export default function OperatorPage() {
       <Section className="bg-bg-secondary retro-grid">
         <Container>
           <div className="space-y-10">
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
               Perfil del Sistema (La Interfaz)
             </h2>
             <p className="text-lg text-text-secondary max-w-3xl">
@@ -202,7 +202,7 @@ export default function OperatorPage() {
             {/* 3 Biological Markers */}
             <div className="space-y-6">
               {/* Marker 1 */}
-              <div className="neon-card rounded-xl p-6 md:p-8 bg-bg-tertiary space-y-4">
+              <div className="neon-card rounded-2xl p-6 md:p-8 bg-bg-tertiary space-y-4">
                 <h3 className="text-lg md:text-xl font-semibold text-accent-cold terminal-text">
                   1. Arquitectura Cruzada Nativa
                 </h3>
@@ -218,7 +218,7 @@ export default function OperatorPage() {
               </div>
 
               {/* Marker 2 */}
-              <div className="neon-card rounded-xl p-6 md:p-8 bg-bg-tertiary space-y-4">
+              <div className="neon-card rounded-2xl p-6 md:p-8 bg-bg-tertiary space-y-4">
                 <h3 className="text-lg md:text-xl font-semibold text-accent-cold terminal-text">
                   2. Ratio 2D:4D Específico (Índice &gt; Anular)
                 </h3>
@@ -234,7 +234,7 @@ export default function OperatorPage() {
               </div>
 
               {/* Marker 3 */}
-              <div className="neon-card rounded-xl p-6 md:p-8 bg-bg-tertiary space-y-4">
+              <div className="neon-card rounded-2xl p-6 md:p-8 bg-bg-tertiary space-y-4">
                 <h3 className="text-lg md:text-xl font-semibold text-accent-cold terminal-text">
                   3. Neuroplasticidad Auto-Ingenierizada
                 </h3>
@@ -259,7 +259,7 @@ export default function OperatorPage() {
             </div>
 
             {/* Tactical Architecture */}
-            <div className="neon-card rounded-xl p-6 md:p-8 bg-bg-tertiary space-y-4">
+            <div className="neon-card rounded-2xl p-6 md:p-8 bg-bg-tertiary space-y-4">
               <h3 className="text-lg font-semibold text-text-primary">
                 Arquitectura Táctica
               </h3>
@@ -286,11 +286,11 @@ export default function OperatorPage() {
       <Section className="retro-grid-warm">
         <Container>
           <div className="space-y-10">
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
               Relevancia (La Propuesta de Valoer)
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="neon-card rounded-xl p-6 md:p-8 bg-bg-tertiary space-y-4">
+              <div className="neon-card rounded-2xl p-6 md:p-8 bg-bg-tertiary space-y-4">
                 <h3 className="text-lg font-semibold text-accent-cold terminal-text">
                   Para Proyectos de IA y Redes
                 </h3>
@@ -302,7 +302,7 @@ export default function OperatorPage() {
                   la densidad de la red.
                 </p>
               </div>
-              <div className="neon-card rounded-xl p-6 md:p-8 bg-bg-tertiary space-y-4">
+              <div className="neon-card rounded-2xl p-6 md:p-8 bg-bg-tertiary space-y-4">
                 <h3 className="text-lg font-semibold text-accent-cold terminal-text">
                   Para Resolución de Problemas
                 </h3>
@@ -327,7 +327,7 @@ export default function OperatorPage() {
       <Section className="bg-bg-secondary retro-grid">
         <Container>
           <div className="space-y-10">
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
               Experiencia Operacional (Los Laboratorios)
             </h2>
 
@@ -337,7 +337,7 @@ export default function OperatorPage() {
                   {/* Dot */}
                   <div className="absolute -left-[calc(1.5rem+1px)] md:-left-[calc(2.5rem+1px)] top-2 w-3 h-3 rounded-full bg-accent-cold border-2 border-bg-primary" />
 
-                  <div className="neon-card rounded-xl p-6 md:p-8 bg-bg-tertiary space-y-4">
+                  <div className="neon-card rounded-2xl p-6 md:p-8 bg-bg-tertiary space-y-4">
                     <span className="text-xs font-bold uppercase tracking-widest text-accent-warm terminal-text-warm">
                       {entry.period}
                     </span>
@@ -366,7 +366,7 @@ export default function OperatorPage() {
       <Section className="retro-grid-warm">
         <Container>
           <div className="space-y-12">
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
               Arsenal (Certificaciones y Conocimiento)
             </h2>
 
@@ -397,7 +397,7 @@ export default function OperatorPage() {
               <h3 className="text-lg font-semibold text-accent-cold terminal-text">
                 Software Cognitivo (Factores Humanos)
               </h3>
-              <div className="neon-card rounded-xl p-6 md:p-8 bg-bg-tertiary space-y-6 text-sm">
+              <div className="neon-card rounded-2xl p-6 md:p-8 bg-bg-tertiary space-y-6 text-sm">
                 <div>
                   <p className="text-accent-warm font-semibold mb-2">PUBLICACIÓN CIENTÍFICA:</p>
                   <p className="text-text-secondary">
@@ -454,7 +454,7 @@ export default function OperatorPage() {
       <Section className="bg-bg-secondary retro-grid">
         <Container>
           <div className="space-y-12">
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
               Philosofía y Cosmovisión
             </h2>
 
@@ -480,7 +480,7 @@ export default function OperatorPage() {
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {influences.map((inf) => (
-                  <div key={inf.category} className="neon-card rounded-xl p-6 bg-bg-tertiary space-y-3">
+                  <div key={inf.category} className="neon-card rounded-2xl p-6 bg-bg-tertiary space-y-3">
                     <h4 className="text-xs font-bold text-accent-warm uppercase tracking-wider">
                       {inf.category}
                     </h4>
@@ -501,13 +501,13 @@ export default function OperatorPage() {
       <Section className="retro-grid-warm">
         <Container>
           <div className="space-y-12">
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
               Trabajar Conmigo
             </h2>
 
             {/* Ideal / Not ideal */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="neon-card rounded-xl p-6 md:p-8 bg-bg-tertiary border-l-4 border-accent-success space-y-4">
+              <div className="neon-card rounded-2xl p-6 md:p-8 bg-bg-tertiary border-l-4 border-accent-success space-y-4">
                 <h3 className="text-lg font-semibold text-accent-success">&#10003; CLIENTE IDEAL</h3>
                 <ul className="text-text-subtle text-sm space-y-2">
                   <li className="flex items-start gap-2"><span className="text-accent-cold">&gt;</span> Holdings multi-nodo (3+ entidades)</li>
@@ -518,7 +518,7 @@ export default function OperatorPage() {
                   <li className="flex items-start gap-2"><span className="text-accent-cold">&gt;</span> Valoran la asimetría de información</li>
                 </ul>
               </div>
-              <div className="neon-card rounded-xl p-6 md:p-8 bg-bg-tertiary border-l-4 border-accent-danger space-y-4">
+              <div className="neon-card rounded-2xl p-6 md:p-8 bg-bg-tertiary border-l-4 border-accent-danger space-y-4">
                 <h3 className="text-lg font-semibold text-accent-danger">&#10005; NO IDEAL</h3>
                 <ul className="text-text-subtle text-sm space-y-2">
                   <li className="flex items-start gap-2"><span className="text-accent-cold">&gt;</span> Buscan &ldquo;hack rápido&rdquo; o &ldquo;solución mágica&rdquo;</li>
@@ -565,7 +565,7 @@ export default function OperatorPage() {
                   items: ["Todo bajo NDA (firmado antes Fase I)", "No datos en third-party servers", "Encriptación E2E (PGP keys)", "Chinese Wall entre clients"],
                 },
               ].map((box) => (
-                <div key={box.title} className="neon-card rounded-xl p-6 bg-bg-tertiary space-y-3">
+                <div key={box.title} className="neon-card rounded-2xl p-6 bg-bg-tertiary space-y-3">
                   <h4 className="text-xs font-bold text-accent-warm uppercase tracking-wider">{box.title}</h4>
                   <ul className="text-text-subtle text-sm space-y-2">
                     {box.items.map((item) => (
@@ -585,7 +585,7 @@ export default function OperatorPage() {
       <Section className="bg-bg-secondary retro-grid">
         <Container>
           <div className="space-y-8">
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
               Biomarcadores Operacionales (Protocolo Personal)
             </h2>
             <div className="bg-bg-primary rounded-xl p-4 md:p-6 text-sm text-text-subtle space-y-2 break-words overflow-hidden">
@@ -608,7 +608,7 @@ export default function OperatorPage() {
       <Section className="retro-grid-warm">
         <Container>
           <div className="space-y-8">
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
               Foco Actual (2026)
             </h2>
 
@@ -626,7 +626,7 @@ export default function OperatorPage() {
                 items: ["Build team (2–3 operadores јúnior)", "Expansión LATAM (México, Argentina, Chile)", "Escribir libro: \"Laminar Organizations\" (publicar 2028)"],
               },
             ].map((block) => (
-              <div key={block.period} className="neon-card rounded-xl p-6 md:p-8 bg-bg-tertiary space-y-4">
+              <div key={block.period} className="neon-card rounded-2xl p-6 md:p-8 bg-bg-tertiary space-y-4">
                 <h3 className="text-lg font-semibold text-accent-cold terminal-text">{block.period}</h3>
                 <ul className="text-text-subtle text-sm space-y-2">
                   {block.items.map((item) => (
@@ -645,7 +645,7 @@ export default function OperatorPage() {
       <Section className="bg-bg-secondary retro-grid">
         <Container>
           <div className="max-w-2xl mx-auto text-center space-y-8">
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
               Contacto
             </h2>
 

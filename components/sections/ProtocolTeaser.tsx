@@ -39,7 +39,7 @@ export default function ProtocolTeaser() {
             <p className="text-xs font-bold uppercase tracking-widest text-accent-cold terminal-text">
               PROTOCOL
             </p>
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
               Reynolds Calculator
             </h2>
             <p className="text-base md:text-lg text-text-secondary leading-relaxed max-w-2xl mx-auto">
@@ -60,7 +60,7 @@ export default function ProtocolTeaser() {
             {variables.map((v, i) => (
               <div
                 key={i}
-                className="neon-card rounded-xl p-4 md:p-5 bg-bg-tertiary text-center space-y-2"
+                className="neon-card rounded-2xl p-4 md:p-5 bg-bg-tertiary/85 backdrop-blur-sm text-center space-y-2 touch-feedback"
               >
                 <p className={`text-2xl md:text-3xl font-bold ${v.color} terminal-text`}>
                   {v.symbol}

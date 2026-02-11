@@ -115,7 +115,7 @@ export default function Navbar() {
                 key={link.href}
                 href={isHome && "sectionId" in link && link.sectionId ? `#${link.sectionId}` : link.href}
                 onClick={(e) => handleNavClick(e, link)}
-                className="text-base text-text-secondary hover:text-accent-cold transition-colors py-3 min-h-[44px] flex items-center"
+                className="text-base text-text-secondary hover:text-accent-cold active:text-teal-dark transition-colors py-3 min-h-[44px] flex items-center touch-feedback"
               >
                 {link.label}
               </Link>

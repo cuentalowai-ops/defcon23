@@ -234,7 +234,7 @@ export default function RegulatoryTimeline() {
             <p className="text-xs font-bold uppercase tracking-widest text-accent-cold terminal-text">
               LANDSCAPE
             </p>
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
               El Paisaje Regulatørio 2024–2030
             </h2>
             <p className="text-sm md:text-base text-text-secondary">

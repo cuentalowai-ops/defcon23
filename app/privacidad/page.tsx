@@ -23,7 +23,7 @@ export default function PrivacidadPage() {
                 <p className="text-xs font-bold uppercase tracking-widest text-accent-cold terminal-text">
                   LEGAL
                 </p>
-                <h1 className="text-[2rem] md:text-[3rem] leading-[1.1] terminal-glow">
+                <h1 className="text-[2rem] md:text-[3rem] leading-[1.1] text-gradient-warm">
                   Política de Privacidad
                 </h1>
                 <p className="text-sm text-text-subtle">

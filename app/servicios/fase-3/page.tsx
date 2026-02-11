@@ -64,7 +64,7 @@ export default function Fase3Page() {
               </span>
               <span className="text-xs text-text-subtle">20-30 días</span>
             </div>
-            <h1 className="text-[2rem] md:text-[3rem] leading-[1.1] terminal-glow">
+            <h1 className="text-[2rem] md:text-[3rem] leading-[1.1] text-gradient-warm">
               Vortex Engineering & EU Funds
             </h1>
             <p className="text-lg text-text-subtle">
@@ -105,7 +105,7 @@ export default function Fase3Page() {
               <span className="text-sm font-bold text-accent-success terminal-text">
                 Módulo {mod.id}
               </span>
-              <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+              <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
                 {mod.title}
               </h2>
               {mod.description && (
@@ -135,7 +135,7 @@ export default function Fase3Page() {
       <Section className="bg-bg-secondary retro-grid">
         <Container>
           <div className="space-y-6">
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
               Tecnologías
             </h2>
             <div className="flex flex-wrap gap-3">
@@ -156,7 +156,7 @@ export default function Fase3Page() {
       <Section className="retro-grid-warm">
         <Container>
           <div className="max-w-2xl mx-auto text-center space-y-6">
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
               El protocolo completo
             </h2>
             <p className="text-text-secondary">

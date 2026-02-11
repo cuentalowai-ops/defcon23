@@ -168,7 +168,7 @@ function CaseCard({ cs, index }: { cs: CaseStudy; index: number }) {
   return (
     <div
       ref={cardRef}
-      className="neon-card rounded-xl p-5 md:p-8 bg-bg-secondary space-y-5 md:space-y-6 flex flex-col h-full opacity-0 translate-y-8 transition-all duration-700"
+      className="neon-card rounded-2xl p-5 md:p-8 bg-bg-secondary/85 backdrop-blur-sm md:backdrop-blur-md space-y-5 md:space-y-6 flex flex-col h-full opacity-0 translate-y-8 transition-all duration-700 touch-feedback"
       style={{ transitionDelay: `${index * 200}ms` }}
     >
       {/* Header */}
@@ -240,7 +240,7 @@ export default function CasesTeaser() {
             <p className="text-xs font-bold uppercase tracking-widest text-accent-success terminal-text">
               RESULTADOS
             </p>
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
               Casøs de Estudio
             </h2>
             <p className="text-text-secondary text-sm max-w-lg mx-auto">

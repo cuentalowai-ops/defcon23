@@ -25,7 +25,7 @@ export default function FinalCTA() {
             <p className="text-xs font-bold uppercase tracking-widest text-accent-warm terminal-text-warm">
               SIGUIENTE PASO
             </p>
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
               ¿Listo para Reducir tu Número de Reynolds?
             </h2>
           </div>
@@ -33,7 +33,7 @@ export default function FinalCTA() {
           {/* Qualification */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8 text-left">
             {/* We don't work with */}
-            <div className="space-y-3 md:space-y-4 neon-card rounded-xl p-4 md:p-6">
+            <div className="space-y-3 md:space-y-4 neon-card rounded-2xl p-4 md:p-6 bg-bg-secondary/85 backdrop-blur-sm">
               <h3 className="text-sm uppercase tracking-wider text-accent-danger font-semibold">
                 No trabajamos con
               </h3>
@@ -51,7 +51,7 @@ export default function FinalCTA() {
             </div>
 
             {/* We work with */}
-            <div className="space-y-3 md:space-y-4 neon-card rounded-xl p-4 md:p-6">
+            <div className="space-y-3 md:space-y-4 neon-card rounded-2xl p-4 md:p-6 bg-bg-secondary/85 backdrop-blur-sm">
               <h3 className="text-sm uppercase tracking-wider text-accent-success font-semibold">
                 Trabajamos con
               </h3>

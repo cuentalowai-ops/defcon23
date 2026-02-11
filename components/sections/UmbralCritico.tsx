@@ -45,7 +45,7 @@ export default function UmbralCritico() {
             <p className="text-xs font-bold uppercase tracking-widest text-accent-cold terminal-text">
               FUNDAMENTOS
             </p>
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
               ¿Qué es la Ingeniería de Flujøs Aplicada?
             </h2>
             <p className="text-text-secondary text-sm md:text-base leading-relaxed">

@@ -95,7 +95,7 @@ export default function CalculadoraReynoldsPage() {
                 <p className="text-xs font-bold uppercase tracking-widest text-accent-cold terminal-text">
                   DIAGNÓSTICO
                 </p>
-                <h1 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+                <h1 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
                   Calculadora Reynolds
                 </h1>
                 <p className="text-sm text-text-secondary">
@@ -119,7 +119,7 @@ export default function CalculadoraReynoldsPage() {
 
               {/* Question or Contact Form */}
               {currentQuestion ? (
-                <div className="neon-card rounded-xl p-6 md:p-8 bg-bg-secondary space-y-6">
+                <div className="neon-card rounded-2xl p-6 md:p-8 bg-bg-secondary space-y-6">
                   <div className="space-y-2">
                     <span className="text-xs text-accent-cold terminal-text">
                       {currentQuestion.id.toUpperCase().replace("Q", "PREGUNTA ")}
@@ -179,7 +179,7 @@ export default function CalculadoraReynoldsPage() {
                 </div>
               ) : (
                 /* Contact Info Step */
-                <div className="neon-card rounded-xl p-6 md:p-8 bg-bg-secondary space-y-6">
+                <div className="neon-card rounded-2xl p-6 md:p-8 bg-bg-secondary space-y-6">
                   <div className="space-y-2">
                     <span className="text-xs text-accent-warm terminal-text-warm">
                       ÚLTIMO PASO

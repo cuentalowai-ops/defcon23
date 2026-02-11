@@ -81,7 +81,7 @@ export default function ConsultaPage() {
             <span className="text-xs font-bold uppercase tracking-widest text-accent-cold terminal-text px-3 py-1 border border-accent-cold/30 rounded">
               FASE 0
             </span>
-            <h1 className="text-[2rem] md:text-[3.5rem] leading-[1.1] terminal-glow">
+            <h1 className="text-[2rem] md:text-[3.5rem] leading-[1.1] text-gradient-warm">
               Consulta Inicial
             </h1>
 
@@ -117,13 +117,13 @@ export default function ConsultaPage() {
       <Section className="bg-bg-secondary retro-grid-warm">
         <Container>
           <div className="max-w-4xl space-y-8">
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
               Qué Evaluaremos
             </h2>
 
             <div className="space-y-5">
               {/* 00-03 */}
-              <div className="neon-card rounded-xl p-4 md:p-6 bg-bg-tertiary border-l-4 border-accent-cold">
+              <div className="neon-card rounded-2xl p-4 md:p-6 bg-bg-tertiary border-l-4 border-accent-cold">
                 <div className="flex items-start gap-3 md:gap-4">
                   <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-full bg-accent-cold/10 border border-accent-cold/30 flex items-center justify-center text-xs md:text-sm font-bold text-accent-cold">
                     00–03
@@ -141,7 +141,7 @@ export default function ConsultaPage() {
               </div>
 
               {/* 04-10 */}
-              <div className="neon-card rounded-xl p-4 md:p-6 bg-bg-tertiary border-l-4 border-accent-warm">
+              <div className="neon-card rounded-2xl p-4 md:p-6 bg-bg-tertiary border-l-4 border-accent-warm">
                 <div className="flex items-start gap-3 md:gap-4">
                   <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-full bg-accent-warm/10 border border-accent-warm/30 flex items-center justify-center text-xs md:text-sm font-bold text-accent-warm">
                     04–10
@@ -173,7 +173,7 @@ export default function ConsultaPage() {
               </div>
 
               {/* 11-15 */}
-              <div className="neon-card rounded-xl p-4 md:p-6 bg-bg-tertiary border-l-4 border-accent-success">
+              <div className="neon-card rounded-2xl p-4 md:p-6 bg-bg-tertiary border-l-4 border-accent-success">
                 <div className="flex items-start gap-3 md:gap-4">
                   <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-full bg-accent-success/10 border border-accent-success/30 flex items-center justify-center text-xs md:text-sm font-bold text-accent-success">
                     11–15
@@ -209,7 +209,7 @@ export default function ConsultaPage() {
         <Container>
           <div className="max-w-4xl">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="neon-card rounded-xl p-4 md:p-6 bg-bg-tertiary border-l-4 border-accent-success space-y-3 md:space-y-4">
+              <div className="neon-card rounded-2xl p-4 md:p-6 bg-bg-tertiary border-l-4 border-accent-success space-y-3 md:space-y-4">
                 <h3 className="text-base font-semibold text-accent-success">
                   &#10003; ACEPTO SI
                 </h3>
@@ -237,7 +237,7 @@ export default function ConsultaPage() {
                 </ul>
               </div>
 
-              <div className="neon-card rounded-xl p-4 md:p-6 bg-bg-tertiary border-l-4 border-accent-danger space-y-3 md:space-y-4">
+              <div className="neon-card rounded-2xl p-4 md:p-6 bg-bg-tertiary border-l-4 border-accent-danger space-y-3 md:space-y-4">
                 <h3 className="text-base font-semibold text-accent-danger">
                   &#10005; RECHAZO SI
                 </h3>
@@ -269,11 +269,11 @@ export default function ConsultaPage() {
       <Section className="bg-bg-secondary retro-grid-warm">
         <Container>
           <div className="max-w-4xl space-y-8">
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
               Preparación (Ten a Mano)
             </h2>
 
-            <div className="neon-card rounded-xl p-6 md:p-8 bg-bg-tertiary space-y-5">
+            <div className="neon-card rounded-2xl p-6 md:p-8 bg-bg-tertiary space-y-5">
               {[
                 {
                   title: "Estructura de tu organización",
@@ -323,7 +323,7 @@ export default function ConsultaPage() {
         <Container>
           <div className="max-w-4xl mx-auto space-y-6">
             <div className="text-center space-y-3">
-              <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+              <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
                 Agenda tu Consulta
               </h2>
               <p className="text-sm text-text-secondary">
@@ -332,7 +332,7 @@ export default function ConsultaPage() {
               </p>
             </div>
 
-            <div className="neon-card rounded-xl p-2 md:p-6 bg-bg-secondary overflow-hidden">
+            <div className="neon-card rounded-2xl p-2 md:p-6 bg-bg-secondary overflow-hidden">
               <Cal
                 calLink="defcon23/15min"
                 calOrigin="https://cal.eu"
@@ -351,12 +351,12 @@ export default function ConsultaPage() {
       <Section className="bg-bg-secondary retro-grid-warm">
         <Container>
           <div className="max-w-4xl space-y-8">
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
               Después de la Llamada
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="neon-card rounded-xl p-4 md:p-6 bg-bg-tertiary border-2 border-accent-success/30 space-y-3 md:space-y-4">
+              <div className="neon-card rounded-2xl p-4 md:p-6 bg-bg-tertiary border-2 border-accent-success/30 space-y-3 md:space-y-4">
                 <h3 className="text-base font-semibold text-accent-success">
                   Opción A (Acepto)
                 </h3>
@@ -379,7 +379,7 @@ export default function ConsultaPage() {
                 </ul>
               </div>
 
-              <div className="neon-card rounded-xl p-4 md:p-6 bg-bg-tertiary border-2 border-accent-danger/30 space-y-3 md:space-y-4">
+              <div className="neon-card rounded-2xl p-4 md:p-6 bg-bg-tertiary border-2 border-accent-danger/30 space-y-3 md:space-y-4">
                 <h3 className="text-base font-semibold text-accent-danger">
                   Opción B (Rechazo)
                 </h3>
@@ -411,7 +411,7 @@ export default function ConsultaPage() {
       <Section className="retro-grid">
         <Container>
           <div className="max-w-4xl">
-            <div className="neon-card rounded-xl p-6 md:p-8 bg-bg-tertiary border-2 border-accent-cold/30 space-y-4">
+            <div className="neon-card rounded-2xl p-6 md:p-8 bg-bg-tertiary border-2 border-accent-cold/30 space-y-4">
               <h3 className="text-base font-semibold text-accent-cold terminal-text">
                 Confidencialidad Garantizada
               </h3>

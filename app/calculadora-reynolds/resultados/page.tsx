@@ -154,7 +154,7 @@ function ResultsContent() {
             }`}
           >
             {/* Scale visualization */}
-            <div className="neon-card rounded-xl p-6 bg-bg-secondary space-y-4">
+            <div className="neon-card rounded-2xl p-6 bg-bg-secondary space-y-4">
               <h3 className="text-sm font-semibold text-text-primary">
                 Escala Reynolds
               </h3>
@@ -190,7 +190,7 @@ function ResultsContent() {
             </div>
 
             {/* Critical Leaks */}
-            <div className="neon-card rounded-xl p-6 bg-bg-secondary space-y-4">
+            <div className="neon-card rounded-2xl p-6 bg-bg-secondary space-y-4">
               <h3 className="text-sm font-semibold text-accent-danger">
                 ⚠ Fugas Críticas Identificadas
               </h3>
@@ -207,7 +207,7 @@ function ResultsContent() {
             </div>
 
             {/* Estimated Loss */}
-            <div className="neon-card rounded-xl p-6 bg-bg-secondary space-y-3">
+            <div className="neon-card rounded-2xl p-6 bg-bg-secondary space-y-3">
               <h3 className="text-sm font-semibold text-text-primary">
                 Pérdida Estimada por Turbulencia
               </h3>
@@ -221,7 +221,7 @@ function ResultsContent() {
             </div>
 
             {/* Recommendation */}
-            <div className="neon-card rounded-xl p-6 bg-bg-secondary space-y-3">
+            <div className="neon-card rounded-2xl p-6 bg-bg-secondary space-y-3">
               <h3 className="text-sm font-semibold text-accent-cold terminal-text">
                 Recomendación
               </h3>

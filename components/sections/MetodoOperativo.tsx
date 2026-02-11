@@ -136,7 +136,7 @@ export default function MetodoOperativo() {
             <p className="text-xs font-bold uppercase tracking-widest text-accent-warm terminal-text-warm">
               PROCESO
             </p>
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
               Nuestro Métødo Operativo
             </h2>
             <p className="text-text-secondary text-sm max-w-lg">

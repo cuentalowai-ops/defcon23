@@ -76,7 +76,7 @@ export default function RetainerPage() {
       <Section className="bg-bg-secondary retro-grid-warm">
         <Container>
           <div className="max-w-3xl space-y-8">
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
               ¿Qué incluye?
             </h2>
             <ul className="space-y-4">
@@ -97,14 +97,14 @@ export default function RetainerPage() {
       <Section className="retro-grid">
         <Container>
           <div className="space-y-8">
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
               Beneficios
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {benefits.map((b) => (
                 <div
                   key={b.title}
-                  className="neon-card rounded-xl p-6 bg-bg-tertiary space-y-3"
+                  className="neon-card rounded-2xl p-6 bg-bg-tertiary space-y-3"
                 >
                   <h3 className="text-base font-semibold text-accent-cold terminal-text">
                     {b.title}
@@ -123,7 +123,7 @@ export default function RetainerPage() {
       <Section className="bg-bg-secondary retro-grid-warm">
         <Container>
           <div className="max-w-3xl space-y-6">
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
               Ideal para
             </h2>
             <ul className="space-y-3">
@@ -146,7 +146,7 @@ export default function RetainerPage() {
       <Section className="retro-grid">
         <Container>
           <div className="max-w-2xl mx-auto text-center space-y-6">
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
               Protección 24/7
             </h2>
             <p className="text-text-secondary">

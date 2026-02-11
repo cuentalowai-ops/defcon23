@@ -42,7 +42,7 @@ export default function ContactoPage() {
   };
 
   const inputClass =
-    "w-full bg-bg-tertiary border border-border-subtle rounded-lg px-4 py-3 text-text-primary text-sm focus:outline-none focus:border-accent-cold transition-colors placeholder:text-text-subtle";
+    "w-full bg-bg-tertiary border border-border-subtle rounded-lg px-4 py-3.5 sm:py-3 text-text-primary text-base sm:text-sm focus:outline-none focus:border-accent-cold focus:ring-4 focus:ring-accent-cold/20 transition-all duration-200 placeholder:text-text-subtle";
 
   return (
     <PageLayout>

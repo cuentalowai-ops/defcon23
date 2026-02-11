@@ -33,7 +33,7 @@ export default function ContactoTeaser() {
             <p className="text-xs font-bold uppercase tracking-widest text-accent-warm terminal-text-warm">
               CONTACTO
             </p>
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
               Iniciar Protocolo
             </h2>
             <p className="text-base md:text-lg text-text-secondary leading-relaxed max-w-2xl mx-auto">
@@ -47,7 +47,7 @@ export default function ContactoTeaser() {
             {channels.map((ch, i) => (
               <div
                 key={i}
-                className="neon-card rounded-xl p-5 md:p-6 bg-bg-secondary text-center space-y-3"
+                className="neon-card rounded-2xl p-5 md:p-6 bg-bg-secondary/85 backdrop-blur-sm md:backdrop-blur-md text-center space-y-3 touch-feedback"
               >
                 <span className="text-2xl">{ch.icon}</span>
                 <p className="text-xs uppercase tracking-wider text-text-subtle">

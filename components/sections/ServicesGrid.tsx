@@ -81,7 +81,7 @@ function PhaseCard({
   return (
     <div
       ref={ref}
-      className="neon-card rounded-xl p-6 md:p-8 bg-bg-tertiary space-y-5 flex flex-col h-full opacity-0 translate-y-8 transition-all duration-700"
+      className="neon-card rounded-2xl p-5 md:p-8 bg-bg-tertiary/85 backdrop-blur-sm md:backdrop-blur-md space-y-5 flex flex-col h-full opacity-0 translate-y-8 transition-all duration-700 touch-feedback"
       style={{ transitionDelay: `${index * 150}ms` }}
     >
       {/* Phase label + icon */}
@@ -152,7 +152,7 @@ export default function ServicesGrid() {
             <p className="text-xs font-bold uppercase tracking-widest text-accent-cold terminal-text mb-2">
               ARSENAL
             </p>
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
               Prøtøcølo de 3 Fases
             </h2>
             <p className="text-text-secondary text-sm max-w-lg mx-auto">

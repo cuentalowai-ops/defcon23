@@ -36,7 +36,7 @@ export default function OperatorTeaser() {
             <p className="text-xs font-bold uppercase tracking-widest text-accent-cold terminal-text">
               OPERATOR
             </p>
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
               Raúl Balaguer
             </h2>
             <p className="text-base md:text-lg text-text-secondary leading-relaxed max-w-2xl">
@@ -52,7 +52,7 @@ export default function OperatorTeaser() {
             {markers.map((m, i) => (
               <div
                 key={i}
-                className="neon-card rounded-xl p-5 md:p-6 bg-bg-secondary space-y-3 h-full"
+                className="neon-card rounded-2xl p-5 md:p-6 bg-bg-secondary/85 backdrop-blur-sm md:backdrop-blur-md space-y-3 h-full touch-feedback"
               >
                 <span className="text-accent-cold text-lg">{m.icon}</span>
                 <h3 className="text-sm font-semibold uppercase tracking-wider text-text-primary">

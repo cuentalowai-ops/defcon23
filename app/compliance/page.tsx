@@ -65,7 +65,7 @@ export default function CompliancePage() {
               </ol>
             </section>
 
-            <section className="space-y-4 neon-card rounded-xl p-6 md:p-8 bg-bg-tertiary">
+            <section className="space-y-4 neon-card rounded-2xl p-6 md:p-8 bg-bg-tertiary">
               <h2 className="text-xl md:text-2xl font-semibold text-accent-cold">
                 Compliance Officer
               </h2>

@@ -69,7 +69,7 @@ export default function Fase1Page() {
       <Section className="bg-bg-secondary retro-grid">
         <Container>
           <div className="max-w-3xl space-y-6">
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
               Argumentación
             </h2>
             <p className="text-text-secondary leading-relaxed">
@@ -93,7 +93,7 @@ export default function Fase1Page() {
       <Section className="retro-grid-warm">
         <Container>
           <div className="max-w-3xl space-y-8">
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
               ¿Qué incluye?
             </h2>
             <ul className="space-y-4">
@@ -112,14 +112,14 @@ export default function Fase1Page() {
       <Section className="retro-grid">
         <Container>
           <div className="space-y-8">
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
               Tecnologías
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {techBadges.map((t) => (
                 <div
                   key={t.name}
-                  className="neon-card rounded-xl p-6 bg-bg-tertiary space-y-3"
+                  className="neon-card rounded-2xl p-6 bg-bg-tertiary space-y-3"
                 >
                   <p className="text-accent-warm font-semibold terminal-text-warm">
                     {t.name}
@@ -139,7 +139,7 @@ export default function Fase1Page() {
         <Container>
           <div className="max-w-2xl mx-auto text-center space-y-6">
             <p className="text-sm text-text-subtle">Siguiente paso</p>
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] terminal-glow">
+            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
               ¿Necesitas más profundidad?
             </h2>
             <p className="text-text-secondary">

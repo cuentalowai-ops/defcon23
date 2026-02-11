@@ -17,7 +17,7 @@ export default function ConfirmacionPage() {
       <Section className="retro-grid min-h-[70vh] flex items-center">
         <Container>
           <div className="max-w-2xl mx-auto text-center space-y-8">
-            <div className="neon-card rounded-xl p-6 md:p-10 lg:p-14 bg-bg-secondary space-y-6 md:space-y-8">
+            <div className="neon-card rounded-2xl p-6 md:p-10 lg:p-14 bg-bg-secondary space-y-6 md:space-y-8">
               <div className="w-20 h-20 mx-auto rounded-full bg-accent-success/20 border-2 border-accent-success flex items-center justify-center">
                 <span className="text-accent-success text-4xl">&#10003;</span>
               </div>
