@@ -20,7 +20,10 @@ const serviciosLinks = [
 ];
 
 const legalLinks = [
-  { href: "/privacidad", label: "Privacidad" },
+  { href: "/politica-privacidad", label: "Política de Privacidad" },
+  { href: "/politica-cookies", label: "Política de Cookies" },
+  { href: "/terminos-condiciones", label: "Términos y Condiciones" },
+  { href: "/privacidad", label: "Privacidad (Página)" },
   { href: "/ens-certificacion", label: "ENS Certificación" },
   { href: "/ens/politica-seguridad-ens.pdf", label: "Política ENS" },
 ];

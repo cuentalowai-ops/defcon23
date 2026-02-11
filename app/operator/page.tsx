@@ -207,10 +207,10 @@ export default function OperatorPage() {
                   1. Arquitectura Cruzada Nativa
                 </h3>
                 <p className="text-text-secondary text-sm">
-                  <strong>Zurdero / Dominancia Hemisferió Derecho</strong> para reconocimiento de patrones no lineales.
+                  <strong>Zurdo / Dominancia Hemisferio Derecho</strong> para reconocimiento de patrones no lineales.
                 </p>
                 <div className="bg-bg-primary rounded-lg p-3 md:p-4 text-xs text-text-subtle space-y-1 break-words overflow-hidden">
-                  <p><span className="text-accent-cold">MODELO COGNITIVO:</span> Pensador Divergente (Dominancia Hemisferió Derecho)</p>
+                  <p><span className="text-accent-cold">MODELO COGNITIVO:</span> Pensador Divergente (Dominancia Hemisferio Derecho)</p>
                   <p><span className="text-accent-cold">ESTILO DE PROCESAMIENTO:</span> Holístico &gt; Analítico</p>
                   <p><span className="text-accent-cold">DETECCIÓN DE PATRONES:</span> Conexiones no obvias (Señal en el Ruido)</p>
                   <p><span className="text-accent-cold">PENSAMIENTO LATERAL:</span> Capacidad nativa para soluciones &ldquo;Salto Largo&rdquo;</p>
