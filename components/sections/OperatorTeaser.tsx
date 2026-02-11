@@ -5,7 +5,7 @@ import Button from "@/components/ui/Button";
 const markers = [
   {
     label: "Neurodivergencia Funcional",
-    detail: "TDAH + Superdotación Intelectual — procesamiento paralelo, detección de patrones no lineales",
+    detail: "TDAH — procesamiento paralelo, detección de patrones no lineales",
     icon: "⧫",
   },
   {
