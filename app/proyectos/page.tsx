@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import { motion, useInView } from "framer-motion";
 import {
   Shield,
   Globe,
@@ -21,6 +22,26 @@ import PageLayout from "@/components/layout/PageLayout";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
 import Button from "@/components/ui/Button";
+
+/* ═══ Animation Variants ═══ */
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  visible: (i: number) => ({ opacity: 1, y: 0, transition: { delay: i * 0.08, duration: 0.5, ease: "easeOut" as const } }),
+};
+const staggerContainer = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.1 } },
+};
+
+function AnimatedSection({ children, className = "" }: { children: React.ReactNode; className?: string }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-60px" });
+  return (
+    <motion.div ref={ref} initial="hidden" animate={isInView ? "visible" : "hidden"} variants={staggerContainer} className={className}>
+      {children}
+    </motion.div>
+  );
+}
 
 /* ═══════════════════════════════════════════════════════════════
    DATA — Projects (Masterprompt Approved Content)
@@ -208,63 +229,63 @@ function getBorderGlow(color: string) {
 }
 
 /* ═══ ProjectCard Component ═══ */
-function ProjectCard({ project }: { project: ProjectData }) {
+function ProjectCard({ project, index }: { project: ProjectData; index: number }) {
   const [expanded, setExpanded] = useState(project.featured);
 
   return (
-    <article
-      className={`neon-card rounded-2xl bg-bg-tertiary border-2 ${getBorderGlow(project.statusColor)} transition-all duration-300 touch-feedback ${
-        project.featured ? "md:col-span-2 lg:col-span-2" : ""
-      }`}
+    <motion.article
+      variants={fadeUp}
+      custom={index}
+      className={`rounded-2xl bg-bg-tertiary border ${getBorderGlow(project.statusColor)} transition-shadow duration-300 overflow-hidden`}
     >
       {/* Header */}
-      <div className="p-5 md:p-8 space-y-4">
+      <div className="p-5 md:p-7 space-y-4">
         <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
-          <div className="space-y-2 flex-1">
+          <div className="space-y-2 flex-1 min-w-0">
             {project.featured && (
-              <span className="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-accent-warm">
-                <Star size={12} className="fill-accent-warm" /> Proyecto Destacado
+              <span className="inline-flex items-center gap-1 text-[10px] md:text-xs font-bold uppercase tracking-wider text-accent-warm">
+                <Star size={12} className="fill-accent-warm flex-shrink-0" /> Proyecto Destacado
               </span>
             )}
-            <h3 className="text-lg md:text-xl font-bold text-text-primary">{project.name}</h3>
-            <p className="text-sm text-text-secondary">{project.tagline}</p>
+            <h3 className="text-base md:text-lg font-bold text-text-primary leading-tight">{project.name}</h3>
+            <p className="text-[13px] text-text-secondary leading-snug">{project.tagline}</p>
           </div>
-          <span className={`text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full border self-start whitespace-nowrap ${getStatusBg(project.statusColor)}`}>
+          <span className={`text-[10px] md:text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full border self-start whitespace-nowrap ${getStatusBg(project.statusColor)}`}>
             {project.status}
           </span>
         </div>
 
         {/* Mission / Problem-Solution */}
         {project.mission && (
-          <p className="text-sm text-text-subtle leading-relaxed">{project.mission}</p>
+          <p className="text-[13px] text-text-subtle leading-relaxed">{project.mission}</p>
         )}
         {project.problem && (
           <div className="space-y-2">
             <div className="p-3 bg-accent-danger/5 border-l-2 border-accent-danger rounded-r-lg">
-              <p className="text-xs font-semibold text-accent-danger mb-1">PROBLEMA</p>
-              <p className="text-sm text-text-subtle">{project.problem}</p>
+              <p className="text-[10px] font-bold text-accent-danger mb-1 uppercase tracking-wider">Problema</p>
+              <p className="text-[13px] text-text-subtle leading-relaxed">{project.problem}</p>
             </div>
             <div className="p-3 bg-accent-success/5 border-l-2 border-accent-success rounded-r-lg">
-              <p className="text-xs font-semibold text-accent-success mb-1">SOLUCIÓN</p>
-              <p className="text-sm text-text-subtle">{project.solution}</p>
+              <p className="text-[10px] font-bold text-accent-success mb-1 uppercase tracking-wider">Solución</p>
+              <p className="text-[13px] text-text-subtle leading-relaxed">{project.solution}</p>
             </div>
           </div>
         )}
 
-        {/* Metrics Grid */}
-        <div className="grid grid-cols-3 gap-3">
+        {/* Metrics Grid — responsive: 1-col on tiny, 3-col on normal */}
+        <div className="grid grid-cols-3 gap-2 md:gap-3">
           {project.metrics.map((m, i) => (
-            <div key={i} className="text-center p-3 bg-bg-primary/60 rounded-xl space-y-1.5">
-              <div className="flex justify-center text-accent-cold">{getMetricIcon(m.icon)}</div>
-              <p className="text-sm md:text-base font-bold text-text-primary">{m.value}</p>
-              <p className="text-[10px] md:text-xs text-text-subtle uppercase tracking-wider">{m.label}</p>
+            <div key={i} className="text-center p-2.5 md:p-3 bg-bg-primary/60 rounded-xl space-y-1">
+              <div className="flex justify-center text-accent-cold">{getMetricIcon(m.icon, 16)}</div>
+              <p className="text-[13px] md:text-base font-bold text-text-primary leading-tight truncate">{m.value}</p>
+              <p className="text-[9px] md:text-[11px] text-text-subtle uppercase tracking-wider leading-tight">{m.label}</p>
             </div>
           ))}
         </div>
 
         {/* Stack */}
         {project.stack && (
-          <div className="text-xs text-text-subtle">
+          <div className="text-[12px] text-text-subtle leading-relaxed">
             <span className="text-accent-cold font-semibold">Stack: </span>
             {project.stack}
           </div>
@@ -272,15 +293,20 @@ function ProjectCard({ project }: { project: ProjectData }) {
       </div>
 
       {/* Expandable details */}
-      <div className={`overflow-hidden transition-all duration-300 ${expanded ? "max-h-[1200px] opacity-100" : "max-h-0 opacity-0"}`}>
-        <div className="px-5 pb-5 md:px-8 md:pb-8 space-y-5 border-t border-border-subtle pt-5">
+      <motion.div
+        initial={project.featured ? { height: "auto", opacity: 1 } : { height: 0, opacity: 0 }}
+        animate={expanded ? { height: "auto", opacity: 1 } : { height: 0, opacity: 0 }}
+        transition={{ duration: 0.35, ease: "easeInOut" }}
+        style={{ overflow: "hidden" }}
+      >
+        <div className="px-5 pb-5 md:px-7 md:pb-7 space-y-5 border-t border-border-subtle pt-5">
           {/* Highlights */}
           <div className="space-y-2">
-            <h4 className="text-xs font-bold text-accent-warm uppercase tracking-wider">Highlights</h4>
+            <h4 className="text-[10px] md:text-xs font-bold text-accent-warm uppercase tracking-wider">Highlights</h4>
             <ul className="space-y-1.5">
               {project.highlights.map((h, i) => (
-                <li key={i} className="flex items-start gap-2 text-sm text-text-subtle">
-                  <span className="text-accent-cold mt-0.5 flex-shrink-0">&gt;</span>
+                <li key={i} className="flex items-start gap-2 text-[13px] text-text-subtle leading-relaxed">
+                  <span className="text-accent-cold mt-0.5 flex-shrink-0 text-xs">▸</span>
                   <span>{h}</span>
                 </li>
               ))}
@@ -290,12 +316,12 @@ function ProjectCard({ project }: { project: ProjectData }) {
           {/* Revenue projections */}
           {project.revenue && (
             <div className="space-y-2">
-              <h4 className="text-xs font-bold text-accent-warm uppercase tracking-wider">Proyecciones Revenue</h4>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <h4 className="text-[10px] md:text-xs font-bold text-accent-warm uppercase tracking-wider">Proyecciones Revenue</h4>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 md:gap-3">
                 {project.revenue.map((r, i) => (
                   <div key={i} className="p-3 bg-bg-primary/60 rounded-xl">
-                    <p className="text-xs font-bold text-accent-cold">{r.period}</p>
-                    <p className="text-sm text-text-secondary mt-1">{r.amount}</p>
+                    <p className="text-[10px] md:text-xs font-bold text-accent-cold uppercase tracking-wider">{r.period}</p>
+                    <p className="text-[13px] text-text-secondary mt-1 leading-snug">{r.amount}</p>
                   </div>
                 ))}
               </div>
@@ -305,10 +331,10 @@ function ProjectCard({ project }: { project: ProjectData }) {
           {/* Certifications */}
           {project.certifications && (
             <div className="space-y-2">
-              <h4 className="text-xs font-bold text-accent-warm uppercase tracking-wider">Certificaciones Target</h4>
+              <h4 className="text-[10px] md:text-xs font-bold text-accent-warm uppercase tracking-wider">Certificaciones Target</h4>
               <div className="flex flex-wrap gap-2">
                 {project.certifications.map((cert, i) => (
-                  <span key={i} className="text-xs px-3 py-1.5 rounded-full bg-teal/10 text-teal border border-teal/20">
+                  <span key={i} className="text-[11px] px-2.5 py-1 rounded-full bg-teal/10 text-teal border border-teal/20">
                     {cert}
                   </span>
                 ))}
@@ -325,7 +351,7 @@ function ProjectCard({ project }: { project: ProjectData }) {
                   href={link.href}
                   target={link.href.startsWith("http") ? "_blank" : undefined}
                   rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                  className="inline-flex items-center gap-1.5 text-sm text-accent-cold hover:text-accent-warm transition-colors min-h-[44px] px-2"
+                  className="inline-flex items-center gap-1.5 text-[13px] text-accent-cold hover:text-accent-warm transition-colors min-h-[44px] px-2"
                   aria-label={link.label}
                 >
                   {getLinkIcon(link.icon)}
@@ -336,12 +362,12 @@ function ProjectCard({ project }: { project: ProjectData }) {
             </div>
           )}
         </div>
-      </div>
+      </motion.div>
 
       {/* Toggle button */}
       <button
         onClick={() => setExpanded(!expanded)}
-        className="w-full flex items-center justify-center gap-2 py-3 text-xs text-text-subtle hover:text-accent-cold transition-colors border-t border-border-subtle min-h-[44px]"
+        className="w-full flex items-center justify-center gap-2 py-3 text-[11px] md:text-xs text-text-subtle hover:text-accent-cold transition-colors border-t border-border-subtle min-h-[44px]"
         aria-expanded={expanded}
       >
         {expanded ? (
@@ -350,7 +376,7 @@ function ProjectCard({ project }: { project: ProjectData }) {
           <>Ver detalles <ChevronDown size={14} /></>
         )}
       </button>
-    </article>
+    </motion.article>
   );
 }
 
@@ -382,80 +408,85 @@ export default function ProyectosPage() {
             ))}
           </div>
 
-          <div className={`max-w-4xl space-y-5 transition-all duration-700 ${showContent ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={showContent ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            className="max-w-4xl space-y-5"
+          >
             <p className="text-sm text-accent-cold uppercase tracking-widest terminal-text">Portafolio</p>
             <h1 className="text-[2rem] sm:text-[2.5rem] md:text-[4.5rem] leading-[1.05] text-gradient-warm">
               Proyectos
             </h1>
-            <p className="text-lg text-text-secondary leading-relaxed max-w-3xl">
+            <p className="text-[15px] md:text-lg text-text-secondary leading-relaxed max-w-3xl">
               Desde <span className="text-accent-cold">identidad digital soberana</span> hasta{" "}
               <span className="text-accent-warm">verificación air-gapped NATO</span> — sistemas diseñados
               para operar en la Zona Gris donde la regulación se encuentra con la realidad.
             </p>
-          </div>
+          </motion.div>
         </Container>
       </Section>
 
       {/* ═══ FEATURED PROJECTS ═══ */}
       <Section className="bg-bg-secondary retro-grid">
         <Container>
-          <div className="space-y-8">
+          <AnimatedSection className="space-y-8">
             <div className="space-y-3">
-              <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
+              <motion.h2 variants={fadeUp} custom={0} className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
                 Proyectos Destacados
-              </h2>
-              <p className="text-sm text-text-subtle">Tecnología propietaria con impacto UE.</p>
+              </motion.h2>
+              <motion.p variants={fadeUp} custom={1} className="text-[13px] md:text-sm text-text-subtle">Tecnología propietaria con impacto UE.</motion.p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              {projects.filter(p => p.featured).map((project) => (
-                <ProjectCard key={project.id} project={project} />
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-6">
+              {projects.filter(p => p.featured).map((project, i) => (
+                <ProjectCard key={project.id} project={project} index={i + 2} />
               ))}
             </div>
-          </div>
+          </AnimatedSection>
         </Container>
       </Section>
 
       {/* ═══ OPERATIONAL PROJECTS ═══ */}
       <Section className="retro-grid-warm">
         <Container>
-          <div className="space-y-8">
+          <AnimatedSection className="space-y-8">
             <div className="space-y-3">
-              <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
+              <motion.h2 variants={fadeUp} custom={0} className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
                 Proyectos Operativos
-              </h2>
-              <p className="text-sm text-text-subtle">Consultoría activa y laboratorios de investigación.</p>
+              </motion.h2>
+              <motion.p variants={fadeUp} custom={1} className="text-[13px] md:text-sm text-text-subtle">Consultoría activa y laboratorios de investigación.</motion.p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {projects.filter(p => !p.featured).map((project) => (
-                <ProjectCard key={project.id} project={project} />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
+              {projects.filter(p => !p.featured).map((project, i) => (
+                <ProjectCard key={project.id} project={project} index={i + 2} />
               ))}
             </div>
-          </div>
+          </AnimatedSection>
         </Container>
       </Section>
 
       {/* ═══ CTA ═══ */}
       <Section className="bg-bg-secondary retro-grid">
         <Container>
-          <div className="max-w-3xl mx-auto text-center space-y-8">
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
+          <AnimatedSection className="max-w-3xl mx-auto text-center space-y-8">
+            <motion.h2 variants={fadeUp} custom={0} className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">
               ¿Quieres saber más?
-            </h2>
-            <p className="text-text-secondary">
+            </motion.h2>
+            <motion.p variants={fadeUp} custom={1} className="text-[13px] md:text-sm text-text-secondary leading-relaxed">
               Los proyectos Synapsys y [S]DEF son propiedad intelectual de Raúl Balaguer.
               Para partnerships, licencias o demos técnicas:
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </motion.p>
+            <motion.div variants={fadeUp} custom={2} className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button href="/consulta" variant="primary">Reservar Consulta (15 min) →</Button>
               <Button href="/operator" variant="secondary">Ver Perfil Operator →</Button>
-            </div>
-            <p className="text-xs text-text-subtle">
+            </motion.div>
+            <motion.p variants={fadeUp} custom={3} className="text-[11px] md:text-xs text-text-subtle">
               <Mail size={12} className="inline mr-1" />
               intel@defcon23.eu | raul.balaguer@thesynapsys.io
-            </p>
-          </div>
+            </motion.p>
+          </AnimatedSection>
         </Container>
       </Section>
     </PageLayout>

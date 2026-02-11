@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import { motion, useInView } from "framer-motion";
 import {
   Shield,
   Brain,
@@ -20,6 +21,30 @@ import PageLayout from "@/components/layout/PageLayout";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
 import Button from "@/components/ui/Button";
+
+/* ═══ Animation Variants ═══ */
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  visible: (i: number) => ({ opacity: 1, y: 0, transition: { delay: i * 0.08, duration: 0.5, ease: "easeOut" as const } }),
+};
+const staggerContainer = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.1 } },
+};
+const fadeIn = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 0.5 } },
+};
+
+function AnimatedSection({ children, className = "" }: { children: React.ReactNode; className?: string }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-60px" });
+  return (
+    <motion.div ref={ref} initial="hidden" animate={isInView ? "visible" : "hidden"} variants={staggerContainer} className={className}>
+      {children}
+    </motion.div>
+  );
+}
 
 /* ═══════════════════════════════════════════════════════════════
    DATA — Operator Profile (Masterprompt Approved Content)
@@ -230,38 +255,43 @@ function getColorClasses(color: string) {
 }
 
 /* ═══ ArsenalCard — Accordion mobile, always-open desktop ═══ */
-function ArsenalCard({ cat, isOpen, onToggle }: { cat: typeof arsenal[0]; isOpen: boolean; onToggle: () => void }) {
+function ArsenalCard({ cat, isOpen, onToggle, index }: { cat: typeof arsenal[0]; isOpen: boolean; onToggle: () => void; index: number }) {
   const colors = getColorClasses(cat.color);
   return (
-    <div className={`neon-card rounded-2xl bg-bg-tertiary border ${colors.border} transition-all duration-300 touch-feedback ${colors.glow}`}>
+    <motion.div
+      variants={fadeUp}
+      custom={index}
+      className={`rounded-2xl bg-bg-tertiary border ${colors.border} transition-shadow duration-300 ${colors.glow} overflow-hidden`}
+    >
       <button
         onClick={onToggle}
-        className="w-full flex items-center gap-3 p-4 md:p-6 text-left md:cursor-default min-h-[44px]"
+        className="w-full flex items-center gap-3 p-4 md:p-5 text-left md:cursor-default min-h-[48px]"
         aria-expanded={isOpen}
         aria-controls={`arsenal-${cat.id}`}
       >
-        <span className={colors.text}>{getIcon(cat.icon)}</span>
-        <h3 className={`text-sm md:text-base font-semibold ${colors.text} flex-1`}>{cat.title}</h3>
+        <span className={`${colors.text} ${colors.bg} p-2 rounded-lg flex-shrink-0`}>{getIcon(cat.icon)}</span>
+        <h3 className={`text-sm md:text-base font-bold ${colors.text} flex-1 leading-tight`}>{cat.title}</h3>
         <span className="md:hidden text-text-subtle">
           {isOpen ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
         </span>
       </button>
       <div
         id={`arsenal-${cat.id}`}
-        className={`overflow-hidden transition-all duration-300 ${
+        className={`transition-all duration-300 ease-in-out ${
           isOpen ? "max-h-[600px] opacity-100" : "max-h-0 md:max-h-[600px] opacity-0 md:opacity-100"
         }`}
+        style={{ overflow: "hidden" }}
       >
-        <ul className="px-4 pb-4 md:px-6 md:pb-6 space-y-2">
+        <ul className="px-4 pb-4 md:px-5 md:pb-5 space-y-2 border-t border-border-subtle pt-3">
           {cat.items.map((item, i) => (
-            <li key={i} className="flex items-start gap-2 text-sm text-text-subtle">
-              <span className={`${colors.text} mt-0.5 flex-shrink-0`}>&gt;</span>
+            <li key={i} className="flex items-start gap-2 text-[13px] leading-relaxed text-text-subtle">
+              <span className={`${colors.text} mt-0.5 flex-shrink-0 text-xs`}>▸</span>
               <span>{item}</span>
             </li>
           ))}
         </ul>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
@@ -294,22 +324,27 @@ export default function OperatorPage() {
             ))}
           </div>
 
-          <div className={`max-w-4xl space-y-6 transition-all duration-700 ${showContent ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={showContent ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            className="max-w-4xl space-y-6"
+          >
             <p className="text-sm text-accent-cold uppercase tracking-widest terminal-text">Operator</p>
             <h1 className="text-[2rem] sm:text-[2.5rem] md:text-[4.5rem] leading-[1.05] text-gradient-warm">
               Raúl Balaguer
             </h1>
-            <h2 className="text-[1rem] md:text-[1.35rem] leading-[1.3] text-text-secondary">
-              CEO Synapsys Laminar Protocol | Cognitive Systems Architect
+            <h2 className="text-[1rem] md:text-[1.25rem] leading-[1.3] text-text-secondary max-w-2xl">
+              CEO Synapsys Laminar Protocol · Cognitive Systems Architect
             </h2>
-            <p className="text-base text-text-subtle leading-relaxed max-w-3xl">
+            <p className="text-[15px] md:text-base text-text-subtle leading-relaxed max-w-3xl">
               Ingeniero de sistemas complejos en la <span className="text-accent-cold">Zona Gris</span> — donde
               la ciberseguridad, la identidad digital y el factor humano convergen.
             </p>
             <p className="text-sm text-text-subtle">
               Metodología: <span className="text-accent-warm">Small Smart Moves</span> → Resultados exponenciales.
             </p>
-            <div className="flex flex-wrap gap-3 text-xs text-text-subtle pt-2">
+            <div className="flex flex-wrap gap-2.5 text-xs text-text-subtle pt-2">
               <span className="flex items-center gap-1.5 border border-border-subtle rounded-full px-3 py-1.5">
                 <MapPin size={12} className="text-accent-cold" /> Madrid, ES
               </span>
@@ -324,180 +359,195 @@ export default function OperatorPage() {
               <Button href="/consulta" variant="primary">Reservar Consulta (15 min) →</Button>
               <Button href="/proyectos" variant="secondary">Ver Proyectos →</Button>
             </div>
-          </div>
+          </motion.div>
         </Container>
       </Section>
 
       {/* ═══ SYSTEM PROFILE ═══ */}
       <Section className="bg-bg-secondary retro-grid">
         <Container>
-          <div className="max-w-4xl space-y-8">
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">Perfil del Sistema</h2>
-            <p className="text-lg text-text-secondary leading-relaxed max-w-3xl">
+          <AnimatedSection className="max-w-4xl space-y-8">
+            <motion.h2 variants={fadeUp} custom={0} className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">Perfil del Sistema</motion.h2>
+            <motion.p variants={fadeUp} custom={1} className="text-[15px] md:text-lg text-text-secondary leading-relaxed max-w-3xl">
               Diseño <span className="text-accent-warm">Small Smart Moves</span> para resolver problemas
               complejos en la <span className="text-accent-cold">Zona Gris</span> — donde la tecnología se
               encuentra con el comportamiento humano.
-            </p>
+            </motion.p>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
               {[
                 { title: "Arquitectura Cruzada Nativa", subtitle: "Zurdo / Dominancia Hemisferio Derecho", detail: "Reconocimiento de patrones no lineales. Pensamiento divergente. Conexiones no obvias.", color: "teal" },
                 { title: "Ratio 2D:4D Específico", subtitle: "Alta empatía cognitiva", detail: "IQ verbal mejorado, inteligencia emocional. Detección de Ingeniería Social (Humano como Sensor).", color: "coral" },
                 { title: "Neuroplasticidad Validada", subtitle: "Neural Plasticity, 2016", detail: "Grosor cortical mejorado en áreas de regulación emocional. Verificado por neuroimagen.", color: "purple" },
-              ].map((marker) => {
+              ].map((marker, i) => {
                 const c = getColorClasses(marker.color);
                 return (
-                  <div key={marker.title} className={`neon-card rounded-2xl p-5 md:p-6 bg-bg-tertiary border ${c.border} space-y-3`}>
-                    <h3 className={`text-sm font-semibold ${c.text}`}>{marker.title}</h3>
-                    <p className="text-xs text-text-secondary font-medium">{marker.subtitle}</p>
-                    <p className="text-xs text-text-subtle leading-relaxed">{marker.detail}</p>
-                  </div>
+                  <motion.div key={marker.title} variants={fadeUp} custom={i + 2} className={`rounded-2xl p-5 md:p-6 bg-bg-tertiary border ${c.border} space-y-3 ${c.glow} transition-shadow duration-300`}>
+                    <div className={`w-8 h-1 rounded-full ${c.bg} mb-1`} style={{ backgroundColor: marker.color === "teal" ? "#3A9B9B" : marker.color === "coral" ? "#FF9966" : "#7B5CAA" }} />
+                    <h3 className={`text-sm md:text-[15px] font-bold ${c.text} leading-tight`}>{marker.title}</h3>
+                    <p className="text-xs md:text-[13px] text-text-secondary font-medium">{marker.subtitle}</p>
+                    <p className="text-xs md:text-[13px] text-text-subtle leading-relaxed">{marker.detail}</p>
+                  </motion.div>
                 );
               })}
             </div>
 
-            <div className="p-4 border-l-2 border-accent-cold bg-accent-cold/5 rounded-r-lg">
-              <p className="text-sm text-text-secondary italic">
+            <motion.div variants={fadeUp} custom={5} className="p-4 border-l-2 border-accent-cold bg-accent-cold/5 rounded-r-lg">
+              <p className="text-[13px] md:text-sm text-text-secondary italic leading-relaxed">
                 Combino este <strong>hardware biológico</strong> con <strong>Dinámica Comportamental</strong> para
                 transformar el &ldquo;Factor Humano&rdquo; de un agujero de seguridad en una{" "}
                 <strong className="text-accent-warm">capa de defensa activa</strong>.
               </p>
-            </div>
-          </div>
+            </motion.div>
+          </AnimatedSection>
         </Container>
       </Section>
 
       {/* ═══ ARSENAL ═══ */}
       <Section id="arsenal" className="retro-grid-warm">
         <Container>
-          <div className="space-y-8">
+          <AnimatedSection className="space-y-8">
             <div className="space-y-3">
-              <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">Arsenal</h2>
-              <p className="text-sm text-text-subtle">Certificaciones y conocimiento técnico. Toca para expandir cada categoría.</p>
+              <motion.h2 variants={fadeUp} custom={0} className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">Arsenal</motion.h2>
+              <motion.p variants={fadeUp} custom={1} className="text-[13px] md:text-sm text-text-subtle">Certificaciones y conocimiento técnico. Toca para expandir cada categoría.</motion.p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-              {arsenal.map((cat) => (
-                <ArsenalCard key={cat.id} cat={cat} isOpen={openArsenal === cat.id} onToggle={() => setOpenArsenal(openArsenal === cat.id ? null : cat.id)} />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {arsenal.map((cat, idx) => (
+                <ArsenalCard key={cat.id} cat={cat} isOpen={openArsenal === cat.id} onToggle={() => setOpenArsenal(openArsenal === cat.id ? null : cat.id)} index={idx + 2} />
               ))}
             </div>
-          </div>
+          </AnimatedSection>
         </Container>
       </Section>
 
       {/* ═══ EXPERIENCE TIMELINE ═══ */}
       <Section className="bg-bg-secondary retro-grid">
         <Container>
-          <div className="space-y-8">
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">Experiencia Operacional</h2>
-            <div className="relative max-w-4xl space-y-6 pl-6 md:pl-10 border-l-2 border-teal/30">
+          <AnimatedSection className="space-y-8">
+            <motion.h2 variants={fadeUp} custom={0} className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">Experiencia Operacional</motion.h2>
+            <div className="relative max-w-4xl space-y-5 pl-6 md:pl-10 border-l-2 border-teal/30">
               {experience.map((job, idx) => {
                 const c = getColorClasses(job.color);
                 return (
-                  <div key={idx} className="relative">
-                    <div className={`absolute -left-[calc(1.5rem+2px)] md:-left-[calc(2.5rem+2px)] top-3 w-3 h-3 rounded-full border-2 border-bg-primary ${c.bg} ${c.border}`} />
-                    <div className={`neon-card rounded-2xl p-5 md:p-6 bg-bg-tertiary border ${c.border} space-y-3 transition-all duration-300 ${c.glow}`}>
+                  <motion.div key={idx} variants={fadeUp} custom={idx + 1} className="relative">
+                    <div className={`absolute -left-[25px] md:-left-[41px] top-5 w-3 h-3 rounded-full border-2 border-bg-primary`} style={{ backgroundColor: job.color === "coral" ? "#FF9966" : job.color === "teal" ? "#3A9B9B" : job.color === "amber" ? "#FFCC66" : job.color === "purple" ? "#7B5CAA" : "#D06080" }} />
+                    <div className={`rounded-2xl p-5 md:p-6 bg-bg-tertiary border ${c.border} space-y-3 ${c.glow} transition-shadow duration-300`}>
                       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                        <div>
-                          <h3 className="text-base md:text-lg font-semibold text-text-primary">{job.role}</h3>
+                        <div className="space-y-0.5">
+                          <h3 className="text-[15px] md:text-lg font-bold text-text-primary leading-tight">{job.role}</h3>
                           <p className={`text-sm ${c.text}`}>{job.company}</p>
                         </div>
-                        <span className="text-xs font-bold uppercase tracking-wider text-accent-warning bg-accent-warning/10 rounded-full px-3 py-1 self-start whitespace-nowrap">
+                        <span className="text-[10px] font-bold uppercase tracking-wider text-accent-warning bg-accent-warning/10 rounded-full px-3 py-1 self-start whitespace-nowrap border border-accent-warning/20">
                           {job.period}
                         </span>
                       </div>
                       <ul className="space-y-1.5">
                         {job.highlights.map((h, i) => (
-                          <li key={i} className="flex items-start gap-2 text-sm text-text-subtle">
-                            <span className={`${c.text} mt-0.5 flex-shrink-0`}>&gt;</span>
+                          <li key={i} className="flex items-start gap-2 text-[13px] text-text-subtle leading-relaxed">
+                            <span className={`${c.text} mt-0.5 flex-shrink-0 text-xs`}>▸</span>
                             <span>{h}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
-                  </div>
+                  </motion.div>
                 );
               })}
             </div>
-          </div>
+          </AnimatedSection>
         </Container>
       </Section>
 
       {/* ═══ LANGUAGES ═══ */}
       <Section className="retro-grid-warm">
         <Container>
-          <div className="max-w-4xl space-y-8">
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">Protocolos de Comunicación</h2>
+          <AnimatedSection className="max-w-4xl space-y-8">
+            <motion.h2 variants={fadeUp} custom={0} className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">Protocolos de Comunicación</motion.h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {[
                 { lang: "Español", level: "Nativo", pct: 100, color: "coral", hex: "#FF9966" },
                 { lang: "Alemán", level: "C1 (Professional)", pct: 85, color: "teal", hex: "#3A9B9B" },
                 { lang: "Inglés", level: "Profesional", pct: 90, color: "amber", hex: "#FFCC66" },
-              ].map((l) => {
+              ].map((l, i) => {
                 const c = getColorClasses(l.color);
                 return (
-                  <div key={l.lang} className={`neon-card rounded-2xl p-5 bg-bg-tertiary border ${c.border} space-y-3`}>
-                    <h3 className={`text-base font-semibold ${c.text}`}>{l.lang}</h3>
+                  <motion.div key={l.lang} variants={fadeUp} custom={i + 1} className={`rounded-2xl p-5 bg-bg-tertiary border ${c.border} space-y-3 ${c.glow} transition-shadow duration-300`}>
+                    <h3 className={`text-[15px] font-bold ${c.text}`}>{l.lang}</h3>
                     <p className="text-xs text-text-subtle">{l.level}</p>
-                    <div className="w-full bg-bg-primary rounded-full h-1.5">
-                      <div className="h-1.5 rounded-full" style={{ width: `${l.pct}%`, backgroundColor: l.hex }} />
+                    <div className="w-full bg-bg-primary rounded-full h-2 overflow-hidden">
+                      <motion.div
+                        className="h-2 rounded-full"
+                        style={{ backgroundColor: l.hex }}
+                        initial={{ width: 0 }}
+                        whileInView={{ width: `${l.pct}%` }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
+                      />
                     </div>
-                  </div>
+                  </motion.div>
                 );
               })}
             </div>
-          </div>
+          </AnimatedSection>
         </Container>
       </Section>
 
       {/* ═══ PHILOSOPHY ═══ */}
       <Section className="bg-bg-secondary retro-grid">
         <Container>
-          <div className="max-w-4xl space-y-8">
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">Principios Operacionales</h2>
-            <div className="space-y-4">
+          <AnimatedSection className="max-w-4xl space-y-8">
+            <motion.h2 variants={fadeUp} custom={0} className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">Principios Operacionales</motion.h2>
+            <div className="space-y-3">
               {principles.map((p, i) => (
-                <div key={i} className="neon-card rounded-2xl p-5 md:p-6 bg-bg-tertiary space-y-2">
-                  <h3 className="text-sm font-bold text-accent-warm uppercase tracking-wider">{i + 1}. {p.title}</h3>
-                  <p className="text-sm text-text-subtle leading-relaxed">{p.text}</p>
-                </div>
+                <motion.div key={i} variants={fadeUp} custom={i + 1} className="rounded-2xl p-5 md:p-6 bg-bg-tertiary border border-border-subtle hover:border-accent-warm/30 transition-all duration-300 space-y-2">
+                  <div className="flex items-start gap-3">
+                    <span className="text-accent-warm font-bold text-lg leading-none mt-0.5">{String(i + 1).padStart(2, "0")}</span>
+                    <div className="space-y-2 flex-1">
+                      <h3 className="text-sm font-bold text-accent-warm uppercase tracking-wider leading-tight">{p.title}</h3>
+                      <p className="text-[13px] md:text-sm text-text-subtle leading-relaxed">{p.text}</p>
+                    </div>
+                  </div>
+                </motion.div>
               ))}
             </div>
-            <div className="text-center pt-4">
+            <motion.div variants={fadeUp} custom={6} className="text-center pt-4">
               <p className="text-text-subtle italic text-sm">&ldquo;No encajo en una caja. Encajo en los espacios entre cajas.&rdquo;</p>
-            </div>
-          </div>
+            </motion.div>
+          </AnimatedSection>
         </Container>
       </Section>
 
       {/* ═══ CONTACT ═══ */}
       <Section className="retro-grid-warm">
         <Container>
-          <div className="max-w-3xl mx-auto text-center space-y-8">
-            <h2 className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">Contacto</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {contactLinks.map((link) => (
-                <a
+          <AnimatedSection className="max-w-3xl mx-auto text-center space-y-8">
+            <motion.h2 variants={fadeUp} custom={0} className="text-[1.5rem] md:text-[2.25rem] leading-[1.2] text-gradient-warm">Contacto</motion.h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+              {contactLinks.map((link, i) => (
+                <motion.a
                   key={link.label}
+                  variants={fadeUp}
+                  custom={i + 1}
                   href={link.href}
                   target={link.href.startsWith("http") ? "_blank" : undefined}
                   rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                  className="neon-card rounded-2xl p-4 bg-bg-tertiary flex flex-col items-center gap-3 touch-feedback hover:border-coral/40 hover:-translate-y-1 transition-all duration-300 group min-h-[44px]"
+                  className="rounded-2xl p-4 bg-bg-tertiary border border-border-subtle flex flex-col items-center gap-3 touch-feedback hover:border-coral/40 hover:-translate-y-1 hover:shadow-[0_0_8px_rgba(255,153,102,0.2)] md:hover:shadow-[0_0_16px_rgba(255,153,102,0.3)] transition-all duration-300 group min-h-[48px]"
                   aria-label={link.label}
                 >
-                  <span className="text-accent-cold group-hover:text-accent-warm transition-colors">
+                  <span className="text-accent-cold group-hover:text-accent-warm transition-colors p-2 rounded-lg bg-accent-cold/5 group-hover:bg-accent-warm/10">
                     {getIcon(link.icon)}
                   </span>
-                  <span className="text-xs text-text-subtle group-hover:text-text-secondary transition-colors text-center break-all">
+                  <span className="text-[10px] md:text-xs text-text-subtle group-hover:text-text-secondary transition-colors text-center leading-tight truncate w-full">
                     {link.label}
                   </span>
-                </a>
+                </motion.a>
               ))}
             </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+            <motion.div variants={fadeUp} custom={5} className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               <Button href="/consulta" variant="primary">Reservar Consulta Gratuita (15 min) →</Button>
               <Button href="/proyectos" variant="secondary">Ver Proyectos →</Button>
-            </div>
-          </div>
+            </motion.div>
+          </AnimatedSection>
         </Container>
       </Section>
     </PageLayout>
