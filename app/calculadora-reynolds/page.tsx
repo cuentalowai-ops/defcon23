@@ -12,6 +12,7 @@ import {
   type Answer,
   type ReynoldsAnswers,
 } from "@/lib/reynolds";
+import { submitReynoldsCalculator } from "@/app/calculadora-reynolds/actions";
 
 export default function CalculadoraReynoldsPage() {
   const router = useRouter();
@@ -20,6 +21,7 @@ export default function CalculadoraReynoldsPage() {
   const [contactInfo, setContactInfo] = useState({ email: "", company: "" });
   const [privacyConsent, setPrivacyConsent] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const totalSteps = REYNOLDS_QUESTIONS.length + 1; // +1 for contact info
   const isLastQuestion = currentStep === REYNOLDS_QUESTIONS.length;
@@ -50,6 +52,25 @@ export default function CalculadoraReynoldsPage() {
       return;
     }
     setIsSubmitting(true);
+    setSubmitError(null);
+
+    const formData = new FormData();
+    for (const [key, val] of Object.entries(answers)) {
+      if (val) {
+        formData.set(key, val as string);
+      }
+    }
+    formData.set("email", contactInfo.email);
+    formData.set("company", contactInfo.company);
+    formData.set("consent", "true");
+
+    const result = await submitReynoldsCalculator(formData);
+
+    if ("error" in result) {
+      setIsSubmitting(false);
+      setSubmitError("No se pudo procesar el envío. Intenta de nuevo.");
+      return;
+    }
 
     // Encode answers + contact into query params for results page
     const params = new URLSearchParams();
@@ -267,6 +288,12 @@ export default function CalculadoraReynoldsPage() {
                         : "Calcular mi Re Score →"}
                     </Button>
                   </div>
+
+                  {submitError && (
+                    <p className="text-xs text-accent-danger text-center">
+                      {submitError}
+                    </p>
+                  )}
 
                   <p className="text-xs text-text-subtle text-center">
                     🔒 Tus datos están protegidos según RGPD. No spam. Solo tu informe Reynolds.
