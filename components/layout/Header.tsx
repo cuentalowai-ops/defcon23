@@ -89,14 +89,6 @@ export default function Header() {
 
   return (
     <>
-      {/* Skip link */}
-      <a
-        href="#main"
-        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:bg-accent-cold focus:text-bg-primary focus:px-4 focus:py-2 focus:rounded-lg focus:text-sm focus:font-semibold"
-      >
-        Saltar al contenido
-      </a>
-
       <header
         role="banner"
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
