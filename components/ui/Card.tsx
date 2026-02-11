@@ -15,7 +15,7 @@ export default function Card({
         border border-border-subtle rounded-xl p-5 md:p-8 bg-bg-secondary
         ${
           hoverable
-            ? "hover:scale-[1.03] hover:border-border-visible hover:shadow-2xl transition-all duration-300"
+            ? "hover:scale-[1.03] hover:border-border-visible hover:shadow-2xl transition-all duration-300 focus-within:border-border-visible focus-within:ring-1 focus-within:ring-accent-cold/30"
             : ""
         }
         ${className}

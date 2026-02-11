@@ -1,4 +1,4 @@
-import Navbar from "@/components/layout/Navbar";
+import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Hero from "@/components/sections/Hero";
 import UmbralCritico from "@/components/sections/UmbralCritico";
@@ -14,8 +14,8 @@ import FinalCTA from "@/components/sections/FinalCTA";
 export default function Home() {
   return (
     <>
-      <Navbar />
-      <main>
+      <Header />
+      <main id="main">
         <Hero />
         <UmbralCritico />
         <MetodoOperativo />

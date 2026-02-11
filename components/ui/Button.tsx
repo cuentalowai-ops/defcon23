@@ -18,7 +18,7 @@ export default function Button({
   type = "button",
 }: ButtonProps) {
   const baseStyles =
-    "inline-block px-6 py-3.5 md:px-8 md:py-4 rounded-lg font-semibold text-sm md:text-base transition-all duration-200 text-center glow-button min-h-[44px]";
+    "inline-block px-6 py-3.5 md:px-8 md:py-4 rounded-lg font-semibold text-sm md:text-base transition-all duration-200 text-center glow-button min-h-[44px] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-cold";
   const variantStyles = {
     primary:
       "bg-accent-warm text-bg-primary hover:scale-105 active:scale-95 hover:shadow-[0_0_20px_rgba(255,140,66,0.4)]",

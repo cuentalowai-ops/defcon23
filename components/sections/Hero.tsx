@@ -75,7 +75,7 @@ export default function Hero() {
 
             {/* H1 with glitch effect */}
             <h1
-              className="text-[2.5rem] sm:text-[3.5rem] md:text-[5rem] leading-[1.05] tracking-tight glitch-text terminal-glow-warm animate-[pulse-warm_2s_ease-in-out_infinite]"
+              className="text-[2rem] sm:text-[3rem] md:text-[5rem] leading-[1.05] tracking-tight glitch-text terminal-glow-warm animate-[pulse-warm_2s_ease-in-out_infinite]"
               data-text="dEfCØN23"
             >
               dEfCØN23
@@ -104,10 +104,10 @@ export default function Hero() {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
-              <Button href="/consulta" variant="primary">
+              <Button href="/consulta" variant="primary" className="w-full sm:w-auto">
                 Consulta Inicial Gratuita (15 min) &rarr;
               </Button>
-              <Button href="/calculadora-reynolds" variant="secondary">
+              <Button href="/calculadora-reynolds" variant="secondary" className="w-full sm:w-auto">
                 Calcular mi Re &rarr;
               </Button>
             </div>

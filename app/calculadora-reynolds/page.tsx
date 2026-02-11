@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
 import Button from "@/components/ui/Button";
-import Navbar from "@/components/layout/Navbar";
+import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import {
   REYNOLDS_QUESTIONS,
@@ -85,8 +85,8 @@ export default function CalculadoraReynoldsPage() {
 
   return (
     <>
-      <Navbar />
-      <main className="pt-20 md:pt-24">
+      <Header />
+      <main id="main" className="pt-20 md:pt-24">
         <Section className="min-h-[80vh] flex items-center retro-grid">
           <Container>
             <div className="max-w-2xl mx-auto space-y-8">

@@ -1,4 +1,4 @@
-import Navbar from "@/components/layout/Navbar";
+import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ConsentBanner from "@/components/ui/ConsentBanner";
 import AnalyticsLoader from "@/components/ui/AnalyticsLoader";
@@ -10,8 +10,10 @@ interface PageLayoutProps {
 export default function PageLayout({ children }: PageLayoutProps) {
   return (
     <>
-      <Navbar />
-      <main className="pt-20 md:pt-24">{children}</main>
+      <Header />
+      <main id="main" className="pt-20 md:pt-24">
+        {children}
+      </main>
       <Footer />
       <ConsentBanner />
       <AnalyticsLoader />

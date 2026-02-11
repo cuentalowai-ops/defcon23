@@ -1,4 +1,4 @@
-import Navbar from "@/components/layout/Navbar";
+import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
@@ -13,8 +13,8 @@ export const metadata = {
 export default function PrivacidadPage() {
   return (
     <>
-      <Navbar />
-      <main className="pt-20 md:pt-24">
+      <Header />
+      <main id="main" className="pt-20 md:pt-24">
         <Section className="bg-bg-primary">
           <Container>
             <div className="max-w-4xl mx-auto space-y-10 md:space-y-12">
