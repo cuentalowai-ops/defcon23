@@ -7,6 +7,7 @@ import ServicesGrid from "@/components/sections/ServicesGrid";
 import RegulatoryTimeline from "@/components/sections/RegulatoryTimeline";
 import CasesTeaser from "@/components/sections/CasesTeaser";
 import OperatorTeaser from "@/components/sections/OperatorTeaser";
+import ProjectsTeaser from "@/components/sections/ProjectsTeaser";
 import ProtocolTeaser from "@/components/sections/ProtocolTeaser";
 import ContactoTeaser from "@/components/sections/ContactoTeaser";
 import FinalCTA from "@/components/sections/FinalCTA";
@@ -22,6 +23,7 @@ export default function Home() {
         <ServicesGrid />
         <CasesTeaser />
         <OperatorTeaser />
+        <ProjectsTeaser />
         <RegulatoryTimeline />
         <ProtocolTeaser />
         <ContactoTeaser />

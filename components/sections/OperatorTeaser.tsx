@@ -4,18 +4,18 @@ import Button from "@/components/ui/Button";
 
 const markers = [
   {
-    label: "Neurodivergencia Funcional",
-    detail: "TDAH — procesamiento paralelo, detección de patrones no lineales",
+    label: "Arquitectura Cruzada Nativa",
+    detail: "Zurdo / Dominancia Hemisferio Derecho — reconocimiento de patrones no lineales, pensamiento divergente",
     icon: "⧫",
   },
   {
-    label: "Bilingüismo Operacional",
-    detail: "Español (nativo) + Alemán C1 — sincronización de sistemas multiculturales",
+    label: "CEO Synapsys Laminar Protocol",
+    detail: "Gateway EUDI Wallet (TRL 7) + [S]DEF verificación táctica NATO (TRL 6). eIDAS 2.0 Sovereignty.",
     icon: "◈",
   },
   {
     label: "Zona Gris",
-    detail: "Adyacencia de Ciberseguridad, Comportamiento Humano y Sistemas Complejos",
+    detail: "Ciberseguridad + Identidad Digital + Factor Humano. Small Smart Moves → Resultados exponenciales.",
     icon: "◇",
   },
 ];
@@ -40,10 +40,10 @@ export default function OperatorTeaser() {
               Raúl Balaguer
             </h2>
             <p className="text-base md:text-lg text-text-secondary leading-relaxed max-w-2xl">
-              Arquitecto de Sistemas Cognitivos. Operador de Inteligencia Híbrida.
-              Especializado en diseñar{" "}
-              <span className="text-accent-warm terminal-text-warm">Small Smart Moves</span>{" "}
-              para resolver problemas complejos en la Zona Gris.
+              CEO Synapsys Laminar Protocol | Cognitive Systems Architect.
+              Ingeniero de sistemas complejos en la Zona Gris — donde la{" "}
+              <span className="text-accent-warm terminal-text-warm">ciberseguridad</span>,{" "}
+              la identidad digital y el factor humano convergen.
             </p>
           </div>
 

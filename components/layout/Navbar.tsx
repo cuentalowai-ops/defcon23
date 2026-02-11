@@ -12,6 +12,7 @@ const navLinks = [
   { href: "/servicios", sectionId: "servicios", label: "Servicios" },
   { href: "/casos", sectionId: "casos", label: "Casos" },
   { href: "/operator", sectionId: "operator", label: "Operator" },
+  { href: "/proyectos", sectionId: "proyectos", label: "Proyectos" },
   { href: "/regulatory", sectionId: "regulatory", label: "Regulatory" },
   { href: "/ens-certificacion", label: "ENS" },
   { href: "/calculadora-reynolds", sectionId: "calculadora", label: "Calculadora Re" },

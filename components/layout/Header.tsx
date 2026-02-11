@@ -44,6 +44,7 @@ const navLinks = [
   { href: "/metodologia", label: "Metodología" },
   { href: "/casos", label: "Casos" },
   { href: "/operator", label: "Operator" },
+  { href: "/proyectos", label: "Proyectos" },
   { href: "/contacto", label: "Contacto" },
 ];
 
