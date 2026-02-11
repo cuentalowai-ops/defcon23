@@ -1,11 +1,11 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Cal, { getCalApi } from "@calcom/embed-react";
 import PageLayout from "@/components/layout/PageLayout";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
 import Button from "@/components/ui/Button";
+import CalBooking from "@/components/CalBooking";
 
 const bootLines = [
   { text: "> INICIALIZANDO PROTOCOLO DE CONSULTA...", delay: 0 },
@@ -22,35 +22,6 @@ export default function ConsultaPage() {
       setTimeout(() => setVisibleLines(i + 1), line.delay);
     });
     setTimeout(() => setShowContent(true), 1200);
-  }, []);
-
-  useEffect(() => {
-    (async function () {
-      const cal = await getCalApi();
-      cal("ui", {
-        theme: "dark",
-        cssVarsPerTheme: {
-          dark: {
-            "cal-brand": "#ff8c42",
-            "cal-text": "#f5f5f5",
-            "cal-text-emphasis": "#f5f5f5",
-            "cal-border-subtle": "#333333",
-            "cal-bg": "#1a1a1a",
-            "cal-bg-emphasis": "#242424",
-          },
-          light: {
-            "cal-brand": "#ff8c42",
-            "cal-text": "#f5f5f5",
-            "cal-text-emphasis": "#f5f5f5",
-            "cal-border-subtle": "#333333",
-            "cal-bg": "#1a1a1a",
-            "cal-bg-emphasis": "#242424",
-          },
-        },
-        hideEventTypeDetails: false,
-        layout: "month_view",
-      });
-    })();
   }, []);
 
   return (
@@ -333,13 +304,39 @@ export default function ConsultaPage() {
             </div>
 
             <div className="neon-card rounded-2xl p-2 md:p-6 bg-bg-secondary overflow-hidden">
-              <Cal
+              <CalBooking
                 calLink="defcon23/15min"
                 calOrigin="https://cal.eu"
-                style={{ width: "100%", height: "100%", overflow: "auto" }}
                 config={{
-                  layout: "month_view",
                   theme: "dark",
+                  layout: "month_view",
+                  hideEventTypeDetails: false,
+                }}
+                cssVarsPerTheme={{
+                  dark: {
+                    "cal-brand": "#FF9966",
+                    "cal-text": "#F9FAFB",
+                    "cal-text-emphasis": "#FFFFFF",
+                    "cal-text-subtle": "#A0A0A0",
+                    "cal-border": "rgba(255, 153, 102, 0.2)",
+                    "cal-border-emphasis": "rgba(58, 155, 155, 0.4)",
+                    "cal-border-subtle": "#333333",
+                    "cal-bg": "#0A0A0A",
+                    "cal-bg-emphasis": "#1A1A1A",
+                    "cal-bg-subtle": "#151515",
+                  },
+                  light: {
+                    "cal-brand": "#FF9966",
+                    "cal-text": "#0A0A0A",
+                    "cal-text-emphasis": "#000000",
+                    "cal-text-subtle": "#6B7280",
+                    "cal-border": "rgba(255, 153, 102, 0.3)",
+                    "cal-border-emphasis": "rgba(58, 155, 155, 0.5)",
+                    "cal-border-subtle": "#E5E7EB",
+                    "cal-bg": "#FFFFFF",
+                    "cal-bg-emphasis": "#F9FAFB",
+                    "cal-bg-subtle": "#F3F4F6",
+                  },
                 }}
               />
             </div>

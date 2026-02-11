@@ -14,7 +14,6 @@
     "audit": "node scripts/legal-mitigation/04-audit-compliance.js"
   },
   "dependencies": {
-    "@calcom/embed-react": "^1.5.3",
     "@notionhq/client": "^5.9.0",
     "@prisma/client": "^6.19.2",
     "framer-motion": "^12.33.0",
