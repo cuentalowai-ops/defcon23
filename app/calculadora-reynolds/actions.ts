@@ -1,7 +1,6 @@
 "use server";
 
 import { z } from "zod";
-import { prisma } from "@/lib/db";
 import { calculateReScore, getRiskLevel } from "@/lib/reynolds";
 import { Resend } from "resend";
 import { Client as NotionClient } from "@notionhq/client";
@@ -46,39 +45,42 @@ export async function submitReynoldsCalculator(formData: FormData) {
   const riskLevel = getRiskLevel(reScore);
 
   try {
-    const lead = await prisma.lead.create({
-      data: {
-        email,
-        company,
-        reScore,
-        riskLevel,
-        answers,
-      },
-    });
-
-    if (resend) {
-      await resend.emails.send({
-        from: "resultados@defcon23.eu",
-        to: email,
-        subject: `Tu Re Score: ${reScore} (${riskLevel.toUpperCase()})`,
-        html: generateEmailTemplate(company, reScore, riskLevel),
-      });
-    }
-
+    // Guardar en Notion (si está configurado)
     if (notion && process.env.NOTION_DATABASE_ID) {
-      await notion.pages.create({
-        parent: { database_id: process.env.NOTION_DATABASE_ID },
-        properties: {
-          Email: { email },
-          Empresa: { title: [{ text: { content: company } }] },
-          "Re Score": { number: reScore },
-          "Risk Level": { select: { name: riskLevel } },
-          Fecha: { date: { start: new Date().toISOString() } },
-        },
-      });
+      try {
+        await notion.pages.create({
+          parent: { database_id: process.env.NOTION_DATABASE_ID },
+          properties: {
+            Email: { email },
+            Empresa: { title: [{ text: { content: company } }] },
+            "Re Score": { number: reScore },
+            "Risk Level": { select: { name: riskLevel } },
+            Fecha: { date: { start: new Date().toISOString() } },
+          },
+        });
+      } catch (notionError) {
+        console.error("Notion error (non-blocking):", notionError);
+      }
     }
 
-    return { success: true, reScore, riskLevel, leadId: lead.id };
+    // Enviar email (si está configurado)
+    if (resend) {
+      try {
+        await resend.emails.send({
+          from: "resultados@defcon23.eu",
+          to: email,
+          subject: `Tu Re Score: ${reScore} (${riskLevel.toUpperCase()})`,
+          html: generateEmailTemplate(company, reScore, riskLevel),
+        });
+      } catch (emailError) {
+        console.error("Email error (non-blocking):", emailError);
+      }
+    }
+
+    // Generar ID único para el lead (sin BD)
+    const leadId = `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+
+    return { success: true, reScore, riskLevel, leadId };
   } catch (error) {
     console.error("Error submitting Reynolds calculator:", error);
     return { error: "Failed to process submission. Please try again." };
